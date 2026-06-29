@@ -88,6 +88,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#0a1e3f" },
+      { property: "og:title", content: "Goodarzi Trading — Global Import & Export Solutions" },
+      { name: "twitter:title", content: "Goodarzi Trading — Global Import & Export Solutions" },
+      { property: "og:description", content: "International import, export, customs consulting and logistics from Tehran. Active member of Tehran Chamber of Commerce." },
+      { name: "twitter:description", content: "International import, export, customs consulting and logistics from Tehran. Active member of Tehran Chamber of Commerce." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/68bf3bc2-5260-405a-81d9-4abdf3ace2cf/id-preview-9764f80f--79142ba9-9717-4598-83cb-5a30cea4b5fe.lovable.app-1782759829050.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/68bf3bc2-5260-405a-81d9-4abdf3ace2cf/id-preview-9764f80f--79142ba9-9717-4598-83cb-5a30cea4b5fe.lovable.app-1782759829050.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
