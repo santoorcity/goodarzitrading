@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
+import logoAsset from "@/assets/goodarzi-trading-logo.png.asset.json";
 
 const navItems = [
   { to: "/", label: "Home" },
@@ -18,18 +19,21 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="container-x flex h-20 items-center justify-between">
-        <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <span className="grid h-10 w-10 place-items-center rounded-sm bg-[color:var(--navy-deep)] font-display text-lg font-semibold text-[color:var(--gold)]">
-            G
-          </span>
-          <span className="flex flex-col leading-tight">
-            <span className="font-display text-lg font-semibold text-[color:var(--navy-deep)]">
-              Goodarzi Trading
-            </span>
-            <span className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
-              Global Import &amp; Export
-            </span>
-          </span>
+        <Link
+          to="/"
+          className="flex items-center gap-3"
+          onClick={() => setOpen(false)}
+          aria-label="Goodarzi Trading — Home"
+        >
+          <img
+            src={logoAsset.url}
+            alt="Goodarzi Trading"
+            width={220}
+            height={56}
+            className="h-12 w-auto object-contain md:h-14"
+            loading="eager"
+            decoding="async"
+          />
         </Link>
 
         <nav className="hidden items-center gap-7 lg:flex">
