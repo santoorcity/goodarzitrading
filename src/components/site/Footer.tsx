@@ -1,23 +1,30 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
+import logoAsset from "@/assets/goodarzi-trading-logo.png.asset.json";
 
 export function Footer() {
   return (
     <footer className="mt-24 bg-[color:var(--navy-deep)] text-white/80">
       <div className="container-x grid gap-10 py-16 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <div className="flex items-center gap-3">
-            <span className="grid h-10 w-10 place-items-center rounded-sm bg-white/10 font-display text-lg font-semibold text-[color:var(--gold)]">
-              G
-            </span>
-            <span className="font-display text-lg font-semibold text-white">
-              Goodarzi Trading
-            </span>
+          <div className="inline-flex items-center rounded-sm bg-white p-3 shadow-sm">
+            <img
+              src={logoAsset.url}
+              alt="Goodarzi Trading — Import & Export"
+              width={220}
+              height={64}
+              className="h-14 w-auto object-contain"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
           <p className="mt-5 text-sm leading-relaxed text-white/65">
             International import &amp; export, customs consulting, and global
             logistics. Active member of the Tehran Chamber of Commerce and
             sales representative of Bedra products in Iran.
+          </p>
+          <p className="mt-3 text-xs uppercase tracking-[0.18em] text-white/40">
+            Registration No. 485993
           </p>
         </div>
 
