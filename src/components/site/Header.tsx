@@ -18,7 +18,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md">
-      <div className="container-x flex h-20 items-center justify-between">
+      <div className="container-x flex h-24 items-center justify-between md:h-28">
         <Link
           to="/"
           className="flex items-center gap-3"
