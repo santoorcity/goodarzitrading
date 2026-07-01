@@ -7,17 +7,18 @@ export function Footer() {
     <footer className="mt-24 bg-[color:var(--navy-deep)] text-white/80">
       <div className="container-x grid gap-10 py-16 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <div className="inline-flex items-center rounded-sm bg-white p-3 shadow-sm">
+          <div className="inline-flex items-center rounded-sm bg-white p-4 shadow-sm">
             <img
               src={logoAsset.url}
               alt="Goodarzi Trading — Import & Export"
-              width={220}
-              height={64}
-              className="h-14 w-auto object-contain"
+              width={340}
+              height={96}
+              className="h-20 w-auto object-contain md:h-24"
               loading="lazy"
               decoding="async"
             />
           </div>
+
           <p className="mt-5 text-sm leading-relaxed text-white/65">
             International import &amp; export, customs consulting, and global
             logistics. Active member of the Tehran Chamber of Commerce and
