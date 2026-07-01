@@ -27,13 +27,14 @@ export function Header() {
         >
           <img
             src={logoAsset.url}
-            alt="Goodarzi Trading"
-            width={220}
-            height={56}
-            className="h-12 w-auto object-contain md:h-14"
+            alt="Goodarzi Trading — Import & Export"
+            width={340}
+            height={96}
+            className="h-14 w-auto object-contain sm:h-16 md:h-20"
             loading="eager"
             decoding="async"
           />
+
         </Link>
 
         <nav className="hidden items-center gap-7 lg:flex">
