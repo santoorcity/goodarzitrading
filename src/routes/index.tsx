@@ -279,14 +279,34 @@ function Home() {
             </div>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 max-w-4xl mx-auto">
               <div className="overflow-hidden rounded-sm border border-border bg-background shadow-[var(--shadow-card)]">
-                <img src={membershipCert.url} alt="Tehran Chamber of Commerce Membership" className="w-full object-contain bg-white" />
+                <a href={membershipCert.url} target="_blank" rel="noopener noreferrer" className="block bg-white">
+                  <img
+                    src={membershipCert.url}
+                    alt="Tehran Chamber of Commerce Membership Certificate"
+                    width={800}
+                    height={1131}
+                    loading="lazy"
+                    decoding="async"
+                    className="block h-auto w-full object-contain"
+                  />
+                </a>
                 <div className="p-6 text-center">
                   <h3 className="font-display text-lg font-semibold text-[color:var(--navy-deep)]">Tehran Chamber of Commerce</h3>
                   <p className="mt-1 text-sm text-muted-foreground">Certificate of Membership</p>
                 </div>
               </div>
               <div className="overflow-hidden rounded-sm border border-border bg-background shadow-[var(--shadow-card)]">
-                <img src={brandCert.url} alt="Trademark Registration Certificate" className="w-full object-contain bg-white" />
+                <a href={brandCert.url} target="_blank" rel="noopener noreferrer" className="block bg-white">
+                  <img
+                    src={brandCert.url}
+                    alt="Trademark Registration Certificate — No. 485993"
+                    width={800}
+                    height={1131}
+                    loading="lazy"
+                    decoding="async"
+                    className="block h-auto w-full object-contain"
+                  />
+                </a>
                 <div className="p-6 text-center">
                   <h3 className="font-display text-lg font-semibold text-[color:var(--navy-deep)]">Trademark Registration</h3>
                   <p className="mt-1 text-sm text-muted-foreground">Official Brand Certificate — No. 485993</p>
