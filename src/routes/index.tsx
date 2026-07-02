@@ -6,6 +6,9 @@ import {
 import heroPort from "@/assets/hero-port.jpg";
 import worldMap from "@/assets/world-map.jpg";
 import cargoShip from "@/assets/cargo-ship.jpg";
+import membershipCert from "@/assets/certificate-of-membership.jpg.asset.json";
+import brandCert from "@/assets/brand-registration-certificate.jpg.asset.json";
+import logoAsset from "@/assets/goodarzi-trading-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -227,7 +230,7 @@ function Home() {
       <section className="bg-secondary/60 py-24" id="certificates">
         <div className="container-x">
           <div className="flex justify-center mb-10">
-            <img src="/goodarzi-trading-logo-900.png" alt="Goodarzi Trading Logo" className="h-28 object-contain" />
+            <img src={logoAsset.url} alt="Goodarzi Trading Logo" className="h-28 object-contain" />
           </div>
           <div className="mx-auto max-w-2xl text-center mb-14">
             <span className="eyebrow">Certifications</span>
@@ -276,14 +279,14 @@ function Home() {
             </div>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 max-w-4xl mx-auto">
               <div className="overflow-hidden rounded-sm border border-border bg-background shadow-[var(--shadow-card)]">
-                <img src="/IMG_20260702_020354_773.jpg" alt="Tehran Chamber of Commerce Membership" className="w-full object-cover" />
+                <img src={membershipCert.url} alt="Tehran Chamber of Commerce Membership" className="w-full object-contain bg-white" />
                 <div className="p-6 text-center">
                   <h3 className="font-display text-lg font-semibold text-[color:var(--navy-deep)]">Tehran Chamber of Commerce</h3>
                   <p className="mt-1 text-sm text-muted-foreground">Certificate of Membership</p>
                 </div>
               </div>
               <div className="overflow-hidden rounded-sm border border-border bg-background shadow-[var(--shadow-card)]">
-                <img src="/IMG_20260702_020642_412.jpg" alt="Trademark Registration Certificate" className="w-full object-cover" />
+                <img src={brandCert.url} alt="Trademark Registration Certificate" className="w-full object-contain bg-white" />
                 <div className="p-6 text-center">
                   <h3 className="font-display text-lg font-semibold text-[color:var(--navy-deep)]">Trademark Registration</h3>
                   <p className="mt-1 text-sm text-muted-foreground">Official Brand Certificate — No. 485993</p>
