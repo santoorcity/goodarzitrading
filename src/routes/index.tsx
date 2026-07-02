@@ -276,7 +276,7 @@ function Home() {
             </div>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 max-w-4xl mx-auto">
               <div className="overflow-hidden rounded-sm border border-border bg-background shadow-[var(--shadow-card)]">
-                <img src="/IMG_20260702_020354_773.jpg" alt="Tehran Chamber of Commerce Membership" className="w-full object-cover object-top h-64"
+               <img src="/IMG_20260702_020354_773.jpg" alt="Tehran Chamber of Commerce Membership" className="w-full object-cover object-top h-64" />
                 <div className="p-6 text-center">
                   <h3 className="font-display text-lg font-semibold text-[color:var(--navy-deep)]">Tehran Chamber of Commerce</h3>
                   <p className="mt-1 text-sm text-muted-foreground">Certificate of Membership</p>
