@@ -59,7 +59,6 @@ function Home() {
                 Explore Services
               </Link>
             </div>
-
             <div className="mt-12 grid max-w-2xl grid-cols-2 gap-6 border-t border-white/15 pt-8 sm:grid-cols-4">
               {[
                 ["40+", "Countries"],
@@ -125,12 +124,8 @@ function Home() {
             />
             <div className="absolute -bottom-8 -left-8 hidden max-w-xs rounded-sm border border-border bg-card p-6 shadow-[var(--shadow-card)] md:block">
               <div className="eyebrow">Managing Director</div>
-              <div className="mt-2 font-display text-xl text-[color:var(--navy-deep)]">
-                Mr. Mehdi Goodarzi
-              </div>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Two decades of international trade leadership.
-              </p>
+              <div className="mt-2 font-display text-xl text-[color:var(--navy-deep)]">Mr. Mehdi Goodarzi</div>
+              <p className="mt-2 text-sm text-muted-foreground">Two decades of international trade leadership.</p>
             </div>
           </div>
         </div>
@@ -145,8 +140,7 @@ function Home() {
               End-to-end international trade
             </h2>
             <p className="mt-5 text-muted-foreground">
-              From sourcing your supplier abroad to clearing goods at the
-              destination port — we handle every link in the chain.
+              From sourcing your supplier abroad to clearing goods at the destination port — we handle every link in the chain.
             </p>
           </div>
           <div className="mt-16 grid gap-px overflow-hidden rounded-sm bg-border md:grid-cols-2 lg:grid-cols-3">
@@ -163,9 +157,7 @@ function Home() {
             ].map(({ icon: Icon, title, desc }) => (
               <div key={title} className="group bg-background p-8 transition-colors hover:bg-[color:var(--navy-deep)]">
                 <Icon className="h-8 w-8 text-[color:var(--gold)]" />
-                <h3 className="mt-5 font-display text-xl text-[color:var(--navy-deep)] group-hover:text-white">
-                  {title}
-                </h3>
+                <h3 className="mt-5 font-display text-xl text-[color:var(--navy-deep)] group-hover:text-white">{title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground group-hover:text-white/70">{desc}</p>
               </div>
             ))}
@@ -185,9 +177,7 @@ function Home() {
         <div className="container-x">
           <div className="mx-auto max-w-2xl text-center">
             <span className="eyebrow">Global Reach</span>
-            <h2 className="mt-4 font-display text-4xl font-semibold md:text-5xl">
-              Trading across continents, every day.
-            </h2>
+            <h2 className="mt-4 font-display text-4xl font-semibold md:text-5xl">Trading across continents, every day.</h2>
           </div>
           <div className="mt-14 grid gap-10 text-center sm:grid-cols-2 lg:grid-cols-4">
             {[
@@ -233,6 +223,77 @@ function Home() {
         </div>
       </section>
 
+      {/* CERTIFICATES - بخش ۱: گواهی‌های قابل ارائه */}
+      <section className="bg-secondary/60 py-24" id="certificates">
+        <div className="container-x">
+          <div className="flex justify-center mb-10">
+            <img src="/goodarzi-trading-logo-900.png" alt="Goodarzi Trading Logo" className="h-28 object-contain" />
+          </div>
+          <div className="mx-auto max-w-2xl text-center mb-14">
+            <span className="eyebrow">Certifications</span>
+            <h2 className="mt-4 font-display text-4xl font-semibold text-[color:var(--navy-deep)] md:text-5xl">
+              Certificates & Trade Documents
+            </h2>
+            <p className="mt-5 text-muted-foreground">
+              We are fully capable of providing all required official certificates and trade documentation for export shipments upon request.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 mb-24">
+            {[
+              { title: "Health Certificate", sub: "گواهی سیب سلامت", icon: "🏥" },
+              { title: "Aflatoxin-Free Certificate", sub: "گواهی عدم آفلاتوکسین", icon: "🔬" },
+              { title: "Lab Analysis Certificate", sub: "آنالیز آزمایشگاه زعفران", icon: "⚗️" },
+              { title: "Certificate of Origin", sub: "گواهی مبدأ", icon: "🌍" },
+              { title: "COI Certificate", sub: "گواهی بازرسی COI", icon: "📋" },
+              { title: "IC Certificate", sub: "گواهی IC", icon: "📄" },
+              { title: "Phytosanitary Certificate", sub: "گواهی فیتوسانیتری", icon: "🌿" },
+              { title: "Customs Documents", sub: "سایر گواهی‌های گمرکی کشور مقصد", icon: "📦" },
+            ].map((cert) => (
+              <div
+                key={cert.title}
+                className="flex flex-col items-center rounded-sm border border-border bg-background p-6 text-center shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] transition-shadow"
+              >
+                <div className="text-4xl mb-3">{cert.icon}</div>
+                <h3 className="font-display text-base font-semibold text-[color:var(--navy-deep)]">{cert.title}</h3>
+                <p className="mt-1 text-xs text-muted-foreground">{cert.sub}</p>
+                <span className="mt-3 inline-block rounded-sm bg-[color:var(--navy-deep)] px-3 py-1 text-xs font-medium text-[color:var(--gold)]">
+                  Available on Request
+                </span>
+              </div>
+            ))}
+          </div>
+
+          {/* بخش ۲: مدارک رسمی */}
+          <div className="border-t border-border pt-20">
+            <div className="mx-auto max-w-2xl text-center mb-14">
+              <span className="eyebrow">Official Documents</span>
+              <h2 className="mt-4 font-display text-4xl font-semibold text-[color:var(--navy-deep)] md:text-5xl">
+                Registered & Certified
+              </h2>
+              <p className="mt-5 text-muted-foreground">
+                Goodarzi Trading is an officially registered and certified business entity with active membership in Tehran Chamber of Commerce.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 max-w-4xl mx-auto">
+              <div className="overflow-hidden rounded-sm border border-border bg-background shadow-[var(--shadow-card)]">
+                <img src="/IMG_20260702_020354_773.jpg" alt="Tehran Chamber of Commerce Membership" className="w-full object-cover" />
+                <div className="p-6 text-center">
+                  <h3 className="font-display text-lg font-semibold text-[color:var(--navy-deep)]">Tehran Chamber of Commerce</h3>
+                  <p className="mt-1 text-sm text-muted-foreground">Certificate of Membership</p>
+                </div>
+              </div>
+              <div className="overflow-hidden rounded-sm border border-border bg-background shadow-[var(--shadow-card)]">
+                <img src="/IMG_20260702_020642_412.jpg" alt="Trademark Registration Certificate" className="w-full object-cover" />
+                <div className="p-6 text-center">
+                  <h3 className="font-display text-lg font-semibold text-[color:var(--navy-deep)]">Trademark Registration</h3>
+                  <p className="mt-1 text-sm text-muted-foreground">Official Brand Certificate — No. 485993</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* PARTNERS */}
       <section className="border-y border-border bg-secondary/40 py-16">
         <div className="container-x">
@@ -241,10 +302,7 @@ function Home() {
           </p>
           <div className="mt-8 grid grid-cols-2 items-center justify-items-center gap-8 sm:grid-cols-3 md:grid-cols-5">
             {["Bedra", "Tehran C.O.C", "IRICA", "INCOTERMS 2020", "ICC"].map((p) => (
-              <div
-                key={p}
-                className="font-display text-lg font-semibold text-[color:var(--navy)]/60 transition-colors hover:text-[color:var(--navy-deep)]"
-              >
+              <div key={p} className="font-display text-lg font-semibold text-[color:var(--navy)]/60 transition-colors hover:text-[color:var(--navy-deep)]">
                 {p}
               </div>
             ))}
@@ -261,8 +319,7 @@ function Home() {
               Ready to move your goods across borders?
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-white/70">
-              Tell us about your shipment, supplier, or sourcing need — we'll
-              respond with a tailored quote within one business day.
+              Tell us about your shipment, supplier, or sourcing need — we'll respond with a tailored quote within one business day.
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <Link to="/quote" className="rounded-sm bg-[color:var(--gold)] px-8 py-3.5 text-sm font-semibold text-[color:var(--navy-deep)]">
