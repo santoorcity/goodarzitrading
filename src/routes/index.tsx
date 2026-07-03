@@ -3,7 +3,8 @@ import {
   Ship, Plane, Truck, FileCheck, Search, Globe, Award, ShieldCheck,
   TrendingUp, ArrowRight, Quote,
 } from "lucide-react";
-import heroPort from "@/assets/hero-port.jpg";
+import heroPortAsset from "@/assets/hero-port-containers.jpg.asset.json";
+const heroPort = heroPortAsset.url;
 import worldMap from "@/assets/world-map.jpg";
 import cargoShip from "@/assets/cargo-ship.jpg";
 import membershipCert from "@/assets/certificate-of-membership.jpg.asset.json";
