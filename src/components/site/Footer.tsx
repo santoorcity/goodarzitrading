@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
-import logoAsset from "@/assets/goodarzi-trading-logo.png.asset.json";
+const logoAsset = { url: "/goodarzi-trading-logo.png" };
 
 export function Footer() {
   return (

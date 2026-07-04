@@ -3,13 +3,12 @@ import {
   Ship, Plane, Truck, FileCheck, Search, Globe, Award, ShieldCheck,
   TrendingUp, ArrowRight, Quote,
 } from "lucide-react";
-import heroPortAsset from "@/assets/hero-port-containers.jpg.asset.json";
-const heroPort = heroPortAsset.url;
 import worldMap from "@/assets/world-map.jpg";
 import cargoShip from "@/assets/cargo-ship.jpg";
-import membershipCert from "@/assets/certificate-of-membership.jpg.asset.json";
-import brandCert from "@/assets/brand-registration-certificate.jpg.asset.json";
-import logoAsset from "@/assets/goodarzi-trading-logo.png.asset.json";
+const heroPort = "/hero-port-containers.jpg";
+const membershipCert = { url: "/certificate-of-membership.jpg" };
+const brandCert = { url: "/brand-registration-certificate.jpg" };
+const logoAsset = { url: "/goodarzi-trading-logo.png" };
 
 export const Route = createFileRoute("/")({
   head: () => ({
