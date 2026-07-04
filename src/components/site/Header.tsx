@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
-import logoAsset from "@/assets/goodarzi-trading-logo.png.asset.json";
+const logoAsset = { url: "/goodarzi-trading-logo.png" };
 
 const navItems = [
   { to: "/", label: "Home" },
