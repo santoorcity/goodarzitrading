@@ -2,7 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import {
   Ship, Plane, Truck, FileCheck, Search, Globe, ShieldCheck, Package, FileText,
+  ShoppingCart, BadgeCheck, ScrollText,
 } from "lucide-react";
+
 
 export const Route = createFileRoute("/services")({
   head: () => ({
