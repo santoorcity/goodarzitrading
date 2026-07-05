@@ -30,7 +30,11 @@ const services = [
   { icon: ShieldCheck, title: "Supplier Verification", desc: "On-site audits, quality inspections and due diligence before commitment." },
   { icon: FileText, title: "Trade Documentation", desc: "Commercial invoices, B/L, certificates of origin, packing lists and L/C support." },
   { icon: Package, title: "Freight Services", desc: "Optimised routing and cost-efficient forwarder partnerships." },
+  { icon: ShoppingCart, title: "Purchase Consulting", desc: "Advisory on selecting and purchasing goods from domestic and international markets — مشاوره در انتخاب و خرید کالا از بازارهای داخلی و خارجی." },
+  { icon: BadgeCheck, title: "Quality Inspection", desc: "Pre-shipment quality inspection and verification — بازرسی و تأیید کیفیت کالا قبل از صادرات." },
+  { icon: ScrollText, title: "Trade Contract Management", desc: "Drafting, reviewing and following up international trade contracts — تنظیم، بررسی و پیگیری قراردادهای تجاری بین‌المللی." },
 ];
+
 
 function Services() {
   return (
