@@ -8,7 +8,9 @@ const navItems = [
   { to: "/about", label: "About" },
   { to: "/services", label: "Services" },
   { to: "/hs-code", label: "HS Code" },
+  { to: "/incoterms", label: "Incoterms" },
   { to: "/knowledge", label: "Knowledge" },
+
   { to: "/blog", label: "Insights" },
   { to: "/profile", label: "Profile" },
   { to: "/contact", label: "Contact" },

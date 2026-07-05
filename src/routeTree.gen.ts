@@ -16,6 +16,7 @@ import { Route as QuoteRouteImport } from './routes/quote'
 import { Route as ProfileRouteImport } from './routes/profile'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as KnowledgeRouteImport } from './routes/knowledge'
+import { Route as IncotermsRouteImport } from './routes/incoterms'
 import { Route as HsCodeRouteImport } from './routes/hs-code'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -58,6 +59,11 @@ const KnowledgeRoute = KnowledgeRouteImport.update({
   path: '/knowledge',
   getParentRoute: () => rootRouteImport,
 } as any)
+const IncotermsRoute = IncotermsRouteImport.update({
+  id: '/incoterms',
+  path: '/incoterms',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const HsCodeRoute = HsCodeRouteImport.update({
   id: '/hs-code',
   path: '/hs-code',
@@ -96,6 +102,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/hs-code': typeof HsCodeRoute
+  '/incoterms': typeof IncotermsRoute
   '/knowledge': typeof KnowledgeRoute
   '/privacy': typeof PrivacyRoute
   '/profile': typeof ProfileRoute
@@ -111,6 +118,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/hs-code': typeof HsCodeRoute
+  '/incoterms': typeof IncotermsRoute
   '/knowledge': typeof KnowledgeRoute
   '/privacy': typeof PrivacyRoute
   '/profile': typeof ProfileRoute
@@ -127,6 +135,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/hs-code': typeof HsCodeRoute
+  '/incoterms': typeof IncotermsRoute
   '/knowledge': typeof KnowledgeRoute
   '/privacy': typeof PrivacyRoute
   '/profile': typeof ProfileRoute
@@ -144,6 +153,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/faq'
     | '/hs-code'
+    | '/incoterms'
     | '/knowledge'
     | '/privacy'
     | '/profile'
@@ -159,6 +169,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/faq'
     | '/hs-code'
+    | '/incoterms'
     | '/knowledge'
     | '/privacy'
     | '/profile'
@@ -174,6 +185,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/faq'
     | '/hs-code'
+    | '/incoterms'
     | '/knowledge'
     | '/privacy'
     | '/profile'
@@ -190,6 +202,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   FaqRoute: typeof FaqRoute
   HsCodeRoute: typeof HsCodeRoute
+  IncotermsRoute: typeof IncotermsRoute
   KnowledgeRoute: typeof KnowledgeRoute
   PrivacyRoute: typeof PrivacyRoute
   ProfileRoute: typeof ProfileRoute
@@ -250,6 +263,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof KnowledgeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/incoterms': {
+      id: '/incoterms'
+      path: '/incoterms'
+      fullPath: '/incoterms'
+      preLoaderRoute: typeof IncotermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/hs-code': {
       id: '/hs-code'
       path: '/hs-code'
@@ -302,6 +322,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   FaqRoute: FaqRoute,
   HsCodeRoute: HsCodeRoute,
+  IncotermsRoute: IncotermsRoute,
   KnowledgeRoute: KnowledgeRoute,
   PrivacyRoute: PrivacyRoute,
   ProfileRoute: ProfileRoute,
