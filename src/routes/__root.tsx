@@ -105,7 +105,54 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap",
       },
     ],
-  }),
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Goodarzi Trading",
+          alternateName: "بازرگانی گودرزی",
+          url: "https://goodarzitrading.lovable.app",
+          logo: "https://goodarzitrading.lovable.app/goodarzi-trading-logo.png",
+          description:
+            "Iran-based international trading house. Import, export, customs consulting and logistics. Supplier of Iranian saffron, pistachio, dates, carpets, bitumen and minerals to 40+ countries.",
+          foundingDate: "2005",
+          founder: { "@type": "Person", name: "Mehdi Goodarzi" },
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "No. 23/1, Ghazal Crossroads, Tenth Street, Tehransar",
+            addressLocality: "Tehran",
+            addressCountry: "IR",
+          },
+          contactPoint: [
+            {
+              "@type": "ContactPoint",
+              telephone: "+98-21-44511076",
+              contactType: "sales",
+              areaServed: ["AE","SA","QA","OM","KW","IQ","TR","DE","FR","ES","IT","NL","RU","AM","AZ","KZ","UZ","TM","CN","IN","MY","ID","JP","KR","KE","ZA","EG","NG","MA","CA","BR","AR","MX","CL"],
+              availableLanguage: ["English","Persian","Arabic"],
+            },
+            {
+              "@type": "ContactPoint",
+              telephone: "+98-919-123-8554",
+              contactType: "customer service",
+              contactOption: "TollFree",
+              availableLanguage: ["English","Persian","Arabic"],
+            },
+          ],
+          sameAs: [],
+          memberOf: [
+            { "@type": "Organization", name: "Tehran Chamber of Commerce, Industries, Mines & Agriculture (TCCIMA)" },
+          ],
+          knowsAbout: [
+            "Iranian saffron export","Iranian pistachio export","Iranian dates export",
+            "Persian handwoven carpets","Iranian bitumen","Industrial minerals",
+            "IRICA customs clearance","International freight forwarding","Incoterms 2020",
+          ],
+        }),
+      },
+    ],
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
