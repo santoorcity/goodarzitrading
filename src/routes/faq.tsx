@@ -7,6 +7,7 @@ export const Route = createFileRoute("/faq")({
   head: () => ({
     meta: [
       { title: "FAQ — Goodarzi Trading" },
+      { name: "keywords", content: "سوالات متداول, FAQ, customs FAQ, پرسش های واردات, راهنمای صادرات, import export Iran, goodarzi trading, واردات صادرات ایران, تجارت بین الملل, customs consulting Tehran" },
       { name: "description", content: "Frequently asked questions about importing, exporting, customs, freight and working with Goodarzi Trading." },
       { property: "og:title", content: "FAQ — Goodarzi Trading" },
       { property: "og:description", content: "Common questions about our international trade services." },

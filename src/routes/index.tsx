@@ -14,6 +14,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Goodarzi Trading — Global Import & Export Solutions" },
+      { name: "keywords", content: "import export company Tehran, شرکت واردات صادرات, global trade Iran, freight forwarding, customs broker, import export Iran, goodarzi trading, واردات صادرات ایران, تجارت بین الملل, customs consulting Tehran" },
       { name: "description", content: "International import, export, customs consulting and logistics from Tehran. Active member of Tehran Chamber of Commerce. Sales representative of Bedra products in Iran." },
       { property: "og:title", content: "Goodarzi Trading — Global Import & Export Solutions" },
       { property: "og:description", content: "Trusted international trade partner. Customs consulting, sourcing, freight, and trade documentation worldwide." },

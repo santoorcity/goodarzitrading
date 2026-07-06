@@ -6,6 +6,7 @@ export const Route = createFileRoute("/profile")({
   head: () => ({
     meta: [
       { title: "Company Profile — Goodarzi Trading" },
+      { name: "keywords", content: "company profile, پروفایل شرکت, credentials, certificates, گواهینامه ها, import export Iran, goodarzi trading, واردات صادرات ایران, تجارت بین الملل, customs consulting Tehran" },
       { name: "description", content: "Goodarzi Trading company profile: history, experience, countries, industries, certifications and achievements." },
       { property: "og:title", content: "Company Profile — Goodarzi Trading" },
       { property: "og:description", content: "An overview of our experience and global trade footprint." },
