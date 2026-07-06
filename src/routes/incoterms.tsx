@@ -4,13 +4,52 @@ import { PageHero } from "@/components/site/PageHero";
 export const Route = createFileRoute("/incoterms")({
   head: () => ({
     meta: [
-      { title: "Incoterms 2020 — Goodarzi Trading" },
-      { name: "description", content: "The 11 Incoterms 2020 rules explained in English and Persian — EXW, FCA, CPT, CIP, DAP, DPU, DDP, FAS, FOB, CFR, CIF." },
-      { property: "og:title", content: "Incoterms 2020 — Goodarzi Trading" },
-      { property: "og:description", content: "Full reference for the 11 Incoterms 2020 rules with Persian and English descriptions." },
-      { property: "og:url", content: "/incoterms" },
+      { title: "Incoterms 2020 — اینکوترمز ۲۰۲۰ | Goodarzi Trading" },
+      {
+        name: "description",
+        content:
+          "راهنمای کامل ۱۱ قانون اینکوترمز ۲۰۲۰ اتاق بازرگانی بین‌المللی (ICC) به فارسی و انگلیسی — EXW، FCA، CPT، CIP، DAP، DPU، DDP، FAS، FOB، CFR، CIF. مسئولیت خریدار و فروشنده در تجارت بین‌الملل.",
+      },
+      {
+        name: "keywords",
+        content:
+          "اینکوترمز, اینکوترمز 2020, Incoterms 2020, شرایط تحویل کالا, EXW, FOB, CIF, CFR, DDP, DAP, تجارت بین الملل, واردات و صادرات",
+      },
+      { property: "og:type", content: "article" },
+      { property: "og:title", content: "Incoterms 2020 — اینکوترمز ۲۰۲۰ | Goodarzi Trading" },
+      {
+        property: "og:description",
+        content:
+          "شرح ۱۱ قانون اینکوترمز ۲۰۲۰ به فارسی و انگلیسی — مسئولیت‌ها، هزینه‌ها و ریسک‌ها میان خریدار و فروشنده در تجارت بین‌الملل.",
+      },
+      { property: "og:url", content: "https://goodarzitrading.lovable.app/incoterms" },
+      { property: "og:locale", content: "en_US" },
+      { property: "og:locale:alternate", content: "fa_IR" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Incoterms 2020 — اینکوترمز ۲۰۲۰ | Goodarzi Trading" },
+      {
+        name: "twitter:description",
+        content:
+          "راهنمای ۱۱ قانون اینکوترمز ۲۰۲۰ به فارسی و انگلیسی برای بازرگانان و فعالان واردات و صادرات.",
+      },
     ],
-    links: [{ rel: "canonical", href: "/incoterms" }],
+    links: [{ rel: "canonical", href: "https://goodarzitrading.lovable.app/incoterms" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: "Incoterms 2020 — اینکوترمز ۲۰۲۰",
+          description:
+            "راهنمای کامل ۱۱ قانون اینکوترمز ۲۰۲۰ اتاق بازرگانی بین‌المللی (ICC) به فارسی و انگلیسی.",
+          inLanguage: ["en", "fa"],
+          author: { "@type": "Organization", name: "Goodarzi Trading" },
+          publisher: { "@type": "Organization", name: "Goodarzi Trading" },
+          mainEntityOfPage: "https://goodarzitrading.lovable.app/incoterms",
+        }),
+      },
+    ],
   }),
   component: IncotermsPage,
 });
