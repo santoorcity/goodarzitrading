@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TradeNetworkRouteImport } from './routes/trade-network'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServicesRouteImport } from './routes/services'
@@ -16,14 +17,21 @@ import { Route as QuoteRouteImport } from './routes/quote'
 import { Route as ProfileRouteImport } from './routes/profile'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as KnowledgeRouteImport } from './routes/knowledge'
+import { Route as InquiryRouteImport } from './routes/inquiry'
 import { Route as IncotermsRouteImport } from './routes/incoterms'
 import { Route as HsCodeRouteImport } from './routes/hs-code'
 import { Route as FaqRouteImport } from './routes/faq'
+import { Route as ExportProductsRouteImport } from './routes/export-products'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TradeNetworkRoute = TradeNetworkRouteImport.update({
+  id: '/trade-network',
+  path: '/trade-network',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
   path: '/terms',
@@ -59,6 +67,11 @@ const KnowledgeRoute = KnowledgeRouteImport.update({
   path: '/knowledge',
   getParentRoute: () => rootRouteImport,
 } as any)
+const InquiryRoute = InquiryRouteImport.update({
+  id: '/inquiry',
+  path: '/inquiry',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IncotermsRoute = IncotermsRouteImport.update({
   id: '/incoterms',
   path: '/incoterms',
@@ -72,6 +85,11 @@ const HsCodeRoute = HsCodeRouteImport.update({
 const FaqRoute = FaqRouteImport.update({
   id: '/faq',
   path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExportProductsRoute = ExportProductsRouteImport.update({
+  id: '/export-products',
+  path: '/export-products',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -100,9 +118,11 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
+  '/export-products': typeof ExportProductsRoute
   '/faq': typeof FaqRoute
   '/hs-code': typeof HsCodeRoute
   '/incoterms': typeof IncotermsRoute
+  '/inquiry': typeof InquiryRoute
   '/knowledge': typeof KnowledgeRoute
   '/privacy': typeof PrivacyRoute
   '/profile': typeof ProfileRoute
@@ -110,15 +130,18 @@ export interface FileRoutesByFullPath {
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
+  '/trade-network': typeof TradeNetworkRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
+  '/export-products': typeof ExportProductsRoute
   '/faq': typeof FaqRoute
   '/hs-code': typeof HsCodeRoute
   '/incoterms': typeof IncotermsRoute
+  '/inquiry': typeof InquiryRoute
   '/knowledge': typeof KnowledgeRoute
   '/privacy': typeof PrivacyRoute
   '/profile': typeof ProfileRoute
@@ -126,6 +149,7 @@ export interface FileRoutesByTo {
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
+  '/trade-network': typeof TradeNetworkRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -133,9 +157,11 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
+  '/export-products': typeof ExportProductsRoute
   '/faq': typeof FaqRoute
   '/hs-code': typeof HsCodeRoute
   '/incoterms': typeof IncotermsRoute
+  '/inquiry': typeof InquiryRoute
   '/knowledge': typeof KnowledgeRoute
   '/privacy': typeof PrivacyRoute
   '/profile': typeof ProfileRoute
@@ -143,6 +169,7 @@ export interface FileRoutesById {
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
+  '/trade-network': typeof TradeNetworkRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -151,9 +178,11 @@ export interface FileRouteTypes {
     | '/about'
     | '/blog'
     | '/contact'
+    | '/export-products'
     | '/faq'
     | '/hs-code'
     | '/incoterms'
+    | '/inquiry'
     | '/knowledge'
     | '/privacy'
     | '/profile'
@@ -161,15 +190,18 @@ export interface FileRouteTypes {
     | '/services'
     | '/sitemap.xml'
     | '/terms'
+    | '/trade-network'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
     | '/blog'
     | '/contact'
+    | '/export-products'
     | '/faq'
     | '/hs-code'
     | '/incoterms'
+    | '/inquiry'
     | '/knowledge'
     | '/privacy'
     | '/profile'
@@ -177,15 +209,18 @@ export interface FileRouteTypes {
     | '/services'
     | '/sitemap.xml'
     | '/terms'
+    | '/trade-network'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/blog'
     | '/contact'
+    | '/export-products'
     | '/faq'
     | '/hs-code'
     | '/incoterms'
+    | '/inquiry'
     | '/knowledge'
     | '/privacy'
     | '/profile'
@@ -193,6 +228,7 @@ export interface FileRouteTypes {
     | '/services'
     | '/sitemap.xml'
     | '/terms'
+    | '/trade-network'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -200,9 +236,11 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   BlogRoute: typeof BlogRoute
   ContactRoute: typeof ContactRoute
+  ExportProductsRoute: typeof ExportProductsRoute
   FaqRoute: typeof FaqRoute
   HsCodeRoute: typeof HsCodeRoute
   IncotermsRoute: typeof IncotermsRoute
+  InquiryRoute: typeof InquiryRoute
   KnowledgeRoute: typeof KnowledgeRoute
   PrivacyRoute: typeof PrivacyRoute
   ProfileRoute: typeof ProfileRoute
@@ -210,10 +248,18 @@ export interface RootRouteChildren {
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
+  TradeNetworkRoute: typeof TradeNetworkRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/trade-network': {
+      id: '/trade-network'
+      path: '/trade-network'
+      fullPath: '/trade-network'
+      preLoaderRoute: typeof TradeNetworkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/terms': {
       id: '/terms'
       path: '/terms'
@@ -263,6 +309,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof KnowledgeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/inquiry': {
+      id: '/inquiry'
+      path: '/inquiry'
+      fullPath: '/inquiry'
+      preLoaderRoute: typeof InquiryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/incoterms': {
       id: '/incoterms'
       path: '/incoterms'
@@ -282,6 +335,13 @@ declare module '@tanstack/react-router' {
       path: '/faq'
       fullPath: '/faq'
       preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/export-products': {
+      id: '/export-products'
+      path: '/export-products'
+      fullPath: '/export-products'
+      preLoaderRoute: typeof ExportProductsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -320,9 +380,11 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   BlogRoute: BlogRoute,
   ContactRoute: ContactRoute,
+  ExportProductsRoute: ExportProductsRoute,
   FaqRoute: FaqRoute,
   HsCodeRoute: HsCodeRoute,
   IncotermsRoute: IncotermsRoute,
+  InquiryRoute: InquiryRoute,
   KnowledgeRoute: KnowledgeRoute,
   PrivacyRoute: PrivacyRoute,
   ProfileRoute: ProfileRoute,
@@ -330,17 +392,8 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
+  TradeNetworkRoute: TradeNetworkRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
