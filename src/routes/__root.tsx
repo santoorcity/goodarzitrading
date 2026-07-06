@@ -82,8 +82,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Goodarzi Trading — Global Import & Export Solutions" },
-      { name: "keywords", content: "international trade, freight forwarding, IRICA, Tehran Chamber of Commerce, بازرگانی گودرزی, import export Iran, goodarzi trading, واردات صادرات ایران, تجارت بین الملل, customs consulting Tehran" },
-      { name: "description", content: "International import, export, customs consulting and logistics from Tehran. Active member of Tehran Chamber of Commerce." },
+      { name: "keywords", content: "import export Iran, buy from Iran, Iranian saffron exporter, Iran pistachio supplier, Persian carpets export, buy Iranian dates, Iran bitumen supplier, international trade Iran, freight forwarding, IRICA customs, Tehran Chamber of Commerce, world traders, chamber of commerce members, goodarzi trading, بازرگانی گودرزی, واردات صادرات ایران, تجارت بین الملل, صادرات زعفران, صادرات پسته, بازرگانان جهان" },
+      { name: "description", content: "Iran-based import & export company. Buy Iranian saffron, pistachio, dates, carpets, bitumen & minerals directly. Trusted worldwide by importers, distributors and chamber-of-commerce members." },
       { name: "author", content: "Goodarzi Trading" },
       { property: "og:site_name", content: "Goodarzi Trading" },
       { property: "og:type", content: "website" },
@@ -103,6 +103,54 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap",
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Goodarzi Trading",
+          alternateName: "بازرگانی گودرزی",
+          url: "https://goodarzitrading.lovable.app",
+          logo: "https://goodarzitrading.lovable.app/goodarzi-trading-logo.png",
+          description:
+            "Iran-based international trading house. Import, export, customs consulting and logistics. Supplier of Iranian saffron, pistachio, dates, carpets, bitumen and minerals to 40+ countries.",
+          foundingDate: "2005",
+          founder: { "@type": "Person", name: "Mehdi Goodarzi" },
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "No. 23/1, Ghazal Crossroads, Tenth Street, Tehransar",
+            addressLocality: "Tehran",
+            addressCountry: "IR",
+          },
+          contactPoint: [
+            {
+              "@type": "ContactPoint",
+              telephone: "+98-21-44511076",
+              contactType: "sales",
+              areaServed: ["AE","SA","QA","OM","KW","IQ","TR","DE","FR","ES","IT","NL","RU","AM","AZ","KZ","UZ","TM","CN","IN","MY","ID","JP","KR","KE","ZA","EG","NG","MA","CA","BR","AR","MX","CL"],
+              availableLanguage: ["English","Persian","Arabic"],
+            },
+            {
+              "@type": "ContactPoint",
+              telephone: "+98-919-123-8554",
+              contactType: "customer service",
+              contactOption: "TollFree",
+              availableLanguage: ["English","Persian","Arabic"],
+            },
+          ],
+          sameAs: [],
+          memberOf: [
+            { "@type": "Organization", name: "Tehran Chamber of Commerce, Industries, Mines & Agriculture (TCCIMA)" },
+          ],
+          knowsAbout: [
+            "Iranian saffron export","Iranian pistachio export","Iranian dates export",
+            "Persian handwoven carpets","Iranian bitumen","Industrial minerals",
+            "IRICA customs clearance","International freight forwarding","Incoterms 2020",
+          ],
+        }),
       },
     ],
   }),

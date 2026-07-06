@@ -7,12 +7,13 @@ const navItems = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/services", label: "Services" },
+  { to: "/export-products", label: "Products" },
+  { to: "/trade-network", label: "Network" },
   { to: "/hs-code", label: "HS Code" },
   { to: "/incoterms", label: "Incoterms" },
   { to: "/knowledge", label: "Knowledge" },
-
   { to: "/blog", label: "Insights" },
-  { to: "/profile", label: "Profile" },
+  { to: "/inquiry", label: "Inquiry" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
