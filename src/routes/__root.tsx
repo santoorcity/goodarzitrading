@@ -82,6 +82,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Goodarzi Trading — Global Import & Export Solutions" },
+      { name: "keywords", content: "international trade, freight forwarding, IRICA, Tehran Chamber of Commerce, بازرگانی گودرزی, import export Iran, goodarzi trading, واردات صادرات ایران, تجارت بین الملل, customs consulting Tehran" },
       { name: "description", content: "International import, export, customs consulting and logistics from Tehran. Active member of Tehran Chamber of Commerce." },
       { name: "author", content: "Goodarzi Trading" },
       { property: "og:site_name", content: "Goodarzi Trading" },

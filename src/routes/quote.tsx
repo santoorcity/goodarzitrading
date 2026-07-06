@@ -8,6 +8,7 @@ export const Route = createFileRoute("/quote")({
   head: () => ({
     meta: [
       { title: "Request a Quote — Goodarzi Trading" },
+      { name: "keywords", content: "درخواست قیمت, request quote, RFQ, freight quote, استعلام قیمت واردات, import export Iran, goodarzi trading, واردات صادرات ایران, تجارت بین الملل, customs consulting Tehran" },
       { name: "description", content: "Request a tailored quote for import, export, sourcing or customs services. We respond within one business day." },
       { property: "og:title", content: "Request a Quote — Goodarzi Trading" },
       { property: "og:description", content: "Tell us about your shipment, supplier or sourcing need." },

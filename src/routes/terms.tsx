@@ -5,6 +5,7 @@ export const Route = createFileRoute("/terms")({
   head: () => ({
     meta: [
       { title: "Terms & Conditions — Goodarzi Trading" },
+      { name: "keywords", content: "terms of service, شرایط استفاده, قوانین سایت, import export Iran, goodarzi trading, واردات صادرات ایران, تجارت بین الملل, customs consulting Tehran" },
       { name: "description", content: "Terms governing the use of the Goodarzi Trading website and inquiries." },
       { property: "og:url", content: "/terms" },
     ],

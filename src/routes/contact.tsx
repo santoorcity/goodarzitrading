@@ -8,6 +8,7 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact — Goodarzi Trading" },
+      { name: "keywords", content: "تماس با گودرزی تریدینگ, contact goodarzi trading, Tehran office, WhatsApp, ایمیل بازرگانی, import export Iran, goodarzi trading, واردات صادرات ایران, تجارت بین الملل, customs consulting Tehran" },
       { name: "description", content: "Contact Goodarzi Trading in Tehran. Phone, email, WhatsApp, office address and office hours." },
       { property: "og:title", content: "Contact Goodarzi Trading" },
       { property: "og:description", content: "Reach our trade desk in Tehran by phone, email or WhatsApp." },

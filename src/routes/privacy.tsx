@@ -5,6 +5,7 @@ export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
       { title: "Privacy Policy — Goodarzi Trading" },
+      { name: "keywords", content: "privacy policy, حریم خصوصی, سیاست حفظ اطلاعات, import export Iran, goodarzi trading, واردات صادرات ایران, تجارت بین الملل, customs consulting Tehran" },
       { name: "description", content: "How Goodarzi Trading collects, uses and protects information submitted through our website and trade services." },
       { property: "og:url", content: "/privacy" },
     ],

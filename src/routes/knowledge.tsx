@@ -16,6 +16,7 @@ export const Route = createFileRoute("/knowledge")({
   head: () => ({
     meta: [
       { title: "Customs & Trade Knowledge Center — Goodarzi Trading" },
+      { name: "keywords", content: "trade knowledge, راهنمای تجارت, learning center, incoterms, letters of credit, LC, import export Iran, goodarzi trading, واردات صادرات ایران, تجارت بین الملل, customs consulting Tehran" },
       { name: "description", content: "In-depth reference guides on import & export procedures, customs regulations, Incoterms 2020, Letters of Credit, international payments and shipping methods." },
       { property: "og:title", content: "Customs & Trade Knowledge Center" },
       { property: "og:description", content: "Reference guides for international trade professionals." },

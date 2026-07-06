@@ -5,6 +5,7 @@ export const Route = createFileRoute("/blog")({
   head: () => ({
     meta: [
       { title: "Insights & News — Goodarzi Trading" },
+      { name: "keywords", content: "trade news, import guides, market analysis, اخبار تجارت, بلاگ بازرگانی, tariff updates, import export Iran, goodarzi trading, واردات صادرات ایران, تجارت بین الملل, customs consulting Tehran" },
       { name: "description", content: "Trade news, import/export guides, customs updates and market analysis from Goodarzi Trading." },
       { property: "og:title", content: "Insights & News — Goodarzi Trading" },
       { property: "og:description", content: "Global trade insights and Iranian market intelligence." },
