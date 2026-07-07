@@ -5,10 +5,25 @@ import {
 } from "lucide-react";
 import worldMap from "@/assets/world-map.jpg";
 import cargoShip from "@/assets/cargo-ship.jpg";
+import saffronImg from "@/assets/products/saffron.jpg.asset.json";
+import pistachioImg from "@/assets/products/pistachio.jpg.asset.json";
+import datesImg from "@/assets/products/dates.avif.asset.json";
+import barberryImg from "@/assets/products/barberry.jpeg.asset.json";
+import carpetImg from "@/assets/products/carpet.jpg.asset.json";
+import nutsImg from "@/assets/products/nuts.jpg.asset.json";
 const heroPort = "/hero-port-containers.jpg";
 const membershipCert = { url: "/certificate-of-membership.jpg" };
 const brandCert = { url: "/brand-registration-certificate.jpg" };
 const logoAsset = { url: "/goodarzi-trading-logo.png" };
+
+const FEATURED = [
+  { slug: "saffron", name: "Iranian Saffron", fa: "زعفران", img: saffronImg.url },
+  { slug: "pistachio", name: "Iranian Pistachio", fa: "پسته", img: pistachioImg.url },
+  { slug: "dates", name: "Iranian Dates", fa: "خرما", img: datesImg.url },
+  { slug: "barberry", name: "Iranian Barberry", fa: "زرشک", img: barberryImg.url },
+  { slug: "nuts", name: "Dried Fruits & Nuts", fa: "خشکبار", img: nutsImg.url },
+  { slug: "handwoven-carpets", name: "Persian Carpets", fa: "فرش دستباف", img: carpetImg.url },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -131,6 +146,51 @@ function Home() {
               <div className="mt-2 font-display text-xl text-[color:var(--navy-deep)]">Mr. Mehdi Goodarzi</div>
               <p className="mt-2 text-sm text-muted-foreground">Two decades of international trade leadership.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FEATURED PRODUCTS */}
+      <section className="py-24">
+        <div className="container-x">
+          <div className="flex flex-wrap items-end justify-between gap-6">
+            <div className="max-w-2xl">
+              <span className="eyebrow">Featured Iranian Exports</span>
+              <h2 className="mt-4 font-display text-4xl font-semibold text-[color:var(--navy-deep)] md:text-5xl">
+                Premium products, shipped worldwide
+              </h2>
+              <p className="mt-4 text-muted-foreground">
+                Saffron, pistachio, dates, barberry, dried fruits and hand‑woven Persian carpets — sourced directly from Iranian growers and workshops.
+              </p>
+            </div>
+            <Link
+              to="/export-products"
+              className="inline-flex items-center gap-2 rounded-sm border border-[color:var(--navy)]/25 px-5 py-3 text-sm font-semibold text-[color:var(--navy-deep)] hover:bg-secondary"
+            >
+              View full catalogue <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {FEATURED.map((p) => (
+              <Link
+                key={p.slug}
+                to="/export-products"
+                className="group relative block overflow-hidden rounded-sm border border-border shadow-[var(--shadow-card)] transition-shadow hover:shadow-[var(--shadow-elegant)]"
+              >
+                <div className="aspect-[4/3] overflow-hidden bg-secondary">
+                  <img
+                    src={p.img}
+                    alt={`${p.name} — ${p.fa}`}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[color:var(--navy-deep)] via-[color:var(--navy-deep)]/70 to-transparent p-5">
+                  <h3 className="font-display text-xl text-white">{p.name}</h3>
+                  <p className="mt-1 text-xs text-white/75" dir="rtl">{p.fa}</p>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
