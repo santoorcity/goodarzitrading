@@ -80,8 +80,18 @@ function InquiryPage() {
       `Incoterm: ${d.incoterm}`,
       d.message ? `\nNotes:\n${d.message}` : null,
     ].filter(Boolean).join("\n");
-    const url = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(lines)}`;
-    window.open(url, "_blank", "noopener,noreferrer");
+
+    // 1) Open WhatsApp with the pre-filled inquiry
+    const waUrl = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(lines)}`;
+    window.open(waUrl, "_blank", "noopener,noreferrer");
+
+    // 2) Also send a copy by email (opens the user's email client)
+    const subject = `International Buyer Inquiry — ${d.companyName} (${d.country})`;
+    const mailUrl = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines)}`;
+    setTimeout(() => {
+      window.location.href = mailUrl;
+    }, 400);
+
     setSent(true);
   }
 
