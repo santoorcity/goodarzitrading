@@ -80,8 +80,18 @@ function InquiryPage() {
       `Incoterm: ${d.incoterm}`,
       d.message ? `\nNotes:\n${d.message}` : null,
     ].filter(Boolean).join("\n");
-    const url = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(lines)}`;
-    window.open(url, "_blank", "noopener,noreferrer");
+
+    // 1) Open WhatsApp with the pre-filled inquiry
+    const waUrl = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(lines)}`;
+    window.open(waUrl, "_blank", "noopener,noreferrer");
+
+    // 2) Also send a copy by email (opens the user's email client)
+    const subject = `International Buyer Inquiry — ${d.companyName} (${d.country})`;
+    const mailUrl = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines)}`;
+    setTimeout(() => {
+      window.location.href = mailUrl;
+    }, 400);
+
     setSent(true);
   }
 
@@ -158,8 +168,8 @@ function InquiryPage() {
               <div className="mt-6 flex items-start gap-3 rounded-sm border border-emerald-300 bg-emerald-50 p-4 text-sm text-emerald-900">
                 <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0" />
                 <div>
-                  Your inquiry opened in WhatsApp. If it did not open, email us at{" "}
-                  <a className="font-semibold underline" href={`mailto:${EMAIL}`}>{EMAIL}</a>.
+                  Your inquiry was sent to our WhatsApp and a copy opened in your email client to{" "}
+                  <a className="font-semibold underline" href={`mailto:${EMAIL}`}>{EMAIL}</a>. We reply within 1 business day.
                 </div>
               </div>
             )}
