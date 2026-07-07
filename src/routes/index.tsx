@@ -5,10 +5,25 @@ import {
 } from "lucide-react";
 import worldMap from "@/assets/world-map.jpg";
 import cargoShip from "@/assets/cargo-ship.jpg";
+import saffronImg from "@/assets/products/saffron.jpg.asset.json";
+import pistachioImg from "@/assets/products/pistachio.jpg.asset.json";
+import datesImg from "@/assets/products/dates.avif.asset.json";
+import barberryImg from "@/assets/products/barberry.jpeg.asset.json";
+import carpetImg from "@/assets/products/carpet.jpg.asset.json";
+import nutsImg from "@/assets/products/nuts.jpg.asset.json";
 const heroPort = "/hero-port-containers.jpg";
 const membershipCert = { url: "/certificate-of-membership.jpg" };
 const brandCert = { url: "/brand-registration-certificate.jpg" };
 const logoAsset = { url: "/goodarzi-trading-logo.png" };
+
+const FEATURED = [
+  { slug: "saffron", name: "Iranian Saffron", fa: "زعفران", img: saffronImg.url },
+  { slug: "pistachio", name: "Iranian Pistachio", fa: "پسته", img: pistachioImg.url },
+  { slug: "dates", name: "Iranian Dates", fa: "خرما", img: datesImg.url },
+  { slug: "barberry", name: "Iranian Barberry", fa: "زرشک", img: barberryImg.url },
+  { slug: "nuts", name: "Dried Fruits & Nuts", fa: "خشکبار", img: nutsImg.url },
+  { slug: "handwoven-carpets", name: "Persian Carpets", fa: "فرش دستباف", img: carpetImg.url },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
