@@ -2,6 +2,13 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { Package, ArrowRight } from "lucide-react";
 
+import saffronImg from "@/assets/products/saffron.jpg.asset.json";
+import pistachioImg from "@/assets/products/pistachio.jpg.asset.json";
+import datesImg from "@/assets/products/dates.avif.asset.json";
+import nutsImg from "@/assets/products/nuts.jpg.asset.json";
+import carpetImg from "@/assets/products/carpet.jpg.asset.json";
+import barberryImg from "@/assets/products/barberry.jpeg.asset.json";
+
 type Product = {
   slug: string;
   name: string;
@@ -12,7 +19,7 @@ type Product = {
   origin: string;
   grades: string;
   desc: string;
-  emoji: string;
+  image: string;
 };
 
 const PRODUCTS: Product[] = [
@@ -26,7 +33,7 @@ const PRODUCTS: Product[] = [
     origin: "Khorasan, Iran",
     grades: "Sargol · Negin · Super Negin · Pushal",
     desc: "Premium Iranian saffron with ISO 3632 category I certification. Highest crocin, safranal & picrocrocin content in the world.",
-    emoji: "🌺",
+    image: saffronImg.url,
   },
   {
     slug: "pistachio",
@@ -38,7 +45,7 @@ const PRODUCTS: Product[] = [
     origin: "Kerman, Rafsanjan",
     grades: "Akbari · Ahmad Aghaei · Kalleh Ghouchi · Fandoghi",
     desc: "Round & long Iranian pistachios (raw, roasted, salted). Aflatoxin-tested & phytosanitary-certified for EU, GCC, and Asian markets.",
-    emoji: "🥜",
+    image: pistachioImg.url,
   },
   {
     slug: "dates",
@@ -50,19 +57,31 @@ const PRODUCTS: Product[] = [
     origin: "Bam, Khuzestan, Bushehr",
     grades: "Mazafati · Piarom · Zahedi · Rabbi · Kabkab",
     desc: "Fresh & semi-dry dates including the world-famous Piarom (chocolate date) and Mazafati soft dates.",
-    emoji: "🌴",
+    image: datesImg.url,
   },
   {
-    slug: "dried-fruits",
+    slug: "barberry",
+    name: "Iranian Barberry",
+    nameFa: "زرشک ایرانی",
+    hs: "0810.90",
+    moq: "500 kg",
+    packaging: "5kg / 10kg cartons, vacuum packs",
+    origin: "South Khorasan (Birjand, Qaen)",
+    grades: "Puffy (Puffed) · Anari (Pomegranate) · Seedless",
+    desc: "Iran is the world's largest producer of barberry. Bright red, tart berries — sun-dried and hand-cleaned to top export grade.",
+    image: barberryImg.url,
+  },
+  {
+    slug: "nuts",
     name: "Dried Fruits & Nuts",
-    nameFa: "خشکبار",
+    nameFa: "خشکبار و آجیل",
     hs: "0813 / 0802",
     moq: "1 MT",
     packaging: "Bulk / private label",
     origin: "Iran (multi-region)",
-    grades: "Raisins · Barberry · Figs · Almonds · Walnuts",
+    grades: "Raisins · Walnuts · Almonds · Hazelnuts · Figs",
     desc: "Full range of Iranian dried fruits and nuts, sorted and cleaned to international export standards.",
-    emoji: "🌰",
+    image: nutsImg.url,
   },
   {
     slug: "handwoven-carpets",
@@ -74,65 +93,29 @@ const PRODUCTS: Product[] = [
     origin: "Tabriz, Kashan, Isfahan, Qom",
     grades: "Silk · Wool · Silk-Wool",
     desc: "Authentic Persian carpets with certificate of origin. City & tribal designs, custom sizes available.",
-    emoji: "🧶",
-  },
-  {
-    slug: "medicinal-herbs",
-    name: "Medicinal Herbs & Spices",
-    nameFa: "گیاهان دارویی و ادویه",
-    hs: "1211 / 0909",
-    moq: "500 kg",
-    packaging: "PP / paper bags",
-    origin: "Iran",
-    grades: "Cumin · Coriander · Fennel · Damask Rose",
-    desc: "Whole & ground herbs and spices, lab-tested for pesticide residue. Organic options available.",
-    emoji: "🌿",
-  },
-  {
-    slug: "bitumen",
-    name: "Bitumen & Petrochemicals",
-    nameFa: "قیر و محصولات پتروشیمی",
-    hs: "2713 / 2715",
-    moq: "27 MT (1 FCL)",
-    packaging: "Steel drums, jumbo bags, bulk",
-    origin: "Iran",
-    grades: "60/70 · 80/100 · 40/50 · MC-30 · VG-30",
-    desc: "Penetration-grade & performance-grade bitumen with TPS/ISO certification. FOB Bandar Abbas.",
-    emoji: "🛢️",
-  },
-  {
-    slug: "minerals",
-    name: "Minerals & Industrial Raw Materials",
-    nameFa: "مواد معدنی و صنعتی",
-    hs: "2503–2530",
-    moq: "1 FCL",
-    packaging: "Jumbo bags, bulk",
-    origin: "Iran",
-    grades: "Iron Ore · Chromite · Sulphur · Barite · Gypsum",
-    desc: "Direct-from-mine industrial minerals with COA and lab reports. Long-term contracts welcome.",
-    emoji: "⛏️",
+    image: carpetImg.url,
   },
 ];
 
 export const Route = createFileRoute("/export-products")({
   head: () => ({
     meta: [
-      { title: "Iranian Export Products — Saffron, Pistachio, Dates, Carpets | Goodarzi Trading" },
+      { title: "Iranian Export Products — Saffron, Pistachio, Dates, Barberry, Carpets | Goodarzi Trading" },
       {
         name: "description",
         content:
-          "Buy premium Iranian export products: saffron, pistachio, dates, dried fruits, handwoven carpets, bitumen & minerals. Direct from Iran with certificates. Global shipping.",
+          "Buy premium Iranian export products: saffron, pistachio, dates, barberry, dried fruits, nuts and handwoven carpets. Direct from Iran with certificates. Global shipping.",
       },
       {
         name: "keywords",
         content:
-          "buy Iranian saffron, Iran pistachio exporter, buy dates from Iran, Persian carpets export, Iranian bitumen supplier, import from Iran, Iran export company, صادرات زعفران, صادرات پسته, صادرات خرما, goodarzi trading",
+          "buy Iranian saffron, Iran pistachio exporter, buy dates from Iran, Iranian barberry, Persian carpets export, Iranian nuts, import from Iran, Iran export company, صادرات زعفران, صادرات پسته, صادرات خرما, صادرات زرشک, goodarzi trading",
       },
       { property: "og:title", content: "Iranian Export Products — Goodarzi Trading" },
       {
         property: "og:description",
         content:
-          "Premium Iranian saffron, pistachio, dates, carpets, bitumen & minerals — with full export documentation.",
+          "Premium Iranian saffron, pistachio, dates, barberry, carpets and nuts — with full export documentation.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://goodarzitrading.lovable.app/export-products" },
@@ -152,6 +135,7 @@ export const Route = createFileRoute("/export-products")({
               "@type": "Product",
               name: p.name,
               description: p.desc,
+              image: p.image,
               category: p.hs,
               brand: { "@type": "Organization", name: "Goodarzi Trading" },
               countryOfOrigin: "IR",
@@ -186,48 +170,56 @@ function ExportProductsPage() {
             </p>
           </div>
 
-          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {PRODUCTS.map((p) => (
               <article
                 key={p.slug}
-                className="group flex flex-col rounded-sm border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-shadow hover:shadow-[var(--shadow-elegant)]"
+                className="group flex flex-col overflow-hidden rounded-sm border border-border bg-card shadow-[var(--shadow-card)] transition-shadow hover:shadow-[var(--shadow-elegant)]"
               >
-                <div className="flex items-start justify-between">
-                  <span className="text-5xl" aria-hidden>{p.emoji}</span>
-                  <span className="rounded-sm bg-secondary px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-[color:var(--navy)]">
+                <div className="relative aspect-[4/3] overflow-hidden bg-secondary">
+                  <img
+                    src={p.image}
+                    alt={`${p.name} — ${p.nameFa}`}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <span className="absolute right-3 top-3 rounded-sm bg-white/95 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-[color:var(--navy)]">
                     HS {p.hs}
                   </span>
                 </div>
-                <h3 className="mt-5 font-display text-xl text-[color:var(--navy-deep)]">{p.name}</h3>
-                <p className="mt-1 text-xs text-muted-foreground" dir="rtl">{p.nameFa}</p>
-                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{p.desc}</p>
 
-                <dl className="mt-5 grid grid-cols-2 gap-3 border-t border-border pt-4 text-xs">
-                  <div>
-                    <dt className="uppercase tracking-[0.14em] text-muted-foreground">MOQ</dt>
-                    <dd className="mt-1 font-medium text-[color:var(--navy)]">{p.moq}</dd>
-                  </div>
-                  <div>
-                    <dt className="uppercase tracking-[0.14em] text-muted-foreground">Origin</dt>
-                    <dd className="mt-1 font-medium text-[color:var(--navy)]">{p.origin}</dd>
-                  </div>
-                  <div className="col-span-2">
-                    <dt className="uppercase tracking-[0.14em] text-muted-foreground">Grades</dt>
-                    <dd className="mt-1 font-medium text-[color:var(--navy)]">{p.grades}</dd>
-                  </div>
-                  <div className="col-span-2">
-                    <dt className="uppercase tracking-[0.14em] text-muted-foreground">Packaging</dt>
-                    <dd className="mt-1 font-medium text-[color:var(--navy)]">{p.packaging}</dd>
-                  </div>
-                </dl>
+                <div className="flex flex-1 flex-col p-7">
+                  <h3 className="font-display text-xl text-[color:var(--navy-deep)]">{p.name}</h3>
+                  <p className="mt-1 text-xs text-muted-foreground" dir="rtl">{p.nameFa}</p>
+                  <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{p.desc}</p>
 
-                <Link
-                  to="/inquiry"
-                  search={{ product: p.slug } as never}
-                  className="mt-6 inline-flex items-center justify-center gap-2 rounded-sm bg-[color:var(--navy-deep)] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[color:var(--navy)]"
-                >
-                  Send Inquiry <ArrowRight className="h-4 w-4" />
-                </Link>
+                  <dl className="mt-5 grid grid-cols-2 gap-3 border-t border-border pt-4 text-xs">
+                    <div>
+                      <dt className="uppercase tracking-[0.14em] text-muted-foreground">MOQ</dt>
+                      <dd className="mt-1 font-medium text-[color:var(--navy)]">{p.moq}</dd>
+                    </div>
+                    <div>
+                      <dt className="uppercase tracking-[0.14em] text-muted-foreground">Origin</dt>
+                      <dd className="mt-1 font-medium text-[color:var(--navy)]">{p.origin}</dd>
+                    </div>
+                    <div className="col-span-2">
+                      <dt className="uppercase tracking-[0.14em] text-muted-foreground">Grades</dt>
+                      <dd className="mt-1 font-medium text-[color:var(--navy)]">{p.grades}</dd>
+                    </div>
+                    <div className="col-span-2">
+                      <dt className="uppercase tracking-[0.14em] text-muted-foreground">Packaging</dt>
+                      <dd className="mt-1 font-medium text-[color:var(--navy)]">{p.packaging}</dd>
+                    </div>
+                  </dl>
+
+                  <Link
+                    to="/inquiry"
+                    search={{ product: p.slug } as never}
+                    className="mt-6 inline-flex items-center justify-center gap-2 rounded-sm bg-[color:var(--navy-deep)] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[color:var(--navy)]"
+                  >
+                    Send Inquiry <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
               </article>
             ))}
           </div>
