@@ -14,7 +14,7 @@ export function PageHero({
         backgroundImage:
           "linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.18)), url('/world-map-gold.png')",
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "50% 90%",
         backgroundRepeat: "no-repeat",
       }}
     >
