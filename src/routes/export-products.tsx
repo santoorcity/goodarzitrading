@@ -33,7 +33,7 @@ const PRODUCTS: Product[] = [
     origin: "Khorasan, Iran",
     grades: "Sargol · Negin · Super Negin · Pushal",
     desc: "Premium Iranian saffron with ISO 3632 category I certification. Highest crocin, safranal & picrocrocin content in the world.",
-    image: image: saffronImg,
+    image: saffronImg,
   },
   {
     slug: "pistachio",
