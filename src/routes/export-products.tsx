@@ -2,12 +2,12 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { Package, ArrowRight } from "lucide-react";
 
-import saffronImg from "@/assets/products/saffron.jpg.asset.json";
-import pistachioImg from "@/assets/products/pistachio.jpg.asset.json";
-import datesImg from "@/assets/products/dates.avif.asset.json";
-import nutsImg from "@/assets/products/nuts.jpg.asset.json";
-import carpetImg from "@/assets/products/carpet.jpg.asset.json";
-import barberryImg from "@/assets/products/barberry.jpeg.asset.json";
+import saffronImg from "@/assets/products/saffron.jpg";
+import pistachioImg from "@/assets/products/pistachio.jpg";
+import datesImg from "@/assets/products/dates.avif";
+import nutsImg from "@/assets/products/nuts.jpg";
+import carpetImg from "@/assets/products/carpet.jpg";
+import barberryImg from "@/assets/products/barberry.jpeg";
 
 type Product = {
   slug: string;
