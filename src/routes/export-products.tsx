@@ -33,7 +33,7 @@ const PRODUCTS: Product[] = [
     origin: "Khorasan, Iran",
     grades: "Sargol · Negin · Super Negin · Pushal",
     desc: "Premium Iranian saffron with ISO 3632 category I certification. Highest crocin, safranal & picrocrocin content in the world.",
-    image: saffronImg.url,
+    image: image: saffronImg,
   },
   {
     slug: "pistachio",
@@ -45,7 +45,7 @@ const PRODUCTS: Product[] = [
     origin: "Kerman, Rafsanjan",
     grades: "Akbari · Ahmad Aghaei · Kalleh Ghouchi · Fandoghi",
     desc: "Round & long Iranian pistachios (raw, roasted, salted). Aflatoxin-tested & phytosanitary-certified for EU, GCC, and Asian markets.",
-    image: pistachioImg.url,
+    image: pistachioImg,
   },
   {
     slug: "dates",
@@ -57,7 +57,7 @@ const PRODUCTS: Product[] = [
     origin: "Bam, Khuzestan, Bushehr",
     grades: "Mazafati · Piarom · Zahedi · Rabbi · Kabkab",
     desc: "Fresh & semi-dry dates including the world-famous Piarom (chocolate date) and Mazafati soft dates.",
-    image: datesImg.url,
+    image: datesImg,
   },
   {
     slug: "barberry",
@@ -69,7 +69,7 @@ const PRODUCTS: Product[] = [
     origin: "South Khorasan (Birjand, Qaen)",
     grades: "Puffy (Puffed) · Anari (Pomegranate) · Seedless",
     desc: "Iran is the world's largest producer of barberry. Bright red, tart berries — sun-dried and hand-cleaned to top export grade.",
-    image: barberryImg.url,
+    image: barberryImg,
   },
   {
     slug: "nuts",
@@ -81,7 +81,7 @@ const PRODUCTS: Product[] = [
     origin: "Iran (multi-region)",
     grades: "Raisins · Walnuts · Almonds · Hazelnuts · Figs",
     desc: "Full range of Iranian dried fruits and nuts, sorted and cleaned to international export standards.",
-    image: nutsImg.url,
+    image: nutsImg,
   },
   {
     slug: "handwoven-carpets",
@@ -93,7 +93,7 @@ const PRODUCTS: Product[] = [
     origin: "Tabriz, Kashan, Isfahan, Qom",
     grades: "Silk · Wool · Silk-Wool",
     desc: "Authentic Persian carpets with certificate of origin. City & tribal designs, custom sizes available.",
-    image: carpetImg.url,
+    image: carpetImg,
   },
 ];
 
