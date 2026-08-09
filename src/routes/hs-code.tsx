@@ -22,6 +22,7 @@ export const Route = createFileRoute("/hs-code")({
 });
 
 function HSCodePage() {
+  const [tab, setTab] = useState<"tariff" | "services">("tariff");
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<string>("همه");
   const [openRow, setOpenRow] = useState<string | null>(null);
@@ -45,9 +46,25 @@ function HSCodePage() {
     <div dir="rtl" className="font-sans">
       <PageHero
         eyebrow="ابزار بازرگانی"
-        title="جستجوی آنلاین تعرفه گمرکی ۱۴۰۵"
-        description="کد HS، حقوق ورودی، سود بازرگانی، مالیات بر ارزش افزوده و مجوزهای لازم برای واردات و صادرات کالا را در یک نگاه ببینید."
+        title="جستجوی تعرفه گمرکی و خدمات تجاری"
+        description="کد HS، حقوق ورودی، سود بازرگانی و مجوزها را جستجو کنید و از خدمات تجاری سامانه جامع تجارت — از کارت بازرگانی تا ثبت سفارش، تأمین ارز، ترخیص و رفع تعهد ارزی — بهره ببرید."
       />
+
+      <section className="border-b border-border bg-card">
+        <div className="container-x flex gap-2 py-4">
+          <TabButton active={tab === "tariff"} onClick={() => setTab("tariff")} icon={<Database className="h-4 w-4" />}>
+            جستجوی تعرفه (HS Code)
+          </TabButton>
+          <TabButton active={tab === "services"} onClick={() => setTab("services")} icon={<Briefcase className="h-4 w-4" />}>
+            خدمات تجاری
+          </TabButton>
+        </div>
+      </section>
+
+      {tab === "services" && <TradeServicesPanel />}
+
+      {tab === "tariff" && (
+
 
       <section className="py-14">
         <div className="container-x">
