@@ -219,3 +219,129 @@ function Field({ label, value, accent }: { label: string; value: string; accent?
     </div>
   );
 }
+
+function TabButton({
+  active,
+  onClick,
+  icon,
+  children,
+}: {
+  active: boolean;
+  onClick: () => void;
+  icon: React.ReactNode;
+  children: React.ReactNode;
+}) {
+  return (
+    <button
+      onClick={onClick}
+      className={`flex items-center gap-2 rounded-sm px-5 py-3 text-sm font-medium transition-colors ${
+        active
+          ? "bg-[color:var(--navy-deep)] text-white"
+          : "bg-secondary text-[color:var(--navy)] hover:bg-secondary/70"
+      }`}
+    >
+      {icon}
+      {children}
+    </button>
+  );
+}
+
+function TradeServicesPanel() {
+  const [group, setGroup] = useState(tradeServiceGroups[0].key);
+  const [open, setOpen] = useState<string | null>(null);
+  const active = tradeServiceGroups.find((g) => g.key === group)!;
+
+  return (
+    <section className="py-14">
+      <div className="container-x">
+        <div className="flex flex-wrap gap-2">
+          {tradeServiceGroups.map((g) => (
+            <button
+              key={g.key}
+              onClick={() => {
+                setGroup(g.key);
+                setOpen(null);
+              }}
+              className={`rounded-sm border px-4 py-2 text-sm transition-colors ${
+                g.key === group
+                  ? "border-[color:var(--gold)] bg-[color:var(--gold)]/10 text-[color:var(--navy-deep)]"
+                  : "border-border bg-card text-muted-foreground hover:text-[color:var(--navy)]"
+              }`}
+            >
+              {g.title}
+            </button>
+          ))}
+        </div>
+
+        <p className="mt-4 text-sm text-muted-foreground">{active.subtitle}</p>
+
+        <div className="mt-6 grid gap-4 lg:grid-cols-2">
+          {active.services.map((s) => (
+            <ServiceCard
+              key={s.title}
+              s={s}
+              open={open === s.title}
+              onToggle={() => setOpen(open === s.title ? null : s.title)}
+            />
+          ))}
+        </div>
+
+        <div className="mt-8 rounded-sm border border-border/60 bg-secondary/40 p-4 text-xs leading-6 text-muted-foreground">
+          <strong className="text-foreground">توجه:</strong> فرایندهای بالا مطابق رویه‌های سامانه جامع تجارت ایران و پنجره واحد تجارت فرامرزی تنظیم شده است. مرجع رسمی ثبت درخواست‌ها سامانه <span dir="ltr">ntsw.ir</span> است؛ گودرزی تریدینگ انجام و پیگیری کامل این خدمات را به‌صورت وکالتی برای شما بر عهده می‌گیرد.
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ServiceCard({ s, open, onToggle }: { s: TradeService; open: boolean; onToggle: () => void }) {
+  return (
+    <div className="rounded-sm border border-border bg-card p-5 shadow-[var(--shadow-card)]">
+      <button onClick={onToggle} className="flex w-full items-start justify-between gap-3 text-right">
+        <div>
+          <h3 className="text-base font-medium text-[color:var(--navy-deep)]">{s.title}</h3>
+          <p className="mt-2 text-sm leading-7 text-muted-foreground">{s.description}</p>
+        </div>
+        <ChevronDown className={`h-5 w-5 shrink-0 text-muted-foreground transition-transform ${open ? "rotate-180" : ""}`} />
+      </button>
+
+      {open && (
+        <div className="mt-4 space-y-4 border-t border-border pt-4">
+          <div>
+            <div className="mb-2 flex items-center gap-2 text-xs font-medium text-[color:var(--navy)]">
+              <FileCheck className="h-4 w-4 text-[color:var(--gold-strong)]" /> مراحل انجام
+            </div>
+            <ol className="space-y-1.5 text-xs leading-6 text-muted-foreground">
+              {s.steps.map((st, i) => (
+                <li key={st} className="flex gap-2">
+                  <span className="text-[color:var(--gold-strong)]">{i + 1}.</span>
+                  <span>{st}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+          <div>
+            <div className="mb-2 text-xs font-medium text-[color:var(--navy)]">مدارک مورد نیاز</div>
+            <ul className="flex flex-wrap gap-2">
+              {s.docs.map((d) => (
+                <li key={d} className="rounded-sm bg-secondary px-2.5 py-1 text-[11px] text-[color:var(--navy)]">
+                  {d}
+                </li>
+              ))}
+            </ul>
+          </div>
+          {s.url && (
+            <a
+              href={s.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-xs text-[color:var(--gold-strong)] hover:underline"
+            >
+              سامانه رسمی <ExternalLink className="h-3 w-3" />
+            </a>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
