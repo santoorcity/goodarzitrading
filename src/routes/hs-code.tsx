@@ -156,7 +156,9 @@ function HSCodePage() {
           </div>
         </div>
       </section>
+      )}
     </div>
+
   );
 }
 
