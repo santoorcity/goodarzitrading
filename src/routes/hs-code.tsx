@@ -1,8 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { Search, Filter, Database, ChevronDown } from "lucide-react";
+import { Search, Filter, Database, ChevronDown, Briefcase, FileCheck, ExternalLink } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
 import { hsCodes, hsCategories, type HSCode } from "@/data/hs-codes";
+import { tradeServiceGroups, type TradeService } from "@/data/trade-services";
+
 
 export const Route = createFileRoute("/hs-code")({
   head: () => ({
