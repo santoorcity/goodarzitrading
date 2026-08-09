@@ -9,11 +9,12 @@ import { tradeServiceGroups, type TradeService } from "@/data/trade-services";
 export const Route = createFileRoute("/hs-code")({
   head: () => ({
     meta: [
-      { title: "جستجوی تعرفه گمرکی ۱۴۰۵ — HS Code و سود بازرگانی | گودرزی تریدینگ" },
-      { name: "keywords", content: "HS Code, کد تعرفه گمرکی, حقوق ورودی, سود بازرگانی, IRICA tariff, جستجوی تعرفه, کتاب مقررات واردات, import export Iran, goodarzi trading, واردات صادرات ایران, تجارت بین الملل, customs consulting Tehran" },
-      { name: "description", content: "جستجوی آنلاین کد تعرفه گمرکی (HS Code) کالاهای وارداتی و صادراتی ایران به همراه حقوق ورودی، سود بازرگانی، ارزش افزوده و مجوزهای لازم." },
-      { property: "og:title", content: "جستجوی تعرفه گمرکی ۱۴۰۵ — HS Code" },
-      { property: "og:description", content: "ابزار سریع جستجوی HS Code و محاسبه حقوق ورودی کالا." },
+      { title: "تعرفه گمرکی ۱۴۰۵ و خدمات تجاری — HS Code | گودرزی تریدینگ" },
+      { name: "keywords", content: "HS Code, کد تعرفه گمرکی, خدمات تجاری, سامانه جامع تجارت, ثبت سفارش, کارت بازرگانی, تخصیص ارز نیما, رفع تعهد ارزی, ترخیص کالا, حقوق ورودی, سود بازرگانی, IRICA tariff, import export Iran, goodarzi trading, واردات صادرات ایران, تجارت بین الملل, customs consulting Tehran" },
+      { name: "description", content: "جستجوی آنلاین کد تعرفه گمرکی (HS Code) به همراه خدمات تجاری: کارت بازرگانی، ثبت سفارش، تأمین ارز، مجوزها، ترخیص گمرکی، ثبت آماری صادرات و رفع تعهد ارزی." },
+      { property: "og:title", content: "تعرفه گمرکی ۱۴۰۵ و خدمات تجاری — HS Code" },
+      { property: "og:description", content: "جستجوی HS Code و راهنمای کامل خدمات تجاری واردات و صادرات." },
+
       { property: "og:url", content: "/hs-code" },
     ],
     links: [{ rel: "canonical", href: "/hs-code" }],
