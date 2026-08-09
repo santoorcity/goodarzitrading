@@ -1,17 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { Search, Filter, Database, ChevronDown } from "lucide-react";
+import { Search, Filter, Database, ChevronDown, Briefcase, FileCheck, ExternalLink } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
 import { hsCodes, hsCategories, type HSCode } from "@/data/hs-codes";
+import { tradeServiceGroups, type TradeService } from "@/data/trade-services";
+
 
 export const Route = createFileRoute("/hs-code")({
   head: () => ({
     meta: [
-      { title: "جستجوی تعرفه گمرکی ۱۴۰۵ — HS Code و سود بازرگانی | گودرزی تریدینگ" },
-      { name: "keywords", content: "HS Code, کد تعرفه گمرکی, حقوق ورودی, سود بازرگانی, IRICA tariff, جستجوی تعرفه, کتاب مقررات واردات, import export Iran, goodarzi trading, واردات صادرات ایران, تجارت بین الملل, customs consulting Tehran" },
-      { name: "description", content: "جستجوی آنلاین کد تعرفه گمرکی (HS Code) کالاهای وارداتی و صادراتی ایران به همراه حقوق ورودی، سود بازرگانی، ارزش افزوده و مجوزهای لازم." },
-      { property: "og:title", content: "جستجوی تعرفه گمرکی ۱۴۰۵ — HS Code" },
-      { property: "og:description", content: "ابزار سریع جستجوی HS Code و محاسبه حقوق ورودی کالا." },
+      { title: "تعرفه گمرکی ۱۴۰۵ و خدمات تجاری — HS Code | گودرزی تریدینگ" },
+      { name: "keywords", content: "HS Code, کد تعرفه گمرکی, خدمات تجاری, سامانه جامع تجارت, ثبت سفارش, کارت بازرگانی, تخصیص ارز نیما, رفع تعهد ارزی, ترخیص کالا, حقوق ورودی, سود بازرگانی, IRICA tariff, import export Iran, goodarzi trading, واردات صادرات ایران, تجارت بین الملل, customs consulting Tehran" },
+      { name: "description", content: "جستجوی آنلاین کد تعرفه گمرکی (HS Code) به همراه خدمات تجاری: کارت بازرگانی، ثبت سفارش، تأمین ارز، مجوزها، ترخیص گمرکی، ثبت آماری صادرات و رفع تعهد ارزی." },
+      { property: "og:title", content: "تعرفه گمرکی ۱۴۰۵ و خدمات تجاری — HS Code" },
+      { property: "og:description", content: "جستجوی HS Code و راهنمای کامل خدمات تجاری واردات و صادرات." },
+
       { property: "og:url", content: "/hs-code" },
     ],
     links: [{ rel: "canonical", href: "/hs-code" }],
@@ -20,6 +23,7 @@ export const Route = createFileRoute("/hs-code")({
 });
 
 function HSCodePage() {
+  const [tab, setTab] = useState<"tariff" | "services">("tariff");
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<string>("همه");
   const [openRow, setOpenRow] = useState<string | null>(null);
@@ -43,9 +47,25 @@ function HSCodePage() {
     <div dir="rtl" className="font-sans">
       <PageHero
         eyebrow="ابزار بازرگانی"
-        title="جستجوی آنلاین تعرفه گمرکی ۱۴۰۵"
-        description="کد HS، حقوق ورودی، سود بازرگانی، مالیات بر ارزش افزوده و مجوزهای لازم برای واردات و صادرات کالا را در یک نگاه ببینید."
+        title="جستجوی تعرفه گمرکی و خدمات تجاری"
+        description="کد HS، حقوق ورودی، سود بازرگانی و مجوزها را جستجو کنید و از خدمات تجاری سامانه جامع تجارت — از کارت بازرگانی تا ثبت سفارش، تأمین ارز، ترخیص و رفع تعهد ارزی — بهره ببرید."
       />
+
+      <section className="border-b border-border bg-card">
+        <div className="container-x flex gap-2 py-4">
+          <TabButton active={tab === "tariff"} onClick={() => setTab("tariff")} icon={<Database className="h-4 w-4" />}>
+            جستجوی تعرفه (HS Code)
+          </TabButton>
+          <TabButton active={tab === "services"} onClick={() => setTab("services")} icon={<Briefcase className="h-4 w-4" />}>
+            خدمات تجاری
+          </TabButton>
+        </div>
+      </section>
+
+      {tab === "services" && <TradeServicesPanel />}
+
+      {tab === "tariff" && (
+
 
       <section className="py-14">
         <div className="container-x">
@@ -137,7 +157,9 @@ function HSCodePage() {
           </div>
         </div>
       </section>
+      )}
     </div>
+
   );
 }
 
@@ -195,6 +217,132 @@ function Field({ label, value, accent }: { label: string; value: string; accent?
     <div className="rounded-sm bg-secondary/40 p-2">
       <div className="text-[10px] text-muted-foreground">{label}</div>
       <div className={`mt-1 font-medium ${accent ? "text-[color:var(--gold-strong)]" : "text-[color:var(--navy)]"}`}>{value}</div>
+    </div>
+  );
+}
+
+function TabButton({
+  active,
+  onClick,
+  icon,
+  children,
+}: {
+  active: boolean;
+  onClick: () => void;
+  icon: React.ReactNode;
+  children: React.ReactNode;
+}) {
+  return (
+    <button
+      onClick={onClick}
+      className={`flex items-center gap-2 rounded-sm px-5 py-3 text-sm font-medium transition-colors ${
+        active
+          ? "bg-[color:var(--navy-deep)] text-white"
+          : "bg-secondary text-[color:var(--navy)] hover:bg-secondary/70"
+      }`}
+    >
+      {icon}
+      {children}
+    </button>
+  );
+}
+
+function TradeServicesPanel() {
+  const [group, setGroup] = useState(tradeServiceGroups[0].key);
+  const [open, setOpen] = useState<string | null>(null);
+  const active = tradeServiceGroups.find((g) => g.key === group)!;
+
+  return (
+    <section className="py-14">
+      <div className="container-x">
+        <div className="flex flex-wrap gap-2">
+          {tradeServiceGroups.map((g) => (
+            <button
+              key={g.key}
+              onClick={() => {
+                setGroup(g.key);
+                setOpen(null);
+              }}
+              className={`rounded-sm border px-4 py-2 text-sm transition-colors ${
+                g.key === group
+                  ? "border-[color:var(--gold)] bg-[color:var(--gold)]/10 text-[color:var(--navy-deep)]"
+                  : "border-border bg-card text-muted-foreground hover:text-[color:var(--navy)]"
+              }`}
+            >
+              {g.title}
+            </button>
+          ))}
+        </div>
+
+        <p className="mt-4 text-sm text-muted-foreground">{active.subtitle}</p>
+
+        <div className="mt-6 grid gap-4 lg:grid-cols-2">
+          {active.services.map((s) => (
+            <ServiceCard
+              key={s.title}
+              s={s}
+              open={open === s.title}
+              onToggle={() => setOpen(open === s.title ? null : s.title)}
+            />
+          ))}
+        </div>
+
+        <div className="mt-8 rounded-sm border border-border/60 bg-secondary/40 p-4 text-xs leading-6 text-muted-foreground">
+          <strong className="text-foreground">توجه:</strong> فرایندهای بالا مطابق رویه‌های سامانه جامع تجارت ایران و پنجره واحد تجارت فرامرزی تنظیم شده است. مرجع رسمی ثبت درخواست‌ها سامانه <span dir="ltr">ntsw.ir</span> است؛ گودرزی تریدینگ انجام و پیگیری کامل این خدمات را به‌صورت وکالتی برای شما بر عهده می‌گیرد.
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ServiceCard({ s, open, onToggle }: { s: TradeService; open: boolean; onToggle: () => void }) {
+  return (
+    <div className="rounded-sm border border-border bg-card p-5 shadow-[var(--shadow-card)]">
+      <button onClick={onToggle} className="flex w-full items-start justify-between gap-3 text-right">
+        <div>
+          <h3 className="text-base font-medium text-[color:var(--navy-deep)]">{s.title}</h3>
+          <p className="mt-2 text-sm leading-7 text-muted-foreground">{s.description}</p>
+        </div>
+        <ChevronDown className={`h-5 w-5 shrink-0 text-muted-foreground transition-transform ${open ? "rotate-180" : ""}`} />
+      </button>
+
+      {open && (
+        <div className="mt-4 space-y-4 border-t border-border pt-4">
+          <div>
+            <div className="mb-2 flex items-center gap-2 text-xs font-medium text-[color:var(--navy)]">
+              <FileCheck className="h-4 w-4 text-[color:var(--gold-strong)]" /> مراحل انجام
+            </div>
+            <ol className="space-y-1.5 text-xs leading-6 text-muted-foreground">
+              {s.steps.map((st, i) => (
+                <li key={st} className="flex gap-2">
+                  <span className="text-[color:var(--gold-strong)]">{i + 1}.</span>
+                  <span>{st}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+          <div>
+            <div className="mb-2 text-xs font-medium text-[color:var(--navy)]">مدارک مورد نیاز</div>
+            <ul className="flex flex-wrap gap-2">
+              {s.docs.map((d) => (
+                <li key={d} className="rounded-sm bg-secondary px-2.5 py-1 text-[11px] text-[color:var(--navy)]">
+                  {d}
+                </li>
+              ))}
+            </ul>
+          </div>
+          {s.url && (
+            <a
+              href={s.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-xs text-[color:var(--gold-strong)] hover:underline"
+            >
+              سامانه رسمی <ExternalLink className="h-3 w-3" />
+            </a>
+          )}
+        </div>
+      )}
     </div>
   );
 }
