@@ -1,16 +1,34 @@
 export type HSCode = {
-  code: string;              // کد تعرفه (HS Code) — 8 رقمی ایران
+  code: string;              // کد تعرفه (HS Code) — ۸ رقمی ایران
   description: string;       // شرح کالا
   category: string;          // فصل / گروه کالایی
-  importDuty: number;        // حقوق ورودی (%)
-  commercialProfit: number;  // سود بازرگانی (%)
+  importDuty: number;        // حقوق ورودی کل (%) = حقوق گمرکی ۴٪ + سود بازرگانی
   vat: number;               // مالیات بر ارزش افزوده (%)
   unit: string;              // واحد اندازه‌گیری
   permits?: string;          // مجوزها / ملاحظات
 };
 
-// دیتاست مرجع تعرفه گمرکی ۱۴۰۵ — نمونه‌ای منتخب از پرکاربردترین ردیف‌ها
-// برای مراجعه رسمی به کتاب مقررات صادرات و واردات وزارت صمت مراجعه کنید.
+/** حقوق گمرکی طبق ماده ۲ قانون امور گمرکی ثابت و برابر ۴٪ ارزش گمرکی است. */
+export const CUSTOMS_DUTY_RATE = 4;
+
+/**
+ * تفکیک رسمی تعرفه: حقوق ورودی = حقوق گمرکی (۴٪ ثابت) + سود بازرگانی.
+ * بنابراین سود بازرگانی همواره از حقوق ورودی کل منهای ۴ به دست می‌آید.
+ */
+export function tariffBreakdown(h: HSCode) {
+  const customsDuty = Math.min(CUSTOMS_DUTY_RATE, h.importDuty);
+  return {
+    customsDuty,
+    commercialProfit: Math.max(0, h.importDuty - customsDuty),
+    importDuty: h.importDuty,
+    vat: h.vat,
+    /** مجموع بار مالی تقریبی روی ارزش گمرکی (CIF) */
+    totalLanded: h.importDuty + h.vat,
+  };
+}
+
+// دیتاست مرجع تعرفه گمرکی — نمونه‌ای منتخب از پرکاربردترین ردیف‌ها
+// مرجع رسمی: کتاب مقررات صادرات و واردات وزارت صمت و سامانه EPL گمرک ایران
 export const hsCodes: HSCode[] = [
   // فصل ۰۸ - میوه‌ها و خشکبار
   { code: "08021200", description: "بادام بدون پوست", category: "میوه و خشکبار", importDuty: 26, vat: 10, unit: "کیلوگرم", permits: "بهداشت گیاهی" },
