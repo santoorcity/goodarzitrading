@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
+import { useT } from "@/i18n/LanguageProvider";
 
 export const Route = createFileRoute("/privacy")({
   head: () => ({
@@ -15,21 +16,22 @@ export const Route = createFileRoute("/privacy")({
 });
 
 function Privacy() {
+  const t = useT();
   return (
     <>
-      <PageHero eyebrow="Legal" title="Privacy Policy" />
+      <PageHero eyebrow={t("legal.privacy.eyebrow", "Legal")} title={t("legal.privacy.title", "Privacy Policy")} />
       <section className="py-20">
         <div className="container-x mx-auto max-w-3xl prose prose-slate space-y-6 text-[color:var(--navy)]">
-          <p className="text-sm text-muted-foreground">Last updated: June 2026</p>
-          <p>This page is maintained by Goodarzi Trading to describe how we collect and handle information through our website.</p>
-          <h2 className="font-display text-2xl text-[color:var(--navy-deep)]">Information we collect</h2>
-          <p>When you contact us or submit a quote request, we collect the details you provide — name, company, contact details, and the trade details relevant to your inquiry.</p>
-          <h2 className="font-display text-2xl text-[color:var(--navy-deep)]">How we use it</h2>
-          <p>Submitted information is used solely to respond to your inquiry, prepare quotes, and coordinate trade services on your behalf.</p>
-          <h2 className="font-display text-2xl text-[color:var(--navy-deep)]">Sharing</h2>
-          <p>We do not sell personal information. We share details only with service providers (e.g. freight forwarders, customs brokers) strictly to fulfil your trade request.</p>
-          <h2 className="font-display text-2xl text-[color:var(--navy-deep)]">Contact</h2>
-          <p>Questions about this policy: <a className="text-[color:var(--gold)]" href="mailto:info@goodarzitrading.ir">info@goodarzitrading.ir</a>.</p>
+          <p className="text-sm text-muted-foreground">{t("legal.privacy.updated", "Last updated: June 2026")}</p>
+          <p>{t("legal.privacy.intro", "This page is maintained by Goodarzi Trading to describe how we collect and handle information through our website.")}</p>
+          <h2 className="font-display text-2xl text-[color:var(--navy-deep)]">{t("legal.privacy.collect.title", "Information we collect")}</h2>
+          <p>{t("legal.privacy.collect.body", "When you contact us or submit a quote request, we collect the details you provide — name, company, contact details, and the trade details relevant to your inquiry.")}</p>
+          <h2 className="font-display text-2xl text-[color:var(--navy-deep)]">{t("legal.privacy.use.title", "How we use it")}</h2>
+          <p>{t("legal.privacy.use.body", "Submitted information is used solely to respond to your inquiry, prepare quotes, and coordinate trade services on your behalf.")}</p>
+          <h2 className="font-display text-2xl text-[color:var(--navy-deep)]">{t("legal.privacy.sharing.title", "Sharing")}</h2>
+          <p>{t("legal.privacy.sharing.body", "We do not sell personal information. We share details only with service providers (e.g. freight forwarders, customs brokers) strictly to fulfil your trade request.")}</p>
+          <h2 className="font-display text-2xl text-[color:var(--navy-deep)]">{t("legal.privacy.contact.title", "Contact")}</h2>
+          <p>{t("legal.privacy.contact.body", "Questions about this policy:")} <a className="text-[color:var(--gold)]" href="mailto:info@goodarzitrading.ir">info@goodarzitrading.ir</a>.</p>
         </div>
       </section>
     </>
