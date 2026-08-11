@@ -14,6 +14,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Header } from "../components/site/Header";
 import { Footer } from "../components/site/Footer";
 import { WhatsAppFab } from "../components/site/WhatsAppFab";
+import { LanguageProvider } from "../i18n/LanguageProvider";
 
 
 function NotFoundComponent() {
@@ -180,12 +181,14 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Header />
-      <main className="min-h-screen">
-        <Outlet />
-      </main>
-      <Footer />
-      <WhatsAppFab />
+      <LanguageProvider>
+        <Header />
+        <main className="min-h-screen">
+          <Outlet />
+        </main>
+        <Footer />
+        <WhatsAppFab />
+      </LanguageProvider>
     </QueryClientProvider>
   );
 }
