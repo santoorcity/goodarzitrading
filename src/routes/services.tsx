@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
+import { useI18n } from "@/i18n/LanguageProvider";
 import {
   Ship, Plane, Truck, FileCheck, Search, Globe, ShieldCheck, Package, FileText,
   ShoppingCart, BadgeCheck, ScrollText,
@@ -21,43 +22,47 @@ export const Route = createFileRoute("/services")({
   component: Services,
 });
 
-const services = [
-  { icon: Ship, title: "Import Services", desc: "Inbound trade handled end-to-end — supplier coordination, freight, customs and delivery to your door." },
-  { icon: Plane, title: "Export Services", desc: "Outbound shipping of Iranian goods globally with full documentation and compliance support." },
-  { icon: FileCheck, title: "Customs Clearance", desc: "Fast and accurate clearance at all major Iranian and international ports." },
-  { icon: Search, title: "Customs Consulting", desc: "Tariff classification, duty optimisation, and regulatory compliance guidance." },
-  { icon: Truck, title: "International Logistics", desc: "Multi-modal freight management: sea, air, road and rail across continents." },
-  { icon: Globe, title: "Product Sourcing", desc: "Find, vet and onboard qualified suppliers anywhere in the world." },
-  { icon: ShieldCheck, title: "Supplier Verification", desc: "On-site audits, quality inspections and due diligence before commitment." },
-  { icon: FileText, title: "Trade Documentation", desc: "Commercial invoices, B/L, certificates of origin, packing lists and L/C support." },
-  { icon: Package, title: "Freight Services", desc: "Optimised routing and cost-efficient forwarder partnerships." },
-  { icon: ShoppingCart, title: "Purchase Consulting", desc: "Advisory on selecting and purchasing goods from domestic and international markets — مشاوره در انتخاب و خرید کالا از بازارهای داخلی و خارجی." },
-  { icon: BadgeCheck, title: "Quality Inspection", desc: "Pre-shipment quality inspection and verification — بازرسی و تأیید کیفیت کالا قبل از صادرات." },
-  { icon: ScrollText, title: "Trade Contract Management", desc: "Drafting, reviewing and following up international trade contracts — تنظیم، بررسی و پیگیری قراردادهای تجاری بین‌المللی." },
+const serviceDefs = [
+  { icon: Ship, titleKey: "importTitle", descKey: "importDesc" },
+  { icon: Plane, titleKey: "exportTitle", descKey: "exportDesc" },
+  { icon: FileCheck, titleKey: "customsClearanceTitle", descKey: "customsClearanceDesc" },
+  { icon: Search, titleKey: "customsConsultingTitle", descKey: "customsConsultingDesc" },
+  { icon: Truck, titleKey: "logisticsTitle", descKey: "logisticsDesc" },
+  { icon: Globe, titleKey: "sourcingTitle", descKey: "sourcingDesc" },
+  { icon: ShieldCheck, titleKey: "verificationTitle", descKey: "verificationDesc" },
+  { icon: FileText, titleKey: "documentationTitle", descKey: "documentationDesc" },
+  { icon: Package, titleKey: "freightTitle", descKey: "freightDesc" },
+  { icon: ShoppingCart, titleKey: "purchaseConsultingTitle", descKey: "purchaseConsultingDesc" },
+  { icon: BadgeCheck, titleKey: "qualityInspectionTitle", descKey: "qualityInspectionDesc" },
+  { icon: ScrollText, titleKey: "contractManagementTitle", descKey: "contractManagementDesc" },
 ];
 
 
 function Services() {
+  const { t } = useI18n();
   return (
     <>
       <PageHero
-        eyebrow="Our Services"
-        title="Full-spectrum trade services."
-        description="From your first supplier conversation to the final customs release, Goodarzi Trading provides every service required to move goods across borders."
+        eyebrow={t("services.heroEyebrow", "Our Services")}
+        title={t("services.heroTitle", "Full-spectrum trade services.")}
+        description={t(
+          "services.heroDesc",
+          "From your first supplier conversation to the final customs release, Goodarzi Trading provides every service required to move goods across borders."
+        )}
       />
       <section className="py-24">
         <div className="container-x grid gap-px overflow-hidden rounded-sm bg-border md:grid-cols-2 lg:grid-cols-3">
-          {services.map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="group bg-card p-10 transition-colors hover:bg-[color:var(--navy-deep)]">
+          {serviceDefs.map(({ icon: Icon, titleKey, descKey }) => (
+            <div key={titleKey} className="group bg-card p-10 transition-colors hover:bg-[color:var(--navy-deep)]">
               <Icon className="h-9 w-9 text-[color:var(--gold)]" />
-              <h3 className="mt-5 font-display text-xl text-[color:var(--navy-deep)] group-hover:text-white">{title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground group-hover:text-white/70">{desc}</p>
+              <h3 className="mt-5 font-display text-xl text-[color:var(--navy-deep)] group-hover:text-white">{t(`services.${titleKey}`)}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground group-hover:text-white/70">{t(`services.${descKey}`)}</p>
             </div>
           ))}
         </div>
         <div className="container-x mt-16 text-center">
           <Link to="/quote" className="inline-flex rounded-sm bg-[color:var(--navy-deep)] px-8 py-3.5 text-sm font-semibold text-white hover:bg-[color:var(--navy)]">
-            Request a Quote
+            {t("services.ctaQuote", "Request a Quote")}
           </Link>
         </div>
       </section>
