@@ -2,33 +2,32 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { Search, Filter, Database, ChevronDown, Briefcase, FileCheck, ExternalLink } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
-import { hsCodes, hsCategories, type HSCode } from "@/data/hs-codes";
+import { hsCodes, hsCategories, tariffBreakdown, CUSTOMS_DUTY_RATE, type HSCode } from "@/data/hs-codes";
 import { tradeServiceGroups, type TradeService } from "@/data/trade-services";
-
+import { useI18n } from "@/i18n/LanguageProvider";
+import { tr } from "@/data/tr";
 
 export const Route = createFileRoute("/hs-code")({
   head: () => ({
     meta: [
-      { title: "تعرفه گمرکی ۱۴۰۵ و خدمات تجاری — HS Code | گودرزی تریدینگ" },
+      { title: "Trade Services & HS Code Tariff Search — Goodarzi Trading" },
       { name: "keywords", content: "HS Code, کد تعرفه گمرکی, خدمات تجاری, سامانه جامع تجارت, ثبت سفارش, کارت بازرگانی, تخصیص ارز نیما, رفع تعهد ارزی, ترخیص کالا, حقوق ورودی, سود بازرگانی, IRICA tariff, import export Iran, goodarzi trading, واردات صادرات ایران, تجارت بین الملل, customs consulting Tehran" },
-      { name: "description", content: "جستجوی آنلاین کد تعرفه گمرکی (HS Code) به همراه خدمات تجاری: کارت بازرگانی، ثبت سفارش، تأمین ارز، مجوزها، ترخیص گمرکی، ثبت آماری صادرات و رفع تعهد ارزی." },
-      { property: "og:title", content: "تعرفه گمرکی ۱۴۰۵ و خدمات تجاری — HS Code" },
-      { property: "og:description", content: "جستجوی HS Code و راهنمای کامل خدمات تجاری واردات و صادرات." },
-
+      { name: "description", content: "Trade services and online HS Code tariff search: business card, order registration, currency allocation, permits, customs clearance, export statistical registration and FX commitment settlement." },
+      { property: "og:title", content: "Trade Services & HS Code Tariff Search" },
+      { property: "og:description", content: "HS Code lookup plus a complete guide to Iranian import and export trade services." },
       { property: "og:url", content: "/hs-code" },
     ],
     links: [{ rel: "canonical", href: "/hs-code" }],
   }),
-  component: HSCodePage,
+  component: TradeServicesPage,
 });
 
-function HSCodePage() {
-  const [tab, setTab] = useState<"tariff" | "services">("tariff");
+function TradeServicesPage() {
+  const { t, lang, dir } = useI18n();
+  const [tab, setTab] = useState<"services" | "tariff">("services");
   const [query, setQuery] = useState("");
-  const [category, setCategory] = useState<string>("همه");
+  const [category, setCategory] = useState<string>("__all__");
   const [openRow, setOpenRow] = useState<string | null>(null);
-
-  const categories = useMemo(() => ["همه", ...hsCategories], []);
 
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -37,27 +36,32 @@ function HSCodePage() {
         !q ||
         h.code.includes(q) ||
         h.description.toLowerCase().includes(q) ||
-        h.category.toLowerCase().includes(q);
-      const matchesC = category === "همه" || h.category === category;
+        tr(h.description, lang).toLowerCase().includes(q) ||
+        h.category.toLowerCase().includes(q) ||
+        tr(h.category, lang).toLowerCase().includes(q);
+      const matchesC = category === "__all__" || h.category === category;
       return matchesQ && matchesC;
     });
-  }, [query, category]);
+  }, [query, category, lang]);
 
   return (
-    <div dir="rtl" className="font-sans">
+    <div dir={dir} className="font-sans">
       <PageHero
-        eyebrow="ابزار بازرگانی"
-        title="جستجوی تعرفه گمرکی و خدمات تجاری"
-        description="کد HS، حقوق ورودی، سود بازرگانی و مجوزها را جستجو کنید و از خدمات تجاری سامانه جامع تجارت — از کارت بازرگانی تا ثبت سفارش، تأمین ارز، ترخیص و رفع تعهد ارزی — بهره ببرید."
+        eyebrow={t("trade.eyebrow", "Trade tools")}
+        title={t("trade.title", "Trade Services")}
+        description={t(
+          "trade.description",
+          "End-to-end Iranian trade services — business card, order registration, currency allocation, clearance and FX settlement — plus a live customs tariff (HS Code) search.",
+        )}
       />
 
       <section className="border-b border-border bg-card">
-        <div className="container-x flex gap-2 py-4">
-          <TabButton active={tab === "tariff"} onClick={() => setTab("tariff")} icon={<Database className="h-4 w-4" />}>
-            جستجوی تعرفه (HS Code)
-          </TabButton>
+        <div className="container-x flex flex-wrap gap-2 py-4">
           <TabButton active={tab === "services"} onClick={() => setTab("services")} icon={<Briefcase className="h-4 w-4" />}>
-            خدمات تجاری
+            {t("trade.tab.services", "Trade services")}
+          </TabButton>
+          <TabButton active={tab === "tariff"} onClick={() => setTab("tariff")} icon={<Database className="h-4 w-4" />}>
+            {t("trade.tab.tariff", "Tariff search (HS Code)")}
           </TabButton>
         </div>
       </section>
@@ -65,145 +69,158 @@ function HSCodePage() {
       {tab === "services" && <TradeServicesPanel />}
 
       {tab === "tariff" && (
-
-
-      <section className="py-14">
-        <div className="container-x">
-          {/* نوار جستجو */}
-          <div className="rounded-sm border border-border bg-card p-5 shadow-[var(--shadow-card)] md:p-7">
-            <div className="flex flex-col gap-3 lg:flex-row">
-              <div className="relative flex-1">
-                <Search className="pointer-events-none absolute right-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
-                <input
-                  value={query}
-                  onChange={(e) => setQuery(e.target.value)}
-                  placeholder="نام کالا یا کد HS را وارد کنید... (مثلاً: زعفران، 08025100)"
-                  className="h-14 w-full rounded-sm border border-input bg-background pr-12 pl-4 text-sm outline-none ring-[color:var(--gold)] focus:ring-2"
-                />
+        <section className="py-14">
+          <div className="container-x">
+            <div className="rounded-sm border border-border bg-card p-5 shadow-[var(--shadow-card)] md:p-7">
+              <div className="flex flex-col gap-3 lg:flex-row">
+                <div className="relative flex-1">
+                  <Search className="pointer-events-none absolute top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground ltr:left-4 rtl:right-4" />
+                  <input
+                    value={query}
+                    onChange={(e) => setQuery(e.target.value)}
+                    placeholder={t("trade.search.placeholder", "Enter a product name or HS code… (e.g. saffron, 08025100)")}
+                    className="h-14 w-full rounded-sm border border-input bg-background px-4 text-sm outline-none ring-[color:var(--gold)] focus:ring-2 ltr:pl-12 rtl:pr-12"
+                  />
+                </div>
+                <div className="relative">
+                  <Filter className="pointer-events-none absolute top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground ltr:left-4 rtl:right-4" />
+                  <select
+                    value={category}
+                    onChange={(e) => setCategory(e.target.value)}
+                    className="h-14 min-w-[220px] appearance-none rounded-sm border border-input bg-background px-8 text-sm outline-none ring-[color:var(--gold)] focus:ring-2 ltr:pl-11 rtl:pr-11"
+                  >
+                    <option value="__all__">{t("trade.filter.all", "All chapters")}</option>
+                    {hsCategories.map((c) => (
+                      <option key={c} value={c}>{tr(c, lang)}</option>
+                    ))}
+                  </select>
+                  <ChevronDown className="pointer-events-none absolute top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground ltr:right-3 rtl:left-3" />
+                </div>
               </div>
-              <div className="relative">
-                <Filter className="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-                <select
-                  value={category}
-                  onChange={(e) => setCategory(e.target.value)}
-                  className="h-14 min-w-[220px] appearance-none rounded-sm border border-input bg-background pr-11 pl-8 text-sm outline-none ring-[color:var(--gold)] focus:ring-2"
-                >
-                  {categories.map((c) => (
-                    <option key={c} value={c}>{c}</option>
-                  ))}
-                </select>
-                <ChevronDown className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+              <div className="mt-4 flex flex-wrap items-center justify-between gap-2 text-xs text-muted-foreground">
+                <span className="flex items-center gap-2">
+                  <Database className="h-3 w-3" /> {hsCodes.length} {t("trade.stats.rows", "tariff lines in the database")}
+                </span>
+                <span>{results.length} {t("trade.stats.results", "results found")}</span>
               </div>
             </div>
-            <div className="mt-4 flex items-center justify-between text-xs text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <Database className="h-3 w-3" /> {hsCodes.length} ردیف تعرفه در پایگاه داده
-              </span>
-              <span>{results.length} نتیجه یافت شد</span>
-            </div>
-          </div>
 
-          {/* جدول نتایج - دسکتاپ */}
-          <div className="mt-8 hidden overflow-hidden rounded-sm border border-border bg-card shadow-[var(--shadow-card)] md:block">
-            <div className="overflow-x-auto">
-              <table className="w-full text-right text-sm">
-                <thead className="bg-[color:var(--navy-deep)] text-white">
-                  <tr>
-                    <th className="px-4 py-4 font-medium text-[12px]">کد تعرفه</th>
-                    <th className="px-4 py-4 font-medium text-[12px]">شرح کالا</th>
-                    <th className="px-4 py-4 font-medium text-[12px]">فصل</th>
-                    <th className="px-4 py-4 text-center font-medium text-[12px]">حقوق ورودی</th>
-                    <th className="px-4 py-4 text-center font-medium text-[12px]">سود بازرگانی</th>
-                    <th className="px-4 py-4 text-center font-medium text-[12px]">ارزش افزوده</th>
-                    <th className="px-4 py-4 text-center font-medium text-[12px]">واحد</th>
-                    <th className="px-4 py-4 font-medium text-[12px]">ملاحظات / مجوز</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {results.length === 0 ? (
+            <div className="mt-6 rounded-sm border border-[color:var(--gold)]/40 bg-[color:var(--gold)]/5 p-4 text-xs leading-6 text-muted-foreground">
+              <strong className="text-foreground">{t("trade.formula.title", "How the tariff is calculated:")}</strong>{" "}
+              {t(
+                "trade.formula.body",
+                "Under Iranian customs law the customs duty is a fixed 4% of the customs (CIF) value, and the commercial profit is set per tariff line. Import duty = 4% customs duty + commercial profit. VAT is then applied on top.",
+              )}
+            </div>
+
+            {/* Desktop table */}
+            <div className="mt-8 hidden overflow-hidden rounded-sm border border-border bg-card shadow-[var(--shadow-card)] md:block">
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm ltr:text-left rtl:text-right">
+                  <thead className="bg-[color:var(--navy-deep)] text-white">
                     <tr>
-                      <td colSpan={8} className="px-6 py-12 text-center text-muted-foreground">
-                        نتیجه‌ای یافت نشد. کلیدواژه یا کد دیگری را امتحان کنید.
-                      </td>
+                      <th className="px-4 py-4 text-[12px] font-medium">{t("trade.col.code", "HS code")}</th>
+                      <th className="px-4 py-4 text-[12px] font-medium">{t("trade.col.desc", "Description")}</th>
+                      <th className="px-4 py-4 text-[12px] font-medium">{t("trade.col.chapter", "Chapter")}</th>
+                      <th className="px-4 py-4 text-center text-[12px] font-medium">{t("trade.col.customs", "Customs duty")}</th>
+                      <th className="px-4 py-4 text-center text-[12px] font-medium">{t("trade.col.profit", "Commercial profit")}</th>
+                      <th className="px-4 py-4 text-center text-[12px] font-medium">{t("trade.col.entry", "Import duty (total)")}</th>
+                      <th className="px-4 py-4 text-center text-[12px] font-medium">{t("trade.col.vat", "VAT")}</th>
+                      <th className="px-4 py-4 text-center text-[12px] font-medium">{t("trade.col.unit", "Unit")}</th>
+                      <th className="px-4 py-4 text-[12px] font-medium">{t("trade.col.permits", "Permits / notes")}</th>
                     </tr>
-                  ) : (
-                    results.map((h) => <DesktopRow key={h.code} h={h} />)
-                  )}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {results.length === 0 ? (
+                      <tr>
+                        <td colSpan={9} className="px-6 py-12 text-center text-muted-foreground">
+                          {t("trade.empty", "No results. Try a different keyword or code.")}
+                        </td>
+                      </tr>
+                    ) : (
+                      results.map((h) => <DesktopRow key={h.code} h={h} />)
+                    )}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Mobile cards */}
+            <div className="mt-8 space-y-3 md:hidden">
+              {results.length === 0 ? (
+                <div className="rounded-sm border border-border bg-card p-8 text-center text-sm text-muted-foreground">
+                  {t("trade.empty", "No results. Try a different keyword or code.")}
+                </div>
+              ) : (
+                results.map((h) => (
+                  <MobileCard
+                    key={h.code}
+                    h={h}
+                    open={openRow === h.code}
+                    onToggle={() => setOpenRow(openRow === h.code ? null : h.code)}
+                  />
+                ))
+              )}
+            </div>
+
+            <div className="mt-8 rounded-sm border border-border/60 bg-secondary/40 p-4 text-xs leading-6 text-muted-foreground">
+              <strong className="text-foreground">{t("trade.note.label", "Please note:")}</strong>{" "}
+              {t(
+                "trade.note.tariff",
+                "This table is indicative guidance. The official references are the Ministry of Industry, Mine and Trade export-import regulations book and the IRICA EPL system. Rates are revised annually — contact our specialists for the binding classification before order registration or clearance.",
+              )}
             </div>
           </div>
-
-          {/* کارت‌های موبایل */}
-          <div className="mt-8 space-y-3 md:hidden">
-            {results.length === 0 ? (
-              <div className="rounded-sm border border-border bg-card p-8 text-center text-sm text-muted-foreground">
-                نتیجه‌ای یافت نشد.
-              </div>
-            ) : (
-              results.map((h) => (
-                <MobileCard
-                  key={h.code}
-                  h={h}
-                  open={openRow === h.code}
-                  onToggle={() => setOpenRow(openRow === h.code ? null : h.code)}
-                />
-              ))
-            )}
-          </div>
-
-          <div className="mt-8 rounded-sm border border-border/60 bg-secondary/40 p-4 text-xs leading-6 text-muted-foreground">
-            <strong className="text-foreground">توجه:</strong> اطلاعات این جدول جهت راهنمایی است و مرجع رسمی، کتاب مقررات صادرات و واردات وزارت صمت و سامانه EPL گمرک ایران می‌باشد. برای طبقه‌بندی رسمی، ثبت سفارش و ترخیص، با کارشناسان گودرزی تریدینگ تماس بگیرید.
-          </div>
-        </div>
-      </section>
+        </section>
       )}
     </div>
-
   );
 }
 
 function DesktopRow({ h }: { h: HSCode }) {
-  const total = h.importDuty + h.commercialProfit;
+  const { lang } = useI18n();
+  const b = tariffBreakdown(h);
   return (
     <tr className="border-t border-border transition-colors hover:bg-secondary/40">
       <td className="px-4 py-4 font-mono text-[color:var(--navy-deep)]" dir="ltr">{h.code}</td>
-      <td className="px-4 py-4 text-[color:var(--navy)]">{h.description}</td>
+      <td className="px-4 py-4 text-[color:var(--navy)]">{tr(h.description, lang)}</td>
       <td className="px-4 py-4">
-        <span className="inline-flex rounded-sm bg-secondary px-2.5 py-1 text-xs text-[color:var(--navy)]">{h.category}</span>
+        <span className="inline-flex rounded-sm bg-secondary px-2.5 py-1 text-xs text-[color:var(--navy)]">{tr(h.category, lang)}</span>
       </td>
-      <td className="px-4 py-4 text-center font-medium text-[color:var(--navy)]">{h.importDuty}٪</td>
-      <td className="px-4 py-4 text-center font-medium text-[color:var(--gold-strong)]">{h.commercialProfit}٪</td>
-      <td className="px-4 py-4 text-center text-[color:var(--navy)]">{h.vat}٪</td>
-      <td className="px-4 py-4 text-center text-xs text-muted-foreground">{h.unit}</td>
-      <td className="px-4 py-4 text-xs text-muted-foreground">
-        {h.permits ?? "—"}
-        <div className="mt-1 text-[10px] text-muted-foreground/70">مجموع تعرفه: {total}٪</div>
-      </td>
+      <td className="px-4 py-4 text-center text-[color:var(--navy)]">{b.customsDuty}%</td>
+      <td className="px-4 py-4 text-center font-medium text-[color:var(--gold-strong)]">{b.commercialProfit}%</td>
+      <td className="px-4 py-4 text-center font-medium text-[color:var(--navy)]">{b.importDuty}%</td>
+      <td className="px-4 py-4 text-center text-[color:var(--navy)]">{b.vat}%</td>
+      <td className="px-4 py-4 text-center text-xs text-muted-foreground">{tr(h.unit, lang)}</td>
+      <td className="px-4 py-4 text-xs text-muted-foreground">{h.permits ? tr(h.permits, lang) : "—"}</td>
     </tr>
   );
 }
 
 function MobileCard({ h, open, onToggle }: { h: HSCode; open: boolean; onToggle: () => void }) {
+  const { t, lang } = useI18n();
+  const b = tariffBreakdown(h);
   return (
     <div className="rounded-sm border border-border bg-card p-4 shadow-[var(--shadow-card)]">
-      <button onClick={onToggle} className="flex w-full items-start justify-between gap-3 text-right">
+      <button onClick={onToggle} className="flex w-full items-start justify-between gap-3 ltr:text-left rtl:text-right">
         <div className="flex-1">
           <div className="font-mono text-sm text-[color:var(--navy-deep)]" dir="ltr">{h.code}</div>
-          <div className="mt-1 text-sm text-[color:var(--navy)]">{h.description}</div>
-          <div className="mt-2 inline-flex rounded-sm bg-secondary px-2 py-0.5 text-[11px] text-[color:var(--navy)]">{h.category}</div>
+          <div className="mt-1 text-sm text-[color:var(--navy)]">{tr(h.description, lang)}</div>
+          <div className="mt-2 inline-flex rounded-sm bg-secondary px-2 py-0.5 text-[11px] text-[color:var(--navy)]">{tr(h.category, lang)}</div>
         </div>
         <ChevronDown className={`h-5 w-5 shrink-0 text-muted-foreground transition-transform ${open ? "rotate-180" : ""}`} />
       </button>
       {open && (
         <div className="mt-4 grid grid-cols-2 gap-3 border-t border-border pt-4 text-xs">
-          <Field label="حقوق ورودی" value={`${h.importDuty}٪`} />
-          <Field label="سود بازرگانی" value={`${h.commercialProfit}٪`} accent />
-          <Field label="ارزش افزوده" value={`${h.vat}٪`} />
-          <Field label="واحد" value={h.unit} />
+          <Field label={t("trade.col.customs", "Customs duty")} value={`${b.customsDuty}%`} />
+          <Field label={t("trade.col.profit", "Commercial profit")} value={`${b.commercialProfit}%`} accent />
+          <Field label={t("trade.col.entry", "Import duty (total)")} value={`${b.importDuty}%`} />
+          <Field label={t("trade.col.vat", "VAT")} value={`${b.vat}%`} />
+          <Field label={t("trade.col.unit", "Unit")} value={tr(h.unit, lang)} />
+          <Field label={t("trade.col.fixed", "Fixed rate")} value={`${CUSTOMS_DUTY_RATE}%`} />
           {h.permits && (
             <div className="col-span-2 rounded-sm bg-secondary/60 p-2 text-[11px] text-muted-foreground">
-              <strong className="text-foreground">مجوز/ملاحظات:</strong> {h.permits}
+              <strong className="text-foreground">{t("trade.col.permits", "Permits / notes")}:</strong> {tr(h.permits, lang)}
             </div>
           )}
         </div>
@@ -248,6 +265,7 @@ function TabButton({
 }
 
 function TradeServicesPanel() {
+  const { t, lang } = useI18n();
   const [group, setGroup] = useState(tradeServiceGroups[0].key);
   const [open, setOpen] = useState<string | null>(null);
   const active = tradeServiceGroups.find((g) => g.key === group)!;
@@ -269,12 +287,12 @@ function TradeServicesPanel() {
                   : "border-border bg-card text-muted-foreground hover:text-[color:var(--navy)]"
               }`}
             >
-              {g.title}
+              {tr(g.title, lang)}
             </button>
           ))}
         </div>
 
-        <p className="mt-4 text-sm text-muted-foreground">{active.subtitle}</p>
+        <p className="mt-4 text-sm text-muted-foreground">{tr(active.subtitle, lang)}</p>
 
         <div className="mt-6 grid gap-4 lg:grid-cols-2">
           {active.services.map((s) => (
@@ -288,7 +306,11 @@ function TradeServicesPanel() {
         </div>
 
         <div className="mt-8 rounded-sm border border-border/60 bg-secondary/40 p-4 text-xs leading-6 text-muted-foreground">
-          <strong className="text-foreground">توجه:</strong> فرایندهای بالا مطابق رویه‌های سامانه جامع تجارت ایران و پنجره واحد تجارت فرامرزی تنظیم شده است. مرجع رسمی ثبت درخواست‌ها سامانه <span dir="ltr">ntsw.ir</span> است؛ گودرزی تریدینگ انجام و پیگیری کامل این خدمات را به‌صورت وکالتی برای شما بر عهده می‌گیرد.
+          <strong className="text-foreground">{t("trade.note.label", "Please note:")}</strong>{" "}
+          {t(
+            "trade.note.services",
+            "These workflows follow the Iranian Integrated Trade System (NTSW) and the single-window cross-border trade procedures. Official submissions are made on ntsw.ir; Goodarzi Trading handles and follows up the entire process on your behalf.",
+          )}
         </div>
       </div>
     </section>
@@ -296,12 +318,13 @@ function TradeServicesPanel() {
 }
 
 function ServiceCard({ s, open, onToggle }: { s: TradeService; open: boolean; onToggle: () => void }) {
+  const { t, lang } = useI18n();
   return (
     <div className="rounded-sm border border-border bg-card p-5 shadow-[var(--shadow-card)]">
-      <button onClick={onToggle} className="flex w-full items-start justify-between gap-3 text-right">
+      <button onClick={onToggle} className="flex w-full items-start justify-between gap-3 ltr:text-left rtl:text-right">
         <div>
-          <h3 className="text-base font-medium text-[color:var(--navy-deep)]">{s.title}</h3>
-          <p className="mt-2 text-sm leading-7 text-muted-foreground">{s.description}</p>
+          <h3 className="text-base font-medium text-[color:var(--navy-deep)]">{tr(s.title, lang)}</h3>
+          <p className="mt-2 text-sm leading-7 text-muted-foreground">{tr(s.description, lang)}</p>
         </div>
         <ChevronDown className={`h-5 w-5 shrink-0 text-muted-foreground transition-transform ${open ? "rotate-180" : ""}`} />
       </button>
@@ -310,23 +333,23 @@ function ServiceCard({ s, open, onToggle }: { s: TradeService; open: boolean; on
         <div className="mt-4 space-y-4 border-t border-border pt-4">
           <div>
             <div className="mb-2 flex items-center gap-2 text-xs font-medium text-[color:var(--navy)]">
-              <FileCheck className="h-4 w-4 text-[color:var(--gold-strong)]" /> مراحل انجام
+              <FileCheck className="h-4 w-4 text-[color:var(--gold-strong)]" /> {t("trade.steps", "Process steps")}
             </div>
             <ol className="space-y-1.5 text-xs leading-6 text-muted-foreground">
               {s.steps.map((st, i) => (
                 <li key={st} className="flex gap-2">
                   <span className="text-[color:var(--gold-strong)]">{i + 1}.</span>
-                  <span>{st}</span>
+                  <span>{tr(st, lang)}</span>
                 </li>
               ))}
             </ol>
           </div>
           <div>
-            <div className="mb-2 text-xs font-medium text-[color:var(--navy)]">مدارک مورد نیاز</div>
+            <div className="mb-2 text-xs font-medium text-[color:var(--navy)]">{t("trade.docs", "Required documents")}</div>
             <ul className="flex flex-wrap gap-2">
               {s.docs.map((d) => (
                 <li key={d} className="rounded-sm bg-secondary px-2.5 py-1 text-[11px] text-[color:var(--navy)]">
-                  {d}
+                  {tr(d, lang)}
                 </li>
               ))}
             </ul>
@@ -338,7 +361,7 @@ function ServiceCard({ s, open, onToggle }: { s: TradeService; open: boolean; on
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-xs text-[color:var(--gold-strong)] hover:underline"
             >
-              سامانه رسمی <ExternalLink className="h-3 w-3" />
+              {t("trade.official", "Official portal")} <ExternalLink className="h-3 w-3" />
             </a>
           )}
         </div>
