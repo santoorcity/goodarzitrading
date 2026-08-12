@@ -62,16 +62,36 @@ export const Route = createFileRoute("/export-products")({
             position: i + 1,
             item: {
               "@type": "Product",
-              name: p.key,
-              image: p.image,
-              category: p.hs,
+              name: PRODUCT_SCHEMA[p.slug]?.name ?? p.slug,
+              description: PRODUCT_SCHEMA[p.slug]?.description,
+              image: `https://goodarzitrading.lovable.app${p.image}`,
+              category: `HS ${p.hs}`,
               brand: { "@type": "Organization", name: "Goodarzi Trading" },
               countryOfOrigin: "IR",
+              offers: {
+                "@type": "AggregateOffer",
+                priceCurrency: "USD",
+                availability: "https://schema.org/InStock",
+                seller: { "@type": "Organization", name: "Goodarzi Trading", url: "https://goodarzitrading.lovable.app" },
+              },
             },
           })),
         }),
       },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: EXPORT_FAQ.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }),
+      },
     ],
+
   }),
   component: ExportProductsPage,
 });
