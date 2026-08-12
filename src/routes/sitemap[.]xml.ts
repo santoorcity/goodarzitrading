@@ -31,6 +31,17 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/privacy", changefreq: "yearly", priority: "0.3" },
           { path: "/terms", changefreq: "yearly", priority: "0.3" },
         ];
+
+        for (const cat of kc.categories) {
+          entries.push({ path: `/knowledge/${cat.slug}`, changefreq: "monthly", priority: "0.6" });
+        }
+        for (const e of kc.registry.entries) {
+          entries.push({ path: `/knowledge/${e.category}/${e.id}`, changefreq: "yearly", priority: "0.55" });
+        }
+        for (const r of kc.incoterms.rules) {
+          entries.push({ path: `/incoterms/${r.code.toLowerCase()}`, changefreq: "yearly", priority: "0.6" });
+        }
+
         const urls = entries.map((e) =>
           [
             `  <url>`,
