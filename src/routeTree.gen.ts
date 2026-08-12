@@ -27,6 +27,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as KnowledgeIndexRouteImport } from './routes/knowledge.index'
 import { Route as IncotermsIndexRouteImport } from './routes/incoterms.index'
 import { Route as KnowledgeCategoryRouteImport } from './routes/knowledge.$category'
+import { Route as IncotermsCodeRouteImport } from './routes/incoterms.$code'
 import { Route as KnowledgeCategoryEntryRouteImport } from './routes/knowledge.$category.$entry'
 
 const TradeNetworkRoute = TradeNetworkRouteImport.update({
@@ -119,6 +120,11 @@ const KnowledgeCategoryRoute = KnowledgeCategoryRouteImport.update({
   path: '/knowledge/$category',
   getParentRoute: () => rootRouteImport,
 } as any)
+const IncotermsCodeRoute = IncotermsCodeRouteImport.update({
+  id: '/incoterms/$code',
+  path: '/incoterms/$code',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const KnowledgeCategoryEntryRoute = KnowledgeCategoryEntryRouteImport.update({
   id: '/$entry',
   path: '/$entry',
@@ -141,6 +147,7 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/trade-network': typeof TradeNetworkRoute
+  '/incoterms/$code': typeof IncotermsCodeRoute
   '/knowledge/$category': typeof KnowledgeCategoryRouteWithChildren
   '/incoterms/': typeof IncotermsIndexRoute
   '/knowledge/': typeof KnowledgeIndexRoute
@@ -162,6 +169,7 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/trade-network': typeof TradeNetworkRoute
+  '/incoterms/$code': typeof IncotermsCodeRoute
   '/knowledge/$category': typeof KnowledgeCategoryRouteWithChildren
   '/incoterms': typeof IncotermsIndexRoute
   '/knowledge': typeof KnowledgeIndexRoute
@@ -184,6 +192,7 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/trade-network': typeof TradeNetworkRoute
+  '/incoterms/$code': typeof IncotermsCodeRoute
   '/knowledge/$category': typeof KnowledgeCategoryRouteWithChildren
   '/incoterms/': typeof IncotermsIndexRoute
   '/knowledge/': typeof KnowledgeIndexRoute
@@ -207,6 +216,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/terms'
     | '/trade-network'
+    | '/incoterms/$code'
     | '/knowledge/$category'
     | '/incoterms/'
     | '/knowledge/'
@@ -228,6 +238,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/terms'
     | '/trade-network'
+    | '/incoterms/$code'
     | '/knowledge/$category'
     | '/incoterms'
     | '/knowledge'
@@ -249,6 +260,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/terms'
     | '/trade-network'
+    | '/incoterms/$code'
     | '/knowledge/$category'
     | '/incoterms/'
     | '/knowledge/'
@@ -271,6 +283,7 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
   TradeNetworkRoute: typeof TradeNetworkRoute
+  IncotermsCodeRoute: typeof IncotermsCodeRoute
   KnowledgeCategoryRoute: typeof KnowledgeCategoryRouteWithChildren
   IncotermsIndexRoute: typeof IncotermsIndexRoute
   KnowledgeIndexRoute: typeof KnowledgeIndexRoute
@@ -404,6 +417,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof KnowledgeCategoryRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/incoterms/$code': {
+      id: '/incoterms/$code'
+      path: '/incoterms/$code'
+      fullPath: '/incoterms/$code'
+      preLoaderRoute: typeof IncotermsCodeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/knowledge/$category/$entry': {
       id: '/knowledge/$category/$entry'
       path: '/$entry'
@@ -441,6 +461,7 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
   TradeNetworkRoute: TradeNetworkRoute,
+  IncotermsCodeRoute: IncotermsCodeRoute,
   KnowledgeCategoryRoute: KnowledgeCategoryRouteWithChildren,
   IncotermsIndexRoute: IncotermsIndexRoute,
   KnowledgeIndexRoute: KnowledgeIndexRoute,
