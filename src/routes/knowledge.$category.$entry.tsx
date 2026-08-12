@@ -131,4 +131,3 @@ function EntryPage() {
   );
 }
 
-export const _entriesCount = kc.registry.entries.length;

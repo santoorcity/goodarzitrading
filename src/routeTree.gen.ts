@@ -27,6 +27,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as KnowledgeIndexRouteImport } from './routes/knowledge.index'
 import { Route as IncotermsIndexRouteImport } from './routes/incoterms.index'
 import { Route as KnowledgeCategoryRouteImport } from './routes/knowledge.$category'
+import { Route as KnowledgeCategoryEntryRouteImport } from './routes/knowledge.$category.$entry'
 
 const TradeNetworkRoute = TradeNetworkRouteImport.update({
   id: '/trade-network',
@@ -118,6 +119,11 @@ const KnowledgeCategoryRoute = KnowledgeCategoryRouteImport.update({
   path: '/knowledge/$category',
   getParentRoute: () => rootRouteImport,
 } as any)
+const KnowledgeCategoryEntryRoute = KnowledgeCategoryEntryRouteImport.update({
+  id: '/$entry',
+  path: '/$entry',
+  getParentRoute: () => KnowledgeCategoryRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -135,9 +141,10 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/trade-network': typeof TradeNetworkRoute
-  '/knowledge/$category': typeof KnowledgeCategoryRoute
+  '/knowledge/$category': typeof KnowledgeCategoryRouteWithChildren
   '/incoterms/': typeof IncotermsIndexRoute
   '/knowledge/': typeof KnowledgeIndexRoute
+  '/knowledge/$category/$entry': typeof KnowledgeCategoryEntryRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -155,9 +162,10 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/trade-network': typeof TradeNetworkRoute
-  '/knowledge/$category': typeof KnowledgeCategoryRoute
+  '/knowledge/$category': typeof KnowledgeCategoryRouteWithChildren
   '/incoterms': typeof IncotermsIndexRoute
   '/knowledge': typeof KnowledgeIndexRoute
+  '/knowledge/$category/$entry': typeof KnowledgeCategoryEntryRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -176,9 +184,10 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/trade-network': typeof TradeNetworkRoute
-  '/knowledge/$category': typeof KnowledgeCategoryRoute
+  '/knowledge/$category': typeof KnowledgeCategoryRouteWithChildren
   '/incoterms/': typeof IncotermsIndexRoute
   '/knowledge/': typeof KnowledgeIndexRoute
+  '/knowledge/$category/$entry': typeof KnowledgeCategoryEntryRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -201,6 +210,7 @@ export interface FileRouteTypes {
     | '/knowledge/$category'
     | '/incoterms/'
     | '/knowledge/'
+    | '/knowledge/$category/$entry'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -221,6 +231,7 @@ export interface FileRouteTypes {
     | '/knowledge/$category'
     | '/incoterms'
     | '/knowledge'
+    | '/knowledge/$category/$entry'
   id:
     | '__root__'
     | '/'
@@ -241,6 +252,7 @@ export interface FileRouteTypes {
     | '/knowledge/$category'
     | '/incoterms/'
     | '/knowledge/'
+    | '/knowledge/$category/$entry'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -259,7 +271,7 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
   TradeNetworkRoute: typeof TradeNetworkRoute
-  KnowledgeCategoryRoute: typeof KnowledgeCategoryRoute
+  KnowledgeCategoryRoute: typeof KnowledgeCategoryRouteWithChildren
   IncotermsIndexRoute: typeof IncotermsIndexRoute
   KnowledgeIndexRoute: typeof KnowledgeIndexRoute
 }
@@ -392,8 +404,26 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof KnowledgeCategoryRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/knowledge/$category/$entry': {
+      id: '/knowledge/$category/$entry'
+      path: '/$entry'
+      fullPath: '/knowledge/$category/$entry'
+      preLoaderRoute: typeof KnowledgeCategoryEntryRouteImport
+      parentRoute: typeof KnowledgeCategoryRoute
+    }
   }
 }
+
+interface KnowledgeCategoryRouteChildren {
+  KnowledgeCategoryEntryRoute: typeof KnowledgeCategoryEntryRoute
+}
+
+const KnowledgeCategoryRouteChildren: KnowledgeCategoryRouteChildren = {
+  KnowledgeCategoryEntryRoute: KnowledgeCategoryEntryRoute,
+}
+
+const KnowledgeCategoryRouteWithChildren =
+  KnowledgeCategoryRoute._addFileChildren(KnowledgeCategoryRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -411,7 +441,7 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
   TradeNetworkRoute: TradeNetworkRoute,
-  KnowledgeCategoryRoute: KnowledgeCategoryRoute,
+  KnowledgeCategoryRoute: KnowledgeCategoryRouteWithChildren,
   IncotermsIndexRoute: IncotermsIndexRoute,
   KnowledgeIndexRoute: KnowledgeIndexRoute,
 }
