@@ -188,8 +188,10 @@ function RootComponent() {
         </main>
         <Footer />
         <WhatsAppFab />
+        <Analytics />
       </LanguageProvider>
     </QueryClientProvider>
   );
+
 }
 
