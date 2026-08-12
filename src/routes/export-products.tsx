@@ -232,7 +232,25 @@ function ExportProductsPage() {
         </div>
       </section>
 
+      <section className="py-20">
+        <div className="container-x max-w-4xl">
+          <span className="eyebrow">FAQ</span>
+          <h2 className="mt-4 font-display text-3xl font-semibold text-[color:var(--navy-deep)] md:text-4xl">
+            Importing from Iran — frequently asked questions
+          </h2>
+          <div className="mt-8 divide-y divide-border border-y border-border">
+            {EXPORT_FAQ.map((f) => (
+              <div key={f.q} className="py-6">
+                <h3 className="font-display text-lg font-semibold text-[color:var(--navy-deep)]">{f.q}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{f.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="bg-secondary/60 py-20">
+
         <div className="container-x text-center">
           <Package className="mx-auto h-10 w-10 text-[color:var(--gold)]" />
           <h2 className="mt-4 font-display text-3xl font-semibold text-[color:var(--navy-deep)] md:text-4xl">
