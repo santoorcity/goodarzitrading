@@ -1,0 +1,2460 @@
+{
+  "project": {
+    "name": "GoodarziTrading International Trade Knowledge Center",
+    "languages": [
+      "en",
+      "fa",
+      "ar"
+    ],
+    "defaultLanguage": "en",
+    "parentMenu": "Knowledge"
+  },
+  "categories": [
+    {
+      "id": "01",
+      "slug": "itc-model-contracts",
+      "type": "knowledge",
+      "title": {
+        "en": "ITC Model Contracts for Small Firms",
+        "fa": "قراردادهای نمونه ITC برای شرکت‌های کوچک",
+        "ar": "العقود النموذجية لـ ITC للشركات الصغيرة"
+      },
+      "displayStatus": "populated_via_dedicated_section"
+    },
+    {
+      "id": "02",
+      "slug": "international-sale-of-goods",
+      "type": "knowledge",
+      "title": {
+        "en": "International Sale of Goods",
+        "fa": "بیع بین‌المللی کالا",
+        "ar": "البيع الدولي للبضائع"
+      },
+      "displayStatus": "populated"
+    },
+    {
+      "id": "03",
+      "slug": "international-commercial-contracts",
+      "type": "knowledge",
+      "title": {
+        "en": "International Commercial Contracts",
+        "fa": "قراردادهای تجاری بین‌المللی",
+        "ar": "العقود التجارية الدولية"
+      },
+      "displayStatus": "coming_soon"
+    },
+    {
+      "id": "04",
+      "slug": "international-transport-conventions",
+      "type": "knowledge",
+      "title": {
+        "en": "International Transport Conventions",
+        "fa": "کنوانسیون‌های حمل‌ونقل بین‌المللی",
+        "ar": "اتفاقيات النقل الدولي"
+      },
+      "displayStatus": "coming_soon"
+    },
+    {
+      "id": "05",
+      "slug": "maritime-transport",
+      "type": "knowledge",
+      "title": {
+        "en": "Maritime Transport",
+        "fa": "حمل‌ونقل دریایی",
+        "ar": "النقل البحري"
+      },
+      "displayStatus": "populated"
+    },
+    {
+      "id": "06",
+      "slug": "road-transport",
+      "type": "knowledge",
+      "title": {
+        "en": "Road Transport",
+        "fa": "حمل‌ونقل جاده‌ای",
+        "ar": "النقل البري على الطرق"
+      },
+      "displayStatus": "populated"
+    },
+    {
+      "id": "07",
+      "slug": "rail-transport",
+      "type": "knowledge",
+      "title": {
+        "en": "Rail Transport",
+        "fa": "حمل‌ونقل ریلی",
+        "ar": "النقل بالسكك الحديدية"
+      },
+      "displayStatus": "populated"
+    },
+    {
+      "id": "08",
+      "slug": "air-transport",
+      "type": "knowledge",
+      "title": {
+        "en": "Air Transport",
+        "fa": "حمل‌ونقل هوایی",
+        "ar": "النقل الجوي"
+      },
+      "displayStatus": "populated"
+    },
+    {
+      "id": "09",
+      "slug": "multimodal-transport",
+      "type": "knowledge",
+      "title": {
+        "en": "Multimodal Transport",
+        "fa": "حمل‌ونقل چندوجهی",
+        "ar": "النقل متعدد الوسائط"
+      },
+      "displayStatus": "populated"
+    },
+    {
+      "id": "10",
+      "slug": "customs-transit-conventions",
+      "type": "knowledge",
+      "title": {
+        "en": "Customs & Transit Conventions",
+        "fa": "کنوانسیون‌های گمرکی و ترانزیتی",
+        "ar": "اتفاقيات الجمارك والعبور"
+      },
+      "displayStatus": "populated"
+    },
+    {
+      "id": "11",
+      "slug": "international-trade-rules",
+      "type": "knowledge",
+      "title": {
+        "en": "International Trade Rules",
+        "fa": "قواعد تجارت بین‌الملل",
+        "ar": "قواعد التجارة الدولية"
+      },
+      "displayStatus": "coming_soon"
+    },
+    {
+      "id": "12",
+      "slug": "incoterms",
+      "type": "knowledge",
+      "title": {
+        "en": "Incoterms",
+        "fa": "اینکوترمز",
+        "ar": "الإنكوترمز"
+      },
+      "displayStatus": "populated_via_dedicated_section"
+    },
+    {
+      "id": "13",
+      "slug": "international-payment-trade-finance",
+      "type": "knowledge",
+      "title": {
+        "en": "International Payment & Trade Finance",
+        "fa": "پرداخت و تأمین مالی تجارت بین‌الملل",
+        "ar": "المدفوعات وتمويل التجارة الدولية"
+      },
+      "displayStatus": "populated"
+    },
+    {
+      "id": "14",
+      "slug": "documentary-credits",
+      "type": "knowledge",
+      "title": {
+        "en": "Documentary Credits",
+        "fa": "اعتبارات اسنادی",
+        "ar": "الاعتمادات المستندية"
+      },
+      "displayStatus": "populated"
+    },
+    {
+      "id": "15",
+      "slug": "documentary-collections",
+      "type": "knowledge",
+      "title": {
+        "en": "Documentary Collections",
+        "fa": "وصول اسناد",
+        "ar": "التحصيل المستندي"
+      },
+      "displayStatus": "populated"
+    },
+    {
+      "id": "16",
+      "slug": "guarantees",
+      "type": "knowledge",
+      "title": {
+        "en": "Guarantees",
+        "fa": "ضمانت‌نامه‌ها",
+        "ar": "الضمانات"
+      },
+      "displayStatus": "populated"
+    },
+    {
+      "id": "17",
+      "slug": "standby-letters-of-credit",
+      "type": "knowledge",
+      "title": {
+        "en": "Standby Letters of Credit",
+        "fa": "اعتبارات اسنادی تضمینی",
+        "ar": "الاعتمادات المستندية الاحتياطية"
+      },
+      "displayStatus": "populated"
+    },
+    {
+      "id": "18",
+      "slug": "international-arbitration",
+      "type": "knowledge",
+      "title": {
+        "en": "International Arbitration",
+        "fa": "داوری تجاری بین‌المللی",
+        "ar": "التحكيم التجاري الدولي"
+      },
+      "displayStatus": "populated"
+    },
+    {
+      "id": "19",
+      "slug": "mediation-dispute-resolution",
+      "type": "knowledge",
+      "title": {
+        "en": "International Mediation & Dispute Resolution",
+        "fa": "میانجیگری و حل‌وفصل اختلافات",
+        "ar": "الوساطة وتسوية المنازعات الدولية"
+      },
+      "displayStatus": "populated"
+    },
+    {
+      "id": "20",
+      "slug": "private-international-law",
+      "type": "knowledge",
+      "title": {
+        "en": "Private International Law",
+        "fa": "حقوق بین‌الملل خصوصی",
+        "ar": "القانون الدولي الخاص"
+      },
+      "displayStatus": "coming_soon"
+    },
+    {
+      "id": "21",
+      "slug": "international-commercial-agency",
+      "type": "knowledge",
+      "title": {
+        "en": "International Commercial Agency",
+        "fa": "نمایندگی تجاری بین‌المللی",
+        "ar": "الوكالة التجارية الدولية"
+      },
+      "displayStatus": "coming_soon"
+    },
+    {
+      "id": "22",
+      "slug": "distribution-franchising",
+      "type": "knowledge",
+      "title": {
+        "en": "Distribution & Franchising",
+        "fa": "توزیع و فرانشیز بین‌المللی",
+        "ar": "التوزيع والامتياز التجاري"
+      },
+      "displayStatus": "coming_soon"
+    },
+    {
+      "id": "23",
+      "slug": "international-insurance",
+      "type": "knowledge",
+      "title": {
+        "en": "International Insurance",
+        "fa": "بیمه بین‌المللی و بیمه حمل",
+        "ar": "التأمين الدولي وتأمين النقل"
+      },
+      "displayStatus": "coming_soon"
+    },
+    {
+      "id": "24",
+      "slug": "international-trade-documents",
+      "type": "knowledge",
+      "title": {
+        "en": "International Trade Documents",
+        "fa": "اسناد تجارت بین‌الملل",
+        "ar": "مستندات التجارة الدولية"
+      },
+      "displayStatus": "coming_soon"
+    },
+    {
+      "id": "25",
+      "slug": "intellectual-property-international-trade",
+      "type": "knowledge",
+      "title": {
+        "en": "Intellectual Property & International Trade",
+        "fa": "مالکیت فکری و تجارت بین‌الملل",
+        "ar": "الملكية الفكرية والتجارة الدولية"
+      },
+      "displayStatus": "populated"
+    },
+    {
+      "id": "26",
+      "slug": "international-electronic-commerce",
+      "type": "knowledge",
+      "title": {
+        "en": "International Electronic Commerce",
+        "fa": "تجارت الکترونیکی بین‌المللی",
+        "ar": "التجارة الإلكترونية الدولية"
+      },
+      "displayStatus": "populated"
+    },
+    {
+      "id": "27",
+      "slug": "wto-agreements",
+      "type": "knowledge",
+      "title": {
+        "en": "WTO Agreements",
+        "fa": "موافقت‌نامه‌های سازمان تجارت جهانی",
+        "ar": "اتفاقيات منظمة التجارة العالمية"
+      },
+      "displayStatus": "populated"
+    },
+    {
+      "id": "28",
+      "slug": "regional-bilateral-trade-agreements",
+      "type": "knowledge",
+      "title": {
+        "en": "Regional & Bilateral Trade Agreements",
+        "fa": "موافقت‌نامه‌های تجاری منطقه‌ای و دوجانبه",
+        "ar": "الاتفاقيات التجارية الإقليمية والثنائية"
+      },
+      "displayStatus": "coming_soon"
+    },
+    {
+      "id": "29",
+      "slug": "international-trade-investment",
+      "type": "knowledge",
+      "title": {
+        "en": "International Trade & Investment",
+        "fa": "تجارت و سرمایه‌گذاری بین‌المللی",
+        "ar": "التجارة والاستثمار الدوليان"
+      },
+      "displayStatus": "populated"
+    },
+    {
+      "id": "30",
+      "slug": "international-insolvency-security",
+      "type": "knowledge",
+      "title": {
+        "en": "International Insolvency & Security",
+        "fa": "ورشکستگی و وثایق بین‌المللی",
+        "ar": "الإعسار والضمانات الدولية"
+      },
+      "displayStatus": "populated"
+    },
+    {
+      "id": "31",
+      "slug": "dangerous-goods-special-cargo",
+      "type": "knowledge",
+      "title": {
+        "en": "Dangerous Goods & Special Cargo",
+        "fa": "حمل کالاهای خطرناک و محموله‌های خاص",
+        "ar": "نقل البضائع الخطرة والشحنات الخاصة"
+      },
+      "displayStatus": "coming_soon"
+    },
+    {
+      "id": "32",
+      "slug": "paperless-digital-trade",
+      "type": "knowledge",
+      "title": {
+        "en": "Paperless Trade & Digital Trade",
+        "fa": "تجارت بدون کاغذ و تجارت دیجیتال",
+        "ar": "التجارة غير الورقية والتجارة الرقمية"
+      },
+      "displayStatus": "coming_soon"
+    }
+  ],
+  "itcModelContracts": [
+    {
+      "chapter": 1,
+      "title": {
+        "en": "International Contractual Alliance",
+        "fa": "ائتلاف قراردادی بین‌المللی",
+        "ar": "التحالف التعاقدي الدولي"
+      },
+      "modelContract": "ITC Model Contract for an International Contractual Alliance",
+      "source": "ITC Model Contracts for Small Firms — Legal Guidance for Doing International Business"
+    },
+    {
+      "chapter": 2,
+      "title": {
+        "en": "International Corporate Joint Venture",
+        "fa": "مشارکت مشترک شرکتی بین‌المللی",
+        "ar": "المشروع المشترك للشركات الدولية"
+      },
+      "modelContract": "ITC Model Contract for an International Corporate Joint Venture",
+      "source": "ITC Model Contracts for Small Firms — Legal Guidance for Doing International Business"
+    },
+    {
+      "chapter": 3,
+      "title": {
+        "en": "International Commercial Sale of Goods",
+        "fa": "فروش تجاری بین‌المللی کالا",
+        "ar": "البيع التجاري الدولي للبضائع"
+      },
+      "modelContract": "ITC Model Contract for the International Commercial Sale of Goods",
+      "source": "ITC Model Contracts for Small Firms — Legal Guidance for Doing International Business",
+      "modelContractVersions": [
+        {
+          "name": "Short Version",
+          "note": "Simplified form; article structure mirrors the list in internationalSaleOfGoodsShortVersionArticles.",
+          "linkedArticleList": "internationalSaleOfGoodsShortVersionArticles"
+        },
+        {
+          "name": "Standard Version",
+          "note": "Fuller/more detailed form for more complex transactions. NIAZ_BE_BARRASI: detailed article list not yet supplied in source data; mark as \"نیازمند بررسی و تأیید از منبع رسمی\" until sourced from the official ITC publication.",
+          "linkedArticleList": null
+        }
+      ],
+      "sourceNote": "The official ITC publication (2010) contains nine model contract forms across these eight chapters; Chapter 3 alone contains two forms (Short Version and Standard Version)."
+    },
+    {
+      "chapter": 4,
+      "title": {
+        "en": "International Long-Term Supply of Goods",
+        "fa": "تأمین بلندمدت بین‌المللی کالا",
+        "ar": "التوريد الدولي طويل الأجل للبضائع"
+      },
+      "modelContract": "ITC Model Contract for the International Long-Term Supply of Goods",
+      "source": "ITC Model Contracts for Small Firms — Legal Guidance for Doing International Business"
+    },
+    {
+      "chapter": 5,
+      "title": {
+        "en": "International Contract Manufacture Agreement",
+        "fa": "قرارداد تولید قراردادی بین‌المللی",
+        "ar": "اتفاقية التصنيع التعاقدي الدولي"
+      },
+      "modelContract": "ITC Model International Contract Manufacture Agreement",
+      "source": "ITC Model Contracts for Small Firms — Legal Guidance for Doing International Business"
+    },
+    {
+      "chapter": 6,
+      "title": {
+        "en": "International Distribution of Goods",
+        "fa": "توزیع بین‌المللی کالا",
+        "ar": "التوزيع الدولي للبضائع"
+      },
+      "modelContract": "ITC Model Contract for the International Distribution of Goods",
+      "source": "ITC Model Contracts for Small Firms — Legal Guidance for Doing International Business"
+    },
+    {
+      "chapter": 7,
+      "title": {
+        "en": "International Commercial Agency",
+        "fa": "نمایندگی تجاری بین‌المللی",
+        "ar": "الوكالة التجارية الدولية"
+      },
+      "modelContract": "ITC Model Contract for an International Commercial Agency",
+      "source": "ITC Model Contracts for Small Firms — Legal Guidance for Doing International Business"
+    },
+    {
+      "chapter": 8,
+      "title": {
+        "en": "International Supply of Services",
+        "fa": "تأمین بین‌المللی خدمات",
+        "ar": "التوريد الدولي للخدمات"
+      },
+      "modelContract": "ITC Model Contract for the International Supply of Services",
+      "source": "ITC Model Contracts for Small Firms — Legal Guidance for Doing International Business"
+    }
+  ],
+  "itcSource": {
+    "publisher": "International Trade Centre (ITC)",
+    "publication": "Model Contracts for Small Firms — Legal Guidance for Doing International Business",
+    "unSalesNo": "E.10.III.T.1",
+    "isbn": "978-92-9137-381-9"
+  },
+  "internationalSaleOfGoodsShortVersionArticles": [
+    "1. Goods",
+    "2. Delivery",
+    "3. Price",
+    "4. Payment conditions",
+    "5. Documents",
+    "6. Non-performance of the Buyer’s obligation to pay the price at the agreed time",
+    "7. Non-performance of the Seller’s obligation to deliver the Goods at the agreed time",
+    "8. Lack of conformity",
+    "9. Transfer of property",
+    "10. Avoidance of contract",
+    "11. Force majeure – excuse for non-performance",
+    "12. Entire agreement",
+    "13. Notices",
+    "14. Dispute resolution procedure",
+    "15. Applicable law and guiding principles"
+  ],
+  "priorityEntries": {
+    "customs-transit-conventions": [
+      {
+        "name": "TIR Convention",
+        "nameFa": "کنوانسیون تیر",
+        "nameAr": "اتفاقية النقل الدولي البري (TIR)",
+        "classification": "Convention",
+        "status": "verify from authoritative primary source before publication"
+      },
+      {
+        "name": "ATA Carnet / ATA Convention",
+        "nameFa": "کارنه آ.ت.آ / کنوانسیون آ.ت.آ",
+        "nameAr": "دفتر مرور مؤقت ATA / اتفاقية ATA",
+        "classification": "Customs instrument",
+        "status": "verify from authoritative primary source before publication"
+      },
+      {
+        "name": "HS Convention",
+        "nameFa": "کنوانسیون سیستم هماهنگ‌شده",
+        "nameAr": "اتفاقية النظام المنسق",
+        "classification": "Convention",
+        "status": "verify from authoritative primary source before publication"
+      },
+      {
+        "name": "Revised Kyoto Convention",
+        "nameFa": "کنوانسیون تجدیدنظرشده کیوتو",
+        "nameAr": "اتفاقية كيوتو المعدلة",
+        "classification": "Convention",
+        "status": "verify from authoritative primary source before publication"
+      },
+      {
+        "name": "WTO Customs Valuation Agreement",
+        "nameFa": "موافقت‌نامه ارزش‌گذاری گمرکی سازمان تجارت جهانی",
+        "nameAr": "اتفاقية تقييم الجمارك في منظمة التجارة العالمية",
+        "classification": "WTO Agreement",
+        "status": "verify from authoritative primary source before publication"
+      },
+      {
+        "name": "Rules of Origin",
+        "nameFa": "قواعد مبدأ",
+        "nameAr": "قواعد المنشأ",
+        "classification": "Trade/customs rules",
+        "status": "verify from authoritative primary source before publication"
+      }
+    ],
+    "international-sale-of-goods": [
+      {
+        "name": "CISG",
+        "nameFa": "کنوانسیون بیع بین‌المللی کالا",
+        "nameAr": "اتفاقية البيع الدولي للبضائع",
+        "classification": "Convention",
+        "status": "verify from authoritative primary source before publication"
+      },
+      {
+        "name": "Convention on the Limitation Period in the International Sale of Goods",
+        "nameFa": "کنوانسیون مرور زمان در بیع بین‌المللی کالا",
+        "nameAr": "اتفاقية التقادم في البيع الدولي للبضائع",
+        "classification": "Convention",
+        "status": "verify from authoritative primary source before publication"
+      }
+    ],
+    "maritime-transport": [
+      {
+        "name": "Hague Rules",
+        "nameFa": "قواعد لاهه",
+        "nameAr": "قواعد لاهاي",
+        "classification": "Rules / convention framework",
+        "status": "verify from authoritative primary source before publication"
+      },
+      {
+        "name": "Hague-Visby Rules",
+        "nameFa": "قواعد لاهه–ویزبی",
+        "nameAr": "قواعد لاهاي-فيسبي",
+        "classification": "Rules / protocol framework",
+        "status": "verify from authoritative primary source before publication"
+      },
+      {
+        "name": "Hamburg Rules",
+        "nameFa": "قواعد هامبورگ",
+        "nameAr": "قواعد هامبورغ",
+        "classification": "Convention",
+        "status": "verify from authoritative primary source before publication"
+      },
+      {
+        "name": "Rotterdam Rules",
+        "nameFa": "قواعد روتردام",
+        "nameAr": "قواعد روتردام",
+        "classification": "Convention",
+        "status": "verify from authoritative primary source before publication"
+      }
+    ],
+    "road-transport": [
+      {
+        "name": "CMR Convention",
+        "nameFa": "کنوانسیون CMR حمل جاده‌ای",
+        "nameAr": "اتفاقية CMR للنقل البري",
+        "classification": "Convention",
+        "status": "verify from authoritative primary source before publication"
+      }
+    ],
+    "rail-transport": [
+      {
+        "name": "COTIF",
+        "nameFa": "کنوانسیون COTIF",
+        "nameAr": "اتفاقية COTIF",
+        "classification": "Convention",
+        "status": "verify from authoritative primary source before publication"
+      },
+      {
+        "name": "CIM Uniform Rules",
+        "nameFa": "قواعد یکنواخت CIM",
+        "nameAr": "القواعد الموحدة CIM",
+        "classification": "Uniform Rules",
+        "status": "verify from authoritative primary source before publication"
+      }
+    ],
+    "air-transport": [
+      {
+        "name": "Warsaw Convention",
+        "nameFa": "کنوانسیون ورشو",
+        "nameAr": "اتفاقية وارسو",
+        "classification": "Convention",
+        "status": "verify from authoritative primary source before publication"
+      },
+      {
+        "name": "Montreal Convention 1999",
+        "nameFa": "کنوانسیون مونترال ۱۹۹۹",
+        "nameAr": "اتفاقية مونتريال 1999",
+        "classification": "Convention",
+        "status": "verify from authoritative primary source before publication"
+      }
+    ],
+    "documentary-credits": [
+      {
+        "name": "UCP 600",
+        "nameFa": "UCP 600",
+        "nameAr": "UCP 600",
+        "classification": "ICC Rules",
+        "status": "verify from authoritative primary source before publication"
+      },
+      {
+        "name": "eUCP",
+        "nameFa": "eUCP",
+        "nameAr": "eUCP",
+        "classification": "ICC Supplementary Rules",
+        "status": "verify from authoritative primary source before publication"
+      },
+      {
+        "name": "ISBP",
+        "nameFa": "ISBP",
+        "nameAr": "ISBP",
+        "classification": "ICC Banking Practice",
+        "status": "verify from authoritative primary source before publication"
+      }
+    ],
+    "documentary-collections": [
+      {
+        "name": "URC 522",
+        "nameFa": "URC 522",
+        "nameAr": "URC 522",
+        "classification": "ICC Rules",
+        "status": "verify from authoritative primary source before publication"
+      }
+    ],
+    "guarantees": [
+      {
+        "name": "URDG 758",
+        "nameFa": "URDG 758",
+        "nameAr": "URDG 758",
+        "classification": "ICC Rules",
+        "status": "verify from authoritative primary source before publication"
+      }
+    ],
+    "standby-letters-of-credit": [
+      {
+        "name": "ISP98",
+        "nameFa": "ISP98",
+        "nameAr": "ISP98",
+        "classification": "Rules",
+        "status": "verify from authoritative primary source before publication"
+      }
+    ],
+    "international-arbitration": [
+      {
+        "name": "New York Convention 1958",
+        "nameFa": "کنوانسیون نیویورک ۱۹۵۸",
+        "nameAr": "اتفاقية نيويورك 1958",
+        "classification": "Convention",
+        "status": "verify from authoritative primary source before publication"
+      },
+      {
+        "name": "UNCITRAL Model Law on International Commercial Arbitration",
+        "nameFa": "قانون نمونه آنسیترال درباره داوری تجاری بین‌المللی",
+        "nameAr": "قانون الأونسيترال النموذجي بشأن التحكيم التجاري الدولي",
+        "classification": "Model Law",
+        "status": "verify from authoritative primary source before publication"
+      },
+      {
+        "name": "UNCITRAL Arbitration Rules",
+        "nameFa": "قواعد داوری آنسیترال",
+        "nameAr": "قواعد الأونسيترال للتحكيم",
+        "classification": "Arbitration Rules",
+        "status": "verify from authoritative primary source before publication"
+      },
+      {
+        "name": "ICC Arbitration Rules",
+        "nameFa": "قواعد داوری ICC",
+        "nameAr": "قواعد تحكيم ICC",
+        "classification": "Institutional Rules",
+        "status": "verify from authoritative primary source before publication"
+      }
+    ],
+    "international-electronic-commerce": [
+      {
+        "name": "UN Convention on the Use of Electronic Communications in International Contracts",
+        "nameFa": "کنوانسیون سازمان ملل درباره استفاده از ارتباطات الکترونیکی در قراردادهای بین‌المللی",
+        "nameAr": "اتفاقية الأمم المتحدة بشأن استخدام الخطابات الإلكترونية في العقود الدولية",
+        "classification": "Convention",
+        "status": "verify from authoritative primary source before publication"
+      },
+      {
+        "name": "UNCITRAL Model Law on Electronic Commerce",
+        "nameFa": "قانون نمونه آنسیترال درباره تجارت الکترونیکی",
+        "nameAr": "قانون الأونسيترال النموذجي بشأن التجارة الإلكترونية",
+        "classification": "Model Law",
+        "status": "verify from authoritative primary source before publication"
+      },
+      {
+        "name": "UNCITRAL Model Law on Electronic Signatures",
+        "nameFa": "قانون نمونه آنسیترال درباره امضاهای الکترونیکی",
+        "nameAr": "قانون الأونسيترال النموذجي بشأن التوقيعات الإلكترونية",
+        "classification": "Model Law",
+        "status": "verify from authoritative primary source before publication"
+      },
+      {
+        "name": "UNCITRAL Model Law on Electronic Transferable Records",
+        "nameFa": "قانون نمونه آنسیترال درباره سوابق قابل انتقال الکترونیکی",
+        "nameAr": "قانون الأونسيترال النموذجي بشأن السجلات الإلكترونية القابلة للتحويل",
+        "classification": "Model Law",
+        "status": "verify from authoritative primary source before publication"
+      },
+      {
+        "name": "UNCITRAL Model Law on Automated Contracting",
+        "nameFa": "قانون نمونه آنسیترال درباره قراردادهای خودکار",
+        "nameAr": "قانون الأونسيترال النموذجي بشأن التعاقد الآلي",
+        "classification": "Model Law",
+        "status": "verify from authoritative primary source before publication"
+      }
+    ]
+  },
+  "ui": {
+    "layout": "accordion-directory",
+    "search": true,
+    "filters": [
+      "category",
+      "documentType"
+    ],
+    "keepExistingContent": true,
+    "keepDedicatedIncotermsMenu": true,
+    "noLanguageMixing": true,
+    "rtlFor": [
+      "fa",
+      "ar"
+    ]
+  },
+  "integrityRules": [
+    "Do not invent legal facts.",
+    "Distinguish Convention, Agreement, Model Law, Rules, Guidelines and Model Contract.",
+    "Verify adoption date, entry into force, parties and Iran status from authoritative primary sources before publication.",
+    "Use the supplied ITC publication as the primary source for the ITC section.",
+    "Do not silently rename or merge the eight ITC model-contract families."
+  ],
+  "incoterms": {
+    "edition": "Incoterms 2020",
+    "title": {
+      "en": "Incoterms 2020",
+      "fa": "اینکوترمز ۲۰۲۰",
+      "ar": "الإنكوترمز 2020"
+    },
+    "publisher": "International Chamber of Commerce (ICC)",
+    "officialSource": "https://iccwbo.org/business-solutions/incoterms-rules/incoterms-2020/",
+    "rules": [
+      {
+        "code": "EXW",
+        "officialName": "Ex Works",
+        "transport": "Any mode"
+      },
+      {
+        "code": "FCA",
+        "officialName": "Free Carrier",
+        "transport": "Any mode"
+      },
+      {
+        "code": "CPT",
+        "officialName": "Carriage Paid To",
+        "transport": "Any mode"
+      },
+      {
+        "code": "CIP",
+        "officialName": "Carriage and Insurance Paid To",
+        "transport": "Any mode"
+      },
+      {
+        "code": "DAP",
+        "officialName": "Delivered at Place",
+        "transport": "Any mode"
+      },
+      {
+        "code": "DPU",
+        "officialName": "Delivered at Place Unloaded",
+        "transport": "Any mode"
+      },
+      {
+        "code": "DDP",
+        "officialName": "Delivered Duty Paid",
+        "transport": "Any mode"
+      },
+      {
+        "code": "FAS",
+        "officialName": "Free Alongside Ship",
+        "transport": "Sea and inland waterway only"
+      },
+      {
+        "code": "FOB",
+        "officialName": "Free on Board",
+        "transport": "Sea and inland waterway only"
+      },
+      {
+        "code": "CFR",
+        "officialName": "Cost and Freight",
+        "transport": "Sea and inland waterway only"
+      },
+      {
+        "code": "CIF",
+        "officialName": "Cost, Insurance and Freight",
+        "transport": "Sea and inland waterway only"
+      }
+    ],
+    "detailTemplate": [
+      "Definition",
+      "Mode of transport",
+      "Delivery point",
+      "Risk transfer",
+      "Costs",
+      "Transport obligations",
+      "Insurance",
+      "Export formalities",
+      "Import formalities",
+      "Documents",
+      "Practical use cases",
+      "Common mistakes",
+      "Comparison with related Incoterms",
+      "Contract drafting checklist",
+      "Legal caveats"
+    ]
+  },
+  "branding": {
+    "logoAsset": "goodarzi-trading-logo-900.png",
+    "brandName": "GoodarziTrading",
+    "website": "https://www.goodarzitrading.ir",
+    "watermark": {
+      "enabled": true,
+      "position": "center",
+      "opacity": "very-low",
+      "pointerEvents": "none",
+      "print": true
+    },
+    "footer": {
+      "enabled": true,
+      "showBrandName": true,
+      "website": "https://www.goodarzitrading.ir",
+      "logo": false,
+      "pageNumber": true
+    },
+    "printAndPdf": {
+      "enabled": true,
+      "repeatBrandingOnEveryPage": true,
+      "watermark": true,
+      "footerWebsite": "https://www.goodarzitrading.ir",
+      "pageNumber": true
+    },
+    "doNotUse": [
+      "Any substitute/generated logo",
+      "Extra logo on left side of content pages",
+      "Opaque logo over legal text"
+    ],
+    "logoAssetNote": "IMPORTANT: 'goodarzi-trading-logo-900.png' is a placeholder filename and may not match the actual file in the live repository. Locate and reuse the existing GoodarziTrading logo already present in the project/repo. Do NOT design, generate, or substitute a new logo under any circumstances."
+  },
+  "lovablePrompt": "UPDATE THE EXISTING GOODARZITRADING WEBSITE — DO NOT REBUILD OR DELETE EXISTING CONTENT.\n\nImplement the attached Knowledge Center master JSON as a three-level reference system:\n\nLEVEL 1: Knowledge Center master index\nLEVEL 2: Category page / expandable list\nLEVEL 3: Individual instrument/rule/contract detail page\n\nExample:\nKnowledge → Incoterms 2020 → 11 rules → CIF → complete CIF detail.\n\nRequirements:\n- English default; Persian and Arabic fully supported.\n- Persian/Arabic RTL; English legal names, abbreviations and codes LTR where appropriate.\n- No language mixing.\n- Keep the existing dedicated Incoterms menu/page.\n- Incoterms 2020 must contain all 11 rules, each with its own detail page.\n- ITC must preserve the eight model-contract families from the supplied ITC publication.\n- Use the registry in this JSON as the core legal-information catalogue.\n- Search + category filter + instrument-type filter.\n- Each detail page must show official title, type, scope, conditions of application, key provisions, limitations, official source, last verified date and disclaimer.\n\nLEGAL ACCURACY IS NON-NEGOTIABLE:\nThis system contains legal information that may affect commercial decisions. Never invent treaty status, Iran membership, dates, applicability or legal conclusions. Never state that an instrument applies to a transaction without checking its conditions, participating States, declarations/reservations and applicable national law. Never present general information as transaction-specific legal advice. Never claim a model contract is universally sufficient. Use primary/official sources first. Show source and last-verified date on every instrument page. If a point is not verified, display 'Verification required' rather than guessing.\n\nPRINT/PDF BRANDING:\n- Use ONLY the user's existing real GoodarziTrading logo asset.\n- No extra logo at the left of content pages.\n- Large, very faint centered watermark behind content.\n- Footer on every page: GoodarziTrading + https://www.goodarzitrading.ir + page number.\n- Print/PDF repeats watermark and footer on every page.\n- Never obscure legal text.\n\nDO NOT remove or overwrite existing website content, routes, products, services, styling, or the current three-language system.",
+  "architecture": {
+    "level1": "Knowledge Center master index",
+    "level2": "Category index / expandable list",
+    "level3": "Individual instrument/rule/contract detail page",
+    "example": "Knowledge → Incoterms 2020 → CIF → complete CIF detail"
+  },
+  "legalSafety": {
+    "critical": true,
+    "requiredNoticePerPage": true,
+    "siteDisclaimer": {
+      "en": "This Knowledge Center is provided for general educational and informational purposes only. It does not constitute legal advice and does not replace review of the specific transaction, contract, applicable law, treaty status, mandatory rules, sanctions/export controls, or advice from a qualified lawyer or other competent professional. Users should verify the applicable rules and current legal status before relying on them in a transaction.",
+      "fa": "این مرکز دانش صرفاً برای اهداف آموزشی و اطلاع‌رسانی عمومی ارائه می‌شود و به‌منزله مشاوره حقوقی یا جایگزین بررسی موردی معامله، قرارداد، قانون حاکم، وضعیت لازم‌الاجرا بودن معاهدات، مقررات آمره، تحریم‌ها و کنترل‌های صادراتی یا نظر وکیل و متخصص ذی‌صلاح نیست. پیش از اتکا به مطالب در هر معامله، مقررات و وضعیت حقوقی جاری باید از منابع معتبر و رسمی بررسی شود.",
+      "ar": "يُقدَّم مركز المعرفة هذا لأغراض تعليمية ومعلوماتية عامة فقط، ولا يُعدّ استشارة قانونية ولا يغني عن مراجعة المعاملة والعقد والقانون الواجب التطبيق وحالة سريان المعاهدات والقواعد الآمرة والعقوبات وضوابط التصدير أو الاستعانة بمحامٍ أو مختص مؤهل. يجب التحقق من القواعد والحالة القانونية السارية من المصادر الرسمية قبل الاعتماد عليها في أي معاملة."
+    },
+    "sourceHierarchy": [
+      "Official treaty/instrument text",
+      "Official depositary/status database",
+      "Official organization guidance",
+      "Secondary commentary only when clearly labelled"
+    ],
+    "prohibited": [
+      "Never invent treaty membership or Iran status.",
+      "Never state that an instrument applies to a transaction without checking its conditions of application.",
+      "Never present general information as transaction-specific legal advice.",
+      "Never claim a model contract is legally sufficient in every jurisdiction.",
+      "Never omit material reservations, declarations, protocols, amendments or mandatory-law qualifications.",
+      "Never silently update a legal entry."
+    ],
+    "versioning": {
+      "enabled": true,
+      "showLastVerified": true,
+      "showInstrumentVersion": true,
+      "showSource": true
+    }
+  },
+  "pageTemplate": {
+    "level1": "Master index",
+    "level2": "Category page",
+    "level3": "Individual instrument/rule/contract detail",
+    "sections": [
+      "Official title",
+      "Instrument type",
+      "Issuing/administering organization",
+      "Purpose",
+      "Scope of application",
+      "Conditions of application",
+      "Key provisions",
+      "Rights and obligations where applicable",
+      "Documents/procedures where applicable",
+      "Liability/remedies where applicable",
+      "Exceptions/limitations",
+      "Reservations/declarations where relevant",
+      "Relationship with other instruments",
+      "Practical trade notes",
+      "Iran status only if officially verified",
+      "Official source",
+      "Last verified",
+      "Legal information disclaimer"
+    ]
+  },
+  "registry": {
+    "description": "Core global registry of instruments materially used in international trade. It is extensible and must not be represented as every bilateral/regional treaty worldwide.",
+    "entryCount": 72,
+    "entries": [
+      {
+        "category": "international-sale-of-goods",
+        "id": "cisg",
+        "title": {
+          "en": "CISG",
+          "fa": "کنوانسیون بیع بین‌المللی کالا",
+          "ar": "CISG"
+        },
+        "instrumentType": "Convention",
+        "administeringBody": "UNCITRAL",
+        "summary": {
+          "en": "Uniform framework for international sale of goods.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://uncitral.un.org/en/texts/salegoods/conventions/sale_of_goods/cisg",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "international-sale-of-goods",
+        "id": "convention-on-the-limitation-period-in-the-international-sale-of-goods",
+        "title": {
+          "en": "Convention on the Limitation Period in the International Sale of Goods",
+          "fa": "کنوانسیون مرور زمان در بیع بین‌المللی کالا",
+          "ar": "Convention on the Limitation Period in the International Sale of Goods"
+        },
+        "instrumentType": "Convention",
+        "administeringBody": "UNCITRAL",
+        "summary": {
+          "en": "Uniform rules concerning limitation periods for international sales.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://uncitral.un.org/en/texts/salegoods/conventions/limitation_period_international_sale_of_goods",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "maritime-transport",
+        "id": "hague-rules",
+        "title": {
+          "en": "Hague Rules",
+          "fa": "قواعد لاهه",
+          "ar": "Hague Rules"
+        },
+        "instrumentType": "Convention / Rules framework",
+        "administeringBody": "UNCITRAL",
+        "summary": {
+          "en": "Framework concerning carriage of goods by sea and bills of lading.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://uncitral.un.org/en/texts/transportgoods",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "maritime-transport",
+        "id": "hague-visby-rules",
+        "title": {
+          "en": "Hague-Visby Rules",
+          "fa": "قواعد لاهه–ویزبی",
+          "ar": "Hague-Visby Rules"
+        },
+        "instrumentType": "Protocol / Rules framework",
+        "administeringBody": "UNCITRAL",
+        "summary": {
+          "en": "Amended Hague regime for carriage of goods by sea.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://uncitral.un.org/en/texts/transportgoods",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "maritime-transport",
+        "id": "hamburg-rules",
+        "title": {
+          "en": "Hamburg Rules",
+          "fa": "قواعد هامبورگ",
+          "ar": "Hamburg Rules"
+        },
+        "instrumentType": "Convention",
+        "administeringBody": "UNCITRAL",
+        "summary": {
+          "en": "UN regime for carriage of goods by sea.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://uncitral.un.org/en/texts/transportgoods",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "maritime-transport",
+        "id": "rotterdam-rules",
+        "title": {
+          "en": "Rotterdam Rules",
+          "fa": "قواعد روتردام",
+          "ar": "Rotterdam Rules"
+        },
+        "instrumentType": "Convention",
+        "administeringBody": "UNCITRAL",
+        "summary": {
+          "en": "Modern carriage regime covering contracts with an international sea leg.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://uncitral.un.org/en/texts/transportgoods/conventions/rotterdam_rules",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "maritime-transport",
+        "id": "un-convention-on-liability-of-operators-of-transport-terminals",
+        "title": {
+          "en": "UN Convention on Liability of Operators of Transport Terminals",
+          "fa": "کنوانسیون مسئولیت متصدیان پایانه‌های حمل‌ونقل",
+          "ar": "UN Convention on Liability of Operators of Transport Terminals"
+        },
+        "instrumentType": "Convention",
+        "administeringBody": "UNCITRAL",
+        "summary": {
+          "en": "Liability framework for international transport terminal operators.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://uncitral.un.org/en/texts/transportgoods",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "road-transport",
+        "id": "cmr-convention",
+        "title": {
+          "en": "CMR Convention",
+          "fa": "کنوانسیون CMR حمل جاده‌ای",
+          "ar": "CMR Convention"
+        },
+        "instrumentType": "Convention",
+        "administeringBody": "UNECE",
+        "summary": {
+          "en": "Uniform contractual and carrier-liability rules for international road carriage.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://unece.org/trade/documents/2023/10/executive-guide-e-cmr",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "road-transport",
+        "id": "e-cmr-additional-protocol-2008",
+        "title": {
+          "en": "e-CMR Additional Protocol 2008",
+          "fa": "پروتکل الحاقی e-CMR",
+          "ar": "e-CMR Additional Protocol 2008"
+        },
+        "instrumentType": "Protocol",
+        "administeringBody": "UNECE",
+        "summary": {
+          "en": "Electronic consignment notes under CMR.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://unece.org/trade/documents/2023/10/executive-guide-e-cmr",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "rail-transport",
+        "id": "cotif",
+        "title": {
+          "en": "COTIF",
+          "fa": "کنوانسیون COTIF",
+          "ar": "COTIF"
+        },
+        "instrumentType": "Convention",
+        "administeringBody": "OTIF",
+        "summary": {
+          "en": "International legal framework for international rail carriage.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://otif.org/en/?page_id=172",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "rail-transport",
+        "id": "cim-uniform-rules",
+        "title": {
+          "en": "CIM Uniform Rules",
+          "fa": "قواعد یکنواخت CIM",
+          "ar": "CIM Uniform Rules"
+        },
+        "instrumentType": "Uniform Rules",
+        "administeringBody": "OTIF",
+        "summary": {
+          "en": "Rules for international carriage of goods by rail.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://otif.org/en/?page_id=172",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "rail-transport",
+        "id": "civ-uniform-rules",
+        "title": {
+          "en": "CIV Uniform Rules",
+          "fa": "قواعد یکنواخت CIV",
+          "ar": "CIV Uniform Rules"
+        },
+        "instrumentType": "Uniform Rules",
+        "administeringBody": "OTIF",
+        "summary": {
+          "en": "Rules for international carriage of passengers by rail.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://otif.org/en/?page_id=172",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "air-transport",
+        "id": "warsaw-convention",
+        "title": {
+          "en": "Warsaw Convention",
+          "fa": "کنوانسیون ورشو",
+          "ar": "Warsaw Convention"
+        },
+        "instrumentType": "Convention",
+        "administeringBody": "ICAO",
+        "summary": {
+          "en": "Historic international air-carriage liability framework, as modified by later instruments.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://www.icao.int/sustainability/Pages/Economic-Regulation-Air-Transport.aspx",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "air-transport",
+        "id": "montreal-convention-1999",
+        "title": {
+          "en": "Montreal Convention 1999",
+          "fa": "کنوانسیون مونترال ۱۹۹۹",
+          "ar": "Montreal Convention 1999"
+        },
+        "instrumentType": "Convention",
+        "administeringBody": "ICAO",
+        "summary": {
+          "en": "Modern international framework for international carriage by air.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://www.icao.int/sustainability/Pages/Economic-Regulation-Air-Transport.aspx",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "multimodal-transport",
+        "id": "un-convention-on-international-multimodal-transport-of-goods-1980",
+        "title": {
+          "en": "UN Convention on International Multimodal Transport of Goods 1980",
+          "fa": "کنوانسیون حمل‌ونقل چندوجهی بین‌المللی کالا ۱۹۸۰",
+          "ar": "UN Convention on International Multimodal Transport of Goods 1980"
+        },
+        "instrumentType": "Convention",
+        "administeringBody": "UN",
+        "summary": {
+          "en": "Framework for international multimodal transport under a single contract.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://uncitral.un.org/en/texts/transportgoods",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "customs-transit-conventions",
+        "id": "tir-convention-1975",
+        "title": {
+          "en": "TIR Convention 1975",
+          "fa": "کنوانسیون تیر ۱۹۷۵",
+          "ar": "TIR Convention 1975"
+        },
+        "instrumentType": "Convention",
+        "administeringBody": "UNECE",
+        "summary": {
+          "en": "Customs transit system under TIR Carnets.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://unece.org/transport/tir/tir-handbooks",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "customs-transit-conventions",
+        "id": "ata-convention---ata-carnet",
+        "title": {
+          "en": "ATA Convention / ATA Carnet",
+          "fa": "کنوانسیون ATA / کارنه ATA",
+          "ar": "ATA Convention / ATA Carnet"
+        },
+        "instrumentType": "Customs Convention / Instrument",
+        "administeringBody": "WCO / ICC WCF",
+        "summary": {
+          "en": "Temporary admission system for eligible goods.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://www.wcotradetools.org/en",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "customs-transit-conventions",
+        "id": "istanbul-convention-on-temporary-admission",
+        "title": {
+          "en": "Istanbul Convention on Temporary Admission",
+          "fa": "کنوانسیون استانبول درباره ورود موقت",
+          "ar": "Istanbul Convention on Temporary Admission"
+        },
+        "instrumentType": "Convention",
+        "administeringBody": "WCO",
+        "summary": {
+          "en": "Harmonized temporary-admission procedures.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://www.wcotradetools.org/en",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "customs-transit-conventions",
+        "id": "revised-kyoto-convention",
+        "title": {
+          "en": "Revised Kyoto Convention",
+          "fa": "کنوانسیون تجدیدنظرشده کیوتو",
+          "ar": "Revised Kyoto Convention"
+        },
+        "instrumentType": "Convention",
+        "administeringBody": "WCO",
+        "summary": {
+          "en": "Simplification and harmonization of customs procedures.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://www.wcotradetools.org/en",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "customs-transit-conventions",
+        "id": "harmonized-system-convention",
+        "title": {
+          "en": "Harmonized System Convention",
+          "fa": "کنوانسیون سیستم هماهنگ‌شده",
+          "ar": "Harmonized System Convention"
+        },
+        "instrumentType": "Convention",
+        "administeringBody": "WCO",
+        "summary": {
+          "en": "International framework for classification of traded goods.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://www.wcotradetools.org/en",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "customs-transit-conventions",
+        "id": "wto-customs-valuation-agreement",
+        "title": {
+          "en": "WTO Customs Valuation Agreement",
+          "fa": "موافقت‌نامه ارزش‌گذاری گمرکی",
+          "ar": "WTO Customs Valuation Agreement"
+        },
+        "instrumentType": "WTO Agreement",
+        "administeringBody": "WTO",
+        "summary": {
+          "en": "Rules for customs valuation.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://www.wto.org/english/docs_e/legal_e/final_e.htm",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "customs-transit-conventions",
+        "id": "wto-agreement-on-rules-of-origin",
+        "title": {
+          "en": "WTO Agreement on Rules of Origin",
+          "fa": "موافقت‌نامه قواعد مبدأ",
+          "ar": "WTO Agreement on Rules of Origin"
+        },
+        "instrumentType": "WTO Agreement",
+        "administeringBody": "WTO",
+        "summary": {
+          "en": "Framework for rules of origin.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://www.wto.org/english/docs_e/legal_e/final_e.htm",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "documentary-credits",
+        "id": "ucp-600",
+        "title": {
+          "en": "UCP 600",
+          "fa": "UCP 600",
+          "ar": "UCP 600"
+        },
+        "instrumentType": "ICC Rules",
+        "administeringBody": "ICC",
+        "summary": {
+          "en": "Uniform rules for documentary credits.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://iccwbo.org/business-solutions/banking-finance/",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "documentary-credits",
+        "id": "eucp",
+        "title": {
+          "en": "eUCP",
+          "fa": "eUCP",
+          "ar": "eUCP"
+        },
+        "instrumentType": "ICC Supplementary Rules",
+        "administeringBody": "ICC",
+        "summary": {
+          "en": "Supplementary rules for electronic records under documentary credits.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://iccwbo.org/business-solutions/banking-finance/",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "documentary-credits",
+        "id": "isbp",
+        "title": {
+          "en": "ISBP",
+          "fa": "ISBP",
+          "ar": "ISBP"
+        },
+        "instrumentType": "ICC Banking Practice",
+        "administeringBody": "ICC",
+        "summary": {
+          "en": "International standard banking practice for documentary credits.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://iccwbo.org/business-solutions/banking-finance/",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "documentary-collections",
+        "id": "urc-522",
+        "title": {
+          "en": "URC 522",
+          "fa": "URC 522",
+          "ar": "URC 522"
+        },
+        "instrumentType": "ICC Rules",
+        "administeringBody": "ICC",
+        "summary": {
+          "en": "Uniform Rules for Collections.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://iccwbo.org/business-solutions/banking-finance/",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "guarantees",
+        "id": "urdg-758",
+        "title": {
+          "en": "URDG 758",
+          "fa": "URDG 758",
+          "ar": "URDG 758"
+        },
+        "instrumentType": "ICC Rules",
+        "administeringBody": "ICC",
+        "summary": {
+          "en": "Uniform Rules for Demand Guarantees.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://iccwbo.org/business-solutions/banking-finance/",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "standby-letters-of-credit",
+        "id": "isp98",
+        "title": {
+          "en": "ISP98",
+          "fa": "ISP98",
+          "ar": "ISP98"
+        },
+        "instrumentType": "ICC Rules",
+        "administeringBody": "ICC",
+        "summary": {
+          "en": "International Standby Practices.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://iccwbo.org/business-solutions/banking-finance/",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "international-arbitration",
+        "id": "new-york-convention-1958",
+        "title": {
+          "en": "New York Convention 1958",
+          "fa": "کنوانسیون نیویورک ۱۹۵۸",
+          "ar": "New York Convention 1958"
+        },
+        "instrumentType": "Convention",
+        "administeringBody": "UNCITRAL",
+        "summary": {
+          "en": "Recognition of arbitration agreements and foreign/non-domestic awards.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://uncitral.un.org/en/texts/arbitration/conventions/foreign_arbitral_awards",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "international-arbitration",
+        "id": "uncitral-arbitration-rules",
+        "title": {
+          "en": "UNCITRAL Arbitration Rules",
+          "fa": "قواعد داوری آنسیترال",
+          "ar": "UNCITRAL Arbitration Rules"
+        },
+        "instrumentType": "Arbitration Rules",
+        "administeringBody": "UNCITRAL",
+        "summary": {
+          "en": "Procedural rules for arbitration.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://uncitral.un.org/en/texts/arbitration/contractualtexts/arbitration",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "international-arbitration",
+        "id": "uncitral-model-law-on-international-commercial-arbitration",
+        "title": {
+          "en": "UNCITRAL Model Law on International Commercial Arbitration",
+          "fa": "قانون نمونه آنسیترال درباره داوری تجاری بین‌المللی",
+          "ar": "UNCITRAL Model Law on International Commercial Arbitration"
+        },
+        "instrumentType": "Model Law",
+        "administeringBody": "UNCITRAL",
+        "summary": {
+          "en": "Model legislative framework for commercial arbitration.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://uncitral.un.org/en/texts/arbitration/modellaw/commercial_arbitration",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "international-arbitration",
+        "id": "icc-arbitration-rules",
+        "title": {
+          "en": "ICC Arbitration Rules",
+          "fa": "قواعد داوری ICC",
+          "ar": "ICC Arbitration Rules"
+        },
+        "instrumentType": "Institutional Rules",
+        "administeringBody": "ICC",
+        "summary": {
+          "en": "Institutional arbitration rules.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://iccwbo.org/dispute-resolution/dispute-resolution-services/icc-arbitration/",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "mediation-dispute-resolution",
+        "id": "singapore-convention-on-mediation-2019",
+        "title": {
+          "en": "Singapore Convention on Mediation 2019",
+          "fa": "کنوانسیون سنگاپور درباره میانجیگری ۲۰۱۹",
+          "ar": "Singapore Convention on Mediation 2019"
+        },
+        "instrumentType": "Convention",
+        "administeringBody": "UNCITRAL",
+        "summary": {
+          "en": "Framework for enforcement of international mediated settlement agreements.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://uncitral.un.org/en/texts/mediation/conventions/international_settlement_agreements",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "international-electronic-commerce",
+        "id": "un-convention-on-electronic-communications-in-international-contracts",
+        "title": {
+          "en": "UN Convention on Electronic Communications in International Contracts",
+          "fa": "کنوانسیون ارتباطات الکترونیکی در قراردادهای بین‌المللی",
+          "ar": "UN Convention on Electronic Communications in International Contracts"
+        },
+        "instrumentType": "Convention",
+        "administeringBody": "UNCITRAL",
+        "summary": {
+          "en": "Legal framework facilitating electronic communications in international contracts.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://uncitral.un.org/en/texts/ecommerce/conventions/electronic_communications",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "international-electronic-commerce",
+        "id": "uncitral-model-law-on-electronic-commerce",
+        "title": {
+          "en": "UNCITRAL Model Law on Electronic Commerce",
+          "fa": "قانون نمونه آنسیترال درباره تجارت الکترونیکی",
+          "ar": "UNCITRAL Model Law on Electronic Commerce"
+        },
+        "instrumentType": "Model Law",
+        "administeringBody": "UNCITRAL",
+        "summary": {
+          "en": "Model framework for electronic commerce.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://uncitral.un.org/en/texts/ecommerce/modellaw/electronic_commerce",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "international-electronic-commerce",
+        "id": "uncitral-model-law-on-electronic-signatures",
+        "title": {
+          "en": "UNCITRAL Model Law on Electronic Signatures",
+          "fa": "قانون نمونه آنسیترال درباره امضاهای الکترونیکی",
+          "ar": "UNCITRAL Model Law on Electronic Signatures"
+        },
+        "instrumentType": "Model Law",
+        "administeringBody": "UNCITRAL",
+        "summary": {
+          "en": "Model framework for electronic signatures.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://uncitral.un.org/en/texts/ecommerce/modellaw/electronic_signatures",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "international-electronic-commerce",
+        "id": "uncitral-model-law-on-electronic-transferable-records",
+        "title": {
+          "en": "UNCITRAL Model Law on Electronic Transferable Records",
+          "fa": "قانون نمونه آنسیترال درباره اسناد قابل انتقال الکترونیکی",
+          "ar": "UNCITRAL Model Law on Electronic Transferable Records"
+        },
+        "instrumentType": "Model Law",
+        "administeringBody": "UNCITRAL",
+        "summary": {
+          "en": "Model framework for electronic transferable records.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://uncitral.un.org/en/texts/ecommerce/modellaw/electronic_transferable_records",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "international-insolvency-security",
+        "id": "uncitral-model-law-on-cross-border-insolvency",
+        "title": {
+          "en": "UNCITRAL Model Law on Cross-Border Insolvency",
+          "fa": "قانون نمونه آنسیترال درباره ورشکستگی فرامرزی",
+          "ar": "UNCITRAL Model Law on Cross-Border Insolvency"
+        },
+        "instrumentType": "Model Law",
+        "administeringBody": "UNCITRAL",
+        "summary": {
+          "en": "Model framework for cross-border insolvency cooperation.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://uncitral.un.org/en/texts/insolvency/modellaw/cross-border_insolvency",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "international-insolvency-security",
+        "id": "uncitral-model-law-on-secured-transactions",
+        "title": {
+          "en": "UNCITRAL Model Law on Secured Transactions",
+          "fa": "قانون نمونه آنسیترال درباره معاملات تضمین‌شده",
+          "ar": "UNCITRAL Model Law on Secured Transactions"
+        },
+        "instrumentType": "Model Law",
+        "administeringBody": "UNCITRAL",
+        "summary": {
+          "en": "Model framework for secured transactions.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://uncitral.un.org/en/texts/securityinterests/modellaw/secured_transactions",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "international-payment-trade-finance",
+        "id": "un-convention-on-assignment-of-receivables-in-international-trade",
+        "title": {
+          "en": "UN Convention on Assignment of Receivables in International Trade",
+          "fa": "کنوانسیون واگذاری مطالبات در تجارت بین‌المللی",
+          "ar": "UN Convention on Assignment of Receivables in International Trade"
+        },
+        "instrumentType": "Convention",
+        "administeringBody": "UNCITRAL",
+        "summary": {
+          "en": "Framework facilitating international receivables financing.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://uncitral.un.org/en/texts/securityinterests/conventions/receivables",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "international-trade-investment",
+        "id": "icsid-convention",
+        "title": {
+          "en": "ICSID Convention",
+          "fa": "کنوانسیون ICSID",
+          "ar": "ICSID Convention"
+        },
+        "instrumentType": "Convention",
+        "administeringBody": "ICSID",
+        "summary": {
+          "en": "Framework for certain investment conciliation and arbitration proceedings.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://icsid.worldbank.org/resources/rules-and-regulations/convention",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "wto-agreements",
+        "id": "gatt-1994",
+        "title": {
+          "en": "GATT 1994",
+          "fa": "گات ۱۹۹۴",
+          "ar": "GATT 1994"
+        },
+        "instrumentType": "WTO Agreement",
+        "administeringBody": "WTO",
+        "summary": {
+          "en": "WTO legal instrument governing an identified field of international trade.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://www.wto.org/english/docs_e/legal_e/legal_e.htm",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "wto-agreements",
+        "id": "agreement-on-agriculture",
+        "title": {
+          "en": "Agreement on Agriculture",
+          "fa": "موافقت‌نامه کشاورزی",
+          "ar": "Agreement on Agriculture"
+        },
+        "instrumentType": "WTO Agreement",
+        "administeringBody": "WTO",
+        "summary": {
+          "en": "WTO legal instrument governing an identified field of international trade.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://www.wto.org/english/docs_e/legal_e/legal_e.htm",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "wto-agreements",
+        "id": "sps-agreement",
+        "title": {
+          "en": "SPS Agreement",
+          "fa": "موافقت‌نامه اقدامات بهداشتی و بهداشت گیاهی",
+          "ar": "SPS Agreement"
+        },
+        "instrumentType": "WTO Agreement",
+        "administeringBody": "WTO",
+        "summary": {
+          "en": "WTO legal instrument governing an identified field of international trade.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://www.wto.org/english/docs_e/legal_e/legal_e.htm",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "wto-agreements",
+        "id": "tbt-agreement",
+        "title": {
+          "en": "TBT Agreement",
+          "fa": "موافقت‌نامه موانع فنی فرا راه تجارت",
+          "ar": "TBT Agreement"
+        },
+        "instrumentType": "WTO Agreement",
+        "administeringBody": "WTO",
+        "summary": {
+          "en": "WTO legal instrument governing an identified field of international trade.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://www.wto.org/english/docs_e/legal_e/legal_e.htm",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "wto-agreements",
+        "id": "anti-dumping-agreement",
+        "title": {
+          "en": "Anti-Dumping Agreement",
+          "fa": "موافقت‌نامه ضد دامپینگ",
+          "ar": "Anti-Dumping Agreement"
+        },
+        "instrumentType": "WTO Agreement",
+        "administeringBody": "WTO",
+        "summary": {
+          "en": "WTO legal instrument governing an identified field of international trade.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://www.wto.org/english/docs_e/legal_e/legal_e.htm",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "wto-agreements",
+        "id": "scm-agreement",
+        "title": {
+          "en": "SCM Agreement",
+          "fa": "موافقت‌نامه یارانه‌ها و اقدامات جبرانی",
+          "ar": "SCM Agreement"
+        },
+        "instrumentType": "WTO Agreement",
+        "administeringBody": "WTO",
+        "summary": {
+          "en": "WTO legal instrument governing an identified field of international trade.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://www.wto.org/english/docs_e/legal_e/legal_e.htm",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "wto-agreements",
+        "id": "agreement-on-safeguards",
+        "title": {
+          "en": "Agreement on Safeguards",
+          "fa": "موافقت‌نامه اقدامات حفاظتی",
+          "ar": "Agreement on Safeguards"
+        },
+        "instrumentType": "WTO Agreement",
+        "administeringBody": "WTO",
+        "summary": {
+          "en": "WTO legal instrument governing an identified field of international trade.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://www.wto.org/english/docs_e/legal_e/legal_e.htm",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "wto-agreements",
+        "id": "agreement-on-import-licensing-procedures",
+        "title": {
+          "en": "Agreement on Import Licensing Procedures",
+          "fa": "موافقت‌نامه رویه‌های صدور مجوز واردات",
+          "ar": "Agreement on Import Licensing Procedures"
+        },
+        "instrumentType": "WTO Agreement",
+        "administeringBody": "WTO",
+        "summary": {
+          "en": "WTO legal instrument governing an identified field of international trade.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://www.wto.org/english/docs_e/legal_e/legal_e.htm",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "wto-agreements",
+        "id": "agreement-on-rules-of-origin",
+        "title": {
+          "en": "Agreement on Rules of Origin",
+          "fa": "موافقت‌نامه قواعد مبدأ",
+          "ar": "Agreement on Rules of Origin"
+        },
+        "instrumentType": "WTO Agreement",
+        "administeringBody": "WTO",
+        "summary": {
+          "en": "WTO legal instrument governing an identified field of international trade.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://www.wto.org/english/docs_e/legal_e/legal_e.htm",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "wto-agreements",
+        "id": "customs-valuation-agreement",
+        "title": {
+          "en": "Customs Valuation Agreement",
+          "fa": "موافقت‌نامه ارزش‌گذاری گمرکی",
+          "ar": "Customs Valuation Agreement"
+        },
+        "instrumentType": "WTO Agreement",
+        "administeringBody": "WTO",
+        "summary": {
+          "en": "WTO legal instrument governing an identified field of international trade.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://www.wto.org/english/docs_e/legal_e/legal_e.htm",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "wto-agreements",
+        "id": "agreement-on-preshipment-inspection",
+        "title": {
+          "en": "Agreement on Preshipment Inspection",
+          "fa": "موافقت‌نامه بازرسی پیش از حمل",
+          "ar": "Agreement on Preshipment Inspection"
+        },
+        "instrumentType": "WTO Agreement",
+        "administeringBody": "WTO",
+        "summary": {
+          "en": "WTO legal instrument governing an identified field of international trade.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://www.wto.org/english/docs_e/legal_e/legal_e.htm",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "wto-agreements",
+        "id": "trade-facilitation-agreement",
+        "title": {
+          "en": "Trade Facilitation Agreement",
+          "fa": "موافقت‌نامه تسهیل تجارت",
+          "ar": "Trade Facilitation Agreement"
+        },
+        "instrumentType": "WTO Agreement",
+        "administeringBody": "WTO",
+        "summary": {
+          "en": "WTO legal instrument governing an identified field of international trade.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://www.wto.org/english/docs_e/legal_e/legal_e.htm",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "wto-agreements",
+        "id": "gats",
+        "title": {
+          "en": "GATS",
+          "fa": "موافقت‌نامه عمومی تجارت خدمات",
+          "ar": "GATS"
+        },
+        "instrumentType": "WTO Agreement",
+        "administeringBody": "WTO",
+        "summary": {
+          "en": "WTO legal instrument governing an identified field of international trade.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://www.wto.org/english/docs_e/legal_e/legal_e.htm",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "wto-agreements",
+        "id": "trips-agreement",
+        "title": {
+          "en": "TRIPS Agreement",
+          "fa": "موافقت‌نامه تریپس",
+          "ar": "TRIPS Agreement"
+        },
+        "instrumentType": "WTO Agreement",
+        "administeringBody": "WTO",
+        "summary": {
+          "en": "WTO legal instrument governing an identified field of international trade.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://www.wto.org/english/docs_e/legal_e/legal_e.htm",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "wto-agreements",
+        "id": "dispute-settlement-understanding",
+        "title": {
+          "en": "Dispute Settlement Understanding",
+          "fa": "تفاهم‌نامه حل‌وفصل اختلافات",
+          "ar": "Dispute Settlement Understanding"
+        },
+        "instrumentType": "WTO Agreement",
+        "administeringBody": "WTO",
+        "summary": {
+          "en": "WTO legal instrument governing an identified field of international trade.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://www.wto.org/english/docs_e/legal_e/legal_e.htm",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "wto-agreements",
+        "id": "agreement-on-fisheries-subsidies",
+        "title": {
+          "en": "Agreement on Fisheries Subsidies",
+          "fa": "موافقت‌نامه یارانه‌های شیلات",
+          "ar": "Agreement on Fisheries Subsidies"
+        },
+        "instrumentType": "WTO Agreement",
+        "administeringBody": "WTO",
+        "summary": {
+          "en": "WTO legal instrument governing an identified field of international trade.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://www.wto.org/english/docs_e/legal_e/legal_e.htm",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "wto-agreements",
+        "id": "government-procurement-agreement",
+        "title": {
+          "en": "Government Procurement Agreement",
+          "fa": "موافقت‌نامه خرید دولتی",
+          "ar": "Government Procurement Agreement"
+        },
+        "instrumentType": "WTO Agreement",
+        "administeringBody": "WTO",
+        "summary": {
+          "en": "WTO legal instrument governing an identified field of international trade.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://www.wto.org/english/docs_e/legal_e/legal_e.htm",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "intellectual-property-international-trade",
+        "id": "paris-convention",
+        "title": {
+          "en": "Paris Convention",
+          "fa": "کنوانسیون پاریس",
+          "ar": "Paris Convention"
+        },
+        "instrumentType": "WIPO Treaty/System",
+        "administeringBody": "WIPO",
+        "summary": {
+          "en": "International IP treaty or system relevant to cross-border commerce.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://www.wipo.int/treaties/en/",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "intellectual-property-international-trade",
+        "id": "berne-convention",
+        "title": {
+          "en": "Berne Convention",
+          "fa": "کنوانسیون برن",
+          "ar": "Berne Convention"
+        },
+        "instrumentType": "WIPO Treaty/System",
+        "administeringBody": "WIPO",
+        "summary": {
+          "en": "International IP treaty or system relevant to cross-border commerce.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://www.wipo.int/treaties/en/",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "intellectual-property-international-trade",
+        "id": "patent-cooperation-treaty-pct",
+        "title": {
+          "en": "Patent Cooperation Treaty (PCT)",
+          "fa": "معاهده همکاری ثبت اختراع PCT",
+          "ar": "Patent Cooperation Treaty (PCT)"
+        },
+        "instrumentType": "WIPO Treaty/System",
+        "administeringBody": "WIPO",
+        "summary": {
+          "en": "International IP treaty or system relevant to cross-border commerce.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://www.wipo.int/treaties/en/",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "intellectual-property-international-trade",
+        "id": "madrid-agreement-and-protocol",
+        "title": {
+          "en": "Madrid Agreement and Protocol",
+          "fa": "موافقت‌نامه و پروتکل مادرید",
+          "ar": "Madrid Agreement and Protocol"
+        },
+        "instrumentType": "WIPO Treaty/System",
+        "administeringBody": "WIPO",
+        "summary": {
+          "en": "International IP treaty or system relevant to cross-border commerce.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://www.wipo.int/treaties/en/",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "intellectual-property-international-trade",
+        "id": "hague-agreement",
+        "title": {
+          "en": "Hague Agreement",
+          "fa": "موافقت‌نامه لاهه درباره طرح‌های صنعتی",
+          "ar": "Hague Agreement"
+        },
+        "instrumentType": "WIPO Treaty/System",
+        "administeringBody": "WIPO",
+        "summary": {
+          "en": "International IP treaty or system relevant to cross-border commerce.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://www.wipo.int/treaties/en/",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "intellectual-property-international-trade",
+        "id": "lisbon-agreement---geneva-act",
+        "title": {
+          "en": "Lisbon Agreement / Geneva Act",
+          "fa": "موافقت‌نامه لیسبون / سند ژنو",
+          "ar": "Lisbon Agreement / Geneva Act"
+        },
+        "instrumentType": "WIPO Treaty/System",
+        "administeringBody": "WIPO",
+        "summary": {
+          "en": "International IP treaty or system relevant to cross-border commerce.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://www.wipo.int/treaties/en/",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "intellectual-property-international-trade",
+        "id": "wipo-copyright-treaty",
+        "title": {
+          "en": "WIPO Copyright Treaty",
+          "fa": "معاهده حق مؤلف وایپو",
+          "ar": "WIPO Copyright Treaty"
+        },
+        "instrumentType": "WIPO Treaty/System",
+        "administeringBody": "WIPO",
+        "summary": {
+          "en": "International IP treaty or system relevant to cross-border commerce.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://www.wipo.int/treaties/en/",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "intellectual-property-international-trade",
+        "id": "wipo-performances-and-phonograms-treaty",
+        "title": {
+          "en": "WIPO Performances and Phonograms Treaty",
+          "fa": "معاهده اجراها و آواها وایپو",
+          "ar": "WIPO Performances and Phonograms Treaty"
+        },
+        "instrumentType": "WIPO Treaty/System",
+        "administeringBody": "WIPO",
+        "summary": {
+          "en": "International IP treaty or system relevant to cross-border commerce.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument, participating States, declarations/reservations and applicable national law.",
+        "officialSource": "https://www.wipo.int/treaties/en/",
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null
+      },
+      {
+        "category": "international-electronic-commerce",
+        "id": "uncitral-model-law-on-automated-contracting",
+        "title": {
+          "en": "UNCITRAL Model Law on Automated Contracting",
+          "fa": "قانون نمونه آنسیترال درباره قراردادهای خودکار",
+          "ar": "قانون الأونسيترال النموذجي بشأن التعاقد الآلي"
+        },
+        "instrumentType": "Model Law",
+        "administeringBody": "UNCITRAL",
+        "summary": {
+          "en": "Model legislative framework addressing legal recognition of automated systems (including AI and machine-to-machine transactions) in the formation and performance of contracts. Adopted by UNCITRAL in July 2024.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability must be determined from the instrument text, enacting States, and applicable national law. As a Model Law (not a Convention), it has no independent international legal force until a State enacts it domestically.",
+        "officialSource": "https://uncitral.un.org/en/mlac",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null,
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE"
+      },
+      {
+        "category": "regional-bilateral-trade-agreements",
+        "id": "eco-trade-agreement",
+        "title": {
+          "en": "ECO Trade Agreement (Economic Cooperation Organization)",
+          "fa": "",
+          "ar": ""
+        },
+        "instrumentType": "Regional Trade Agreement",
+        "administeringBody": "Economic Cooperation Organization (ECO)",
+        "summary": {
+          "en": "Regional preferential-tariff framework among ECO member states (including Iran, Turkey, Pakistan and others). Directly relevant to Iran-origin cross-border trade; exact tariff schedules, ratification status, and current in-force status per member must be verified from ECO's official texts.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applicability depends on ratification status per member state and the specific tariff line — must be verified from the official ECO source before use.",
+        "officialSource": "https://eco.int",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null,
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE"
+      },
+      {
+        "category": "regional-bilateral-trade-agreements",
+        "id": "iran-eaeu-preferential-trade-agreement",
+        "title": {
+          "en": "Iran–Eurasian Economic Union (EAEU) Free Trade Agreement",
+          "fa": "",
+          "ar": ""
+        },
+        "instrumentType": "Preferential/Free Trade Agreement",
+        "administeringBody": "Eurasian Economic Union / Islamic Republic of Iran",
+        "summary": {
+          "en": "Preferential trade agreement between Iran and EAEU member states (Russia, Armenia, Belarus, Kazakhstan, Kyrgyzstan) covering reduced tariffs on a scheduled list of goods. Status upgraded from interim to full FTA in recent years; exact product coverage, tariff rates and current entry-into-force status must be verified from an official/primary source before any transactional reliance.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Product-line-specific tariff preferences; must be checked against the current official schedule, not assumed to apply generally.",
+        "officialSource": "https://eec.eaeunion.org",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null,
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE"
+      },
+      {
+        "category": "international-insurance",
+        "id": "institute-cargo-clauses",
+        "title": {
+          "en": "Institute Cargo Clauses (A / B / C)",
+          "fa": "",
+          "ar": ""
+        },
+        "instrumentType": "Standard Market Clauses (not a treaty)",
+        "administeringBody": "Institute of London Underwriters / Lloyd's Market Association (LMA) & International Underwriting Association (IUA)",
+        "summary": {
+          "en": "Widely used standard clauses defining scope of marine cargo insurance cover (All Risks / named perils / minimum cover), commonly referenced alongside CIF and CIP Incoterms. Not an international convention — a market-standard wording; exact current edition and wording must be confirmed from the official LMA/IUA source.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Contractual insurance wording chosen by the parties/insurer; applicability is transaction-specific, not automatic.",
+        "officialSource": "https://www.lmalloyds.com",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null,
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE"
+      },
+      {
+        "category": "private-international-law",
+        "id": "unidroit-principles-international-commercial-contracts",
+        "title": {
+          "en": "UNIDROIT Principles of International Commercial Contracts",
+          "fa": "",
+          "ar": ""
+        },
+        "instrumentType": "Restatement / Soft-law Principles",
+        "administeringBody": "UNIDROIT",
+        "summary": {
+          "en": "Non-binding restatement of general contract-law principles, frequently chosen by parties (or applied by arbitral tribunals) to govern or interpret international commercial contracts, especially alongside or in gaps left by CISG. Current edition and precise text must be confirmed from UNIDROIT's official source.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Applies only if chosen by the parties or applied by a tribunal; not automatically binding law.",
+        "officialSource": "https://www.unidroit.org/instruments/commercial-contracts/unidroit-principles-2016/",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null,
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE"
+      },
+      {
+        "category": "international-commercial-agency",
+        "id": "geneva-convention-agency-international-sale-of-goods-1983",
+        "title": {
+          "en": "Geneva Convention on Agency in the International Sale of Goods (1983)",
+          "fa": "",
+          "ar": ""
+        },
+        "instrumentType": "Convention (not yet widely in force)",
+        "administeringBody": "UNIDROIT",
+        "summary": {
+          "en": "Convention addressing the legal relationship created when an agent acts on behalf of a principal in international sale-of-goods transactions. Has a very limited number of ratifications and may not be in force at all — ratification/in-force status must be verified from an official source before any reliance.",
+          "fa": "",
+          "ar": ""
+        },
+        "scope": "Extremely limited ratification; do not assume applicability without checking current status.",
+        "officialSource": "https://www.unidroit.org/instruments/agency/1983-convention/",
+        "dataCompiledDate": "2026-08-12",
+        "lastLegalVerification": null,
+        "status": "VERIFY_CURRENT_STATUS_BEFORE_TRANSACTIONAL_RELIANCE"
+      }
+    ]
+  },
+  "translationIntegrityNote": {
+    "issue": "All registry entry summaries currently have empty fa/ar fields (en only).",
+    "rule": "Do NOT auto-generate or machine-translate fa/ar legal summaries as a substitute for reviewed content. Where fa/ar summary is empty, the UI must either (a) display the English summary with a clearly labeled 'Not yet available in this language' note, or (b) display 'نیازمند بررسی و تأیید از منبع رسمی' / 'قيد المراجعة والتحقق من مصدر رسمي' — never silently invent translated legal content."
+  },
+  "completenessNote": {
+    "en": "This registry is a curated starting set, not an exhaustive index of every international trade instrument. Categories marked displayStatus='coming_soon' currently have no entries and must not be presented to site visitors as 'no such instruments exist' — they should show a clear 'content under development' state instead.",
+    "fa": "این فهرست یک مجموعه اولیه انتخاب‌شده است، نه فهرست جامع همه اسناد تجارت بین‌الملل. دسته‌هایی که displayStatus آن‌ها 'coming_soon' است فعلاً هیچ موردی ندارند و نباید طوری به کاربر نمایش داده شوند که انگار 'چنین سندی وجود ندارد' — باید وضعیت 'در حال تکمیل' به‌وضوح نشان داده شود.",
+    "ar": ""
+  }
+}

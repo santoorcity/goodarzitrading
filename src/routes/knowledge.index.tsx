@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { PageHero } from "@/components/site/PageHero";
+import { InstrumentDirectory } from "@/components/knowledge/InstrumentDirectory";
+
 import {
   Accordion,
   AccordionContent,
@@ -12,7 +14,7 @@ import {
   Banknote, Search, CheckCircle2,
 } from "lucide-react";
 
-export const Route = createFileRoute("/knowledge")({
+export const Route = createFileRoute("/knowledge/")({
   head: () => ({
     meta: [
       { title: "Customs & Trade Knowledge Center — Goodarzi Trading" },
@@ -388,6 +390,9 @@ function Knowledge() {
           )}
         </div>
       </section>
+
+      <InstrumentDirectory />
     </>
+
   );
 }

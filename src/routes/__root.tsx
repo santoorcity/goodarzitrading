@@ -15,6 +15,8 @@ import { Header } from "../components/site/Header";
 import { Footer } from "../components/site/Footer";
 import { WhatsAppFab } from "../components/site/WhatsAppFab";
 import { LanguageProvider } from "../i18n/LanguageProvider";
+import { Analytics } from "@vercel/analytics/react";
+
 
 
 function NotFoundComponent() {
@@ -188,8 +190,10 @@ function RootComponent() {
         </main>
         <Footer />
         <WhatsAppFab />
+        <Analytics />
       </LanguageProvider>
     </QueryClientProvider>
   );
+
 }
 

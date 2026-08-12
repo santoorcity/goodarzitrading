@@ -16,9 +16,7 @@ import { Route as ServicesRouteImport } from './routes/services'
 import { Route as QuoteRouteImport } from './routes/quote'
 import { Route as ProfileRouteImport } from './routes/profile'
 import { Route as PrivacyRouteImport } from './routes/privacy'
-import { Route as KnowledgeRouteImport } from './routes/knowledge'
 import { Route as InquiryRouteImport } from './routes/inquiry'
-import { Route as IncotermsRouteImport } from './routes/incoterms'
 import { Route as HsCodeRouteImport } from './routes/hs-code'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as ExportProductsRouteImport } from './routes/export-products'
@@ -26,6 +24,11 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as KnowledgeIndexRouteImport } from './routes/knowledge.index'
+import { Route as IncotermsIndexRouteImport } from './routes/incoterms.index'
+import { Route as KnowledgeCategoryRouteImport } from './routes/knowledge.$category'
+import { Route as IncotermsCodeRouteImport } from './routes/incoterms.$code'
+import { Route as KnowledgeCategoryEntryRouteImport } from './routes/knowledge.$category.$entry'
 
 const TradeNetworkRoute = TradeNetworkRouteImport.update({
   id: '/trade-network',
@@ -62,19 +65,9 @@ const PrivacyRoute = PrivacyRouteImport.update({
   path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
-const KnowledgeRoute = KnowledgeRouteImport.update({
-  id: '/knowledge',
-  path: '/knowledge',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const InquiryRoute = InquiryRouteImport.update({
   id: '/inquiry',
   path: '/inquiry',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const IncotermsRoute = IncotermsRouteImport.update({
-  id: '/incoterms',
-  path: '/incoterms',
   getParentRoute: () => rootRouteImport,
 } as any)
 const HsCodeRoute = HsCodeRouteImport.update({
@@ -112,6 +105,31 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const KnowledgeIndexRoute = KnowledgeIndexRouteImport.update({
+  id: '/knowledge/',
+  path: '/knowledge/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IncotermsIndexRoute = IncotermsIndexRouteImport.update({
+  id: '/incoterms/',
+  path: '/incoterms/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KnowledgeCategoryRoute = KnowledgeCategoryRouteImport.update({
+  id: '/knowledge/$category',
+  path: '/knowledge/$category',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IncotermsCodeRoute = IncotermsCodeRouteImport.update({
+  id: '/incoterms/$code',
+  path: '/incoterms/$code',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KnowledgeCategoryEntryRoute = KnowledgeCategoryEntryRouteImport.update({
+  id: '/$entry',
+  path: '/$entry',
+  getParentRoute: () => KnowledgeCategoryRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -121,9 +139,7 @@ export interface FileRoutesByFullPath {
   '/export-products': typeof ExportProductsRoute
   '/faq': typeof FaqRoute
   '/hs-code': typeof HsCodeRoute
-  '/incoterms': typeof IncotermsRoute
   '/inquiry': typeof InquiryRoute
-  '/knowledge': typeof KnowledgeRoute
   '/privacy': typeof PrivacyRoute
   '/profile': typeof ProfileRoute
   '/quote': typeof QuoteRoute
@@ -131,6 +147,11 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/trade-network': typeof TradeNetworkRoute
+  '/incoterms/$code': typeof IncotermsCodeRoute
+  '/knowledge/$category': typeof KnowledgeCategoryRouteWithChildren
+  '/incoterms/': typeof IncotermsIndexRoute
+  '/knowledge/': typeof KnowledgeIndexRoute
+  '/knowledge/$category/$entry': typeof KnowledgeCategoryEntryRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -140,9 +161,7 @@ export interface FileRoutesByTo {
   '/export-products': typeof ExportProductsRoute
   '/faq': typeof FaqRoute
   '/hs-code': typeof HsCodeRoute
-  '/incoterms': typeof IncotermsRoute
   '/inquiry': typeof InquiryRoute
-  '/knowledge': typeof KnowledgeRoute
   '/privacy': typeof PrivacyRoute
   '/profile': typeof ProfileRoute
   '/quote': typeof QuoteRoute
@@ -150,6 +169,11 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/trade-network': typeof TradeNetworkRoute
+  '/incoterms/$code': typeof IncotermsCodeRoute
+  '/knowledge/$category': typeof KnowledgeCategoryRouteWithChildren
+  '/incoterms': typeof IncotermsIndexRoute
+  '/knowledge': typeof KnowledgeIndexRoute
+  '/knowledge/$category/$entry': typeof KnowledgeCategoryEntryRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -160,9 +184,7 @@ export interface FileRoutesById {
   '/export-products': typeof ExportProductsRoute
   '/faq': typeof FaqRoute
   '/hs-code': typeof HsCodeRoute
-  '/incoterms': typeof IncotermsRoute
   '/inquiry': typeof InquiryRoute
-  '/knowledge': typeof KnowledgeRoute
   '/privacy': typeof PrivacyRoute
   '/profile': typeof ProfileRoute
   '/quote': typeof QuoteRoute
@@ -170,6 +192,11 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/trade-network': typeof TradeNetworkRoute
+  '/incoterms/$code': typeof IncotermsCodeRoute
+  '/knowledge/$category': typeof KnowledgeCategoryRouteWithChildren
+  '/incoterms/': typeof IncotermsIndexRoute
+  '/knowledge/': typeof KnowledgeIndexRoute
+  '/knowledge/$category/$entry': typeof KnowledgeCategoryEntryRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -181,9 +208,7 @@ export interface FileRouteTypes {
     | '/export-products'
     | '/faq'
     | '/hs-code'
-    | '/incoterms'
     | '/inquiry'
-    | '/knowledge'
     | '/privacy'
     | '/profile'
     | '/quote'
@@ -191,6 +216,11 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/terms'
     | '/trade-network'
+    | '/incoterms/$code'
+    | '/knowledge/$category'
+    | '/incoterms/'
+    | '/knowledge/'
+    | '/knowledge/$category/$entry'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -200,9 +230,7 @@ export interface FileRouteTypes {
     | '/export-products'
     | '/faq'
     | '/hs-code'
-    | '/incoterms'
     | '/inquiry'
-    | '/knowledge'
     | '/privacy'
     | '/profile'
     | '/quote'
@@ -210,6 +238,11 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/terms'
     | '/trade-network'
+    | '/incoterms/$code'
+    | '/knowledge/$category'
+    | '/incoterms'
+    | '/knowledge'
+    | '/knowledge/$category/$entry'
   id:
     | '__root__'
     | '/'
@@ -219,9 +252,7 @@ export interface FileRouteTypes {
     | '/export-products'
     | '/faq'
     | '/hs-code'
-    | '/incoterms'
     | '/inquiry'
-    | '/knowledge'
     | '/privacy'
     | '/profile'
     | '/quote'
@@ -229,6 +260,11 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/terms'
     | '/trade-network'
+    | '/incoterms/$code'
+    | '/knowledge/$category'
+    | '/incoterms/'
+    | '/knowledge/'
+    | '/knowledge/$category/$entry'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -239,9 +275,7 @@ export interface RootRouteChildren {
   ExportProductsRoute: typeof ExportProductsRoute
   FaqRoute: typeof FaqRoute
   HsCodeRoute: typeof HsCodeRoute
-  IncotermsRoute: typeof IncotermsRoute
   InquiryRoute: typeof InquiryRoute
-  KnowledgeRoute: typeof KnowledgeRoute
   PrivacyRoute: typeof PrivacyRoute
   ProfileRoute: typeof ProfileRoute
   QuoteRoute: typeof QuoteRoute
@@ -249,6 +283,10 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
   TradeNetworkRoute: typeof TradeNetworkRoute
+  IncotermsCodeRoute: typeof IncotermsCodeRoute
+  KnowledgeCategoryRoute: typeof KnowledgeCategoryRouteWithChildren
+  IncotermsIndexRoute: typeof IncotermsIndexRoute
+  KnowledgeIndexRoute: typeof KnowledgeIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -302,25 +340,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/knowledge': {
-      id: '/knowledge'
-      path: '/knowledge'
-      fullPath: '/knowledge'
-      preLoaderRoute: typeof KnowledgeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/inquiry': {
       id: '/inquiry'
       path: '/inquiry'
       fullPath: '/inquiry'
       preLoaderRoute: typeof InquiryRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/incoterms': {
-      id: '/incoterms'
-      path: '/incoterms'
-      fullPath: '/incoterms'
-      preLoaderRoute: typeof IncotermsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/hs-code': {
@@ -372,8 +396,54 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/knowledge/': {
+      id: '/knowledge/'
+      path: '/knowledge'
+      fullPath: '/knowledge/'
+      preLoaderRoute: typeof KnowledgeIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/incoterms/': {
+      id: '/incoterms/'
+      path: '/incoterms'
+      fullPath: '/incoterms/'
+      preLoaderRoute: typeof IncotermsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/knowledge/$category': {
+      id: '/knowledge/$category'
+      path: '/knowledge/$category'
+      fullPath: '/knowledge/$category'
+      preLoaderRoute: typeof KnowledgeCategoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/incoterms/$code': {
+      id: '/incoterms/$code'
+      path: '/incoterms/$code'
+      fullPath: '/incoterms/$code'
+      preLoaderRoute: typeof IncotermsCodeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/knowledge/$category/$entry': {
+      id: '/knowledge/$category/$entry'
+      path: '/$entry'
+      fullPath: '/knowledge/$category/$entry'
+      preLoaderRoute: typeof KnowledgeCategoryEntryRouteImport
+      parentRoute: typeof KnowledgeCategoryRoute
+    }
   }
 }
+
+interface KnowledgeCategoryRouteChildren {
+  KnowledgeCategoryEntryRoute: typeof KnowledgeCategoryEntryRoute
+}
+
+const KnowledgeCategoryRouteChildren: KnowledgeCategoryRouteChildren = {
+  KnowledgeCategoryEntryRoute: KnowledgeCategoryEntryRoute,
+}
+
+const KnowledgeCategoryRouteWithChildren =
+  KnowledgeCategoryRoute._addFileChildren(KnowledgeCategoryRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -383,9 +453,7 @@ const rootRouteChildren: RootRouteChildren = {
   ExportProductsRoute: ExportProductsRoute,
   FaqRoute: FaqRoute,
   HsCodeRoute: HsCodeRoute,
-  IncotermsRoute: IncotermsRoute,
   InquiryRoute: InquiryRoute,
-  KnowledgeRoute: KnowledgeRoute,
   PrivacyRoute: PrivacyRoute,
   ProfileRoute: ProfileRoute,
   QuoteRoute: QuoteRoute,
@@ -393,6 +461,10 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
   TradeNetworkRoute: TradeNetworkRoute,
+  IncotermsCodeRoute: IncotermsCodeRoute,
+  KnowledgeCategoryRoute: KnowledgeCategoryRouteWithChildren,
+  IncotermsIndexRoute: IncotermsIndexRoute,
+  KnowledgeIndexRoute: KnowledgeIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
