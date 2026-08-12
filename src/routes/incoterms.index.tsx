@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 
-export const Route = createFileRoute("/incoterms")({
+export const Route = createFileRoute("/incoterms/")({
   head: () => ({
     meta: [
       { title: "Incoterms 2020 — اینکوترمز ۲۰۲۰ | Goodarzi Trading" },

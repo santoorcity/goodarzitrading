@@ -12,7 +12,7 @@ import {
   Banknote, Search, CheckCircle2,
 } from "lucide-react";
 
-export const Route = createFileRoute("/knowledge")({
+export const Route = createFileRoute("/knowledge/")({
   head: () => ({
     meta: [
       { title: "Customs & Trade Knowledge Center — Goodarzi Trading" },
