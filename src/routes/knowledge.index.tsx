@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { PageHero } from "@/components/site/PageHero";
+import { InstrumentDirectory } from "@/components/knowledge/InstrumentDirectory";
+
 import {
   Accordion,
   AccordionContent,
