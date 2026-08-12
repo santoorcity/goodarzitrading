@@ -26,6 +26,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as KnowledgeIndexRouteImport } from './routes/knowledge.index'
 import { Route as IncotermsIndexRouteImport } from './routes/incoterms.index'
+import { Route as KnowledgeCategoryRouteImport } from './routes/knowledge.$category'
 
 const TradeNetworkRoute = TradeNetworkRouteImport.update({
   id: '/trade-network',
@@ -112,6 +113,11 @@ const IncotermsIndexRoute = IncotermsIndexRouteImport.update({
   path: '/incoterms/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const KnowledgeCategoryRoute = KnowledgeCategoryRouteImport.update({
+  id: '/knowledge/$category',
+  path: '/knowledge/$category',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -129,6 +135,7 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/trade-network': typeof TradeNetworkRoute
+  '/knowledge/$category': typeof KnowledgeCategoryRoute
   '/incoterms/': typeof IncotermsIndexRoute
   '/knowledge/': typeof KnowledgeIndexRoute
 }
@@ -148,6 +155,7 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/trade-network': typeof TradeNetworkRoute
+  '/knowledge/$category': typeof KnowledgeCategoryRoute
   '/incoterms': typeof IncotermsIndexRoute
   '/knowledge': typeof KnowledgeIndexRoute
 }
@@ -168,6 +176,7 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/trade-network': typeof TradeNetworkRoute
+  '/knowledge/$category': typeof KnowledgeCategoryRoute
   '/incoterms/': typeof IncotermsIndexRoute
   '/knowledge/': typeof KnowledgeIndexRoute
 }
@@ -189,6 +198,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/terms'
     | '/trade-network'
+    | '/knowledge/$category'
     | '/incoterms/'
     | '/knowledge/'
   fileRoutesByTo: FileRoutesByTo
@@ -208,6 +218,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/terms'
     | '/trade-network'
+    | '/knowledge/$category'
     | '/incoterms'
     | '/knowledge'
   id:
@@ -227,6 +238,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/terms'
     | '/trade-network'
+    | '/knowledge/$category'
     | '/incoterms/'
     | '/knowledge/'
   fileRoutesById: FileRoutesById
@@ -247,6 +259,7 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
   TradeNetworkRoute: typeof TradeNetworkRoute
+  KnowledgeCategoryRoute: typeof KnowledgeCategoryRoute
   IncotermsIndexRoute: typeof IncotermsIndexRoute
   KnowledgeIndexRoute: typeof KnowledgeIndexRoute
 }
@@ -372,6 +385,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IncotermsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/knowledge/$category': {
+      id: '/knowledge/$category'
+      path: '/knowledge/$category'
+      fullPath: '/knowledge/$category'
+      preLoaderRoute: typeof KnowledgeCategoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -391,6 +411,7 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
   TradeNetworkRoute: TradeNetworkRoute,
+  KnowledgeCategoryRoute: KnowledgeCategoryRoute,
   IncotermsIndexRoute: IncotermsIndexRoute,
   KnowledgeIndexRoute: KnowledgeIndexRoute,
 }
