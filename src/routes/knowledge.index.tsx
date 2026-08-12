@@ -388,6 +388,9 @@ function Knowledge() {
           )}
         </div>
       </section>
+
+      <InstrumentDirectory />
     </>
+
   );
 }
