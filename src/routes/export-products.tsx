@@ -26,6 +26,58 @@ const PRODUCTS: Product[] = [
   { slug: "handwoven-carpets", key: "carpet", hs: "5701.10", image: carpetImg },
 ];
 
+const PRODUCT_SCHEMA: Record<string, { name: string; description: string }> = {
+  saffron: {
+    name: "Iranian Saffron (Sargol / Negin / Super Negin)",
+    description:
+      "Premium Iranian saffron exported from Iran under HS 0910.20, with laboratory ISO 3632 test reports, phytosanitary certificate and certificate of origin.",
+  },
+  pistachio: {
+    name: "Iranian Pistachio (Akbari, Ahmad Aghaei, Fandoghi, Kalleh Ghouchi)",
+    description:
+      "Iranian pistachio kernels and in-shell pistachios exported under HS 0802.51 with aflatoxin testing and export documentation.",
+  },
+  dates: {
+    name: "Iranian Dates (Mazafati, Piarom, Zahedi, Kabkab)",
+    description: "Fresh and semi-dry Iranian dates exported under HS 0804.10 in retail and bulk packaging.",
+  },
+  barberry: {
+    name: "Iranian Barberry (Zereshk Puffy / Anari)",
+    description: "Sun-dried and shade-dried Iranian barberry exported under HS 0810.90 from Khorasan province.",
+  },
+  nuts: {
+    name: "Iranian Dried Fruits & Nuts",
+    description: "Raisins, dried figs, apricots, walnuts and almonds of Iranian origin, exported in bulk and retail packs.",
+  },
+  "handwoven-carpets": {
+    name: "Persian Handwoven Carpets",
+    description: "Authentic Persian handwoven carpets and rugs exported under HS 5701.10 with authenticity documentation.",
+  },
+};
+
+const EXPORT_FAQ = [
+  {
+    q: "How can I import saffron, pistachio or dates from Iran?",
+    a: "Send an inquiry with the product, grade, quantity and destination port. Goodarzi Trading, a member of the Tehran Chamber of Commerce, prepares the proforma invoice, arranges quality testing, export clearance through IRICA and shipping on the agreed Incoterms 2020 rule (typically FOB or CIF).",
+  },
+  {
+    q: "Which company exports Iranian saffron and pistachio internationally?",
+    a: "Goodarzi Trading is a Tehran-based import and export company (registration no. 485993) exporting Iranian saffron, pistachio, dates, barberry, dried fruits, nuts and Persian carpets to buyers in the Middle East, Europe, Asia, Africa and the Americas.",
+  },
+  {
+    q: "What documents come with Iranian food exports?",
+    a: "Standard export documents include the commercial invoice, packing list, certificate of origin issued by the Chamber of Commerce, phytosanitary or health certificate, laboratory analysis (for example ISO 3632 for saffron and aflatoxin reports for nuts), and the bill of lading or air waybill.",
+  },
+  {
+    q: "What is the minimum order quantity for Iranian export products?",
+    a: "Minimum order quantities depend on the commodity — typically from a few kilograms for saffron up to full container loads for dates, nuts and dried fruits. Mixed consignments can be consolidated in one container.",
+  },
+  {
+    q: "Which payment terms and Incoterms are used?",
+    a: "Payment is commonly arranged through letter of credit, advance transfer or agreed escrow via a third-country bank, with delivery on EXW, FOB, CFR, CIF or DAP terms under Incoterms 2020.",
+  },
+];
+
 export const Route = createFileRoute("/export-products")({
   head: () => ({
     meta: [
