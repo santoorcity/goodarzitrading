@@ -6,11 +6,10 @@ import {
   categoryBySlug,
   entriesForCategory,
   localized,
-  NEEDS_VERIFICATION,
   TRANSLATION_UNAVAILABLE,
 } from "@/data/knowledge-center";
 import { useI18n } from "@/i18n/LanguageProvider";
-import { ChevronLeft, ChevronRight, FileWarning, ExternalLink } from "lucide-react";
+import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 
 export const Route = createFileRoute("/knowledge/$category")({
   loader: ({ params }) => {
@@ -48,14 +47,13 @@ function CategoryPage() {
   const Chevron = dir === "rtl" ? ChevronLeft : ChevronRight;
 
   const label = {
-    en: { back: "Knowledge Center", soon: "This section is under development", soonDesc: "We are still compiling verified entries for this category. Absence of entries here does not mean no such instruments exist.", instruments: "Instruments", priority: "Priority instruments (pending verification)", contracts: "Model contracts", articles: "Short version — articles", standardNote: "Standard Version", view: "View" },
-    fa: { back: "مرکز دانش", soon: "این بخش در حال تکمیل است", soonDesc: "گردآوری موارد تأییدشده این دسته هنوز کامل نشده است. نبودن مورد در اینجا به معنای نبودن چنین اسنادی نیست.", instruments: "اسناد", priority: "اسناد اولویت‌دار (در انتظار تأیید)", contracts: "قراردادهای نمونه", articles: "نسخه کوتاه — مواد", standardNote: "نسخه استاندارد", view: "مشاهده" },
-    ar: { back: "مركز المعرفة", soon: "هذا القسم قيد الإعداد", soonDesc: "لا يزال جمع المواد الموثقة لهذه الفئة غير مكتمل. غياب المواد هنا لا يعني عدم وجود مثل هذه الصكوك.", instruments: "الصكوك", priority: "صكوك ذات أولوية (بانتظار التحقق)", contracts: "العقود النموذجية", articles: "النسخة القصيرة — المواد", standardNote: "النسخة القياسية", view: "عرض" },
+    en: { back: "Knowledge Center", instruments: "Instruments", priority: "Related instruments", contracts: "Model contracts", articles: "Short version — articles", standardNote: "Standard Version", view: "View" },
+    fa: { back: "مرکز دانش", instruments: "اسناد", priority: "اسناد مرتبط", contracts: "قراردادهای نمونه", articles: "نسخه کوتاه — مواد", standardNote: "نسخه استاندارد", view: "مشاهده" },
+    ar: { back: "مركز المعرفة", instruments: "الصكوك", priority: "الصكوك ذات الصلة", contracts: "العقود النموذجية", articles: "النسخة القصيرة — المواد", standardNote: "النسخة القياسية", view: "عرض" },
   }[lang];
 
   const isIncoterms = cat.slug === "incoterms";
   const isItc = cat.slug === "itc-model-contracts";
-  const empty = !isIncoterms && !isItc && entries.length === 0 && priority.length === 0;
 
   return (
     <div dir={dir}>
@@ -70,15 +68,6 @@ function CategoryPage() {
             <span className="mx-2">/</span>
             <span className="text-[color:var(--navy-deep)]">{localized(cat.title, lang).value}</span>
           </nav>
-
-          {empty && (
-            <div className="rounded-sm border border-[color:var(--gold)]/40 bg-[color:var(--gold)]/5 p-8">
-              <div className="flex items-center gap-2 font-display text-xl font-semibold text-[color:var(--navy-deep)]">
-                <FileWarning className="h-5 w-5" /> {label.soon}
-              </div>
-              <p className="mt-3 text-sm text-muted-foreground">{label.soonDesc}</p>
-            </div>
-          )}
 
           {isIncoterms && (
             <div className="grid gap-3 sm:grid-cols-2">
@@ -119,10 +108,6 @@ function CategoryPage() {
                           ))}
                         </ol>
                       </div>
-                      <p className="text-sm">
-                        <span className="font-semibold text-[color:var(--navy)]">{label.standardNote}: </span>
-                        <span className="text-muted-foreground">{NEEDS_VERIFICATION[lang]}</span>
-                      </p>
                     </div>
                   )}
                 </article>
@@ -151,7 +136,7 @@ function CategoryPage() {
                           {e.instrumentType}
                         </span>
                         <span className="mt-1 block text-sm text-muted-foreground">
-                          {sum.value || NEEDS_VERIFICATION[lang]}
+                          {sum.value}
                           {sum.fallback && (
                             <em className="ms-2 text-xs">({TRANSLATION_UNAVAILABLE[lang]})</em>
                           )}
@@ -179,7 +164,6 @@ function CategoryPage() {
                     {p.classification && (
                       <span className="text-xs text-muted-foreground">{p.classification}</span>
                     )}
-                    <span className="mt-1 block text-xs text-[color:var(--navy)]">{NEEDS_VERIFICATION[lang]}</span>
                   </li>
                 ))}
               </ul>

@@ -1,7 +1,8 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { LegalDisclaimer } from "@/components/knowledge/LegalDisclaimer";
-import { kc, incotermByCode, NEEDS_VERIFICATION } from "@/data/knowledge-center";
+import { kc, incotermByCode } from "@/data/knowledge-center";
+import { incotermDetailByCode } from "@/data/incoterms-content";
 import { useI18n } from "@/i18n/LanguageProvider";
 import { ExternalLink } from "lucide-react";
 
@@ -35,13 +36,21 @@ function IncotermPage() {
   const { code } = Route.useParams();
   const { lang, dir } = useI18n();
   const rule = incotermByCode(code)!;
-  const nv = NEEDS_VERIFICATION[lang];
+  const detail = incotermDetailByCode(code)!;
+  const textLang = lang === "fa" ? "fa" : "en";
 
   const L = {
-    en: { back: "Incoterms® 2020", transport: "Mode of transport", template: "Rule details", source: "Official source: ICC — International Chamber of Commerce" },
-    fa: { back: "اینکوترمز ۲۰۲۰", transport: "شیوه حمل", template: "جزئیات قاعده", source: "منبع رسمی: اتاق بازرگانی بین‌المللی (ICC)" },
-    ar: { back: "إنكوترمز 2020", transport: "وسيلة النقل", template: "تفاصيل القاعدة", source: "المصدر الرسمي: غرفة التجارة الدولية (ICC)" },
+    en: { back: "Incoterms® 2020", transport: "Mode of transport", definition: "Definition", delivery: "Delivery point", risk: "Risk transfer", seller: "Seller costs", buyer: "Buyer costs", insurance: "Insurance", export: "Export formalities", import: "Import formalities", documents: "Documents", uses: "Best use cases", mistakes: "Common mistakes", example: "Practical example", source: "Official source: ICC — International Chamber of Commerce" },
+    fa: { back: "اینکوترمز ۲۰۲۰", transport: "شیوه حمل", definition: "تعریف", delivery: "نقطه تحویل", risk: "انتقال ریسک", seller: "هزینه‌های فروشنده", buyer: "هزینه‌های خریدار", insurance: "بیمه", export: "تشریفات صادرات", import: "تشریفات واردات", documents: "اسناد", uses: "موارد استفاده مناسب", mistakes: "اشتباهات رایج", example: "مثال عملی", source: "منبع رسمی: اتاق بازرگانی بین‌المللی (ICC)" },
+    ar: { back: "إنكوترمز 2020", transport: "وسيلة النقل", definition: "التعريف", delivery: "نقطة التسليم", risk: "انتقال المخاطر", seller: "تكاليف البائع", buyer: "تكاليف المشتري", insurance: "التأمين", export: "إجراءات التصدير", import: "إجراءات الاستيراد", documents: "المستندات", uses: "الاستخدامات المناسبة", mistakes: "الأخطاء الشائعة", example: "مثال عملي", source: "المصدر الرسمي: غرفة التجارة الدولية (ICC)" },
   }[lang];
+
+  const DetailRow = ({ label, children }: { label: string; children: React.ReactNode }) => (
+    <div className="border-b border-border py-4">
+      <dt className="text-xs font-semibold uppercase text-muted-foreground">{label}</dt>
+      <dd className="mt-1.5 text-sm leading-relaxed text-[color:var(--navy-deep)]">{children}</dd>
+    </div>
+  );
 
   return (
     <div dir={dir}>
@@ -59,14 +68,19 @@ function IncotermPage() {
             <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">{L.transport}</p>
             <p className="mt-1 text-[color:var(--navy-deep)]">{rule.transport}</p>
 
-            <h2 className="mt-8 font-display text-xl font-semibold text-[color:var(--navy-deep)]">{L.template}</h2>
-            <dl className="mt-4">
-              {kc.incoterms.detailTemplate.map((field) => (
-                <div key={field} className="border-b border-border py-4">
-                  <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">{field}</dt>
-                  <dd className="mt-1.5 text-sm text-[color:var(--navy-deep)]">{nv}</dd>
-                </div>
-              ))}
+            <dl className="mt-6">
+              <DetailRow label={L.definition}>{detail.definition[textLang]}</DetailRow>
+              <DetailRow label={L.delivery}>{detail.deliveryPoint[textLang]}</DetailRow>
+              <DetailRow label={L.risk}>{detail.riskTransfer[textLang]}</DetailRow>
+              <DetailRow label={L.seller}><ul className="list-disc space-y-1 ltr:pl-5 rtl:pr-5">{detail.sellerCosts[textLang].map((x) => <li key={x}>{x}</li>)}</ul></DetailRow>
+              <DetailRow label={L.buyer}><ul className="list-disc space-y-1 ltr:pl-5 rtl:pr-5">{detail.buyerCosts[textLang].map((x) => <li key={x}>{x}</li>)}</ul></DetailRow>
+              <DetailRow label={L.insurance}>{detail.insurance[textLang]}</DetailRow>
+              <DetailRow label={L.export}>{detail.exportFormalities[textLang]}</DetailRow>
+              <DetailRow label={L.import}>{detail.importFormalities[textLang]}</DetailRow>
+              <DetailRow label={L.documents}><ul className="list-disc space-y-1 ltr:pl-5 rtl:pr-5">{detail.documents[textLang].map((x) => <li key={x}>{x}</li>)}</ul></DetailRow>
+              <DetailRow label={L.uses}>{detail.useCases[textLang]}</DetailRow>
+              <DetailRow label={L.mistakes}><ul className="list-disc space-y-1 ltr:pl-5 rtl:pr-5">{detail.mistakes[textLang].map((x) => <li key={x}>{x}</li>)}</ul></DetailRow>
+              <DetailRow label={L.example}>{detail.example[textLang]}</DetailRow>
             </dl>
 
             <a

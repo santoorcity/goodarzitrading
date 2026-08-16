@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { Search, ChevronLeft, ChevronRight, FileWarning } from "lucide-react";
+import { Search, ChevronLeft, ChevronRight } from "lucide-react";
 import { kc, localized, entriesForCategory } from "@/data/knowledge-center";
 import { useI18n } from "@/i18n/LanguageProvider";
 
@@ -14,7 +14,6 @@ const L = {
     filterType: "Document type",
     allTypes: "All types",
     items: "items",
-    soon: "Content under development",
     open: "Open category",
     none: "No category matches your search.",
   },
@@ -27,7 +26,6 @@ const L = {
     filterType: "نوع سند",
     allTypes: "همه انواع",
     items: "مورد",
-    soon: "در حال تکمیل",
     open: "مشاهده دسته",
     none: "دسته‌ای با جستجوی شما مطابقت ندارد.",
   },
@@ -40,7 +38,6 @@ const L = {
     filterType: "نوع الوثيقة",
     allTypes: "كل الأنواع",
     items: "عنصر",
-    soon: "قيد الإعداد",
     open: "عرض الفئة",
     none: "لا توجد فئة مطابقة لبحثك.",
   },
@@ -64,6 +61,9 @@ export function InstrumentDirectory() {
         const entries = entriesForCategory(cat.slug);
         return { cat, entries };
       })
+      .filter(({ cat, entries }) =>
+        entries.length > 0 || cat.slug === "incoterms" || cat.slug === "itc-model-contracts",
+      )
       .filter(({ cat, entries }) => {
         if (type !== "all" && !entries.some((e) => e.instrumentType === type)) return false;
         if (!needle) return true;
@@ -118,7 +118,6 @@ export function InstrumentDirectory() {
 
         <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {cats.map(({ cat, entries }) => {
-            const soon = cat.displayStatus === "coming_soon";
             const count =
               cat.slug === "incoterms"
                 ? kc.incoterms.rules.length
@@ -141,15 +140,9 @@ export function InstrumentDirectory() {
                   </h3>
                 </div>
                 <div className="mt-4 flex items-center justify-between text-xs">
-                  {soon || count === 0 ? (
-                    <span className="inline-flex items-center gap-1.5 rounded-sm bg-[color:var(--gold)]/15 px-2 py-1 font-medium text-[color:var(--navy)]">
-                      <FileWarning className="h-3.5 w-3.5" /> {c.soon}
-                    </span>
-                  ) : (
-                    <span className="text-muted-foreground">
-                      {count} {c.items}
-                    </span>
-                  )}
+                  <span className="text-muted-foreground">
+                    {count} {c.items}
+                  </span>
                   <span className="inline-flex items-center gap-1 font-medium text-[color:var(--navy)] group-hover:text-[color:var(--gold)]">
                     {c.open} <Chevron className="h-4 w-4" />
                   </span>
@@ -161,9 +154,6 @@ export function InstrumentDirectory() {
 
         {cats.length === 0 && <p className="mt-10 text-center text-muted-foreground">{c.none}</p>}
 
-        <p className="mt-8 max-w-3xl text-xs leading-relaxed text-muted-foreground">
-          {localized(kc.completenessNote, lang).value}
-        </p>
       </div>
     </section>
   );

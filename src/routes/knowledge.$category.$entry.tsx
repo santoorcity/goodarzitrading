@@ -2,13 +2,12 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { LegalDisclaimer } from "@/components/knowledge/LegalDisclaimer";
 import {
-  kc,
   categoryBySlug,
   entryById,
   localized,
-  NEEDS_VERIFICATION,
   TRANSLATION_UNAVAILABLE,
 } from "@/data/knowledge-center";
+import { contentForEntry } from "@/data/kc-content";
 import { useI18n } from "@/i18n/LanguageProvider";
 import { ExternalLink, Printer } from "lucide-react";
 
@@ -53,7 +52,8 @@ function EntryPage() {
   const cat = categoryBySlug(category)!;
   const e = entryById(entry)!;
   const sum = localized(e.summary, lang);
-  const nv = NEEDS_VERIFICATION[lang];
+  const editorial = contentForEntry(e.id);
+  const textLang = lang === "fa" ? "fa" : "en";
 
   const L = {
     en: { home: "Knowledge Center", type: "Instrument type", body: "Issuing / administering organization", purpose: "Purpose", scope: "Scope of application", key: "Key provisions", iran: "Status for Iran", source: "Official source", compiled: "Data compiled on", verified: "Last legal verification", status: "Status", print: "Print / save as PDF" },
@@ -88,13 +88,19 @@ function EntryPage() {
               <Row label={L.type}>{e.instrumentType}</Row>
               <Row label={L.body}>{e.administeringBody}</Row>
               <Row label={L.purpose}>
-                {sum.value || nv}
+                {editorial?.purpose[textLang] ?? sum.value}
                 {sum.fallback && <em className="ms-2 text-xs text-muted-foreground">({TRANSLATION_UNAVAILABLE[lang]})</em>}
               </Row>
               <Row label={L.scope}>{e.scope}</Row>
-              <Row label={L.key}>{nv}</Row>
-              <Row label={L.iran}>{nv}</Row>
-              <Row label={L.status}>{e.status}</Row>
+              <Row label={L.key}>
+                {editorial ? (
+                  <ul className="space-y-2 ltr:list-disc ltr:pl-5 rtl:list-disc rtl:pr-5">
+                    {editorial.key[textLang].map((item) => <li key={item}>{item}</li>)}
+                  </ul>
+                ) : e.summary.en}
+              </Row>
+              <Row label={L.iran}>{editorial?.iran[textLang] ?? e.status}</Row>
+              <Row label={L.status}>{editorial?.status[textLang] ?? e.status}</Row>
               <Row label={L.source}>
                 <a
                   href={e.officialSource}
@@ -106,7 +112,7 @@ function EntryPage() {
                 </a>
               </Row>
               <Row label={L.compiled}>{e.dataCompiledDate}</Row>
-              <Row label={L.verified}>{e.lastLegalVerification ?? nv}</Row>
+              {e.lastLegalVerification && <Row label={L.verified}>{e.lastLegalVerification}</Row>}
             </dl>
 
             <div className="mt-6">
