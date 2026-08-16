@@ -154,9 +154,6 @@ export function InstrumentDirectory() {
 
         {cats.length === 0 && <p className="mt-10 text-center text-muted-foreground">{c.none}</p>}
 
-        <p className="mt-8 max-w-3xl text-xs leading-relaxed text-muted-foreground">
-          {localized(kc.completenessNote, lang).value}
-        </p>
       </div>
     </section>
   );
