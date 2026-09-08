@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { z } from "zod";
 import { CheckCircle2, Send } from "lucide-react";
 import { useT } from "@/i18n/LanguageProvider";
+import { sendToWhatsApp } from "@/lib/whatsapp";
 
 const WHATSAPP = "989191238554";
 const EMAIL = "info@goodarzitrading.ir";
