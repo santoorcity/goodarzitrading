@@ -4,6 +4,7 @@ import { z } from "zod";
 import { PageHero } from "@/components/site/PageHero";
 import { CheckCircle2, Upload } from "lucide-react";
 import { useT } from "@/i18n/LanguageProvider";
+import { composeMessage, sendToWhatsApp } from "@/lib/whatsapp";
 
 export const Route = createFileRoute("/quote")({
   head: () => ({
@@ -56,6 +57,21 @@ function Quote() {
       return;
     }
     setErrors({});
+    const d = parsed.data;
+    sendToWhatsApp(
+      composeMessage("Request for Quote", [
+        ["Company", d.company],
+        ["Contact", d.person],
+        ["Email", d.email],
+        ["Phone", d.phone],
+        ["Product", d.product],
+        ["HS Code", d.hsCode],
+        ["Quantity", d.quantity],
+        ["Origin", d.origin],
+        ["Destination", d.destination],
+        ["Notes", d.message],
+      ]),
+    );
     setSent(true);
   }
 
