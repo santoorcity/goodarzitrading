@@ -88,6 +88,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "keywords", content: "import export Iran, buy from Iran, Iranian saffron exporter, Iran pistachio supplier, Persian carpets export, buy Iranian dates, Iran bitumen supplier, international trade Iran, freight forwarding, IRICA customs, Tehran Chamber of Commerce, world traders, chamber of commerce members, goodarzi trading, بازرگانی گودرزی, واردات صادرات ایران, تجارت بین الملل, صادرات زعفران, صادرات پسته, بازرگانان جهان" },
       { name: "description", content: "Iran-based import & export company. Buy Iranian saffron, pistachio, dates, carpets, bitumen & minerals directly. Trusted worldwide by importers, distributors and chamber-of-commerce members." },
       { name: "author", content: "Goodarzi Trading" },
+      { name: "google-site-verification", content: "DVsriVrhxiWjRyJJaweJ1-xQMP3hNRqyWHvqVLKAYkk" },
       { property: "og:site_name", content: "Goodarzi Trading" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -101,6 +102,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
+      { rel: "llms", type: "text/plain", href: "/llms.txt" },
+      { rel: "sitemap", type: "application/xml", href: "/sitemap.xml" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
