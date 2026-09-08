@@ -16,6 +16,7 @@ import { Footer } from "../components/site/Footer";
 import { WhatsAppFab } from "../components/site/WhatsAppFab";
 import { LanguageProvider } from "../i18n/LanguageProvider";
 import { Analytics } from "@vercel/analytics/react";
+import { initGoogleAnalytics, trackPageView } from "../lib/analytics";
 
 
 
