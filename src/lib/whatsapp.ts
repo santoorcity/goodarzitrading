@@ -1,3 +1,5 @@
+import { trackEvent } from "./analytics";
+
 export const WHATSAPP_NUMBER = "989191238554";
 
 /** Build a WhatsApp deep link with a pre-filled message. */
