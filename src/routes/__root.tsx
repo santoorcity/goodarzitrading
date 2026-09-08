@@ -16,6 +16,7 @@ import { Footer } from "../components/site/Footer";
 import { WhatsAppFab } from "../components/site/WhatsAppFab";
 import { LanguageProvider } from "../i18n/LanguageProvider";
 import { Analytics } from "@vercel/analytics/react";
+import { initGoogleAnalytics, trackPageView } from "../lib/analytics";
 
 
 
@@ -183,6 +184,16 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const router = useRouter();
+  const pathname = router.state.location.pathname;
+
+  useEffect(() => {
+    initGoogleAnalytics();
+  }, []);
+
+  useEffect(() => {
+    trackPageView(pathname);
+  }, [pathname]);
 
   return (
     <QueryClientProvider client={queryClient}>
