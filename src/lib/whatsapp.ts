@@ -17,6 +17,7 @@ export function composeMessage(title: string, fields: Array<[string, string | un
 
 /** Open WhatsApp with the message. Returns true if a window was opened. */
 export function sendToWhatsApp(text: string) {
+  trackEvent("whatsapp_lead", { channel: "whatsapp" });
   const win = window.open(whatsappLink(text), "_blank", "noopener,noreferrer");
   if (!win) window.location.href = whatsappLink(text);
   return true;
