@@ -90,16 +90,8 @@ function InquiryPage() {
       d.message ? `\nNotes:\n${d.message}` : null,
     ].filter(Boolean).join("\n");
 
-    // 1) Open WhatsApp with the pre-filled inquiry
-    const waUrl = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(lines)}`;
-    window.open(waUrl, "_blank", "noopener,noreferrer");
-
-    // 2) Also send a copy by email (opens the user's email client)
-    const subject = `International Buyer Inquiry — ${d.companyName} (${d.country})`;
-    const mailUrl = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines)}`;
-    setTimeout(() => {
-      window.location.href = mailUrl;
-    }, 400);
+    // Deliver the inquiry to WhatsApp only
+    sendToWhatsApp(lines);
 
     setSent(true);
   }
