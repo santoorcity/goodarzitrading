@@ -9,9 +9,9 @@ export const Route = createFileRoute("/blog")({
       { name: "description", content: "Trade news, import/export guides, customs updates and market analysis from Goodarzi Trading." },
       { property: "og:title", content: "Insights & News — Goodarzi Trading" },
       { property: "og:description", content: "Global trade insights and Iranian market intelligence." },
-      { property: "og:url", content: "/blog" },
+      { property: "og:url", content: "https://goodarzitrading.lovable.app/blog" },
     ],
-    links: [{ rel: "canonical", href: "/blog" }],
+    links: [{ rel: "canonical", href: "https://goodarzitrading.lovable.app/blog" }],
   }),
   component: Blog,
 });

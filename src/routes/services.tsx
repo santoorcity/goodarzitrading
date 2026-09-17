@@ -15,9 +15,9 @@ export const Route = createFileRoute("/services")({
       { name: "description", content: "Import, export, customs clearance, consulting, international logistics, sourcing, supplier verification, trade documentation and freight services." },
       { property: "og:title", content: "Services — Goodarzi Trading" },
       { property: "og:description", content: "Full-spectrum international trade services from Tehran to the world." },
-      { property: "og:url", content: "/services" },
+      { property: "og:url", content: "https://goodarzitrading.lovable.app/services" },
     ],
-    links: [{ rel: "canonical", href: "/services" }],
+    links: [{ rel: "canonical", href: "https://goodarzitrading.lovable.app/services" }],
   }),
   component: Services,
 });

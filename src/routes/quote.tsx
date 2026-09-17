@@ -14,9 +14,9 @@ export const Route = createFileRoute("/quote")({
       { name: "description", content: "Request a tailored quote for import, export, sourcing or customs services. We respond within one business day." },
       { property: "og:title", content: "Request a Quote — Goodarzi Trading" },
       { property: "og:description", content: "Tell us about your shipment, supplier or sourcing need." },
-      { property: "og:url", content: "/quote" },
+      { property: "og:url", content: "https://goodarzitrading.lovable.app/quote" },
     ],
-    links: [{ rel: "canonical", href: "/quote" }],
+    links: [{ rel: "canonical", href: "https://goodarzitrading.lovable.app/quote" }],
   }),
   component: Quote,
 });

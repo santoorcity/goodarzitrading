@@ -8,9 +8,9 @@ export const Route = createFileRoute("/terms")({
       { title: "Terms & Conditions — Goodarzi Trading" },
       { name: "keywords", content: "terms of service, شرایط استفاده, قوانین سایت, import export Iran, goodarzi trading, واردات صادرات ایران, تجارت بین الملل, customs consulting Tehran" },
       { name: "description", content: "Terms governing the use of the Goodarzi Trading website and inquiries." },
-      { property: "og:url", content: "/terms" },
+      { property: "og:url", content: "https://goodarzitrading.lovable.app/terms" },
     ],
-    links: [{ rel: "canonical", href: "/terms" }],
+    links: [{ rel: "canonical", href: "https://goodarzitrading.lovable.app/terms" }],
   }),
   component: Terms,
 });

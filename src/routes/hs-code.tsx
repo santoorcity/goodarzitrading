@@ -15,9 +15,9 @@ export const Route = createFileRoute("/hs-code")({
       { name: "description", content: "Trade services and online HS Code tariff search: business card, order registration, currency allocation, permits, customs clearance, export statistical registration and FX commitment settlement." },
       { property: "og:title", content: "Trade Services & HS Code Tariff Search" },
       { property: "og:description", content: "HS Code lookup plus a complete guide to Iranian import and export trade services." },
-      { property: "og:url", content: "/hs-code" },
+      { property: "og:url", content: "https://goodarzitrading.lovable.app/hs-code" },
     ],
-    links: [{ rel: "canonical", href: "/hs-code" }],
+    links: [{ rel: "canonical", href: "https://goodarzitrading.lovable.app/hs-code" }],
   }),
   component: TradeServicesPage,
 });

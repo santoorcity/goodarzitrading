@@ -14,9 +14,9 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: "Contact Goodarzi Trading in Tehran. Phone, email, WhatsApp, office address and office hours." },
       { property: "og:title", content: "Contact Goodarzi Trading" },
       { property: "og:description", content: "Reach our trade desk in Tehran by phone, email or WhatsApp." },
-      { property: "og:url", content: "/contact" },
+      { property: "og:url", content: "https://goodarzitrading.lovable.app/contact" },
     ],
-    links: [{ rel: "canonical", href: "/contact" }],
+    links: [{ rel: "canonical", href: "https://goodarzitrading.lovable.app/contact" }],
   }),
   component: Contact,
 });

@@ -11,9 +11,9 @@ export const Route = createFileRoute("/profile")({
       { name: "description", content: "Goodarzi Trading company profile: history, experience, countries, industries, certifications and achievements." },
       { property: "og:title", content: "Company Profile — Goodarzi Trading" },
       { property: "og:description", content: "An overview of our experience and global trade footprint." },
-      { property: "og:url", content: "/profile" },
+      { property: "og:url", content: "https://goodarzitrading.lovable.app/profile" },
     ],
-    links: [{ rel: "canonical", href: "/profile" }],
+    links: [{ rel: "canonical", href: "https://goodarzitrading.lovable.app/profile" }],
   }),
   component: Profile,
 });
