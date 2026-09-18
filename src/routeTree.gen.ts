@@ -16,6 +16,7 @@ import { Route as ServicesRouteImport } from './routes/services'
 import { Route as QuoteRouteImport } from './routes/quote'
 import { Route as ProfileRouteImport } from './routes/profile'
 import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as IranianSaffronExporterRouteImport } from './routes/iranian-saffron-exporter'
 import { Route as InquiryRouteImport } from './routes/inquiry'
 import { Route as HsCodeRouteImport } from './routes/hs-code'
 import { Route as FaqRouteImport } from './routes/faq'
@@ -65,6 +66,11 @@ const ProfileRoute = ProfileRouteImport.update({
 const PrivacyRoute = PrivacyRouteImport.update({
   id: '/privacy',
   path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IranianSaffronExporterRoute = IranianSaffronExporterRouteImport.update({
+  id: '/iranian-saffron-exporter',
+  path: '/iranian-saffron-exporter',
   getParentRoute: () => rootRouteImport,
 } as any)
 const InquiryRoute = InquiryRouteImport.update({
@@ -152,6 +158,7 @@ export interface FileRoutesByFullPath {
   '/faq': typeof FaqRoute
   '/hs-code': typeof HsCodeRoute
   '/inquiry': typeof InquiryRoute
+  '/iranian-saffron-exporter': typeof IranianSaffronExporterRoute
   '/privacy': typeof PrivacyRoute
   '/profile': typeof ProfileRoute
   '/quote': typeof QuoteRoute
@@ -175,6 +182,7 @@ export interface FileRoutesByTo {
   '/faq': typeof FaqRoute
   '/hs-code': typeof HsCodeRoute
   '/inquiry': typeof InquiryRoute
+  '/iranian-saffron-exporter': typeof IranianSaffronExporterRoute
   '/privacy': typeof PrivacyRoute
   '/profile': typeof ProfileRoute
   '/quote': typeof QuoteRoute
@@ -200,6 +208,7 @@ export interface FileRoutesById {
   '/faq': typeof FaqRoute
   '/hs-code': typeof HsCodeRoute
   '/inquiry': typeof InquiryRoute
+  '/iranian-saffron-exporter': typeof IranianSaffronExporterRoute
   '/privacy': typeof PrivacyRoute
   '/profile': typeof ProfileRoute
   '/quote': typeof QuoteRoute
@@ -226,6 +235,7 @@ export interface FileRouteTypes {
     | '/faq'
     | '/hs-code'
     | '/inquiry'
+    | '/iranian-saffron-exporter'
     | '/privacy'
     | '/profile'
     | '/quote'
@@ -249,6 +259,7 @@ export interface FileRouteTypes {
     | '/faq'
     | '/hs-code'
     | '/inquiry'
+    | '/iranian-saffron-exporter'
     | '/privacy'
     | '/profile'
     | '/quote'
@@ -273,6 +284,7 @@ export interface FileRouteTypes {
     | '/faq'
     | '/hs-code'
     | '/inquiry'
+    | '/iranian-saffron-exporter'
     | '/privacy'
     | '/profile'
     | '/quote'
@@ -298,6 +310,7 @@ export interface RootRouteChildren {
   FaqRoute: typeof FaqRoute
   HsCodeRoute: typeof HsCodeRoute
   InquiryRoute: typeof InquiryRoute
+  IranianSaffronExporterRoute: typeof IranianSaffronExporterRoute
   PrivacyRoute: typeof PrivacyRoute
   ProfileRoute: typeof ProfileRoute
   QuoteRoute: typeof QuoteRoute
@@ -360,6 +373,13 @@ declare module '@tanstack/react-router' {
       path: '/privacy'
       fullPath: '/privacy'
       preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/iranian-saffron-exporter': {
+      id: '/iranian-saffron-exporter'
+      path: '/iranian-saffron-exporter'
+      fullPath: '/iranian-saffron-exporter'
+      preLoaderRoute: typeof IranianSaffronExporterRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/inquiry': {
@@ -504,6 +524,7 @@ const rootRouteChildren: RootRouteChildren = {
   FaqRoute: FaqRoute,
   HsCodeRoute: HsCodeRoute,
   InquiryRoute: InquiryRoute,
+  IranianSaffronExporterRoute: IranianSaffronExporterRoute,
   PrivacyRoute: PrivacyRoute,
   ProfileRoute: ProfileRoute,
   QuoteRoute: QuoteRoute,

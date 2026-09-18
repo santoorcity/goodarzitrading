@@ -57,6 +57,8 @@ export function Footer() {
             {t("legal.footer.tradeTools", "Trade Tools")}
           </h4>
           <ul className="mt-5 space-y-3 text-sm">
+            <li><Link to="/export-products" className="hover:text-[color:var(--gold)]">{t("common.nav.products", "Export Products")}</Link></li>
+            <li><Link to="/iranian-saffron-exporter" className="hover:text-[color:var(--gold)]">Iranian Saffron Exporter</Link></li>
             <li><Link to="/hs-code" className="hover:text-[color:var(--gold)]">{t("legal.footer.hsCode", "HS Code Search")}</Link></li>
             <li><Link to="/knowledge" className="hover:text-[color:var(--gold)]">{t("legal.footer.knowledge", "Knowledge Center")}</Link></li>
             <li><Link to="/quote" className="hover:text-[color:var(--gold)]">{t("common.nav.quote", "Request a Quote")}</Link></li>

@@ -37,12 +37,12 @@ function Home() {
   const t = useT();
 
   const FEATURED = [
-    { slug: "saffron", name: t("home.products.saffron.name", "Iranian Saffron"), fa: t("home.products.saffron.fa", "زعفران"), img: saffronImg.url },
-    { slug: "pistachio", name: t("home.products.pistachio.name", "Iranian Pistachio"), fa: t("home.products.pistachio.fa", "پسته"), img: pistachioImg.url },
-    { slug: "dates", name: t("home.products.dates.name", "Iranian Dates"), fa: t("home.products.dates.fa", "خرما"), img: datesImg.url },
-    { slug: "barberry", name: t("home.products.barberry.name", "Iranian Barberry"), fa: t("home.products.barberry.fa", "زرشک"), img: barberryImg.url },
-    { slug: "nuts", name: t("home.products.nuts.name", "Dried Fruits & Nuts"), fa: t("home.products.nuts.fa", "خشکبار"), img: nutsImg.url },
-    { slug: "handwoven-carpets", name: t("home.products.carpets.name", "Persian Carpets"), fa: t("home.products.carpets.fa", "فرش دستباف"), img: carpetImg.url },
+    { slug: "saffron", detailSlug: "iranian-saffron", name: t("home.products.saffron.name", "Iranian Saffron"), fa: t("home.products.saffron.fa", "زعفران"), img: saffronImg.url },
+    { slug: "pistachio", detailSlug: "iranian-pistachio", name: t("home.products.pistachio.name", "Iranian Pistachio"), fa: t("home.products.pistachio.fa", "پسته"), img: pistachioImg.url },
+    { slug: "dates", detailSlug: "iranian-dates", name: t("home.products.dates.name", "Iranian Dates"), fa: t("home.products.dates.fa", "خرما"), img: datesImg.url },
+    { slug: "barberry", detailSlug: "iranian-barberry", name: t("home.products.barberry.name", "Iranian Barberry"), fa: t("home.products.barberry.fa", "زرشک"), img: barberryImg.url },
+    { slug: "nuts", detailSlug: "iranian-dried-fruits-and-nuts", name: t("home.products.nuts.name", "Dried Fruits & Nuts"), fa: t("home.products.nuts.fa", "خشکبار"), img: nutsImg.url },
+    { slug: "handwoven-carpets", detailSlug: "persian-handwoven-carpets", name: t("home.products.carpets.name", "Persian Carpets"), fa: t("home.products.carpets.fa", "فرش دستباف"), img: carpetImg.url },
   ];
 
   const heroStats: [string, string][] = [
@@ -211,7 +211,8 @@ function Home() {
             {FEATURED.map((p) => (
               <Link
                 key={p.slug}
-                to="/export-products"
+                to="/export-products/$slug"
+                params={{ slug: p.detailSlug }}
                 className="group relative block overflow-hidden rounded-sm border border-border shadow-[var(--shadow-card)] transition-shadow hover:shadow-[var(--shadow-elegant)]"
               >
                 <div className="aspect-[4/3] overflow-hidden bg-secondary">
