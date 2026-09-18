@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { kc } from "@/data/knowledge-center";
+import { EXPORT_PRODUCTS } from "@/data/export-products";
 
 
 const BASE_URL = "https://goodarzitrading.lovable.app";
@@ -20,6 +21,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/about", changefreq: "monthly", priority: "0.8" },
           { path: "/services", changefreq: "monthly", priority: "0.9" },
           { path: "/export-products", changefreq: "weekly", priority: "0.95" },
+          { path: "/iranian-saffron-exporter", changefreq: "weekly", priority: "0.95" },
           { path: "/trade-network", changefreq: "monthly", priority: "0.85" },
           { path: "/inquiry", changefreq: "monthly", priority: "0.9" },
           { path: "/incoterms", changefreq: "yearly", priority: "0.7" },
@@ -33,6 +35,10 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/privacy", changefreq: "yearly", priority: "0.3" },
           { path: "/terms", changefreq: "yearly", priority: "0.3" },
         ];
+
+        for (const p of EXPORT_PRODUCTS) {
+          entries.push({ path: `/export-products/${p.slug}`, changefreq: "monthly", priority: "0.9" });
+        }
 
         for (const cat of kc.categories) {
           entries.push({ path: `/knowledge/${cat.slug}`, changefreq: "monthly", priority: "0.6" });
