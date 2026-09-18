@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { Package, ArrowRight } from "lucide-react";
 import { useI18n } from "@/i18n/LanguageProvider";
+import { EXPORT_PRODUCTS } from "@/data/export-products";
 
 import saffronImg from "@/assets/products/saffron.jpg";
 import pistachioImg from "@/assets/products/pistachio.jpg";
