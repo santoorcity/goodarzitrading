@@ -218,12 +218,25 @@ function ExportProductsPage() {
                     </div>
                   </dl>
 
+                  {(() => {
+                    const detail = EXPORT_PRODUCTS.find((e) => e.key === p.key);
+                    return detail ? (
+                      <Link
+                        to="/export-products/$slug"
+                        params={{ slug: detail.slug }}
+                        className="mt-6 inline-flex items-center justify-center gap-2 rounded-sm bg-[color:var(--navy-deep)] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[color:var(--navy)]"
+                      >
+                        {t("products.viewDetails", "View Details & Specifications")} <ArrowRight className="h-4 w-4" />
+                      </Link>
+                    ) : null;
+                  })()}
+
                   <Link
                     to="/inquiry"
                     search={{ product: p.slug } as never}
-                    className="mt-6 inline-flex items-center justify-center gap-2 rounded-sm bg-[color:var(--navy-deep)] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[color:var(--navy)]"
+                    className="mt-3 inline-flex items-center justify-center gap-2 rounded-sm border border-[color:var(--navy)]/20 px-5 py-3 text-sm font-medium text-[color:var(--navy-deep)] transition-colors hover:bg-secondary"
                   >
-                    {t("products.sendInquiry", "Send Inquiry")} <ArrowRight className="h-4 w-4" />
+                    {t("products.sendInquiry", "Send Inquiry")}
                   </Link>
                 </div>
               </article>
