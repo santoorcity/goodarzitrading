@@ -28,9 +28,11 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as KnowledgeIndexRouteImport } from './routes/knowledge.index'
 import { Route as IncotermsIndexRouteImport } from './routes/incoterms.index'
 import { Route as ExportProductsIndexRouteImport } from './routes/export-products.index'
+import { Route as MarketsRegionRouteImport } from './routes/markets.$region'
 import { Route as KnowledgeCategoryRouteImport } from './routes/knowledge.$category'
 import { Route as IncotermsCodeRouteImport } from './routes/incoterms.$code'
 import { Route as ExportProductsSlugRouteImport } from './routes/export-products.$slug'
+import { Route as KnowledgeBuyerGuidesSlugRouteImport } from './routes/knowledge.buyer-guides.$slug'
 import { Route as KnowledgeCategoryEntryRouteImport } from './routes/knowledge.$category.$entry'
 
 const TradeNetworkRoute = TradeNetworkRouteImport.update({
@@ -128,6 +130,11 @@ const ExportProductsIndexRoute = ExportProductsIndexRouteImport.update({
   path: '/',
   getParentRoute: () => ExportProductsRoute,
 } as any)
+const MarketsRegionRoute = MarketsRegionRouteImport.update({
+  id: '/markets/$region',
+  path: '/markets/$region',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const KnowledgeCategoryRoute = KnowledgeCategoryRouteImport.update({
   id: '/knowledge/$category',
   path: '/knowledge/$category',
@@ -143,6 +150,12 @@ const ExportProductsSlugRoute = ExportProductsSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => ExportProductsRoute,
 } as any)
+const KnowledgeBuyerGuidesSlugRoute =
+  KnowledgeBuyerGuidesSlugRouteImport.update({
+    id: '/knowledge/buyer-guides/$slug',
+    path: '/knowledge/buyer-guides/$slug',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const KnowledgeCategoryEntryRoute = KnowledgeCategoryEntryRouteImport.update({
   id: '/$entry',
   path: '/$entry',
@@ -169,10 +182,12 @@ export interface FileRoutesByFullPath {
   '/export-products/$slug': typeof ExportProductsSlugRoute
   '/incoterms/$code': typeof IncotermsCodeRoute
   '/knowledge/$category': typeof KnowledgeCategoryRouteWithChildren
+  '/markets/$region': typeof MarketsRegionRoute
   '/export-products/': typeof ExportProductsIndexRoute
   '/incoterms/': typeof IncotermsIndexRoute
   '/knowledge/': typeof KnowledgeIndexRoute
   '/knowledge/$category/$entry': typeof KnowledgeCategoryEntryRoute
+  '/knowledge/buyer-guides/$slug': typeof KnowledgeBuyerGuidesSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -193,10 +208,12 @@ export interface FileRoutesByTo {
   '/export-products/$slug': typeof ExportProductsSlugRoute
   '/incoterms/$code': typeof IncotermsCodeRoute
   '/knowledge/$category': typeof KnowledgeCategoryRouteWithChildren
+  '/markets/$region': typeof MarketsRegionRoute
   '/export-products': typeof ExportProductsIndexRoute
   '/incoterms': typeof IncotermsIndexRoute
   '/knowledge': typeof KnowledgeIndexRoute
   '/knowledge/$category/$entry': typeof KnowledgeCategoryEntryRoute
+  '/knowledge/buyer-guides/$slug': typeof KnowledgeBuyerGuidesSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -219,10 +236,12 @@ export interface FileRoutesById {
   '/export-products/$slug': typeof ExportProductsSlugRoute
   '/incoterms/$code': typeof IncotermsCodeRoute
   '/knowledge/$category': typeof KnowledgeCategoryRouteWithChildren
+  '/markets/$region': typeof MarketsRegionRoute
   '/export-products/': typeof ExportProductsIndexRoute
   '/incoterms/': typeof IncotermsIndexRoute
   '/knowledge/': typeof KnowledgeIndexRoute
   '/knowledge/$category/$entry': typeof KnowledgeCategoryEntryRoute
+  '/knowledge/buyer-guides/$slug': typeof KnowledgeBuyerGuidesSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -246,10 +265,12 @@ export interface FileRouteTypes {
     | '/export-products/$slug'
     | '/incoterms/$code'
     | '/knowledge/$category'
+    | '/markets/$region'
     | '/export-products/'
     | '/incoterms/'
     | '/knowledge/'
     | '/knowledge/$category/$entry'
+    | '/knowledge/buyer-guides/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -270,10 +291,12 @@ export interface FileRouteTypes {
     | '/export-products/$slug'
     | '/incoterms/$code'
     | '/knowledge/$category'
+    | '/markets/$region'
     | '/export-products'
     | '/incoterms'
     | '/knowledge'
     | '/knowledge/$category/$entry'
+    | '/knowledge/buyer-guides/$slug'
   id:
     | '__root__'
     | '/'
@@ -295,10 +318,12 @@ export interface FileRouteTypes {
     | '/export-products/$slug'
     | '/incoterms/$code'
     | '/knowledge/$category'
+    | '/markets/$region'
     | '/export-products/'
     | '/incoterms/'
     | '/knowledge/'
     | '/knowledge/$category/$entry'
+    | '/knowledge/buyer-guides/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -320,8 +345,10 @@ export interface RootRouteChildren {
   TradeNetworkRoute: typeof TradeNetworkRoute
   IncotermsCodeRoute: typeof IncotermsCodeRoute
   KnowledgeCategoryRoute: typeof KnowledgeCategoryRouteWithChildren
+  MarketsRegionRoute: typeof MarketsRegionRoute
   IncotermsIndexRoute: typeof IncotermsIndexRoute
   KnowledgeIndexRoute: typeof KnowledgeIndexRoute
+  KnowledgeBuyerGuidesSlugRoute: typeof KnowledgeBuyerGuidesSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -459,6 +486,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ExportProductsIndexRouteImport
       parentRoute: typeof ExportProductsRoute
     }
+    '/markets/$region': {
+      id: '/markets/$region'
+      path: '/markets/$region'
+      fullPath: '/markets/$region'
+      preLoaderRoute: typeof MarketsRegionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/knowledge/$category': {
       id: '/knowledge/$category'
       path: '/knowledge/$category'
@@ -479,6 +513,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/export-products/$slug'
       preLoaderRoute: typeof ExportProductsSlugRouteImport
       parentRoute: typeof ExportProductsRoute
+    }
+    '/knowledge/buyer-guides/$slug': {
+      id: '/knowledge/buyer-guides/$slug'
+      path: '/knowledge/buyer-guides/$slug'
+      fullPath: '/knowledge/buyer-guides/$slug'
+      preLoaderRoute: typeof KnowledgeBuyerGuidesSlugRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/knowledge/$category/$entry': {
       id: '/knowledge/$category/$entry'
@@ -534,8 +575,10 @@ const rootRouteChildren: RootRouteChildren = {
   TradeNetworkRoute: TradeNetworkRoute,
   IncotermsCodeRoute: IncotermsCodeRoute,
   KnowledgeCategoryRoute: KnowledgeCategoryRouteWithChildren,
+  MarketsRegionRoute: MarketsRegionRoute,
   IncotermsIndexRoute: IncotermsIndexRoute,
   KnowledgeIndexRoute: KnowledgeIndexRoute,
+  KnowledgeBuyerGuidesSlugRoute: KnowledgeBuyerGuidesSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
