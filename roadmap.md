@@ -4,4 +4,5 @@
 - [ ] Add nine buyer Knowledge Center articles with metadata, schemas, internal links, and WhatsApp CTAs
 - [ ] Add seven defensible product-market pages with metadata, schemas, internal links, and WhatsApp CTAs
 - [ ] Add directory links, sitemap entries, AI-readable links, and relevant product/footer cross-links
+- [ ] Replace Persian carpet catalogue listing with Iranian Mamra Almonds using the supplied details and image
 - [ ] Verify representative desktop/mobile pages, links, schema output, WhatsApp flow, and diagnostics
