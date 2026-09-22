@@ -8,7 +8,7 @@ import saffronImg from "@/assets/products/saffron.jpg";
 import pistachioImg from "@/assets/products/pistachio.jpg";
 import datesImg from "@/assets/products/dates.avif";
 import nutsImg from "@/assets/products/nuts.jpg";
-import carpetImg from "@/assets/products/carpet.jpg";
+import mamraAlmondsImg from "@/assets/products/mamra-almonds.jpg.asset.json";
 import barberryImg from "@/assets/products/barberry.jpeg";
 
 type Product = {
@@ -24,7 +24,7 @@ const PRODUCTS: Product[] = [
   { slug: "dates", key: "dates", hs: "0804.10", image: datesImg },
   { slug: "barberry", key: "barberry", hs: "0810.90", image: barberryImg },
   { slug: "nuts", key: "nuts", hs: "0813 / 0802", image: nutsImg },
-  { slug: "handwoven-carpets", key: "carpet", hs: "5701.10", image: carpetImg },
+  { slug: "mamra-almonds", key: "almonds", hs: "0802.12", image: mamraAlmondsImg.url },
 ];
 
 const PRODUCT_SCHEMA: Record<string, { name: string; description: string }> = {
@@ -50,9 +50,9 @@ const PRODUCT_SCHEMA: Record<string, { name: string; description: string }> = {
     name: "Iranian Dried Fruits & Nuts",
     description: "Raisins, dried figs, apricots, walnuts and almonds of Iranian origin, exported in bulk and retail packs.",
   },
-  "handwoven-carpets": {
-    name: "Persian Handwoven Carpets",
-    description: "Authentic Persian handwoven carpets and rugs exported under HS 5701.10 with authenticity documentation.",
+  "mamra-almonds": {
+    name: "Iranian Mamra Almonds",
+    description: "Premium shelled Iranian Mamra almonds from Isfahan and Chaharmahal, offered as whole Grade A and broken Grade B kernels.",
   },
 };
 
@@ -63,7 +63,7 @@ const EXPORT_FAQ = [
   },
   {
     q: "Which company exports Iranian saffron and pistachio internationally?",
-    a: "Goodarzi Trading is a Tehran-based import and export company (registration no. 485993) exporting Iranian saffron, pistachio, dates, barberry, dried fruits, nuts and Persian carpets to buyers in the Middle East, Europe, Asia, Africa and the Americas.",
+    a: "Goodarzi Trading is a Tehran-based import and export company (registration no. 485993) exporting Iranian saffron, pistachio, dates, barberry, dried fruits, nuts and Mamra almonds to buyers in the Middle East, Europe, Asia, Africa and the Americas.",
   },
   {
     q: "What documents come with Iranian food exports?",
@@ -82,22 +82,22 @@ const EXPORT_FAQ = [
 export const Route = createFileRoute("/export-products/")({
   head: () => ({
     meta: [
-      { title: "Iranian Export Products — Saffron, Pistachio, Dates, Barberry, Carpets | Goodarzi Trading" },
+      { title: "Iranian Export Products — Saffron, Pistachio, Dates, Barberry & Mamra Almonds | Goodarzi Trading" },
       {
         name: "description",
         content:
-          "Buy premium Iranian export products: saffron, pistachio, dates, barberry, dried fruits, nuts and handwoven carpets. Direct from Iran with certificates. Global shipping.",
+          "Buy premium Iranian export products: saffron, pistachio, dates, barberry, dried fruits, nuts and Mamra almonds. Direct from Iran with certificates. Global shipping.",
       },
       {
         name: "keywords",
         content:
-          "buy Iranian saffron, Iran pistachio exporter, buy dates from Iran, Iranian barberry, Persian carpets export, Iranian nuts, import from Iran, Iran export company, صادرات زعفران, صادرات پسته, صادرات خرما, صادرات زرشک, goodarzi trading",
+          "buy Iranian saffron, Iran pistachio exporter, buy dates from Iran, Iranian barberry, Iranian Mamra almonds, Iranian nuts, import from Iran, Iran export company, صادرات زعفران, صادرات پسته, صادرات خرما, صادرات زرشک, goodarzi trading",
       },
       { property: "og:title", content: "Iranian Export Products — Goodarzi Trading" },
       {
         property: "og:description",
         content:
-          "Premium Iranian saffron, pistachio, dates, barberry, carpets and nuts — with full export documentation.",
+          "Premium Iranian saffron, pistachio, dates, barberry, Mamra almonds and nuts — with full export documentation.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://goodarzitrading.lovable.app/export-products" },

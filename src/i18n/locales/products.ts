@@ -70,14 +70,14 @@ export const products: Bundle = {
     nutsDesc:
       "Full range of Iranian dried fruits and nuts, sorted and cleaned to international export standards.",
 
-    carpetName: "Persian Handwoven Carpets",
-    carpetNameFa: "فرش دستباف",
-    carpetMoq: "1 pc",
-    carpetPackaging: "Rolled, wrapped, sealed",
-    carpetOrigin: "Tabriz, Kashan, Isfahan, Qom",
-    carpetGrades: "Silk · Wool · Silk-Wool",
-    carpetDesc:
-      "Authentic Persian carpets with certificate of origin. City & tribal designs, custom sizes available.",
+    almondsName: "Iranian Mamra Almonds",
+    almondsNameFa: "مغز بادام مامایی",
+    almondsMoq: "1 MT",
+    almondsPackaging: "10kg / 25kg vacuum bags",
+    almondsOrigin: "Isfahan, Chaharmahal, Iran",
+    almondsGrades: "Grade A (whole kernel) · Grade B (broken)",
+    almondsDesc:
+      "Premium Iranian Mamra almonds with high oil content and distinctive flavor, sourced from Iran's almond-growing regions.",
   },
   fa: {
     heroEyebrow: "کاتالوگ صادراتی",
@@ -148,14 +148,14 @@ export const products: Bundle = {
     nutsDesc:
       "طیف کامل خشکبار و آجیل ایرانی، دسته‌بندی و تمیز شده مطابق استانداردهای صادراتی بین‌المللی.",
 
-    carpetName: "فرش دستباف ایرانی",
-    carpetNameFa: "فرش دستباف",
-    carpetMoq: "۱ تخته",
-    carpetPackaging: "رول‌شده، بسته‌بندی و مهروموم‌شده",
-    carpetOrigin: "تبریز، کاشان، اصفهان، قم",
-    carpetGrades: "ابریشم · پشم · ابریشم-پشم",
-    carpetDesc:
-      "فرش‌های اصیل ایرانی همراه با گواهی مبدأ. طرح‌های شهری و عشایری، امکان تولید در ابعاد سفارشی.",
+    almondsName: "بادام مامایی ایرانی",
+    almondsNameFa: "مغز بادام مامایی",
+    almondsMoq: "۱ تن",
+    almondsPackaging: "کیسه وکیوم ۱۰ و ۲۵ کیلوگرمی",
+    almondsOrigin: "اصفهان، چهارمحال، ایران",
+    almondsGrades: "درجه A (مغز کامل) · درجه B (شکسته)",
+    almondsDesc:
+      "بادام مامایی ممتاز ایرانی با روغن بالا و طعم متمایز، تهیه‌شده از مناطق بادام‌خیز ایران.",
   },
   ar: {
     heroEyebrow: "كتالوج التصدير",
@@ -226,13 +226,13 @@ export const products: Bundle = {
     nutsDesc:
       "مجموعة كاملة من الفواكه المجففة والمكسرات الإيرانية، مصنفة ومنظفة وفق معايير التصدير الدولية.",
 
-    carpetName: "السجاد الفارسي اليدوي",
-    carpetNameFa: "فرش دستباف",
-    carpetMoq: "قطعة واحدة",
-    carpetPackaging: "ملفوف ومغلف ومختوم",
-    carpetOrigin: "تبريز، كاشان، أصفهان، قم",
-    carpetGrades: "حرير · صوف · حرير-صوف",
-    carpetDesc:
-      "سجاد فارسي أصيل مع شهادة منشأ. تصاميم مدنية وقبلية، مع إمكانية التصنيع بمقاسات مخصصة.",
+    almondsName: "لوز مامرا الإيراني",
+    almondsNameFa: "مغز بادام مامایی",
+    almondsMoq: "1 طن",
+    almondsPackaging: "أكياس مفرغة من الهواء 10 / 25 كجم",
+    almondsOrigin: "أصفهان، جهارمحال، إيران",
+    almondsGrades: "درجة A (حبة كاملة) · درجة B (مكسرة)",
+    almondsDesc:
+      "لوز مامرا إيراني ممتاز بمحتوى زيت مرتفع ونكهة مميزة، مصدره مناطق زراعة اللوز في إيران.",
   },
 };

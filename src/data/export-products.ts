@@ -1,3 +1,5 @@
+import mamraAlmonds from "@/assets/products/mamra-almonds.jpg.asset.json";
+
 /**
  * Canonical, English-language product data for the public export catalogue and
  * the per-product SEO landing pages. Every value here is drawn from the
@@ -245,40 +247,42 @@ export const EXPORT_PRODUCTS: ExportProduct[] = [
     ],
   },
   {
-    slug: "persian-handwoven-carpets",
-    key: "carpet",
-    name: "Persian Handwoven Carpets",
-    nameFa: "فرش دستباف",
-    hs: "5701.10",
-    image: "/carpet.jpg",
+    slug: "iranian-mamra-almonds",
+    key: "almonds",
+    name: "Iranian Mamra Almonds",
+    nameFa: "مغز بادام مامایی",
+    hs: "0802.12",
+    image: mamraAlmonds.url,
     summary:
-      "Authentic handwoven carpets and rugs from Tabriz, Kashan, Isfahan and Qom in silk, wool and silk-wool, with certificate of origin.",
+      "Premium Iranian Mamra almonds with high oil content and a distinctive flavor, sourced from Isfahan and Chaharmahal for international wholesale buyers.",
     overview: [
-      "Handwoven Persian carpets are sourced from the weaving centres of Tabriz, Kashan, Isfahan and Qom in silk, wool and silk-wool constructions.",
-      "City and tribal designs are available, and custom sizes can be commissioned. Each piece is exported with a certificate of origin.",
+      "Iranian Mamra almond kernels are known for their high oil content and distinctive flavor. Goodarzi Trading sources them from almond-growing regions in Isfahan and Chaharmahal, Iran.",
+      "Whole Grade A kernels and broken Grade B kernels are offered in vacuum bags for international wholesale supply, subject to lot availability and buyer specification.",
+      "Supply is suitable for inquiries from EU, GCC and Asian markets. Destination import requirements remain the buyer's responsibility and must be confirmed before shipment.",
     ],
-    origin: "Tabriz, Kashan, Isfahan and Qom, Iran",
-    grades: ["Silk", "Wool", "Silk-wool"],
-    packaging: ["Rolled, wrapped and sealed for export"],
-    moq: "1 piece",
+    origin: "Isfahan, Chaharmahal, Iran",
+    grades: ["Grade A (whole kernel)", "Grade B (broken)"],
+    packaging: ["10 kg vacuum bags", "25 kg vacuum bags"],
+    moq: "1 metric tonne",
     specifications: [
-      ["HS code", "5701.10"],
-      ["Materials", "Silk, wool, silk-wool"],
-      ["Origin", "Tabriz, Kashan, Isfahan, Qom"],
-      ["Minimum order", "1 piece"],
-      ["Delivery terms", "EXW, FOB, CFR, CIF, DAP (Incoterms 2020)"],
+      ["HS code", "0802.12"],
+      ["Product", "Shelled Mamra almond kernels"],
+      ["Grades", "Grade A whole kernel; Grade B broken"],
+      ["Origin", "Isfahan, Chaharmahal, Iran"],
+      ["Minimum order", "1 metric tonne"],
     ],
-    documentation: ["Certificate of origin and authenticity documentation", ...COMMON_DOCS],
+    documentation: [
+      "Health certificate",
+      "Aflatoxin-free certificate",
+      "Certificate of origin",
+      "Phytosanitary certificate",
+    ],
     shipping: COMMON_SHIPPING,
     faqs: [
-      {
-        q: "What is the HS code for handwoven carpets?",
-        a: "Hand-knotted carpets of silk are classified under HS heading 5701.10.",
-      },
-      {
-        q: "Can carpets be ordered in custom sizes?",
-        a: "Yes. Custom sizes and designs can be commissioned from the weaving workshops.",
-      },
+      { q: "What is the HS code for shelled Mamra almonds?", a: "The listed HS code for shelled Mamra almond kernels is 0802.12." },
+      { q: "Which Mamra almond grades are available?", a: "Grade A whole kernels and Grade B broken kernels are available, subject to lot availability and agreed specification." },
+      { q: "What is the minimum order quantity?", a: "The published minimum order is 1 metric tonne." },
+      { q: "Which export documents are available?", a: "The listed documents are a health certificate, aflatoxin-free certificate, certificate of origin and phytosanitary certificate." },
     ],
   },
 ];

@@ -35,7 +35,7 @@ export const home: Bundle = {
     "products.eyebrow": "Featured Iranian Exports",
     "products.title": "Premium products, shipped worldwide",
     "products.desc":
-      "Saffron, pistachio, dates, barberry, dried fruits and hand-woven Persian carpets — sourced directly from Iranian growers and workshops.",
+      "Iranian saffron, pistachios, dates, barberry, dried fruits and nuts, and Mamra almonds for international importers, wholesalers and distributors.",
     "products.cta": "View full catalogue",
     "products.saffron.name": "Iranian Saffron",
     "products.saffron.fa": "زعفران",
@@ -47,8 +47,8 @@ export const home: Bundle = {
     "products.barberry.fa": "زرشک",
     "products.nuts.name": "Dried Fruits & Nuts",
     "products.nuts.fa": "خشکبار",
-    "products.carpets.name": "Persian Carpets",
-    "products.carpets.fa": "فرش دستباف",
+    "products.almonds.name": "Iranian Mamra Almonds",
+    "products.almonds.fa": "مغز بادام مامایی",
 
     "services.eyebrow": "Our Services",
     "services.title": "End-to-end international trade",
@@ -174,7 +174,7 @@ export const home: Bundle = {
     "products.eyebrow": "صادرات منتخب ایرانی",
     "products.title": "محصولات ممتاز، ارسال به سراسر جهان",
     "products.desc":
-      "زعفران، پسته، خرما، زرشک، خشکبار و فرش دستباف ایرانی — تهیه‌شده مستقیم از کشاورزان و کارگاه‌های ایرانی.",
+      "زعفران، پسته، خرما، زرشک، خشکبار و مغز بادام مامایی ایرانی برای واردکنندگان، عمده‌فروشان و توزیع‌کنندگان بین‌المللی.",
     "products.cta": "مشاهده کاتالوگ کامل",
     "products.saffron.name": "زعفران ایرانی",
     "products.saffron.fa": "زعفران",
@@ -186,8 +186,8 @@ export const home: Bundle = {
     "products.barberry.fa": "زرشک",
     "products.nuts.name": "میوه خشک و آجیل",
     "products.nuts.fa": "خشکبار",
-    "products.carpets.name": "فرش دستباف ایرانی",
-    "products.carpets.fa": "فرش دستباف",
+    "products.almonds.name": "بادام مامایی ایرانی",
+    "products.almonds.fa": "مغز بادام مامایی",
 
     "services.eyebrow": "خدمات ما",
     "services.title": "تجارت بین‌المللی سرتاسری",
@@ -313,7 +313,7 @@ export const home: Bundle = {
     "products.eyebrow": "صادرات إيرانية مميزة",
     "products.title": "منتجات فاخرة، تُشحن حول العالم",
     "products.desc":
-      "الزعفران والفستق والتمور والزرشك والفواكه المجففة والسجاد الفارسي اليدوي — يتم توريدها مباشرة من المزارعين والورش الإيرانية.",
+      "الزعفران والفستق والتمور والزرشك والفواكه المجففة والمكسرات ولوز مامرا الإيراني للمستوردين وتجار الجملة والموزعين الدوليين.",
     "products.cta": "عرض الكتالوج الكامل",
     "products.saffron.name": "الزعفران الإيراني",
     "products.saffron.fa": "زعفران",
@@ -325,8 +325,8 @@ export const home: Bundle = {
     "products.barberry.fa": "زرشک",
     "products.nuts.name": "الفواكه المجففة والمكسرات",
     "products.nuts.fa": "خشکبار",
-    "products.carpets.name": "السجاد الفارسي",
-    "products.carpets.fa": "فرش دستباف",
+    "products.almonds.name": "لوز مامرا الإيراني",
+    "products.almonds.fa": "مغز بادام مامایی",
 
     "services.eyebrow": "خدماتنا",
     "services.title": "تجارة دولية متكاملة",
