@@ -1,5 +1,3 @@
-import mamraAlmonds from "@/assets/products/mamra-almonds.jpg.asset.json";
-
 /**
  * Canonical, English-language product data for the public export catalogue and
  * the per-product SEO landing pages. Every value here is drawn from the
@@ -252,7 +250,7 @@ export const EXPORT_PRODUCTS: ExportProduct[] = [
     name: "Iranian Mamra Almonds",
     nameFa: "مغز بادام مامایی",
     hs: "0802.12",
-    image: mamraAlmonds.url,
+    image: "/iranian-mamra-almond-size-guide.png",
     summary:
       "Premium Iranian Mamra almonds with high oil content and a distinctive flavor, sourced from Isfahan and Chaharmahal for international wholesale buyers.",
     overview: [

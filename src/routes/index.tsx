@@ -9,7 +9,6 @@ import saffronImg from "@/assets/products/saffron.jpg.asset.json";
 import pistachioImg from "@/assets/products/pistachio.jpg.asset.json";
 import datesImg from "@/assets/products/dates.avif.asset.json";
 import barberryImg from "@/assets/products/barberry.jpeg.asset.json";
-import mamraAlmondsImg from "@/assets/products/mamra-almonds.jpg.asset.json";
 import nutsImg from "@/assets/products/nuts.jpg.asset.json";
 import { useT } from "@/i18n/LanguageProvider";
 const heroPort = "/hero-port-containers.jpg";
@@ -42,7 +41,7 @@ function Home() {
     { slug: "dates", detailSlug: "iranian-dates", name: t("home.products.dates.name", "Iranian Dates"), fa: t("home.products.dates.fa", "خرما"), img: datesImg.url },
     { slug: "barberry", detailSlug: "iranian-barberry", name: t("home.products.barberry.name", "Iranian Barberry"), fa: t("home.products.barberry.fa", "زرشک"), img: barberryImg.url },
     { slug: "nuts", detailSlug: "iranian-dried-fruits-and-nuts", name: t("home.products.nuts.name", "Dried Fruits & Nuts"), fa: t("home.products.nuts.fa", "خشکبار"), img: nutsImg.url },
-    { slug: "mamra-almonds", detailSlug: "iranian-mamra-almonds", name: t("home.products.almonds.name", "Iranian Mamra Almonds"), fa: t("home.products.almonds.fa", "مغز بادام مامایی"), img: mamraAlmondsImg.url },
+    { slug: "mamra-almonds", detailSlug: "iranian-mamra-almonds", name: t("home.products.almonds.name", "Iranian Mamra Almonds"), fa: t("home.products.almonds.fa", "مغز بادام مامایی"), img: "/iranian-mamra-almond-size-guide.png" },
   ];
 
   const heroStats: [string, string][] = [

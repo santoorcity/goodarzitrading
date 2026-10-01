@@ -8,7 +8,6 @@ import saffronImg from "@/assets/products/saffron.jpg";
 import pistachioImg from "@/assets/products/pistachio.jpg";
 import datesImg from "@/assets/products/dates.avif";
 import nutsImg from "@/assets/products/nuts.jpg";
-import mamraAlmondsImg from "@/assets/products/mamra-almonds.jpg.asset.json";
 import barberryImg from "@/assets/products/barberry.jpeg";
 
 type Product = {
@@ -24,7 +23,7 @@ const PRODUCTS: Product[] = [
   { slug: "dates", key: "dates", hs: "0804.10", image: datesImg },
   { slug: "barberry", key: "barberry", hs: "0810.90", image: barberryImg },
   { slug: "nuts", key: "nuts", hs: "0813 / 0802", image: nutsImg },
-  { slug: "mamra-almonds", key: "almonds", hs: "0802.12", image: mamraAlmondsImg.url },
+  { slug: "mamra-almonds", key: "almonds", hs: "0802.12", image: "/iranian-mamra-almond-size-guide.png" },
 ];
 
 const PRODUCT_SCHEMA: Record<string, { name: string; description: string }> = {
