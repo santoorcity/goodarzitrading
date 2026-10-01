@@ -5,4 +5,5 @@
 - [ ] Add seven defensible product-market pages with metadata, schemas, internal links, and WhatsApp CTAs
 - [ ] Add directory links, sitemap entries, AI-readable links, and relevant product/footer cross-links
 - [ ] Replace Persian carpet catalogue listing with Iranian Mamra Almonds using the supplied details and image
+- [ ] Replace Mamra image with the new size guide in public assets and verify production-safe paths across every usage
 - [ ] Verify representative desktop/mobile pages, links, schema output, WhatsApp flow, and diagnostics

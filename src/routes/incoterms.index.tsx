@@ -22,7 +22,7 @@ export const Route = createFileRoute("/incoterms/")({
         content:
           "شرح ۱۱ قانون اینکوترمز ۲۰۲۰ به فارسی و انگلیسی — مسئولیت‌ها، هزینه‌ها و ریسک‌ها میان خریدار و فروشنده در تجارت بین‌الملل.",
       },
-      { property: "og:url", content: "https://goodarzitrading.lovable.app/incoterms" },
+      { property: "og:url", content: "https://goodarzitrading.ir/incoterms" },
       { property: "og:locale", content: "en_US" },
       { property: "og:locale:alternate", content: "fa_IR" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -33,7 +33,7 @@ export const Route = createFileRoute("/incoterms/")({
           "راهنمای ۱۱ قانون اینکوترمز ۲۰۲۰ به فارسی و انگلیسی برای بازرگانان و فعالان واردات و صادرات.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://goodarzitrading.lovable.app/incoterms" }],
+    links: [{ rel: "canonical", href: "https://goodarzitrading.ir/incoterms" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -46,7 +46,7 @@ export const Route = createFileRoute("/incoterms/")({
           inLanguage: ["en", "fa"],
           author: { "@type": "Organization", name: "Goodarzi Trading" },
           publisher: { "@type": "Organization", name: "Goodarzi Trading" },
-          mainEntityOfPage: "https://goodarzitrading.lovable.app/incoterms",
+          mainEntityOfPage: "https://goodarzitrading.ir/incoterms",
         }),
       },
     ],

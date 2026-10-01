@@ -86,8 +86,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Goodarzi Trading — Global Import & Export Solutions" },
-      { name: "keywords", content: "import export Iran, buy from Iran, Iranian saffron exporter, Iran pistachio supplier, Persian carpets export, buy Iranian dates, Iran bitumen supplier, international trade Iran, freight forwarding, IRICA customs, Tehran Chamber of Commerce, world traders, chamber of commerce members, goodarzi trading, بازرگانی گودرزی, واردات صادرات ایران, تجارت بین الملل, صادرات زعفران, صادرات پسته, بازرگانان جهان" },
-      { name: "description", content: "Iran-based import & export company. Buy Iranian saffron, pistachio, dates, carpets, bitumen & minerals directly. Trusted worldwide by importers, distributors and chamber-of-commerce members." },
+      { name: "keywords", content: "import export Iran, buy from Iran, Iranian saffron exporter, Iran pistachio supplier, Iranian Mamra almonds, buy Iranian dates, Iran bitumen supplier, international trade Iran, freight forwarding, IRICA customs, Tehran Chamber of Commerce, world traders, chamber of commerce members, goodarzi trading, بازرگانی گودرزی, واردات صادرات ایران, تجارت بین الملل, صادرات زعفران, صادرات پسته, بازرگانان جهان" },
+      { name: "description", content: "Iran-based import & export company. Buy Iranian saffron, pistachio, dates, barberry, dried fruits, nuts and Mamra almonds. Trade, customs and logistics support from Tehran." },
       { name: "author", content: "Goodarzi Trading" },
       { name: "google-site-verification", content: "DVsriVrhxiWjRyJJaweJ1-xQMP3hNRqyWHvqVLKAYkk" },
       { property: "og:site_name", content: "Goodarzi Trading" },
@@ -98,8 +98,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:title", content: "Goodarzi Trading — Global Import & Export Solutions" },
       { property: "og:description", content: "International import, export, customs consulting and logistics from Tehran. Active member of Tehran Chamber of Commerce." },
       { name: "twitter:description", content: "International import, export, customs consulting and logistics from Tehran. Active member of Tehran Chamber of Commerce." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/68bf3bc2-5260-405a-81d9-4abdf3ace2cf/id-preview-9764f80f--79142ba9-9717-4598-83cb-5a30cea4b5fe.lovable.app-1782759829050.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/68bf3bc2-5260-405a-81d9-4abdf3ace2cf/id-preview-9764f80f--79142ba9-9717-4598-83cb-5a30cea4b5fe.lovable.app-1782759829050.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -120,11 +118,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@type": "Organization",
           name: "Goodarzi Trading",
           alternateName: "بازرگانی گودرزی",
-          url: "https://goodarzitrading.lovable.app",
-          logo: "https://goodarzitrading.lovable.app/goodarzi-trading-logo.png",
+          url: "https://goodarzitrading.ir",
+          logo: "https://goodarzitrading.ir/goodarzi-trading-logo.png",
           description:
-            "Iran-based international trading house. Import, export, customs consulting and logistics. Supplier of Iranian saffron, pistachio, dates, carpets, bitumen and minerals to 40+ countries.",
-          foundingDate: "2005",
+            "Iran-based international trading house. Import, export, customs consulting and logistics. Iran-based import and export company offering Iranian products, sourcing, customs consulting and international logistics.",
           founder: { "@type": "Person", name: "Mehdi Goodarzi" },
           address: {
             "@type": "PostalAddress",
@@ -154,7 +151,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           ],
           knowsAbout: [
             "Iranian saffron export","Iranian pistachio export","Iranian dates export",
-            "Persian handwoven carpets","Iranian bitumen","Industrial minerals",
+            "Iranian barberry","Iranian dried fruits and nuts","Iranian Mamra almonds",
             "IRICA customs clearance","International freight forwarding","Incoterms 2020",
           ],
         }),

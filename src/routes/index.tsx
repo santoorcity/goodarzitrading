@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   Ship, Plane, Truck, FileCheck, Search, Globe, Award, ShieldCheck,
-  TrendingUp, ArrowRight, Quote,
+  TrendingUp, ArrowRight, MessageCircle,
 } from "lucide-react";
 import worldMap from "@/assets/world-map.jpg";
 import cargoShip from "@/assets/cargo-ship.jpg";
@@ -9,9 +9,9 @@ import saffronImg from "@/assets/products/saffron.jpg.asset.json";
 import pistachioImg from "@/assets/products/pistachio.jpg.asset.json";
 import datesImg from "@/assets/products/dates.avif.asset.json";
 import barberryImg from "@/assets/products/barberry.jpeg.asset.json";
-import mamraAlmondsImg from "@/assets/products/mamra-almonds.jpg.asset.json";
 import nutsImg from "@/assets/products/nuts.jpg.asset.json";
 import { useT } from "@/i18n/LanguageProvider";
+import { whatsappLink } from "@/lib/whatsapp";
 const heroPort = "/hero-port-containers.jpg";
 const membershipCert = { url: "/certificate-of-membership.jpg" };
 const brandCert = { url: "/brand-registration-certificate.jpg" };
@@ -26,15 +26,16 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Goodarzi Trading — Global Import & Export Solutions" },
       { property: "og:description", content: "Trusted international trade partner. Customs consulting, sourcing, freight, and trade documentation worldwide." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://goodarzitrading.lovable.app/" },
+      { property: "og:url", content: "https://goodarzitrading.ir/" },
     ],
-    links: [{ rel: "canonical", href: "https://goodarzitrading.lovable.app/" }],
+    links: [{ rel: "canonical", href: "https://goodarzitrading.ir/" }],
   }),
   component: Home,
 });
 
 function Home() {
   const t = useT();
+  const exportWhatsApp = whatsappLink("Hello Goodarzi Trading, I am an international buyer.\nProduct: \nQuantity: \nDestination: \nMessage: ");
 
   const FEATURED = [
     { slug: "saffron", detailSlug: "iranian-saffron", name: t("home.products.saffron.name", "Iranian Saffron"), fa: t("home.products.saffron.fa", "زعفران"), img: saffronImg.url },
@@ -42,7 +43,7 @@ function Home() {
     { slug: "dates", detailSlug: "iranian-dates", name: t("home.products.dates.name", "Iranian Dates"), fa: t("home.products.dates.fa", "خرما"), img: datesImg.url },
     { slug: "barberry", detailSlug: "iranian-barberry", name: t("home.products.barberry.name", "Iranian Barberry"), fa: t("home.products.barberry.fa", "زرشک"), img: barberryImg.url },
     { slug: "nuts", detailSlug: "iranian-dried-fruits-and-nuts", name: t("home.products.nuts.name", "Dried Fruits & Nuts"), fa: t("home.products.nuts.fa", "خشکبار"), img: nutsImg.url },
-    { slug: "mamra-almonds", detailSlug: "iranian-mamra-almonds", name: t("home.products.almonds.name", "Iranian Mamra Almonds"), fa: t("home.products.almonds.fa", "مغز بادام مامایی"), img: mamraAlmondsImg.url },
+    { slug: "mamra-almonds", detailSlug: "iranian-mamra-almonds", name: t("home.products.almonds.name", "Iranian Mamra Almonds"), fa: t("home.products.almonds.fa", "مغز بادام مامایی"), img: "/iranian-mamra-almond-size-guide.png", contain: true },
   ];
 
   const heroStats: [string, string][] = [
@@ -76,12 +77,6 @@ function Home() {
     [t("home.reach.stat.suppliers.value", "120+"), t("home.reach.stat.suppliers.label", "Verified suppliers")],
     [t("home.reach.stat.volume.value", "15M+"), t("home.reach.stat.volume.label", "USD in trade volume")],
     [t("home.reach.stat.support.value", "24/7"), t("home.reach.stat.support.label", "Operations support")],
-  ];
-
-  const testimonials = [
-    { q: t("home.testimonials.t1.quote", "Goodarzi Trading streamlined our entire supply chain into Iran. Customs cleared in record time."), n: t("home.testimonials.t1.name", "A. Hosseini"), r: t("home.testimonials.t1.role", "Procurement Director") },
-    { q: t("home.testimonials.t2.quote", "Professional, reliable and deeply knowledgeable about international trade regulations."), n: t("home.testimonials.t2.name", "M. Karimi"), r: t("home.testimonials.t2.role", "CEO, Industrial Group") },
-    { q: t("home.testimonials.t3.quote", "Their sourcing team found us a better supplier in 3 weeks. Highly recommended."), n: t("home.testimonials.t3.name", "S. Ahmadi"), r: t("home.testimonials.t3.role", "Founder, Retail Chain") },
   ];
 
   const certificates = [
@@ -128,6 +123,14 @@ function Home() {
               >
                 {t("home.hero.cta.services", "Explore Services")}
               </Link>
+              <a
+                href={exportWhatsApp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-sm border border-white/30 px-7 py-3.5 text-sm font-medium text-white backdrop-blur transition-colors hover:bg-white/10"
+              >
+                <MessageCircle className="h-4 w-4" /> Contact us on WhatsApp
+              </a>
             </div>
             <div className="mt-12 grid max-w-2xl grid-cols-2 gap-6 border-t border-white/15 pt-8 sm:grid-cols-4">
               {heroStats.map(([k, v]) => (
@@ -220,7 +223,7 @@ function Home() {
                     src={p.img}
                     alt={`${p.name} — ${p.fa}`}
                     loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className={`h-full w-full transition-transform duration-500 group-hover:scale-105 ${p.contain ? "bg-background object-contain" : "object-cover"}`}
                   />
                 </div>
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[color:var(--navy-deep)] via-[color:var(--navy-deep)]/70 to-transparent p-5">
@@ -277,30 +280,6 @@ function Home() {
                 <div className="font-display text-5xl font-semibold text-[color:var(--gold)]">{k}</div>
                 <div className="mt-2 text-sm uppercase tracking-[0.18em] text-white/70">{v}</div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* TESTIMONIALS */}
-      <section className="py-24">
-        <div className="container-x">
-          <div className="mx-auto max-w-2xl text-center">
-            <span className="eyebrow">{t("home.testimonials.eyebrow", "Client Testimonials")}</span>
-            <h2 className="mt-4 font-display text-4xl font-semibold text-[color:var(--navy-deep)] md:text-5xl">
-              {t("home.testimonials.title", "Trusted by importers and exporters worldwide")}
-            </h2>
-          </div>
-          <div className="mt-14 grid gap-8 md:grid-cols-3">
-            {testimonials.map((tItem) => (
-              <figure key={tItem.n} className="rounded-sm border border-border bg-card p-8 shadow-[var(--shadow-card)]">
-                <Quote className="h-8 w-8 text-[color:var(--gold)]" />
-                <blockquote className="mt-4 text-sm leading-relaxed text-[color:var(--navy)]">"{tItem.q}"</blockquote>
-                <figcaption className="mt-6 border-t border-border pt-4">
-                  <div className="font-display text-base text-[color:var(--navy-deep)]">{tItem.n}</div>
-                  <div className="text-xs text-muted-foreground">{tItem.r}</div>
-                </figcaption>
-              </figure>
             ))}
           </div>
         </div>

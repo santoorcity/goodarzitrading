@@ -13,7 +13,7 @@ export const Route = createFileRoute("/incoterms/$code")({
     return { code: rule.code, name: rule.officialName, transport: rule.transport };
   },
   head: ({ loaderData }) => {
-    const url = `https://goodarzitrading.lovable.app/incoterms/${loaderData?.code.toLowerCase()}`;
+    const url = `https://goodarzitrading.ir/incoterms/${loaderData?.code.toLowerCase()}`;
     const desc = `${loaderData?.code} (${loaderData?.name}) under Incoterms® 2020 — ${loaderData?.transport}. Delivery point, risk transfer, cost allocation and documents explained for importers and exporters.`;
     return {
       meta: [

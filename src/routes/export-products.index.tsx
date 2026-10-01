@@ -8,7 +8,6 @@ import saffronImg from "@/assets/products/saffron.jpg";
 import pistachioImg from "@/assets/products/pistachio.jpg";
 import datesImg from "@/assets/products/dates.avif";
 import nutsImg from "@/assets/products/nuts.jpg";
-import mamraAlmondsImg from "@/assets/products/mamra-almonds.jpg.asset.json";
 import barberryImg from "@/assets/products/barberry.jpeg";
 
 type Product = {
@@ -24,7 +23,7 @@ const PRODUCTS: Product[] = [
   { slug: "dates", key: "dates", hs: "0804.10", image: datesImg },
   { slug: "barberry", key: "barberry", hs: "0810.90", image: barberryImg },
   { slug: "nuts", key: "nuts", hs: "0813 / 0802", image: nutsImg },
-  { slug: "mamra-almonds", key: "almonds", hs: "0802.12", image: mamraAlmondsImg.url },
+  { slug: "mamra-almonds", key: "almonds", hs: "0802.12", image: "/iranian-mamra-almond-size-guide.png" },
 ];
 
 const PRODUCT_SCHEMA: Record<string, { name: string; description: string }> = {
@@ -100,9 +99,9 @@ export const Route = createFileRoute("/export-products/")({
           "Premium Iranian saffron, pistachio, dates, barberry, Mamra almonds and nuts — with full export documentation.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://goodarzitrading.lovable.app/export-products" },
+      { property: "og:url", content: "https://goodarzitrading.ir/export-products" },
     ],
-    links: [{ rel: "canonical", href: "https://goodarzitrading.lovable.app/export-products" }],
+    links: [{ rel: "canonical", href: "https://goodarzitrading.ir/export-products" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -117,7 +116,7 @@ export const Route = createFileRoute("/export-products/")({
               "@type": "Product",
               name: PRODUCT_SCHEMA[p.slug]?.name ?? p.slug,
               description: PRODUCT_SCHEMA[p.slug]?.description,
-              image: `https://goodarzitrading.lovable.app${p.image}`,
+              image: `https://goodarzitrading.ir${p.image}`,
               category: `HS ${p.hs}`,
               brand: { "@type": "Organization", name: "Goodarzi Trading" },
               countryOfOrigin: "IR",
@@ -125,7 +124,7 @@ export const Route = createFileRoute("/export-products/")({
                 "@type": "AggregateOffer",
                 priceCurrency: "USD",
                 availability: "https://schema.org/InStock",
-                seller: { "@type": "Organization", name: "Goodarzi Trading", url: "https://goodarzitrading.lovable.app" },
+                seller: { "@type": "Organization", name: "Goodarzi Trading", url: "https://goodarzitrading.ir" },
               },
             },
           })),
@@ -188,7 +187,7 @@ function ExportProductsPage() {
                     src={p.image}
                     alt={`${t(`products.${p.key}Name`)} — ${t(`products.${p.key}NameFa`)}`}
                     loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className={`h-full w-full transition-transform duration-500 group-hover:scale-105 ${p.slug === "mamra-almonds" ? "bg-background object-contain" : "object-cover"}`}
                   />
                   <span className="absolute right-3 top-3 rounded-sm bg-white/95 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-[color:var(--navy)]">
                     {t("products.hsPrefix", "HS")} {p.hs}

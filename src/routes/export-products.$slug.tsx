@@ -24,6 +24,7 @@ export const Route = createFileRoute("/export-products/$slug")({
       meta: [
         { title },
         { name: "description", content: product.summary },
+        { name: "keywords", content: `${product.name} exporter, ${product.name} supplier, buy ${product.name} from Iran, HS ${product.hs}, wholesale Iranian products, Goodarzi Trading` },
         { property: "og:title", content: title },
         { property: "og:description", content: product.summary },
         { property: "og:type", content: "product" },
@@ -138,7 +139,7 @@ function ProductPage() {
               alt={`${product.name} for export from Iran`}
               width={1200}
               height={900}
-              className="h-full w-full object-cover"
+              className={`h-full w-full ${product.slug === "iranian-mamra-almonds" ? "bg-background object-contain" : "object-cover"}`}
               loading="eager"
               decoding="async"
             />

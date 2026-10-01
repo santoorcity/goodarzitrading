@@ -1,7 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { PageHero } from "@/components/site/PageHero";
 import { InstrumentDirectory } from "@/components/knowledge/InstrumentDirectory";
+import { BUYER_GUIDES } from "@/data/buyer-guides";
 
 import {
   Accordion,
@@ -22,9 +23,9 @@ export const Route = createFileRoute("/knowledge/")({
       { name: "description", content: "In-depth reference guides on import & export procedures, customs regulations, Incoterms 2020, Letters of Credit, international payments and shipping methods." },
       { property: "og:title", content: "Customs & Trade Knowledge Center" },
       { property: "og:description", content: "Reference guides for international trade professionals." },
-      { property: "og:url", content: "https://goodarzitrading.lovable.app/knowledge" },
+      { property: "og:url", content: "https://goodarzitrading.ir/knowledge" },
     ],
-    links: [{ rel: "canonical", href: "https://goodarzitrading.lovable.app/knowledge" }],
+    links: [{ rel: "canonical", href: "https://goodarzitrading.ir/knowledge" }],
   }),
   component: Knowledge,
 });
@@ -388,6 +389,36 @@ function Knowledge() {
               })}
             </div>
           )}
+        </div>
+      </section>
+
+      <section className="border-y border-border bg-secondary/50 py-16 md:py-20">
+        <div className="container-x">
+          <span className="eyebrow">International buyer guides</span>
+          <h2 className="mt-4 max-w-3xl font-display text-3xl font-semibold text-[color:var(--navy-deep)] md:text-4xl">
+            Product, quality and shipment decisions explained
+          </h2>
+          <p className="mt-4 max-w-2xl text-sm leading-6 text-muted-foreground">
+            Practical reference articles for importers comparing Iranian products, specifications, delivery terms and export documentation.
+          </p>
+          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {BUYER_GUIDES.map((guide) => (
+              <Link
+                key={guide.slug}
+                to="/knowledge/buyer-guides/$slug"
+                params={{ slug: guide.slug }}
+                className="group rounded-sm border border-border bg-card p-6 transition-colors hover:border-[color:var(--gold)]"
+              >
+                <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[color:var(--gold)]">
+                  {guide.category}
+                </span>
+                <h3 className="mt-2 font-display text-xl font-semibold leading-tight text-[color:var(--navy-deep)]">
+                  {guide.shortTitle}
+                </h3>
+                <p className="mt-3 line-clamp-3 text-sm leading-6 text-muted-foreground">{guide.description}</p>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

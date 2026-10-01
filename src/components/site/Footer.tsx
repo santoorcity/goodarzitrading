@@ -61,6 +61,8 @@ export function Footer() {
             <li><Link to="/iranian-saffron-exporter" className="hover:text-[color:var(--gold)]">Iranian Saffron Exporter</Link></li>
             <li><Link to="/hs-code" className="hover:text-[color:var(--gold)]">{t("legal.footer.hsCode", "HS Code Search")}</Link></li>
             <li><Link to="/knowledge" className="hover:text-[color:var(--gold)]">{t("legal.footer.knowledge", "Knowledge Center")}</Link></li>
+            <li><Link to="/knowledge/buyer-guides/iranian-saffron-grades" className="hover:text-[color:var(--gold)]">Buyer Guides</Link></li>
+            <li><Link to="/markets/iranian-saffron-uae" className="hover:text-[color:var(--gold)]">Target Markets</Link></li>
             <li><Link to="/quote" className="hover:text-[color:var(--gold)]">{t("common.nav.quote", "Request a Quote")}</Link></li>
             <li><Link to="/privacy" className="hover:text-[color:var(--gold)]">{t("common.footer.privacy", "Privacy Policy")}</Link></li>
             <li><Link to="/terms" className="hover:text-[color:var(--gold)]">{t("common.footer.terms", "Terms & Conditions")}</Link></li>
