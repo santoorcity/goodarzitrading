@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   Ship, Plane, Truck, FileCheck, Search, Globe, Award, ShieldCheck,
-  TrendingUp, ArrowRight, Quote,
+  TrendingUp, ArrowRight, Quote, MessageCircle,
 } from "lucide-react";
 import worldMap from "@/assets/world-map.jpg";
 import cargoShip from "@/assets/cargo-ship.jpg";
@@ -11,6 +11,7 @@ import datesImg from "@/assets/products/dates.avif.asset.json";
 import barberryImg from "@/assets/products/barberry.jpeg.asset.json";
 import nutsImg from "@/assets/products/nuts.jpg.asset.json";
 import { useT } from "@/i18n/LanguageProvider";
+import { whatsappLink } from "@/lib/whatsapp";
 const heroPort = "/hero-port-containers.jpg";
 const membershipCert = { url: "/certificate-of-membership.jpg" };
 const brandCert = { url: "/brand-registration-certificate.jpg" };
@@ -34,6 +35,7 @@ export const Route = createFileRoute("/")({
 
 function Home() {
   const t = useT();
+  const exportWhatsApp = whatsappLink("Hello Goodarzi Trading, I am an international buyer.\nProduct: \nQuantity: \nDestination: \nMessage: ");
 
   const FEATURED = [
     { slug: "saffron", detailSlug: "iranian-saffron", name: t("home.products.saffron.name", "Iranian Saffron"), fa: t("home.products.saffron.fa", "زعفران"), img: saffronImg.url },
@@ -127,6 +129,14 @@ function Home() {
               >
                 {t("home.hero.cta.services", "Explore Services")}
               </Link>
+              <a
+                href={exportWhatsApp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-sm border border-white/30 px-7 py-3.5 text-sm font-medium text-white backdrop-blur transition-colors hover:bg-white/10"
+              >
+                <MessageCircle className="h-4 w-4" /> Contact us on WhatsApp
+              </a>
             </div>
             <div className="mt-12 grid max-w-2xl grid-cols-2 gap-6 border-t border-white/15 pt-8 sm:grid-cols-4">
               {heroStats.map(([k, v]) => (

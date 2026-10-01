@@ -24,6 +24,7 @@ export const Route = createFileRoute("/export-products/$slug")({
       meta: [
         { title },
         { name: "description", content: product.summary },
+        { name: "keywords", content: `${product.name} exporter, ${product.name} supplier, buy ${product.name} from Iran, HS ${product.hs}, wholesale Iranian products, Goodarzi Trading` },
         { property: "og:title", content: title },
         { property: "og:description", content: product.summary },
         { property: "og:type", content: "product" },
