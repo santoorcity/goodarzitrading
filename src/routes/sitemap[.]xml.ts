@@ -2,9 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { kc } from "@/data/knowledge-center";
 import { EXPORT_PRODUCTS } from "@/data/export-products";
+import { BUYER_GUIDES } from "@/data/buyer-guides";
+import { TARGET_MARKETS } from "@/data/target-markets";
 
 
-const BASE_URL = "https://goodarzitrading.lovable.app";
+const BASE_URL = "https://goodarzitrading.ir";
 
 interface SitemapEntry {
   path: string;
@@ -38,6 +40,13 @@ export const Route = createFileRoute("/sitemap.xml")({
 
         for (const p of EXPORT_PRODUCTS) {
           entries.push({ path: `/export-products/${p.slug}`, changefreq: "monthly", priority: "0.9" });
+        }
+
+        for (const guide of BUYER_GUIDES) {
+          entries.push({ path: `/knowledge/buyer-guides/${guide.slug}`, changefreq: "monthly", priority: "0.8" });
+        }
+        for (const market of TARGET_MARKETS) {
+          entries.push({ path: `/markets/${market.slug}`, changefreq: "monthly", priority: "0.8" });
         }
 
         for (const cat of kc.categories) {

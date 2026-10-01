@@ -19,7 +19,7 @@ export const Route = createFileRoute("/knowledge/$category/$entry")({
     return { title: e.title.en, summary: e.summary.en, body: e.administeringBody, slug: cat.slug, id: e.id };
   },
   head: ({ loaderData }) => {
-    const url = `https://goodarzitrading.lovable.app/knowledge/${loaderData?.slug}/${loaderData?.id}`;
+    const url = `https://goodarzitrading.ir/knowledge/${loaderData?.slug}/${loaderData?.id}`;
     const desc = `${loaderData?.title}: ${loaderData?.summary || "official instrument reference"} — administered by ${loaderData?.body}. Official source and scope of application, compiled by Goodarzi Trading.`;
     return {
       meta: [

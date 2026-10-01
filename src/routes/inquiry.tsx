@@ -30,9 +30,9 @@ export const Route = createFileRoute("/inquiry")({
           "Dedicated inquiry form for international importers, distributors and chamber-of-commerce members buying from Iran.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://goodarzitrading.lovable.app/inquiry" },
+      { property: "og:url", content: "https://goodarzitrading.ir/inquiry" },
     ],
-    links: [{ rel: "canonical", href: "https://goodarzitrading.lovable.app/inquiry" }],
+    links: [{ rel: "canonical", href: "https://goodarzitrading.ir/inquiry" }],
   }),
   component: InquiryPage,
 });

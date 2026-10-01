@@ -19,7 +19,7 @@ export const Route = createFileRoute("/knowledge/$category")({
   },
   head: ({ loaderData }) => {
     const title = loaderData?.title ?? "Knowledge";
-    const url = `https://goodarzitrading.lovable.app/knowledge/${loaderData?.slug ?? ""}`;
+    const url = `https://goodarzitrading.ir/knowledge/${loaderData?.slug ?? ""}`;
     const desc = `${title} — conventions, uniform rules and model contracts used in international trade, with official sources. Reference library by Goodarzi Trading, Tehran.`;
     return {
       meta: [

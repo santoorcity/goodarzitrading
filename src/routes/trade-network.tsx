@@ -35,9 +35,9 @@ export const Route = createFileRoute("/trade-network")({
           "Partner with a Tehran-based trading house connected to importers, exporters and chambers of commerce worldwide.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://goodarzitrading.lovable.app/trade-network" },
+      { property: "og:url", content: "https://goodarzitrading.ir/trade-network" },
     ],
-    links: [{ rel: "canonical", href: "https://goodarzitrading.lovable.app/trade-network" }],
+    links: [{ rel: "canonical", href: "https://goodarzitrading.ir/trade-network" }],
   }),
   component: TradeNetworkPage,
 });

@@ -22,9 +22,9 @@ export const Route = createFileRoute("/knowledge/")({
       { name: "description", content: "In-depth reference guides on import & export procedures, customs regulations, Incoterms 2020, Letters of Credit, international payments and shipping methods." },
       { property: "og:title", content: "Customs & Trade Knowledge Center" },
       { property: "og:description", content: "Reference guides for international trade professionals." },
-      { property: "og:url", content: "https://goodarzitrading.lovable.app/knowledge" },
+      { property: "og:url", content: "https://goodarzitrading.ir/knowledge" },
     ],
-    links: [{ rel: "canonical", href: "https://goodarzitrading.lovable.app/knowledge" }],
+    links: [{ rel: "canonical", href: "https://goodarzitrading.ir/knowledge" }],
   }),
   component: Knowledge,
 });

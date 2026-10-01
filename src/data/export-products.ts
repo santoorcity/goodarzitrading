@@ -289,4 +289,4 @@ export function getExportProduct(slug: string) {
   return EXPORT_PRODUCTS.find((p) => p.slug === slug);
 }
 
-export const SITE_URL = "https://goodarzitrading.lovable.app";
+export const SITE_URL = "https://goodarzitrading.ir";
