@@ -139,7 +139,7 @@ function ProductPage() {
               alt={`${product.name} for export from Iran`}
               width={1200}
               height={900}
-              className="h-full w-full object-cover"
+              className={`h-full w-full ${product.slug === "iranian-mamra-almonds" ? "bg-background object-contain" : "object-cover"}`}
               loading="eager"
               decoding="async"
             />

@@ -187,7 +187,7 @@ function ExportProductsPage() {
                     src={p.image}
                     alt={`${t(`products.${p.key}Name`)} — ${t(`products.${p.key}NameFa`)}`}
                     loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className={`h-full w-full transition-transform duration-500 group-hover:scale-105 ${p.slug === "mamra-almonds" ? "bg-background object-contain" : "object-cover"}`}
                   />
                   <span className="absolute right-3 top-3 rounded-sm bg-white/95 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-[color:var(--navy)]">
                     {t("products.hsPrefix", "HS")} {p.hs}
