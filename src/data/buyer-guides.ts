@@ -126,7 +126,7 @@ export const BUYER_GUIDES: BuyerGuide[] = [
     shortTitle: "Pistachio ounce size explained",
     description: "A practical explanation of pistachio ounce count, why a lower count means larger nuts, and what international buyers should include in a pistachio specification.",
     category: "Pistachio buying guide",
-    image: "/pistachio.jpg",
+    image: "/iranian-pistachios.jpg",
     productSlug: "iranian-pistachio",
     sections: [
       {
@@ -172,7 +172,7 @@ export const BUYER_GUIDES: BuyerGuide[] = [
     shortTitle: "Iranian pistachio varieties",
     description: "Compare Akbari, Ahmad Aghaei, Kalleh Ghouchi and Fandoghi Iranian pistachios and prepare a clear wholesale specification for export purchasing.",
     category: "Pistachio buying guide",
-    image: "/pistachio.jpg",
+    image: "/iranian-pistachios.jpg",
     productSlug: "iranian-pistachio",
     sections: [
       {
