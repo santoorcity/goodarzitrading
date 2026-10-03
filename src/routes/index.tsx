@@ -6,7 +6,6 @@ import {
 import worldMap from "@/assets/world-map.jpg";
 import cargoShip from "@/assets/cargo-ship.jpg";
 import saffronImg from "@/assets/products/saffron.jpg.asset.json";
-import pistachioImg from "@/assets/products/pistachio.jpg.asset.json";
 import datesImg from "@/assets/products/dates.avif.asset.json";
 import barberryImg from "@/assets/products/barberry.jpeg.asset.json";
 import nutsImg from "@/assets/products/nuts.jpg.asset.json";
@@ -39,7 +38,7 @@ function Home() {
 
   const FEATURED = [
     { slug: "saffron", detailSlug: "iranian-saffron", name: t("home.products.saffron.name", "Iranian Saffron"), fa: t("home.products.saffron.fa", "زعفران"), img: saffronImg.url },
-    { slug: "pistachio", detailSlug: "iranian-pistachio", name: t("home.products.pistachio.name", "Iranian Pistachio"), fa: t("home.products.pistachio.fa", "پسته"), img: pistachioImg.url },
+    { slug: "pistachio", detailSlug: "iranian-pistachio", name: t("home.products.pistachio.name", "Iranian Pistachio"), fa: t("home.products.pistachio.fa", "پسته"), img: "/iranian-pistachios.jpg" },
     { slug: "dates", detailSlug: "iranian-dates", name: t("home.products.dates.name", "Iranian Dates"), fa: t("home.products.dates.fa", "خرما"), img: datesImg.url },
     { slug: "barberry", detailSlug: "iranian-barberry", name: t("home.products.barberry.name", "Iranian Barberry"), fa: t("home.products.barberry.fa", "زرشک"), img: barberryImg.url },
     { slug: "nuts", detailSlug: "iranian-dried-fruits-and-nuts", name: t("home.products.nuts.name", "Dried Fruits & Nuts"), fa: t("home.products.nuts.fa", "خشکبار"), img: nutsImg.url },

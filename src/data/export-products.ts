@@ -101,7 +101,7 @@ export const EXPORT_PRODUCTS: ExportProduct[] = [
     name: "Iranian Pistachio",
     nameFa: "پسته ایرانی",
     hs: "0802.51",
-    image: "/pistachio.jpg",
+    image: "/iranian-pistachios.jpg",
     summary:
       "Akbari, Ahmad Aghaei, Kalleh Ghouchi and Fandoghi pistachios from Kerman and Rafsanjan, aflatoxin-tested and phytosanitary-certified.",
     overview: [

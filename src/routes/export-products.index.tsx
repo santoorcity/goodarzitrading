@@ -5,7 +5,6 @@ import { useI18n } from "@/i18n/LanguageProvider";
 import { EXPORT_PRODUCTS } from "@/data/export-products";
 
 import saffronImg from "@/assets/products/saffron.jpg";
-import pistachioImg from "@/assets/products/pistachio.jpg";
 import datesImg from "@/assets/products/dates.avif";
 import nutsImg from "@/assets/products/nuts.jpg";
 import barberryImg from "@/assets/products/barberry.jpeg";
@@ -19,7 +18,7 @@ type Product = {
 
 const PRODUCTS: Product[] = [
   { slug: "saffron", key: "saffron", hs: "0910.20", image: saffronImg },
-  { slug: "pistachio", key: "pistachio", hs: "0802.51", image: pistachioImg },
+  { slug: "pistachio", key: "pistachio", hs: "0802.51", image: "/iranian-pistachios.jpg" },
   { slug: "dates", key: "dates", hs: "0804.10", image: datesImg },
   { slug: "barberry", key: "barberry", hs: "0810.90", image: barberryImg },
   { slug: "nuts", key: "nuts", hs: "0813 / 0802", image: nutsImg },
