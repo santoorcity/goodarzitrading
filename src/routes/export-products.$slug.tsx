@@ -105,7 +105,11 @@ function ProductPage() {
       />
 
       <section className="bg-[color:var(--navy-deep)] text-white">
-        <div className="container-x grid gap-10 py-16 md:grid-cols-2 md:items-center md:py-20">
+        <div
+          className={`container-x grid gap-10 py-16 md:items-center md:py-20 ${
+            product.slug === "iranian-pistachio" ? "lg:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)]" : "md:grid-cols-2"
+          }`}
+        >
           <div>
             <span className="eyebrow">Iranian Export Product · HS {product.hs}</span>
             <h1 className="mt-4 font-display text-4xl font-semibold leading-[1.1] md:text-5xl">
@@ -134,15 +138,30 @@ function ProductPage() {
             </div>
           </div>
           <div className="overflow-hidden rounded-sm">
-            <img
-              src={product.image}
-              alt={`${product.name} for export from Iran`}
-              width={1200}
-              height={900}
-              className={`h-full w-full ${product.slug === "iranian-mamra-almonds" ? "bg-background object-contain" : "object-cover"}`}
-              loading="eager"
-              decoding="async"
-            />
+            {product.slug === "iranian-pistachio" ? (
+              <picture>
+                <source media="(max-width: 767px)" srcSet="/iranian-pistachios-detail-mobile.jpg" />
+                <img
+                  src="/iranian-pistachios-detail.jpg"
+                  alt="Iranian pistachio varieties and size count guide"
+                  width={2528}
+                  height={1696}
+                  className="h-auto w-full object-contain"
+                  loading="eager"
+                  decoding="async"
+                />
+              </picture>
+            ) : (
+              <img
+                src={product.image}
+                alt={`${product.name} for export from Iran`}
+                width={1200}
+                height={900}
+                className={`h-full w-full ${product.slug === "iranian-mamra-almonds" ? "bg-background object-contain" : "object-cover"}`}
+                loading="eager"
+                decoding="async"
+              />
+            )}
           </div>
         </div>
       </section>
