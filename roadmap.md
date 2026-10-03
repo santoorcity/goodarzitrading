@@ -7,3 +7,4 @@
 - [ ] Replace Persian carpet catalogue listing with Iranian Mamra Almonds using the supplied details and image
 - [ ] Replace Mamra image with the new size guide in public assets and verify production-safe paths across every usage
 - [ ] Verify representative desktop/mobile pages, links, schema output, WhatsApp flow, and diagnostics
+- [ ] Replace only the pistachio image with the supplied production-safe static asset and verify all three placements
