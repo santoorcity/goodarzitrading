@@ -9,100 +9,35 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as TradeNetworkRouteImport } from './routes/trade-network'
-import { Route as TermsRouteImport } from './routes/terms'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as ServicesRouteImport } from './routes/services'
-import { Route as QuoteRouteImport } from './routes/quote'
-import { Route as ProfileRouteImport } from './routes/profile'
-import { Route as PrivacyRouteImport } from './routes/privacy'
-import { Route as IranianSaffronExporterRouteImport } from './routes/iranian-saffron-exporter'
-import { Route as InquiryRouteImport } from './routes/inquiry'
-import { Route as HsCodeRouteImport } from './routes/hs-code'
-import { Route as FaqRouteImport } from './routes/faq'
-import { Route as ExportProductsRouteImport } from './routes/export-products'
-import { Route as ContactRouteImport } from './routes/contact'
-import { Route as BlogRouteImport } from './routes/blog'
-import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as KnowledgeIndexRouteImport } from './routes/knowledge.index'
-import { Route as IncotermsIndexRouteImport } from './routes/incoterms.index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as BlogRouteImport } from './routes/blog'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ExportProductsRouteImport } from './routes/export-products'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as HsCodeRouteImport } from './routes/hs-code'
+import { Route as InquiryRouteImport } from './routes/inquiry'
+import { Route as IranianSaffronExporterRouteImport } from './routes/iranian-saffron-exporter'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as ProfileRouteImport } from './routes/profile'
+import { Route as QuoteRouteImport } from './routes/quote'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as TradeNetworkRouteImport } from './routes/trade-network'
 import { Route as ExportProductsIndexRouteImport } from './routes/export-products.index'
-import { Route as MarketsRegionRouteImport } from './routes/markets.$region'
-import { Route as KnowledgeCategoryRouteImport } from './routes/knowledge.$category'
-import { Route as IncotermsCodeRouteImport } from './routes/incoterms.$code'
 import { Route as ExportProductsSlugRouteImport } from './routes/export-products.$slug'
-import { Route as KnowledgeBuyerGuidesSlugRouteImport } from './routes/knowledge.buyer-guides.$slug'
+import { Route as IncotermsIndexRouteImport } from './routes/incoterms.index'
+import { Route as IncotermsCodeRouteImport } from './routes/incoterms.$code'
+import { Route as KnowledgeIndexRouteImport } from './routes/knowledge.index'
+import { Route as KnowledgeCategoryRouteImport } from './routes/knowledge.$category'
+import { Route as MarketsRegionRouteImport } from './routes/markets.$region'
 import { Route as KnowledgeCategoryEntryRouteImport } from './routes/knowledge.$category.$entry'
+import { Route as KnowledgeBuyerGuidesSlugRouteImport } from './routes/knowledge.buyer-guides.$slug'
 
-const TradeNetworkRoute = TradeNetworkRouteImport.update({
-  id: '/trade-network',
-  path: '/trade-network',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const TermsRoute = TermsRouteImport.update({
-  id: '/terms',
-  path: '/terms',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ServicesRoute = ServicesRouteImport.update({
-  id: '/services',
-  path: '/services',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const QuoteRoute = QuoteRouteImport.update({
-  id: '/quote',
-  path: '/quote',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProfileRoute = ProfileRouteImport.update({
-  id: '/profile',
-  path: '/profile',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PrivacyRoute = PrivacyRouteImport.update({
-  id: '/privacy',
-  path: '/privacy',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const IranianSaffronExporterRoute = IranianSaffronExporterRouteImport.update({
-  id: '/iranian-saffron-exporter',
-  path: '/iranian-saffron-exporter',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const InquiryRoute = InquiryRouteImport.update({
-  id: '/inquiry',
-  path: '/inquiry',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const HsCodeRoute = HsCodeRouteImport.update({
-  id: '/hs-code',
-  path: '/hs-code',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const FaqRoute = FaqRouteImport.update({
-  id: '/faq',
-  path: '/faq',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ExportProductsRoute = ExportProductsRouteImport.update({
-  id: '/export-products',
-  path: '/export-products',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BlogRoute = BlogRouteImport.update({
-  id: '/blog',
-  path: '/blog',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -110,19 +45,74 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
-const KnowledgeIndexRoute = KnowledgeIndexRouteImport.update({
-  id: '/knowledge/',
-  path: '/knowledge/',
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IncotermsIndexRoute = IncotermsIndexRouteImport.update({
-  id: '/incoterms/',
-  path: '/incoterms/',
+const ExportProductsRoute = ExportProductsRouteImport.update({
+  id: '/export-products',
+  path: '/export-products',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HsCodeRoute = HsCodeRouteImport.update({
+  id: '/hs-code',
+  path: '/hs-code',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InquiryRoute = InquiryRouteImport.update({
+  id: '/inquiry',
+  path: '/inquiry',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IranianSaffronExporterRoute = IranianSaffronExporterRouteImport.update({
+  id: '/iranian-saffron-exporter',
+  path: '/iranian-saffron-exporter',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProfileRoute = ProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuoteRoute = QuoteRouteImport.update({
+  id: '/quote',
+  path: '/quote',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TradeNetworkRoute = TradeNetworkRouteImport.update({
+  id: '/trade-network',
+  path: '/trade-network',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ExportProductsIndexRoute = ExportProductsIndexRouteImport.update({
@@ -130,14 +120,14 @@ const ExportProductsIndexRoute = ExportProductsIndexRouteImport.update({
   path: '/',
   getParentRoute: () => ExportProductsRoute,
 } as any)
-const MarketsRegionRoute = MarketsRegionRouteImport.update({
-  id: '/markets/$region',
-  path: '/markets/$region',
-  getParentRoute: () => rootRouteImport,
+const ExportProductsSlugRoute = ExportProductsSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => ExportProductsRoute,
 } as any)
-const KnowledgeCategoryRoute = KnowledgeCategoryRouteImport.update({
-  id: '/knowledge/$category',
-  path: '/knowledge/$category',
+const IncotermsIndexRoute = IncotermsIndexRouteImport.update({
+  id: '/incoterms/',
+  path: '/incoterms/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IncotermsCodeRoute = IncotermsCodeRouteImport.update({
@@ -145,10 +135,25 @@ const IncotermsCodeRoute = IncotermsCodeRouteImport.update({
   path: '/incoterms/$code',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ExportProductsSlugRoute = ExportProductsSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => ExportProductsRoute,
+const KnowledgeIndexRoute = KnowledgeIndexRouteImport.update({
+  id: '/knowledge/',
+  path: '/knowledge/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KnowledgeCategoryRoute = KnowledgeCategoryRouteImport.update({
+  id: '/knowledge/$category',
+  path: '/knowledge/$category',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MarketsRegionRoute = MarketsRegionRouteImport.update({
+  id: '/markets/$region',
+  path: '/markets/$region',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KnowledgeCategoryEntryRoute = KnowledgeCategoryEntryRouteImport.update({
+  id: '/$entry',
+  path: '/$entry',
+  getParentRoute: () => KnowledgeCategoryRoute,
 } as any)
 const KnowledgeBuyerGuidesSlugRoute =
   KnowledgeBuyerGuidesSlugRouteImport.update({
@@ -156,11 +161,6 @@ const KnowledgeBuyerGuidesSlugRoute =
     path: '/knowledge/buyer-guides/$slug',
     getParentRoute: () => rootRouteImport,
   } as any)
-const KnowledgeCategoryEntryRoute = KnowledgeCategoryEntryRouteImport.update({
-  id: '/$entry',
-  path: '/$entry',
-  getParentRoute: () => KnowledgeCategoryRoute,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -353,102 +353,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/trade-network': {
-      id: '/trade-network'
-      path: '/trade-network'
-      fullPath: '/trade-network'
-      preLoaderRoute: typeof TradeNetworkRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/terms': {
-      id: '/terms'
-      path: '/terms'
-      fullPath: '/terms'
-      preLoaderRoute: typeof TermsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services': {
-      id: '/services'
-      path: '/services'
-      fullPath: '/services'
-      preLoaderRoute: typeof ServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/quote': {
-      id: '/quote'
-      path: '/quote'
-      fullPath: '/quote'
-      preLoaderRoute: typeof QuoteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/profile': {
-      id: '/profile'
-      path: '/profile'
-      fullPath: '/profile'
-      preLoaderRoute: typeof ProfileRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/privacy': {
-      id: '/privacy'
-      path: '/privacy'
-      fullPath: '/privacy'
-      preLoaderRoute: typeof PrivacyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/iranian-saffron-exporter': {
-      id: '/iranian-saffron-exporter'
-      path: '/iranian-saffron-exporter'
-      fullPath: '/iranian-saffron-exporter'
-      preLoaderRoute: typeof IranianSaffronExporterRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/inquiry': {
-      id: '/inquiry'
-      path: '/inquiry'
-      fullPath: '/inquiry'
-      preLoaderRoute: typeof InquiryRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/hs-code': {
-      id: '/hs-code'
-      path: '/hs-code'
-      fullPath: '/hs-code'
-      preLoaderRoute: typeof HsCodeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/faq': {
-      id: '/faq'
-      path: '/faq'
-      fullPath: '/faq'
-      preLoaderRoute: typeof FaqRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/export-products': {
-      id: '/export-products'
-      path: '/export-products'
-      fullPath: '/export-products'
-      preLoaderRoute: typeof ExportProductsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog': {
-      id: '/blog'
-      path: '/blog'
-      fullPath: '/blog'
-      preLoaderRoute: typeof BlogRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -458,25 +367,102 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/knowledge/': {
-      id: '/knowledge/'
-      path: '/knowledge'
-      fullPath: '/knowledge/'
-      preLoaderRoute: typeof KnowledgeIndexRouteImport
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/incoterms/': {
-      id: '/incoterms/'
-      path: '/incoterms'
-      fullPath: '/incoterms/'
-      preLoaderRoute: typeof IncotermsIndexRouteImport
+    '/export-products': {
+      id: '/export-products'
+      path: '/export-products'
+      fullPath: '/export-products'
+      preLoaderRoute: typeof ExportProductsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hs-code': {
+      id: '/hs-code'
+      path: '/hs-code'
+      fullPath: '/hs-code'
+      preLoaderRoute: typeof HsCodeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/inquiry': {
+      id: '/inquiry'
+      path: '/inquiry'
+      fullPath: '/inquiry'
+      preLoaderRoute: typeof InquiryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/iranian-saffron-exporter': {
+      id: '/iranian-saffron-exporter'
+      path: '/iranian-saffron-exporter'
+      fullPath: '/iranian-saffron-exporter'
+      preLoaderRoute: typeof IranianSaffronExporterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/profile': {
+      id: '/profile'
+      path: '/profile'
+      fullPath: '/profile'
+      preLoaderRoute: typeof ProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quote': {
+      id: '/quote'
+      path: '/quote'
+      fullPath: '/quote'
+      preLoaderRoute: typeof QuoteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trade-network': {
+      id: '/trade-network'
+      path: '/trade-network'
+      fullPath: '/trade-network'
+      preLoaderRoute: typeof TradeNetworkRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/export-products/': {
@@ -486,18 +472,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ExportProductsIndexRouteImport
       parentRoute: typeof ExportProductsRoute
     }
-    '/markets/$region': {
-      id: '/markets/$region'
-      path: '/markets/$region'
-      fullPath: '/markets/$region'
-      preLoaderRoute: typeof MarketsRegionRouteImport
-      parentRoute: typeof rootRouteImport
+    '/export-products/$slug': {
+      id: '/export-products/$slug'
+      path: '/$slug'
+      fullPath: '/export-products/$slug'
+      preLoaderRoute: typeof ExportProductsSlugRouteImport
+      parentRoute: typeof ExportProductsRoute
     }
-    '/knowledge/$category': {
-      id: '/knowledge/$category'
-      path: '/knowledge/$category'
-      fullPath: '/knowledge/$category'
-      preLoaderRoute: typeof KnowledgeCategoryRouteImport
+    '/incoterms/': {
+      id: '/incoterms/'
+      path: '/incoterms'
+      fullPath: '/incoterms/'
+      preLoaderRoute: typeof IncotermsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/incoterms/$code': {
@@ -507,18 +493,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IncotermsCodeRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/export-products/$slug': {
-      id: '/export-products/$slug'
-      path: '/$slug'
-      fullPath: '/export-products/$slug'
-      preLoaderRoute: typeof ExportProductsSlugRouteImport
-      parentRoute: typeof ExportProductsRoute
+    '/knowledge/': {
+      id: '/knowledge/'
+      path: '/knowledge'
+      fullPath: '/knowledge/'
+      preLoaderRoute: typeof KnowledgeIndexRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/knowledge/buyer-guides/$slug': {
-      id: '/knowledge/buyer-guides/$slug'
-      path: '/knowledge/buyer-guides/$slug'
-      fullPath: '/knowledge/buyer-guides/$slug'
-      preLoaderRoute: typeof KnowledgeBuyerGuidesSlugRouteImport
+    '/knowledge/$category': {
+      id: '/knowledge/$category'
+      path: '/knowledge/$category'
+      fullPath: '/knowledge/$category'
+      preLoaderRoute: typeof KnowledgeCategoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/markets/$region': {
+      id: '/markets/$region'
+      path: '/markets/$region'
+      fullPath: '/markets/$region'
+      preLoaderRoute: typeof MarketsRegionRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/knowledge/$category/$entry': {
@@ -527,6 +520,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/knowledge/$category/$entry'
       preLoaderRoute: typeof KnowledgeCategoryEntryRouteImport
       parentRoute: typeof KnowledgeCategoryRoute
+    }
+    '/knowledge/buyer-guides/$slug': {
+      id: '/knowledge/buyer-guides/$slug'
+      path: '/knowledge/buyer-guides/$slug'
+      fullPath: '/knowledge/buyer-guides/$slug'
+      preLoaderRoute: typeof KnowledgeBuyerGuidesSlugRouteImport
+      parentRoute: typeof rootRouteImport
     }
   }
 }
