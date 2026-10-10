@@ -119,8 +119,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@type": "Organization",
           name: "Goodarzi Trading",
           alternateName: "بازرگانی گودرزی",
-          url: "https://goodarzitrading.ir",
-          logo: "https://goodarzitrading.ir/goodarzi-trading-logo.png",
+          url: "https://www.goodarzitrading.ir",
+          logo: "https://www.goodarzitrading.ir/goodarzi-trading-logo.png",
           description:
             "Iran-based international trading house. Import, export, customs consulting and logistics. Iran-based import and export company offering Iranian products, sourcing, customs consulting and international logistics.",
           founder: { "@type": "Person", name: "Mehdi Goodarzi" },

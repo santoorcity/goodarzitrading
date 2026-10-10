@@ -11,9 +11,9 @@ export const Route = createFileRoute("/about")({
       { name: "description", content: "Goodarzi Trading is a Tehran-based international import and export company led by Mr. Mehdi Goodarzi, active member of the Tehran Chamber of Commerce." },
       { property: "og:title", content: "About Goodarzi Trading" },
       { property: "og:description", content: "Founder Mr. Mehdi Goodarzi and our mission to connect global markets through trusted trade." },
-      { property: "og:url", content: "https://goodarzitrading.ir/about" },
+      { property: "og:url", content: "https://www.goodarzitrading.ir/about" },
     ],
-    links: [{ rel: "canonical", href: "https://goodarzitrading.ir/about" }],
+    links: [{ rel: "canonical", href: "https://www.goodarzitrading.ir/about" }],
   }),
   component: About,
 });
