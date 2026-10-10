@@ -6,7 +6,7 @@ import { BUYER_GUIDES } from "@/data/buyer-guides";
 import { TARGET_MARKETS } from "@/data/target-markets";
 
 
-const BASE_URL = "https://goodarzitrading.ir";
+const BASE_URL = "https://www.goodarzitrading.ir";
 
 interface SitemapEntry {
   path: string;

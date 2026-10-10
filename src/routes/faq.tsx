@@ -11,9 +11,9 @@ export const Route = createFileRoute("/faq")({
       { name: "description", content: "Frequently asked questions about importing, exporting, customs, freight and working with Goodarzi Trading." },
       { property: "og:title", content: "FAQ — Goodarzi Trading" },
       { property: "og:description", content: "Common questions about our international trade services." },
-      { property: "og:url", content: "https://goodarzitrading.ir/faq" },
+      { property: "og:url", content: "https://www.goodarzitrading.ir/faq" },
     ],
-    links: [{ rel: "canonical", href: "https://goodarzitrading.ir/faq" }],
+    links: [{ rel: "canonical", href: "https://www.goodarzitrading.ir/faq" }],
     scripts: [{
       type: "application/ld+json",
       children: JSON.stringify({

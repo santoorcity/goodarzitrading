@@ -25,9 +25,9 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Goodarzi Trading — Global Import & Export Solutions" },
       { property: "og:description", content: "Trusted international trade partner. Customs consulting, sourcing, freight, and trade documentation worldwide." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://goodarzitrading.ir/" },
+      { property: "og:url", content: "https://www.goodarzitrading.ir/" },
     ],
-    links: [{ rel: "canonical", href: "https://goodarzitrading.ir/" }],
+    links: [{ rel: "canonical", href: "https://www.goodarzitrading.ir/" }],
   }),
   component: Home,
 });

@@ -47,8 +47,8 @@ Allow: /
 User-agent: meta-externalagent
 Allow: /
 
-Sitemap: https://goodarzitrading.ir/sitemap.xml
+Sitemap: https://www.goodarzitrading.ir/sitemap.xml
 
 # AI summary file for LLMs
-# https://goodarzitrading.ir/llms.txt
+# https://www.goodarzitrading.ir/llms.txt
 
