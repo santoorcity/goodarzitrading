@@ -25,13 +25,17 @@ import { Route as ServicesRouteImport } from './routes/services'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as TradeNetworkRouteImport } from './routes/trade-network'
+import { Route as DeSafranGrosshandelRouteImport } from './routes/de.safran-grosshandel'
+import { Route as EsAzafranIraniAlPorMayorRouteImport } from './routes/es.azafran-irani-al-por-mayor'
 import { Route as ExportProductsIndexRouteImport } from './routes/export-products.index'
 import { Route as ExportProductsSlugRouteImport } from './routes/export-products.$slug'
 import { Route as IncotermsIndexRouteImport } from './routes/incoterms.index'
 import { Route as IncotermsCodeRouteImport } from './routes/incoterms.$code'
+import { Route as JaIranianSaffronWholesaleRouteImport } from './routes/ja.iranian-saffron-wholesale'
 import { Route as KnowledgeIndexRouteImport } from './routes/knowledge.index'
 import { Route as KnowledgeCategoryRouteImport } from './routes/knowledge.$category'
 import { Route as MarketsRegionRouteImport } from './routes/markets.$region'
+import { Route as ZhIranianSaffronSupplierRouteImport } from './routes/zh.iranian-saffron-supplier'
 import { Route as KnowledgeCategoryEntryRouteImport } from './routes/knowledge.$category.$entry'
 import { Route as KnowledgeBuyerGuidesSlugRouteImport } from './routes/knowledge.buyer-guides.$slug'
 
@@ -115,6 +119,17 @@ const TradeNetworkRoute = TradeNetworkRouteImport.update({
   path: '/trade-network',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DeSafranGrosshandelRoute = DeSafranGrosshandelRouteImport.update({
+  id: '/de/safran-grosshandel',
+  path: '/de/safran-grosshandel',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EsAzafranIraniAlPorMayorRoute =
+  EsAzafranIraniAlPorMayorRouteImport.update({
+    id: '/es/azafran-irani-al-por-mayor',
+    path: '/es/azafran-irani-al-por-mayor',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ExportProductsIndexRoute = ExportProductsIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -135,6 +150,12 @@ const IncotermsCodeRoute = IncotermsCodeRouteImport.update({
   path: '/incoterms/$code',
   getParentRoute: () => rootRouteImport,
 } as any)
+const JaIranianSaffronWholesaleRoute =
+  JaIranianSaffronWholesaleRouteImport.update({
+    id: '/ja/iranian-saffron-wholesale',
+    path: '/ja/iranian-saffron-wholesale',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const KnowledgeIndexRoute = KnowledgeIndexRouteImport.update({
   id: '/knowledge/',
   path: '/knowledge/',
@@ -150,6 +171,12 @@ const MarketsRegionRoute = MarketsRegionRouteImport.update({
   path: '/markets/$region',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ZhIranianSaffronSupplierRoute =
+  ZhIranianSaffronSupplierRouteImport.update({
+    id: '/zh/iranian-saffron-supplier',
+    path: '/zh/iranian-saffron-supplier',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const KnowledgeCategoryEntryRoute = KnowledgeCategoryEntryRouteImport.update({
   id: '/$entry',
   path: '/$entry',
@@ -179,10 +206,14 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/trade-network': typeof TradeNetworkRoute
+  '/de/safran-grosshandel': typeof DeSafranGrosshandelRoute
+  '/es/azafran-irani-al-por-mayor': typeof EsAzafranIraniAlPorMayorRoute
   '/export-products/$slug': typeof ExportProductsSlugRoute
   '/incoterms/$code': typeof IncotermsCodeRoute
+  '/ja/iranian-saffron-wholesale': typeof JaIranianSaffronWholesaleRoute
   '/knowledge/$category': typeof KnowledgeCategoryRouteWithChildren
   '/markets/$region': typeof MarketsRegionRoute
+  '/zh/iranian-saffron-supplier': typeof ZhIranianSaffronSupplierRoute
   '/export-products/': typeof ExportProductsIndexRoute
   '/incoterms/': typeof IncotermsIndexRoute
   '/knowledge/': typeof KnowledgeIndexRoute
@@ -205,10 +236,14 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/trade-network': typeof TradeNetworkRoute
+  '/de/safran-grosshandel': typeof DeSafranGrosshandelRoute
+  '/es/azafran-irani-al-por-mayor': typeof EsAzafranIraniAlPorMayorRoute
   '/export-products/$slug': typeof ExportProductsSlugRoute
   '/incoterms/$code': typeof IncotermsCodeRoute
+  '/ja/iranian-saffron-wholesale': typeof JaIranianSaffronWholesaleRoute
   '/knowledge/$category': typeof KnowledgeCategoryRouteWithChildren
   '/markets/$region': typeof MarketsRegionRoute
+  '/zh/iranian-saffron-supplier': typeof ZhIranianSaffronSupplierRoute
   '/export-products': typeof ExportProductsIndexRoute
   '/incoterms': typeof IncotermsIndexRoute
   '/knowledge': typeof KnowledgeIndexRoute
@@ -233,10 +268,14 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/trade-network': typeof TradeNetworkRoute
+  '/de/safran-grosshandel': typeof DeSafranGrosshandelRoute
+  '/es/azafran-irani-al-por-mayor': typeof EsAzafranIraniAlPorMayorRoute
   '/export-products/$slug': typeof ExportProductsSlugRoute
   '/incoterms/$code': typeof IncotermsCodeRoute
+  '/ja/iranian-saffron-wholesale': typeof JaIranianSaffronWholesaleRoute
   '/knowledge/$category': typeof KnowledgeCategoryRouteWithChildren
   '/markets/$region': typeof MarketsRegionRoute
+  '/zh/iranian-saffron-supplier': typeof ZhIranianSaffronSupplierRoute
   '/export-products/': typeof ExportProductsIndexRoute
   '/incoterms/': typeof IncotermsIndexRoute
   '/knowledge/': typeof KnowledgeIndexRoute
@@ -262,10 +301,14 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/terms'
     | '/trade-network'
+    | '/de/safran-grosshandel'
+    | '/es/azafran-irani-al-por-mayor'
     | '/export-products/$slug'
     | '/incoterms/$code'
+    | '/ja/iranian-saffron-wholesale'
     | '/knowledge/$category'
     | '/markets/$region'
+    | '/zh/iranian-saffron-supplier'
     | '/export-products/'
     | '/incoterms/'
     | '/knowledge/'
@@ -288,10 +331,14 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/terms'
     | '/trade-network'
+    | '/de/safran-grosshandel'
+    | '/es/azafran-irani-al-por-mayor'
     | '/export-products/$slug'
     | '/incoterms/$code'
+    | '/ja/iranian-saffron-wholesale'
     | '/knowledge/$category'
     | '/markets/$region'
+    | '/zh/iranian-saffron-supplier'
     | '/export-products'
     | '/incoterms'
     | '/knowledge'
@@ -315,10 +362,14 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/terms'
     | '/trade-network'
+    | '/de/safran-grosshandel'
+    | '/es/azafran-irani-al-por-mayor'
     | '/export-products/$slug'
     | '/incoterms/$code'
+    | '/ja/iranian-saffron-wholesale'
     | '/knowledge/$category'
     | '/markets/$region'
+    | '/zh/iranian-saffron-supplier'
     | '/export-products/'
     | '/incoterms/'
     | '/knowledge/'
@@ -343,9 +394,13 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
   TradeNetworkRoute: typeof TradeNetworkRoute
+  DeSafranGrosshandelRoute: typeof DeSafranGrosshandelRoute
+  EsAzafranIraniAlPorMayorRoute: typeof EsAzafranIraniAlPorMayorRoute
   IncotermsCodeRoute: typeof IncotermsCodeRoute
+  JaIranianSaffronWholesaleRoute: typeof JaIranianSaffronWholesaleRoute
   KnowledgeCategoryRoute: typeof KnowledgeCategoryRouteWithChildren
   MarketsRegionRoute: typeof MarketsRegionRoute
+  ZhIranianSaffronSupplierRoute: typeof ZhIranianSaffronSupplierRoute
   IncotermsIndexRoute: typeof IncotermsIndexRoute
   KnowledgeIndexRoute: typeof KnowledgeIndexRoute
   KnowledgeBuyerGuidesSlugRoute: typeof KnowledgeBuyerGuidesSlugRoute
@@ -465,6 +520,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TradeNetworkRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/de/safran-grosshandel': {
+      id: '/de/safran-grosshandel'
+      path: '/de/safran-grosshandel'
+      fullPath: '/de/safran-grosshandel'
+      preLoaderRoute: typeof DeSafranGrosshandelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/es/azafran-irani-al-por-mayor': {
+      id: '/es/azafran-irani-al-por-mayor'
+      path: '/es/azafran-irani-al-por-mayor'
+      fullPath: '/es/azafran-irani-al-por-mayor'
+      preLoaderRoute: typeof EsAzafranIraniAlPorMayorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/export-products/': {
       id: '/export-products/'
       path: '/'
@@ -493,6 +562,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IncotermsCodeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ja/iranian-saffron-wholesale': {
+      id: '/ja/iranian-saffron-wholesale'
+      path: '/ja/iranian-saffron-wholesale'
+      fullPath: '/ja/iranian-saffron-wholesale'
+      preLoaderRoute: typeof JaIranianSaffronWholesaleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/knowledge/': {
       id: '/knowledge/'
       path: '/knowledge'
@@ -512,6 +588,13 @@ declare module '@tanstack/react-router' {
       path: '/markets/$region'
       fullPath: '/markets/$region'
       preLoaderRoute: typeof MarketsRegionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/zh/iranian-saffron-supplier': {
+      id: '/zh/iranian-saffron-supplier'
+      path: '/zh/iranian-saffron-supplier'
+      fullPath: '/zh/iranian-saffron-supplier'
+      preLoaderRoute: typeof ZhIranianSaffronSupplierRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/knowledge/$category/$entry': {
@@ -573,9 +656,13 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
   TradeNetworkRoute: TradeNetworkRoute,
+  DeSafranGrosshandelRoute: DeSafranGrosshandelRoute,
+  EsAzafranIraniAlPorMayorRoute: EsAzafranIraniAlPorMayorRoute,
   IncotermsCodeRoute: IncotermsCodeRoute,
+  JaIranianSaffronWholesaleRoute: JaIranianSaffronWholesaleRoute,
   KnowledgeCategoryRoute: KnowledgeCategoryRouteWithChildren,
   MarketsRegionRoute: MarketsRegionRoute,
+  ZhIranianSaffronSupplierRoute: ZhIranianSaffronSupplierRoute,
   IncotermsIndexRoute: IncotermsIndexRoute,
   KnowledgeIndexRoute: KnowledgeIndexRoute,
   KnowledgeBuyerGuidesSlugRoute: KnowledgeBuyerGuidesSlugRoute,
