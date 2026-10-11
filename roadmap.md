@@ -12,4 +12,4 @@
 - [ ] Implement only approved, non-architectural saffron and international-buyer SEO improvements without publishing
 - [ ] Verify routes, EN/FA/AR behavior, desktop/mobile, metadata, schemas, sitemap, images, and inquiry channels after approved changes
 
-- [ ] Saffron buyer pages DE/ES/ZH/JA + hreflang + sitemap + email contact (Japan added)
+- [x] Saffron buyer pages DE/ES/ZH/JA + hreflang + sitemap + email contact (Japan added)
