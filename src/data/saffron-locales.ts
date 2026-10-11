@@ -1,6 +1,6 @@
 // Localized saffron buyer pages (DE / ES / ZH). Facts limited to verified site information:
 // grades, HS 0910.20, origin Khorasan, MOQ 1 kg, packing, documents, Incoterms, contacts.
-export type SaffronLocaleKey = "de" | "es" | "zh";
+export type SaffronLocaleKey = "de" | "es" | "zh" | "ja";
 
 export interface SaffronLocale {
   key: SaffronLocaleKey;
@@ -242,6 +242,65 @@ export const SAFFRON_LOCALES: Record<SaffronLocaleKey, SaffronLocale> = {
     emailSubject: "Saffron wholesale inquiry (China) / 藏红花批发询价",
     emailBody: "您好，\n\n我想询价伊朗藏红花。\n等级 Grade: \n数量 Quantity (kg): \n包装 Packing: \n目的地 Destination: \n贸易条款 Incoterm: \n公司 Company: \n",
     waText: "Hello Goodarzi Trading, saffron wholesale inquiry from China.\nGrade: \nQuantity (kg): \nPacking: \nDestination: ",
+  },
+  ja: {
+    key: "ja",
+    lang: "ja",
+    path: "/ja/iranian-saffron-wholesale",
+    breadcrumb: "イラン産サフラン卸売",
+    title: "イラン産サフラン 卸売・業務用 – イランの輸出業者 | Goodarzi Trading",
+    description:
+      "イラン・ホラーサーン産サフランの輸出業者。スーパーネギン、ネギン、サルゴル、プシャル。輸入商社・卸売・食品メーカー向けにバルクまたはOEM包装で供給。メールでお見積りください。",
+    keywords:
+      "イラン産サフラン, サフラン 卸売, サフラン 業務用, サフラン 輸入, サフラン バルク, サフラン OEM, スーパーネギン, サフラン HS 0910.20",
+    eyebrow: "サフラン · HS 0910.20 · イラン・ホラーサーン",
+    h1: "イラン産サフランの卸売 – テヘランの輸出業者から直接",
+    intro:
+      "Goodarzi Trading はテヘランを拠点とする輸出入会社です。ホラーサーン地方のサフランを、輸入商社、卸売業者、小分け包装業者、食品メーカーへ、バルクの輸出包装またはお客様ブランドでのOEM包装で供給します。",
+    ctaQuote: "見積もり依頼",
+    ctaEmail: "メールで問い合わせ",
+    ctaWhatsapp: "WhatsApp",
+    sections: [
+      {
+        h2: "日本への輸入にあたって",
+        paras: [
+          "サフランのHSコードは0910.20です。食品衛生法に基づく輸入届出や残留農薬などの要件は、輸入者様が検疫所・通関業者にご確認ください。必要な検査項目と書類をお問い合わせ時にお知らせいただければ、それに合わせて分析と輸出書類を準備します。日本の認証取得を主張するものではありません。",
+        ],
+      },
+      {
+        h2: "包装・最低発注量・書類・輸送",
+        bullets: [
+          "最低発注量：1 kg",
+          "1単位最大1 kgのバルク輸出包装、または0.1 g～100 gの小売包装（瓶・缶・小袋）",
+          "お客様ブランドでのOEM包装に対応",
+          "ご要望に応じてISO 3632分析（クロシン、サフラナール、ピクロクロシン）",
+          "商業送り状、パッキングリスト、テヘラン商工会議所の原産地証明書、植物検疫証明書または衛生証明書、輸送書類",
+          "通常はテヘラン（IKA）から航空便。EXW、FOB、CFR、CIF、DAP（インコタームズ2020）",
+        ],
+      },
+    ],
+    gradesTitle: "サフランのグレード",
+    grades: [
+      { name: "Super Negin", text: "最も長く太い全赤の柱頭で黄色い花柱なし。外観が最も均一。" },
+      { name: "Negin", text: "全赤の柱頭で、スーパーネギンよりやや短い。小分け・食品加工向け。" },
+      { name: "Sargol", text: "花柱を除いたカットされた赤い柱頭。最も一般的な輸出グレード。" },
+      { name: "Pushal", text: "黄色い花柱が少し付いた赤い柱頭。伝統的な外観。" },
+    ],
+    quoteTitle: "お見積りの方法",
+    quoteIntro: "以下の情報をお送りいただければ、プロフォーマインボイスを作成します：",
+    quoteFields: ["グレード（Super Negin / Negin / Sargol / Pushal）", "数量（kg）", "包装またはOEMの有無", "仕向港・空港", "取引条件（例：CIF、DAP）", "必要な分析・書類"],
+    contactTitle: "輸出営業への連絡先",
+    contactNote: "英語で回答します。日本語でのご連絡も歓迎します。",
+    labels: { email: "メール", phone: "携帯 / WhatsApp", whatsapp: "WhatsApp", office: "テヘラン事務所" },
+    faqTitle: "卸売バイヤーからのよくある質問",
+    faqs: [
+      { q: "最低発注量は？", a: "1 kgからです。大口は他のイラン産品と混載できます。" },
+      { q: "OEM包装は可能ですか？", a: "はい、0.1 g～100 gの小売包装をお客様ブランドで対応します。" },
+      { q: "品質書類は？", a: "ご要望に応じたISO 3632分析、原産地証明書、植物検疫または衛生証明書、商業書類です。" },
+    ],
+    emailSubject: "Saffron wholesale inquiry (Japan) / サフラン卸売見積もり",
+    emailBody: "お世話になります。\n\nイラン産サフランの見積もりをお願いします。\nGrade: \nQuantity (kg): \nPacking: \nDestination: \nIncoterm: \nCompany: \n",
+    waText: "Hello Goodarzi Trading, saffron wholesale inquiry from Japan.\nGrade: \nQuantity (kg): \nPacking: \nDestination: ",
   },
 };
 
