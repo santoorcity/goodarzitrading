@@ -11,3 +11,5 @@
 - [ ] Audit international SEO and buyer acquisition for Germany, mainland China, and Spain; present narrow file-level changes before implementation
 - [ ] Implement only approved, non-architectural saffron and international-buyer SEO improvements without publishing
 - [ ] Verify routes, EN/FA/AR behavior, desktop/mobile, metadata, schemas, sitemap, images, and inquiry channels after approved changes
+
+- [x] Saffron buyer pages DE/ES/ZH/JA + hreflang + sitemap + email contact (Japan added)

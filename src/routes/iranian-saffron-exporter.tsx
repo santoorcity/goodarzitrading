@@ -3,6 +3,7 @@ import { ArrowRight, CheckCircle2, MessageCircle } from "lucide-react";
 import { Breadcrumbs, breadcrumbSchema } from "@/components/site/Breadcrumbs";
 import { SITE_URL, getExportProduct } from "@/data/export-products";
 import { whatsappLink } from "@/lib/whatsapp";
+import { SAFFRON_HREFLANG, SAFFRON_LOCALES } from "@/data/saffron-locales";
 
 const URL = `${SITE_URL}/iranian-saffron-exporter`;
 const IMAGE = `${SITE_URL}/saffron.jpg`;
@@ -86,7 +87,7 @@ export const Route = createFileRoute("/iranian-saffron-exporter")({
       { property: "og:image", content: IMAGE },
       { name: "twitter:image", content: IMAGE },
     ],
-    links: [{ rel: "canonical", href: URL }],
+    links: [{ rel: "canonical", href: URL }, ...SAFFRON_HREFLANG(SITE_URL)],
     scripts: [
       {
         type: "application/ld+json",
@@ -185,6 +186,14 @@ function SaffronPage() {
                 <MessageCircle className="h-4 w-4" /> WhatsApp Export Sales
               </a>
             </div>
+            <p className="mt-5 text-sm text-white/75">
+              Email: <a href="mailto:info@goodarzitrading.ir?subject=Saffron%20wholesale%20inquiry" className="font-semibold text-white underline">info@goodarzitrading.ir</a> · Tel: <a href="tel:+989191238554" className="font-semibold text-white">+98 919 123 8554</a>
+            </p>
+            <p className="mt-2 text-xs text-white/60">
+              {Object.values(SAFFRON_LOCALES).map((l, i) => (
+                <span key={l.key}>{i > 0 && " · "}<a href={l.path} hrefLang={l.lang} lang={l.lang} className="underline hover:text-white">{l.breadcrumb}</a></span>
+              ))}
+            </p>
           </div>
           <div className="overflow-hidden rounded-sm">
             <img
