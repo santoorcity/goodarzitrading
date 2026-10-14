@@ -162,7 +162,7 @@ function Home() {
           <div className="relative">
             <HomeVideo
               label={t("home.intro.image.alt", "Goodarzi Trading video")}
-              className="aspect-[4/5] w-full rounded-sm bg-[color:var(--navy-deep)] object-cover shadow-[var(--shadow-elegant)]"
+              className="aspect-[3/2] w-full rounded-sm bg-[color:var(--navy-deep)] object-cover shadow-[var(--shadow-elegant)]"
             />
             <div className="absolute -bottom-8 -left-8 hidden max-w-xs rounded-sm border border-border bg-card p-6 shadow-[var(--shadow-card)] md:block">
               <div className="eyebrow">{t("home.intro.director.eyebrow", "Managing Director")}</div>
