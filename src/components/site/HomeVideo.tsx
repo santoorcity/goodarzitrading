@@ -38,8 +38,8 @@ export function HomeVideo({ label, className }: { label: string; className?: str
     <div className="relative">
       <video
         ref={ref}
-        src={video.url}
-        poster={poster.url}
+        src="/goodarzi-trading-video.mp4"
+        poster="/goodarzi-trading-video-poster.jpg"
         muted
         loop
         playsInline
