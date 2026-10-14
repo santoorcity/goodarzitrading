@@ -1,7 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import { Volume2, VolumeX } from "lucide-react";
-import video from "@/assets/goodarzi-trading-video.mp4.asset.json";
-import poster from "@/assets/goodarzi-trading-video-poster.jpg.asset.json";
 
 export function HomeVideo({ label, className }: { label: string; className?: string }) {
   const ref = useRef<HTMLVideoElement>(null);
