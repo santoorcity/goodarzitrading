@@ -4,11 +4,7 @@ import {
   TrendingUp, ArrowRight, MessageCircle,
 } from "lucide-react";
 import worldMap from "@/assets/world-map.jpg";
-import cargoShip from "@/assets/cargo-ship.jpg";
-import saffronImg from "@/assets/products/saffron.jpg.asset.json";
-import datesImg from "@/assets/products/dates.avif.asset.json";
-import barberryImg from "@/assets/products/barberry.jpeg.asset.json";
-import nutsImg from "@/assets/products/nuts.jpg.asset.json";
+import { HomeVideo } from "@/components/site/HomeVideo";
 import { useT } from "@/i18n/LanguageProvider";
 import { whatsappLink } from "@/lib/whatsapp";
 const heroPort = "/hero-port-containers.jpg";
@@ -36,14 +32,6 @@ function Home() {
   const t = useT();
   const exportWhatsApp = whatsappLink("Hello Goodarzi Trading, I am an international buyer.\nProduct: \nQuantity: \nDestination: \nMessage: ");
 
-  const FEATURED = [
-    { slug: "saffron", detailSlug: "iranian-saffron", name: t("home.products.saffron.name", "Iranian Saffron"), fa: t("home.products.saffron.fa", "زعفران"), img: saffronImg.url },
-    { slug: "pistachio", detailSlug: "iranian-pistachio", name: t("home.products.pistachio.name", "Iranian Pistachio"), fa: t("home.products.pistachio.fa", "پسته"), img: "/iranian-pistachios.jpg" },
-    { slug: "dates", detailSlug: "iranian-dates", name: t("home.products.dates.name", "Iranian Dates"), fa: t("home.products.dates.fa", "خرما"), img: datesImg.url },
-    { slug: "barberry", detailSlug: "iranian-barberry", name: t("home.products.barberry.name", "Iranian Barberry"), fa: t("home.products.barberry.fa", "زرشک"), img: barberryImg.url },
-    { slug: "nuts", detailSlug: "iranian-dried-fruits-and-nuts", name: t("home.products.nuts.name", "Dried Fruits & Nuts"), fa: t("home.products.nuts.fa", "خشکبار"), img: nutsImg.url },
-    { slug: "mamra-almonds", detailSlug: "iranian-mamra-almonds", name: t("home.products.almonds.name", "Iranian Mamra Almonds"), fa: t("home.products.almonds.fa", "مغز بادام مامایی"), img: "/iranian-mamra-almond-size-guide.png", contain: true },
-  ];
 
   const heroStats: [string, string][] = [
     [t("home.hero.stat.countries.value", "40+"), t("home.hero.stat.countries.label", "Countries")],
@@ -172,13 +160,9 @@ function Home() {
             </Link>
           </div>
           <div className="relative">
-            <img
-              src={cargoShip}
-              alt={t("home.intro.image.alt", "Container ship at sunrise")}
-              className="aspect-[4/5] w-full rounded-sm object-cover shadow-[var(--shadow-elegant)]"
-              loading="lazy"
-              width={1024}
-              height={1024}
+            <HomeVideo
+              label={t("home.intro.image.alt", "Goodarzi Trading video")}
+              className="aspect-[4/5] w-full rounded-sm bg-[color:var(--navy-deep)] object-cover shadow-[var(--shadow-elegant)]"
             />
             <div className="absolute -bottom-8 -left-8 hidden max-w-xs rounded-sm border border-border bg-card p-6 shadow-[var(--shadow-card)] md:block">
               <div className="eyebrow">{t("home.intro.director.eyebrow", "Managing Director")}</div>
@@ -189,49 +173,15 @@ function Home() {
         </div>
       </section>
 
-      {/* FEATURED PRODUCTS */}
-      <section className="py-24">
-        <div className="container-x">
-          <div className="flex flex-wrap items-end justify-between gap-6">
-            <div className="max-w-2xl">
-              <span className="eyebrow">{t("home.products.eyebrow", "Featured Iranian Exports")}</span>
-              <h2 className="mt-4 font-display text-4xl font-semibold text-[color:var(--navy-deep)] md:text-5xl">
-                {t("home.products.title", "Premium products, shipped worldwide")}
-              </h2>
-              <p className="mt-4 text-muted-foreground">
-                {t("home.products.desc", "Iranian saffron, pistachios, dates, barberry, dried fruits and nuts, and Mamra almonds for international importers, wholesalers and distributors.")}
-              </p>
-            </div>
-            <Link
-              to="/export-products"
-              className="inline-flex items-center gap-2 rounded-sm border border-[color:var(--navy)]/25 px-5 py-3 text-sm font-semibold text-[color:var(--navy-deep)] hover:bg-secondary"
-            >
-              {t("home.products.cta", "View full catalogue")} <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {FEATURED.map((p) => (
-              <Link
-                key={p.slug}
-                to="/export-products/$slug"
-                params={{ slug: p.detailSlug }}
-                className="group relative block overflow-hidden rounded-sm border border-border shadow-[var(--shadow-card)] transition-shadow hover:shadow-[var(--shadow-elegant)]"
-              >
-                <div className="aspect-[4/3] overflow-hidden bg-secondary">
-                  <img
-                    src={p.img}
-                    alt={`${p.name} — ${p.fa}`}
-                    loading="lazy"
-                    className={`h-full w-full transition-transform duration-500 group-hover:scale-105 ${p.contain ? "bg-background object-contain" : "object-cover"}`}
-                  />
-                </div>
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[color:var(--navy-deep)] via-[color:var(--navy-deep)]/70 to-transparent p-5">
-                  <h3 className="font-display text-xl text-white">{p.name}</h3>
-                  <p className="mt-1 text-xs text-white/75" dir="rtl">{p.fa}</p>
-                </div>
-              </Link>
-            ))}
-          </div>
+      {/* CATALOGUE LINK */}
+      <section className="pb-16 pt-8">
+        <div className="container-x flex justify-center">
+          <Link
+            to="/export-products"
+            className="inline-flex items-center gap-2 rounded-sm border border-[color:var(--navy)]/25 px-6 py-3 text-sm font-semibold text-[color:var(--navy-deep)] hover:bg-secondary"
+          >
+            {t("home.products.cta", "View full catalogue")} <ArrowRight className="h-4 w-4" />
+          </Link>
         </div>
       </section>
 
