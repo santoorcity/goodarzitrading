@@ -3,6 +3,14 @@ import { ArrowRight, CheckCircle2, FileText, MessageCircle, Package, Ship } from
 import { Breadcrumbs, breadcrumbSchema } from "@/components/site/Breadcrumbs";
 import { EXPORT_PRODUCTS, SITE_URL, getExportProduct } from "@/data/export-products";
 import { whatsappLink } from "@/lib/whatsapp";
+import { DETAIL_DOCS_NOTE, getProductDetail } from "@/data/product-details";
+
+function detailHs(slug: string, fallback: string) {
+  const d = getProductDetail(slug);
+  if (!d) return fallback;
+  const row = d.specifications.find(([k]) => k === "HS code");
+  return row ? row[1].split(" ")[0] : "";
+}
 
 export const Route = createFileRoute("/export-products/$slug")({
   loader: ({ params }) => {
@@ -18,18 +26,27 @@ export const Route = createFileRoute("/export-products/$slug")({
         meta: [{ title: "Product not found — Goodarzi Trading" }, { name: "robots", content: "noindex" }],
       };
     }
-    const title = `${product.name} Exporter & Supplier — HS ${product.hs} | Goodarzi Trading`;
-    const image = `${SITE_URL}${product.image}`;
+    const d = getProductDetail(product.slug);
+    const hs = detailHs(product.slug, product.hs);
+    const title = d?.seoTitle ?? `${product.name} Exporter & Supplier — HS ${product.hs} | Goodarzi Trading`;
+    const description = d?.seoDescription ?? product.summary;
+    const imgPath = d?.image ?? product.image;
+    const image = imgPath.startsWith("http") ? imgPath : `${SITE_URL}${imgPath}`;
+    const specs = d?.specifications ?? product.specifications;
+    const faqs = d?.faqs ?? product.faqs;
     return {
       meta: [
         { title },
-        { name: "description", content: product.summary },
-        { name: "keywords", content: `${product.name} exporter, ${product.name} supplier, buy ${product.name} from Iran, HS ${product.hs}, wholesale Iranian products, Goodarzi Trading` },
+        { name: "description", content: description },
+        { name: "keywords", content: `${product.name} exporter, ${product.name} supplier, buy ${product.name} from Iran, ${hs ? `HS ${hs}, ` : ""}wholesale Iranian products, Goodarzi Trading` },
         { property: "og:title", content: title },
-        { property: "og:description", content: product.summary },
+        { property: "og:description", content: description },
         { property: "og:type", content: "product" },
         { property: "og:url", content: url },
         { property: "og:image", content: image },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: title },
+        { name: "twitter:description", content: description },
         { name: "twitter:image", content: image },
       ],
       links: [{ rel: "canonical", href: url }],
@@ -41,22 +58,26 @@ export const Route = createFileRoute("/export-products/$slug")({
             "@type": "Product",
             name: product.name,
             alternateName: product.nameFa,
-            description: product.summary,
+            description,
             image,
-            category: `HS ${product.hs}`,
+            ...(hs ? { category: `HS ${hs}` } : {}),
             countryOfOrigin: { "@type": "Country", name: "Iran" },
             brand: { "@type": "Organization", name: "Goodarzi Trading" },
-            additionalProperty: product.specifications.map(([name, value]) => ({
+            additionalProperty: specs.filter(([name]) => name !== "Price").map(([name, value]) => ({
               "@type": "PropertyValue",
               name,
               value,
             })),
-            offers: {
-              "@type": "AggregateOffer",
-              priceCurrency: "USD",
-              availability: "https://schema.org/InStock",
-              seller: { "@type": "Organization", name: "Goodarzi Trading", url: SITE_URL },
-            },
+            ...(d
+              ? {}
+              : {
+                  offers: {
+                    "@type": "AggregateOffer",
+                    priceCurrency: "USD",
+                    availability: "https://schema.org/InStock",
+                    seller: { "@type": "Organization", name: "Goodarzi Trading", url: SITE_URL },
+                  },
+                }),
           }),
         },
         {
@@ -64,7 +85,7 @@ export const Route = createFileRoute("/export-products/$slug")({
           children: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            mainEntity: product.faqs.map((f) => ({
+            mainEntity: faqs.map((f) => ({
               "@type": "Question",
               name: f.q,
               acceptedAnswer: { "@type": "Answer", text: f.a },
@@ -89,8 +110,15 @@ export const Route = createFileRoute("/export-products/$slug")({
 
 function ProductPage() {
   const { product } = Route.useLoaderData();
+  const d = getProductDetail(product.slug);
+  const hs = detailHs(product.slug, product.hs);
+  const grades = d?.grades ?? product.grades;
+  const packaging = d?.packaging ?? product.packaging;
+  const documentation = d?.documentation ?? product.documentation;
+  const specifications = d?.specifications ?? product.specifications;
+  const faqs = d?.faqs ?? product.faqs;
   const wa = whatsappLink(
-    `Hello Goodarzi Trading, I would like a quotation for ${product.name} (HS ${product.hs}).\nQuantity: \nDestination port: \nPacking: `,
+    `Hello Goodarzi Trading, I would like a quotation for ${product.name}${hs ? ` (HS ${hs})` : ""}.\nQuantity: \nDestination port: \nPacking: `,
   );
   const related = EXPORT_PRODUCTS.filter((p) => p.slug !== product.slug).slice(0, 3);
 
@@ -107,18 +135,18 @@ function ProductPage() {
       <section className="bg-[color:var(--navy-deep)] text-white">
         <div
           className={`container-x grid gap-10 py-16 md:items-center md:py-20 ${
-            product.slug === "iranian-pistachio" ? "lg:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)]" : "md:grid-cols-2"
+            !d && product.slug === "iranian-pistachio" ? "lg:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)]" : "md:grid-cols-2"
           }`}
         >
           <div>
-            <span className="eyebrow">Iranian Export Product · HS {product.hs}</span>
+            <span className="eyebrow">Iranian Export Product{hs ? ` · HS ${hs}` : ""}</span>
             <h1 className="mt-4 font-display text-4xl font-semibold leading-[1.1] md:text-5xl">
-              {product.name} — Exporter &amp; Supplier from Iran
+              {d ? d.h1 : <>{product.name} — Exporter &amp; Supplier from Iran</>}
             </h1>
             <p className="mt-3 text-sm text-white/60" dir="rtl" lang="fa">
               {product.nameFa}
             </p>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-white/75">{product.summary}</p>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-white/75">{d?.intro ?? product.summary}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 to="/inquiry"
@@ -138,7 +166,17 @@ function ProductPage() {
             </div>
           </div>
           <div className="overflow-hidden rounded-sm">
-            {product.slug === "iranian-pistachio" ? (
+            {d ? (
+              <img
+                src={d.image}
+                alt={d.imageAlt}
+                width={1200}
+                height={900}
+                className={`h-full w-full ${d.contain ? "bg-background object-contain" : "object-cover"}`}
+                loading="eager"
+                decoding="async"
+              />
+            ) : product.slug === "iranian-pistachio" ? (
               <picture>
                 <source media="(max-width: 767px)" srcSet="/iranian-pistachios-detail-mobile.jpg" />
                 <img
@@ -178,11 +216,57 @@ function ProductPage() {
               </p>
             ))}
 
-            <h3 className="mt-12 font-display text-xl font-semibold text-[color:var(--navy-deep)]">
-              Grades &amp; varieties
-            </h3>
+            {d?.sections.map((sec) => (
+              <div key={sec.heading}>
+                <h2 className="mt-12 font-display text-xl font-semibold text-[color:var(--navy-deep)] md:text-2xl">
+                  {sec.heading}
+                </h2>
+                {sec.table && (
+                  <div className="mt-4 overflow-x-auto">
+                    <table className="w-full border border-border text-sm">
+                      <thead className="bg-secondary/60 text-left text-[color:var(--navy-deep)]">
+                        <tr>
+                          <th className="px-4 py-2 font-semibold">{sec.table.head[0]}</th>
+                          <th className="px-4 py-2 font-semibold">{sec.table.head[1]}</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-border">
+                        {sec.table.rows.map(([a, b]) => (
+                          <tr key={a}>
+                            <td className="px-4 py-2 font-medium text-[color:var(--navy)]">{a}</td>
+                            <td className="px-4 py-2 text-muted-foreground">{b}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+                {sec.paragraphs?.map((p) => (
+                  <p key={p} className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                    {p}
+                  </p>
+                ))}
+                {sec.items && (
+                  <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
+                    {sec.items.map((it) => (
+                      <li key={it.name} className="flex gap-2">
+                        <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[color:var(--gold)]" />
+                        <span>
+                          <strong className="font-semibold text-[color:var(--navy-deep)]">{it.name}</strong>
+                          {it.text ? ` — ${it.text}` : ""}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+
+            <h2 className="mt-12 font-display text-xl font-semibold text-[color:var(--navy-deep)] md:text-2xl">
+              {d?.gradesHeading ?? "Grades & varieties"}
+            </h2>
             <ul className="mt-4 flex flex-wrap gap-2">
-              {product.grades.map((g) => (
+              {grades.map((g) => (
                 <li
                   key={g}
                   className="rounded-sm border border-border bg-card px-3 py-1.5 text-xs font-medium text-[color:var(--navy)]"
@@ -196,7 +280,7 @@ function ProductPage() {
               <Package className="h-5 w-5 text-[color:var(--gold)]" /> Packaging
             </h3>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              {product.packaging.map((p) => (
+              {packaging.map((p) => (
                 <li key={p} className="flex gap-2">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[color:var(--gold)]" /> {p}
                 </li>
@@ -207,12 +291,13 @@ function ProductPage() {
               <FileText className="h-5 w-5 text-[color:var(--gold)]" /> Quality documentation
             </h3>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              {product.documentation.map((d) => (
-                <li key={d} className="flex gap-2">
-                  <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[color:var(--gold)]" /> {d}
+              {documentation.map((doc) => (
+                <li key={doc} className="flex gap-2">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[color:var(--gold)]" /> {doc}
                 </li>
               ))}
             </ul>
+            {d && <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{DETAIL_DOCS_NOTE}</p>}
 
             <h3 className="mt-12 flex items-center gap-2 font-display text-xl font-semibold text-[color:var(--navy-deep)]">
               <Ship className="h-5 w-5 text-[color:var(--gold)]" /> Shipping &amp; export availability
@@ -229,16 +314,18 @@ function ProductPage() {
           <aside className="h-fit rounded-sm border border-border bg-card p-7 shadow-[var(--shadow-card)]">
             <h2 className="font-display text-lg font-semibold text-[color:var(--navy-deep)]">Specifications</h2>
             <dl className="mt-5 divide-y divide-border text-sm">
-              {product.specifications.map(([k, v]) => (
+              {specifications.map(([k, v]) => (
                 <div key={k} className="grid grid-cols-2 gap-3 py-3">
                   <dt className="text-xs uppercase tracking-[0.12em] text-muted-foreground">{k}</dt>
                   <dd className="font-medium text-[color:var(--navy)]">{v}</dd>
                 </div>
               ))}
-              <div className="grid grid-cols-2 gap-3 py-3">
-                <dt className="text-xs uppercase tracking-[0.12em] text-muted-foreground">MOQ</dt>
-                <dd className="font-medium text-[color:var(--navy)]">{product.moq}</dd>
-              </div>
+              {!d && (
+                <div className="grid grid-cols-2 gap-3 py-3">
+                  <dt className="text-xs uppercase tracking-[0.12em] text-muted-foreground">MOQ</dt>
+                  <dd className="font-medium text-[color:var(--navy)]">{product.moq}</dd>
+                </div>
+              )}
             </dl>
             <Link
               to="/quote"
@@ -278,7 +365,7 @@ function ProductPage() {
             {product.name} — frequently asked questions
           </h2>
           <div className="mt-8 divide-y divide-border border-y border-border">
-            {product.faqs.map((f) => (
+            {faqs.map((f) => (
               <div key={f.q} className="py-6">
                 <h3 className="font-display text-lg font-semibold text-[color:var(--navy-deep)]">{f.q}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{f.a}</p>
