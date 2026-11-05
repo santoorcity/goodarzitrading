@@ -4,6 +4,7 @@ import { Breadcrumbs, breadcrumbSchema } from "@/components/site/Breadcrumbs";
 import { EXPORT_PRODUCTS, SITE_URL, getExportProduct } from "@/data/export-products";
 import { whatsappLink } from "@/lib/whatsapp";
 import { DETAIL_DOCS_NOTE, getProductDetail } from "@/data/product-details";
+import { SAFFRON_LOCALES } from "@/data/saffron-locales";
 
 function detailHs(slug: string, fallback: string) {
   const d = getProductDetail(slug);
@@ -56,6 +57,7 @@ export const Route = createFileRoute("/export-products/$slug")({
           children: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Product",
+            url,
             name: product.name,
             alternateName: product.nameFa,
             description,
@@ -85,6 +87,7 @@ export const Route = createFileRoute("/export-products/$slug")({
           children: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
+            inLanguage: "en",
             mainEntity: faqs.map((f) => ({
               "@type": "Question",
               name: f.q,
@@ -123,7 +126,7 @@ function ProductPage() {
   const related = EXPORT_PRODUCTS.filter((p) => p.slug !== product.slug).slice(0, 3);
 
   return (
-    <>
+    <div lang="en" dir="ltr">
       <Breadcrumbs
         items={[
           { label: "Home", to: "/" },
@@ -210,11 +213,22 @@ function ProductPage() {
             <h2 className="font-display text-2xl font-semibold text-[color:var(--navy-deep)] md:text-3xl">
               Product overview
             </h2>
-            {product.overview.map((p) => (
+            {(d ? [d.intro] : product.overview).map((p) => (
               <p key={p} className="mt-4 text-sm leading-relaxed text-muted-foreground">
                 {p}
               </p>
             ))}
+
+            {product.slug === "iranian-saffron" && (
+              <p className="mt-4 text-sm text-muted-foreground">
+                {Object.values(SAFFRON_LOCALES).map((locale, index) => (
+                  <span key={locale.key}>
+                    {index > 0 ? " · " : ""}
+                    <Link to={locale.path as never} lang={locale.lang} hrefLang={locale.lang} className="underline">{locale.breadcrumb}</Link>
+                  </span>
+                ))}
+              </p>
+            )}
 
             {d?.sections.map((sec) => (
               <div key={sec.heading}>
@@ -303,7 +317,7 @@ function ProductPage() {
               <Ship className="h-5 w-5 text-[color:var(--gold)]" /> Shipping &amp; export availability
             </h3>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              {product.shipping.map((s) => (
+              {(d ? ["Shipping method, delivery terms, destination requirements and export documents are confirmed for each order."] : product.shipping).map((s) => (
                 <li key={s} className="flex gap-2">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[color:var(--gold)]" /> {s}
                 </li>
@@ -405,6 +419,6 @@ function ProductPage() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
