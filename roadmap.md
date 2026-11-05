@@ -1,5 +1,12 @@
 # SEO and international buyer work
 
+## Authorized November 2026 completion
+- [ ] Finish five existing product detail pages: validate content, catalogue images, metadata, schema, layouts and existing language controls
+- [ ] Improve existing Spanish, Simplified Chinese and Japanese saffron buyer content and product links; preserve German page and hreflang cluster
+- [ ] Validate discovery files, automated build and security checks, then publish and check live pages
+
+## Earlier backlog (outside current authorization)
+
 - [ ] Refine English homepage copy and replace unsupported homepage claims with verifiable buyer information
 - [ ] Add nine buyer Knowledge Center articles with metadata, schemas, internal links, and WhatsApp CTAs
 - [ ] Add seven defensible product-market pages with metadata, schemas, internal links, and WhatsApp CTAs

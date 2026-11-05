@@ -1,5 +1,5 @@
-// Localized saffron buyer pages (DE / ES / ZH). Facts limited to verified site information:
-// grades, HS 0910.20, origin Khorasan, MOQ 1 kg, packing, documents, Incoterms, contacts.
+// Localized saffron buyer pages. ES/ZH/JA use approved batch-specific supply facts.
+// DE and the existing reciprocal language cluster are preserved.
 export type SaffronLocaleKey = "de" | "es" | "zh" | "ja";
 
 export interface SaffronLocale {
@@ -104,204 +104,353 @@ export const SAFFRON_LOCALES: Record<SaffronLocaleKey, SaffronLocale> = {
     waText: "Hello Goodarzi Trading, saffron wholesale inquiry from Germany.\nGrade: \nQuantity (kg): \nPacking: \nDestination: ",
   },
   es: {
-    key: "es",
-    lang: "es",
-    path: "/es/azafran-irani-al-por-mayor",
-    breadcrumb: "Azafrán iraní al por mayor",
-    title: "Azafrán iraní al por mayor – Exportador y proveedor de Irán | Goodarzi Trading",
-    description:
-      "Proveedor de azafrán iraní al por mayor para importadores, envasadores y fabricantes en España: Super Negin, Negin, Sargol y Pushal de Khorasan, granel o marca blanca. Solicite cotización.",
-    keywords:
-      "azafrán iraní al por mayor, proveedor de azafrán iraní, exportador de azafrán de Irán, azafrán a granel, azafrán para importadores, azafrán marca blanca, azafrán Super Negin, azafrán HS 0910.20",
-    eyebrow: "Azafrán · HS 0910.20 · Khorasan, Irán",
-    h1: "Azafrán iraní al por mayor para importadores y envasadores",
-    intro:
-      "Goodarzi Trading es una empresa de importación y exportación con sede en Teherán. Suministramos azafrán iraní de la región de Khorasan a importadores, mayoristas, envasadores y fabricantes de alimentos, a granel o envasado con su propia marca.",
-    ctaQuote: "Solicitar cotización",
-    ctaEmail: "Consulta por correo",
-    ctaWhatsapp: "WhatsApp",
-    sections: [
-      {
-        h2: "Azafrán iraní en el mercado español",
-        paras: [
-          "España tiene una larga tradición en azafrán y su propia producción, con denominación de origen. Por eso el azafrán iraní se compra aquí sobre todo como materia prima para envasado, para la industria alimentaria y para marcas que necesitan volumen y una calidad estable a lo largo del año. El origen debe declararse correctamente en el etiquetado: nuestro producto es azafrán de Irán.",
-        ],
-      },
-      {
-        h2: "A quién va dirigido",
-        bullets: [
-          "Importadores y distribuidores de especias",
-          "Envasadores y marcas blancas que venden azafrán en frascos, latas o sobres",
-          "Fabricantes de alimentos y hostelería industrial que usan azafrán como ingrediente",
-        ],
-      },
-      {
-        h2: "Envase, pedido mínimo, documentos y envío",
-        bullets: [
-          "Pedido mínimo: 1 kg",
-          "Granel de exportación hasta 1 kg por unidad o envases de 0,1 g a 100 g (vidrio, lata, sobre)",
-          "Marca blanca bajo su marca, a petición",
-          "Análisis de laboratorio ISO 3632 (crocina, safranal, picrocrocina) bajo solicitud",
-          "Factura comercial, lista de empaque, certificado de origen de la Cámara de Comercio de Teherán, certificado fitosanitario o sanitario y documento de transporte",
-          "Envío normalmente aéreo desde Teherán (IKA) en condiciones EXW, FOB, CFR, CIF o DAP (Incoterms 2020)",
-        ],
-      },
-      {
-        h2: "Requisitos de importación",
-        paras: [
-          "Los requisitos sanitarios y de etiquetado de la UE y de España los confirma el importador. Indíquenos en su consulta qué análisis y documentos necesita y preparamos el envío en consecuencia. No afirmamos disponer de certificaciones de la UE.",
-        ],
-      },
+    "key": "es",
+    "lang": "es",
+    "path": "/es/azafran-irani-al-por-mayor",
+    "breadcrumb": "Azafrán iraní al por mayor",
+    "title": "Azafrán iraní al por mayor para España | Goodarzi Trading",
+    "description": "Proveedor de azafrán iraní para importadores, distribuidores y fabricantes en España. Seis calidades, latas de 250 g netos y COA por lote. Solicite oferta y muestras.",
+    "keywords": "azafrán iraní al por mayor, proveedor de azafrán iraní, azafrán a granel, exportador de azafrán, azafrán marca blanca, importación de azafrán",
+    "eyebrow": "Azafrán · HS 0910.20 · Qainat, Irán",
+    "h1": "Azafrán iraní al por mayor para compradores en España",
+    "intro": "Goodarzi Trading, empresa de importación y exportación con sede en Teherán, obtiene azafrán de agricultores de Qainat, en Jorasán del Sur. Atendemos consultas de importadores de especias, mayoristas, distribuidores, fabricantes de alimentos y envasadores que buscan azafrán de origen iraní.",
+    "ctaQuote": "Solicitar oferta y muestras",
+    "ctaEmail": "Consultar por correo",
+    "ctaWhatsapp": "WhatsApp",
+    "sections": [
+        {
+            "h2": "Suministro para importadores, envasadores y marca blanca",
+            "paras": [
+                "Solicite azafrán a granel para distribución o uso como ingrediente. Los proyectos de marca blanca, el envase personalizado y las cantidades se estudian según los requisitos del comprador; las condiciones se confirman en la oferta. El origen del producto es Irán y debe declararse correctamente."
+            ]
+        },
+        {
+            "h2": "Selección y limpieza según la calidad",
+            "paras": [
+                "Cada lote se clasifica y limpia antes del envasado. Se retiran las partes amarillas no deseadas, el polvo, el polen, las impurezas y los fragmentos que no corresponden a la calidad elegida. Pushal y Bunch conservan la parte del estilo que define su presentación; los hilos rotos se comercializan por separado como Narmah."
+            ]
+        },
+        {
+            "h2": "Latas de 250 g netos y pedidos a granel",
+            "bullets": [
+                "Latas metálicas decorativas de 250 g de peso neto.",
+                "Pedidos a granel y envases personalizados: indique cantidad y formato para confirmar las opciones.",
+                "Solicite muestras e indique la calidad, los ensayos y el destino; disponibilidad y condiciones se confirman por pedido."
+            ]
+        },
+        {
+            "h2": "COA del lote después del envasado y sellado",
+            "paras": [
+                "Las muestras se envían al laboratorio después de envasar y sellar el producto. El certificado de análisis (COA) del lote puede incluir crocina (color), picrocrocina (amargor) y safranal (aroma). ISO 3632 es una referencia de ensayo, no una certificación de la empresa ni una garantía de resultados.",
+                "Para importar a España, confirme con su agente o autoridad competente los requisitos alimentarios, de residuos y de etiquetado. Los documentos de exportación y el transporte se acuerdan para cada envío; ningún documento o resultado se promete de forma automática."
+            ]
+        }
     ],
-    gradesTitle: "Calidades de azafrán",
-    grades: [
-      { name: "Super Negin", text: "Estigmas totalmente rojos, los más largos y gruesos, sin estilo amarillo. Aspecto muy uniforme." },
-      { name: "Negin", text: "Estigmas totalmente rojos, algo más cortos que Super Negin; muy usado por envasadores." },
-      { name: "Sargol", text: "Estigmas rojos cortados sin estilo; la calidad de exportación más habitual para industria y venta al público." },
-      { name: "Pushal", text: "Estigmas rojos con una parte corta del estilo amarillo; aspecto tradicional." },
+    "gradesTitle": "Seis calidades comerciales de azafrán",
+    "grades": [
+        {
+            "name": "Super Negin",
+            "text": "Estigmas rojos largos y separados, sin estilo; selección especialmente rigurosa."
+        },
+        {
+            "name": "Negin",
+            "text": "Estigmas rojos sin estilo, con una selección menos estricta que Super Negin."
+        },
+        {
+            "name": "Sargol",
+            "text": "Puntas rojas del estigma, sin estilo; hilos más cortos."
+        },
+        {
+            "name": "Pushal",
+            "text": "Estigmas rojos con una pequeña parte del estilo adherida."
+        },
+        {
+            "name": "Bunch (Dokhtar Pich)",
+            "text": "Estigmas completos con el estilo, agrupados en manojos."
+        },
+        {
+            "name": "Broken Threads (Narmah)",
+            "text": "Fragmentos de estigmas rojos vendidos como una calidad comercial propia."
+        }
     ],
-    quoteTitle: "Cómo solicitar una cotización",
-    quoteIntro: "Envíenos estos datos para preparar una factura proforma:",
-    quoteFields: ["Calidad (Super Negin / Negin / Sargol / Pushal)", "Cantidad en kg", "Envase o marca blanca", "Puerto o aeropuerto de destino", "Incoterm deseado (p. ej. CIF, DAP)", "Análisis y documentos requeridos"],
-    contactTitle: "Contacto con ventas de exportación",
-    contactNote: "Respondemos en inglés; puede escribirnos en español.",
-    labels: { email: "Correo", phone: "Móvil / WhatsApp", whatsapp: "WhatsApp", office: "Oficina Teherán" },
-    faqTitle: "Preguntas frecuentes de compradores mayoristas",
-    faqs: [
-      { q: "¿Cuál es el pedido mínimo?", a: "El pedido mínimo es de 1 kg. Volúmenes mayores pueden consolidarse con otros productos iraníes en un mismo envío." },
-      { q: "¿Ofrecen marca blanca?", a: "Sí, envasamos azafrán de 0,1 g a 100 g con la marca del comprador." },
-      { q: "¿Qué documentación de calidad se entrega?", a: "Análisis ISO 3632 bajo solicitud, certificado de origen, certificado fitosanitario o sanitario y documentos comerciales." },
-      { q: "¿Cuál es el código arancelario del azafrán?", a: "El azafrán se clasifica en la partida SA 0910.20." },
+    "quoteTitle": "Solicite una oferta de exportación y muestras",
+    "quoteIntro": "Para una consulta comercial concreta, envíe:",
+    "quoteFields": [
+        "Empresa, país y uso previsto: distribución, envasado o fabricación",
+        "Calidad y cantidad en kg",
+        "Envase: lata de 250 g netos, granel o proyecto de marca blanca",
+        "Destino y condiciones de entrega deseadas",
+        "Requisitos del COA, documentos y solicitud de muestras"
     ],
-    emailSubject: "Azafrán al por mayor – solicitud de cotización",
-    emailBody: "Hola,\n\nSolicito cotización de azafrán iraní.\nCalidad: \nCantidad (kg): \nEnvase / marca blanca: \nDestino: \nIncoterm: \nEmpresa / país: \n",
-    waText: "Hello Goodarzi Trading, saffron wholesale inquiry from Spain.\nGrade: \nQuantity (kg): \nPacking: \nDestination: ",
-  },
+    "contactTitle": "Contacto para compradores profesionales",
+    "contactNote": "Respondemos en inglés; puede escribirnos en español.",
+    "labels": {
+        "email": "Correo",
+        "phone": "Móvil / WhatsApp",
+        "whatsapp": "WhatsApp",
+        "office": "Oficina de Teherán"
+    },
+    "faqTitle": "Preguntas de importadores de azafrán",
+    "faqs": [
+        {
+            "q": "¿Qué calidades de azafrán iraní puedo consultar?",
+            "a": "Super Negin, Negin, Sargol, Pushal, Bunch (Dokhtar Pich) y Broken Threads (Narmah). La especificación se confirma por lote."
+        },
+        {
+            "q": "¿Cómo se limpia el azafrán?",
+            "a": "Se clasifica y se retiran polvo, polen, impurezas, partes amarillas no deseadas y fragmentos ajenos a la calidad elegida. Pushal y Bunch conservan su parte característica del estilo."
+        },
+        {
+            "q": "¿Qué envases y opciones de marca blanca hay?",
+            "a": "Se presentan latas metálicas de 250 g netos. El suministro a granel y los proyectos de marca blanca o envase personalizado se estudian según la solicitud del comprador."
+        },
+        {
+            "q": "¿Cuándo se realiza el análisis del lote?",
+            "a": "Las muestras se envían al laboratorio después del envasado y sellado. Los resultados y cualquier categoría ISO 3632 dependen del COA del lote, sin valores garantizados."
+        },
+        {
+            "q": "¿Cómo solicito una oferta o muestras para España?",
+            "a": "Indique empresa, calidad, cantidad, envase, destino y requisitos de análisis por correo, formulario de consulta o WhatsApp. Las condiciones de las muestras y de suministro se confirman en la respuesta."
+        }
+    ],
+    "emailSubject": "Azafrán iraní al por mayor — oferta y muestras",
+    "emailBody": "Hola, solicito oferta y condiciones de muestras.\nEmpresa / país: \nCalidad: \nCantidad (kg): \nEnvase / marca blanca: \nDestino: \nAnálisis y documentos: ",
+    "waText": "Hello Goodarzi Trading, saffron wholesale inquiry from Spain.\nCompany: \nGrade: \nQuantity: \nPacking: \nDestination: \nSamples / COA requirements: "
+},
   zh: {
-    key: "zh",
-    lang: "zh-Hans",
-    path: "/zh/iranian-saffron-supplier",
-    breadcrumb: "伊朗藏红花批发",
-    title: "伊朗藏红花批发供应商 – 伊朗出口商 | Goodarzi Trading",
-    description:
-      "伊朗藏红花出口商，来自呼罗珊产区：Super Negin、Negin、Sargol、Pushal 等级，散装或贴牌包装，面向进口商、批发商及食品企业。请通过电子邮件询价。",
-    keywords:
-      "伊朗藏红花, 伊朗藏红花批发, 伊朗藏红花供应商, 伊朗藏红花出口商, 藏红花进口, 藏红花散装, 藏红花贴牌, 西红花批发, 藏红花 HS 0910.20",
-    eyebrow: "藏红花 · HS 0910.20 · 伊朗呼罗珊",
-    h1: "伊朗藏红花批发 – 德黑兰出口商直接供货",
-    intro:
-      "Goodarzi Trading 是一家总部位于德黑兰的进出口公司，向进口商、批发商、分装企业和食品生产商供应伊朗呼罗珊产区的藏红花（西红花），可提供散装出口包装或客户自有品牌（贴牌）包装。",
-    ctaQuote: "在线询价",
-    ctaEmail: "电子邮件询价",
-    ctaWhatsapp: "WhatsApp",
-    sections: [
-      {
-        h2: "中国买家请注意：推荐使用电子邮件联系",
-        paras: [
-          "由于 WhatsApp 在中国大陆通常无法使用，请优先通过电子邮件 info@goodarzitrading.ir 或电话联系我们。我们使用英文回复，您也可以用中文来信。",
-        ],
-      },
-      {
-        h2: "进口前需确认的事项",
-        paras: [
-          "藏红花的海关编码为 HS 0910.20。进口食品在中国可能涉及境外生产企业注册、检验检疫及标签等要求，具体要求请由进口商向海关或代理确认。请在询价时告知所需的检测项目和单证，我们将据此准备检测与出口文件。我们不声称已取得中国相关注册。",
-        ],
-      },
-      {
-        h2: "包装、起订量、单证与运输",
-        bullets: [
-          "起订量：1 公斤",
-          "散装出口包装（每件最多 1 公斤），或 0.1 克至 100 克零售包装（玻璃瓶、铁罐、小袋）",
-          "可按买家品牌贴牌包装",
-          "可按需提供 ISO 3632 实验室分析（藏红花素、藏红花醛、苦藏花素）",
-          "商业发票、装箱单、德黑兰商会原产地证书、植物检疫或卫生证书及运输单据",
-          "通常从德黑兰（IKA）空运，贸易条款可选 EXW、FOB、CFR、CIF、DAP（2020 国际贸易术语解释通则）",
-        ],
-      },
+    "key": "zh",
+    "lang": "zh-Hans",
+    "path": "/zh/iranian-saffron-supplier",
+    "breadcrumb": "伊朗藏红花批发",
+    "title": "伊朗藏红花批发供应商｜散装与贴牌询价 | Goodarzi Trading",
+    "description": "面向中国进口商、批发商及食品企业的伊朗藏红花供应咨询。六种商业等级、250克净重金属罐、包装密封后按批次检测。欢迎邮件询价及咨询样品。",
+    "keywords": "伊朗藏红花供应商, 伊朗藏红花批发, 西红花批发, 藏红花散装, 藏红花进口, 伊朗藏红花出口商, 藏红花贴牌",
+    "eyebrow": "藏红花 · HS 0910.20 · 伊朗卡恩",
+    "h1": "面向中国专业买家的伊朗藏红花批发供应",
+    "intro": "Goodarzi Trading 是一家位于德黑兰的进出口公司，从伊朗南呼罗珊省卡恩（Qainat）的农户采购藏红花（西红花）。我们接受香料进口商、批发商、经销商、食品生产商及自有品牌分装企业的采购咨询。",
+    "ctaQuote": "询价及咨询样品",
+    "ctaEmail": "优先邮件询价",
+    "ctaWhatsapp": "WhatsApp",
+    "sections": [
+        {
+            "h2": "中国大陆买家：优先通过电子邮件联系",
+            "paras": [
+                "请发送邮件至 info@goodarzitrading.ir，注明公司、产品等级、采购量和目的地。WhatsApp 在中国大陆可能无法可靠使用；原有在线询价及电话联系方式仍可使用。我们用英文回复，也欢迎中文来信。"
+            ]
+        },
+        {
+            "h2": "散装采购、食品原料与贴牌项目",
+            "paras": [
+                "可咨询用于批发分销或食品加工的散装藏红花。贴牌及定制包装项目按买家的需求评估，数量、包装和供货条件逐单确认。我们不宣称已获得中国进口所需的任何注册或认证。"
+            ]
+        },
+        {
+            "h2": "按等级分选与清洁",
+            "paras": [
+                "包装前对每批藏红花进行分选和清洁，去除不需要的黄色部分、灰尘、花粉、杂质及不符合所选等级的碎片。Pushal 和 Bunch 保留其等级特有的花柱部分；红色碎丝作为 Narmah 独立商业等级销售。"
+            ]
+        },
+        {
+            "h2": "250克净重金属罐与散装询价",
+            "bullets": [
+                "装饰金属罐，每罐净重250克。",
+                "散装出口、定制及贴牌包装请注明数量和具体需求，选项逐单确认。",
+                "欢迎咨询样品；样品条件、检测要求及寄送安排需确认。"
+            ]
+        },
+        {
+            "h2": "包装密封后的批次COA与进口准备",
+            "paras": [
+                "产品包装并密封后取样送检。批次分析证书（COA）的检测项目可包括藏红花素（色泽）、苦藏花素（苦味）及藏红花醛（香气）。ISO 3632 是检测参考标准，不代表企业认证，也不保证固定检测结果。",
+                "中国进口商应向海关或代理确认食品进口、境外生产企业注册、检验检疫及标签等适用要求。出口单证、检测项目和运输条件按具体订单及目的地要求商定。"
+            ]
+        }
     ],
-    gradesTitle: "藏红花等级",
-    grades: [
-      { name: "Super Negin", text: "最长最粗的全红柱头，不带黄色花柱，外观最均匀。" },
-      { name: "Negin", text: "全红柱头，略短于 Super Negin，常用于分装和食品加工。" },
-      { name: "Sargol", text: "剪切的红色柱头，不带花柱，是最常见的出口等级。" },
-      { name: "Pushal", text: "红色柱头带少量黄色花柱，传统外观。" },
+    "gradesTitle": "六种藏红花商业等级",
+    "grades": [
+        {
+            "name": "Super Negin",
+            "text": "较长、分离的红色柱头，去除花柱，筛选要求更严格。"
+        },
+        {
+            "name": "Negin",
+            "text": "去除花柱的全红柱头，筛选要求较Super Negin略宽。"
+        },
+        {
+            "name": "Sargol",
+            "text": "去除花柱的红色柱头尖部，丝较短。"
+        },
+        {
+            "name": "Pushal",
+            "text": "红色柱头带少量花柱。"
+        },
+        {
+            "name": "Bunch (Dokhtar Pich)",
+            "text": "保留花柱的完整柱头，扎成束。"
+        },
+        {
+            "name": "Broken Threads (Narmah)",
+            "text": "红色柱头碎丝，作为独立商业等级供应咨询。"
+        }
     ],
-    quoteTitle: "如何获取报价",
-    quoteIntro: "请提供以下信息，以便我们出具形式发票：",
-    quoteFields: ["等级（Super Negin / Negin / Sargol / Pushal）", "数量（公斤）", "包装或贴牌要求", "目的港或目的机场", "贸易条款（如 CIF、DAP）", "所需检测与单证"],
-    contactTitle: "出口销售联系方式",
-    contactNote: "我们用英文回复，欢迎用中文来信。",
-    labels: { email: "电子邮件", phone: "手机 / WhatsApp", whatsapp: "WhatsApp", office: "德黑兰办公室" },
-    faqTitle: "批发买家常见问题",
-    faqs: [
-      { q: "最低起订量是多少？", a: "最低起订量为 1 公斤，较大批量可与其他伊朗产品拼箱发运。" },
-      { q: "可以贴牌包装吗？", a: "可以，可按买家品牌提供 0.1 克至 100 克的零售包装。" },
-      { q: "提供哪些质量文件？", a: "可按需提供 ISO 3632 实验室分析，以及原产地证书、植物检疫或卫生证书和商业单据。" },
-      { q: "在中国大陆如何联系？", a: "请发送电子邮件至 info@goodarzitrading.ir，或致电 +98 919 123 8554 / +98 21 44511076。" },
+    "quoteTitle": "获取出口报价及样品条件",
+    "quoteIntro": "请在邮件中提供以下采购信息：",
+    "quoteFields": [
+        "公司、国家及用途：分销、分装或食品生产",
+        "等级与采购数量（公斤）",
+        "250克净重金属罐、散装或贴牌要求",
+        "目的地及期望的交货条件",
+        "COA检测项目、单证要求与样品需求"
     ],
-    emailSubject: "Saffron wholesale inquiry (China) / 藏红花批发询价",
-    emailBody: "您好，\n\n我想询价伊朗藏红花。\n等级 Grade: \n数量 Quantity (kg): \n包装 Packing: \n目的地 Destination: \n贸易条款 Incoterm: \n公司 Company: \n",
-    waText: "Hello Goodarzi Trading, saffron wholesale inquiry from China.\nGrade: \nQuantity (kg): \nPacking: \nDestination: ",
-  },
+    "contactTitle": "专业采购联系方式",
+    "contactNote": "中国大陆请优先使用邮件。我们用英文回复，欢迎中文来信。",
+    "labels": {
+        "email": "电子邮件",
+        "phone": "手机 / WhatsApp",
+        "whatsapp": "WhatsApp",
+        "office": "德黑兰办公室"
+    },
+    "faqTitle": "藏红花进口商常见问题",
+    "faqs": [
+        {
+            "q": "有哪些伊朗藏红花商业等级？",
+            "a": "Super Negin、Negin、Sargol、Pushal、Bunch（Dokhtar Pich）及Broken Threads（Narmah）。具体规格按批次确认。"
+        },
+        {
+            "q": "如何进行分选和清洁？",
+            "a": "去除灰尘、花粉、杂质、不需要的黄色部分及不符合所选等级的碎片。Pushal和Bunch保留其特有的花柱部分。"
+        },
+        {
+            "q": "可以询问散装或贴牌包装吗？",
+            "a": "可以。现介绍250克净重金属罐；散装、定制和贴牌项目按买家需求评估，条件逐单确认。"
+        },
+        {
+            "q": "COA是在什么时候检测的？",
+            "a": "产品包装并密封后取样送检。检测项目及ISO 3632类别以该批次COA为准，不保证固定数值。"
+        },
+        {
+            "q": "中国大陆买家如何询价或咨询样品？",
+            "a": "优先发送邮件至info@goodarzitrading.ir，注明公司、等级、数量、包装、目的地及检测要求。样品与供货条件经回复确认，也可使用现有在线询价或电话。"
+        }
+    ],
+    "emailSubject": "Iranian saffron inquiry / 伊朗藏红花报价及样品",
+    "emailBody": "您好，请提供伊朗藏红花报价及样品条件。\nCompany 公司: \nGrade 等级: \nQuantity 数量(kg): \nPacking 包装: \nDestination 目的地: \nCOA / documents 检测与单证: ",
+    "waText": "Hello Goodarzi Trading, saffron wholesale inquiry from China.\nCompany: \nGrade: \nQuantity: \nPacking: \nDestination: \nSamples / COA requirements: "
+},
   ja: {
-    key: "ja",
-    lang: "ja",
-    path: "/ja/iranian-saffron-wholesale",
-    breadcrumb: "イラン産サフラン卸売",
-    title: "イラン産サフラン 卸売・業務用 – イランの輸出業者 | Goodarzi Trading",
-    description:
-      "イラン・ホラーサーン産サフランの輸出業者。スーパーネギン、ネギン、サルゴル、プシャル。輸入商社・卸売・食品メーカー向けにバルクまたはOEM包装で供給。メールでお見積りください。",
-    keywords:
-      "イラン産サフラン, サフラン 卸売, サフラン 業務用, サフラン 輸入, サフラン バルク, サフラン OEM, スーパーネギン, サフラン HS 0910.20",
-    eyebrow: "サフラン · HS 0910.20 · イラン・ホラーサーン",
-    h1: "イラン産サフランの卸売 – テヘランの輸出業者から直接",
-    intro:
-      "Goodarzi Trading はテヘランを拠点とする輸出入会社です。ホラーサーン地方のサフランを、輸入商社、卸売業者、小分け包装業者、食品メーカーへ、バルクの輸出包装またはお客様ブランドでのOEM包装で供給します。",
-    ctaQuote: "見積もり依頼",
-    ctaEmail: "メールで問い合わせ",
-    ctaWhatsapp: "WhatsApp",
-    sections: [
-      {
-        h2: "日本への輸入にあたって",
-        paras: [
-          "サフランのHSコードは0910.20です。食品衛生法に基づく輸入届出や残留農薬などの要件は、輸入者様が検疫所・通関業者にご確認ください。必要な検査項目と書類をお問い合わせ時にお知らせいただければ、それに合わせて分析と輸出書類を準備します。日本の認証取得を主張するものではありません。",
-        ],
-      },
-      {
-        h2: "包装・最低発注量・書類・輸送",
-        bullets: [
-          "最低発注量：1 kg",
-          "1単位最大1 kgのバルク輸出包装、または0.1 g～100 gの小売包装（瓶・缶・小袋）",
-          "お客様ブランドでのOEM包装に対応",
-          "ご要望に応じてISO 3632分析（クロシン、サフラナール、ピクロクロシン）",
-          "商業送り状、パッキングリスト、テヘラン商工会議所の原産地証明書、植物検疫証明書または衛生証明書、輸送書類",
-          "通常はテヘラン（IKA）から航空便。EXW、FOB、CFR、CIF、DAP（インコタームズ2020）",
-        ],
-      },
+    "key": "ja",
+    "lang": "ja",
+    "path": "/ja/iranian-saffron-wholesale",
+    "breadcrumb": "イラン産サフラン卸売",
+    "title": "イラン産サフラン卸売・業務用｜輸入・OEM相談 | Goodarzi Trading",
+    "description": "日本の輸入商社、卸売業者、食品メーカー向けのイラン産サフラン。6種類のグレード、正味250gの金属缶、包装・密封後のロット別COA。見積もり・サンプルをご相談ください。",
+    "keywords": "イラン産サフラン 卸売, サフラン 業務用, サフラン 輸入, サフラン バルク, サフラン 輸出業者, サフラン OEM, サフラン サプライヤー",
+    "eyebrow": "サフラン · HS 0910.20 · イラン・カイン",
+    "h1": "日本の業務用バイヤー向け イラン産サフラン卸売",
+    "intro": "Goodarzi Trading はテヘランを拠点とする輸出入会社です。イランの南ホラーサーン州カイン（Qainat）の農家からサフランを調達し、香辛料の輸入商社、卸売業者、販売代理店、食品メーカー、自社ブランドの包装事業者からの調達相談を受け付けています。",
+    "ctaQuote": "見積もり・サンプル相談",
+    "ctaEmail": "メールで問い合わせ",
+    "ctaWhatsapp": "WhatsApp",
+    "sections": [
+        {
+            "h2": "卸売・食品原料・OEMの調達相談",
+            "paras": [
+                "流通向け、食品原料向けのバルク供給をご相談いただけます。OEMや自社ブランド包装は、ご希望の仕様に基づいて検討します。数量、包装、供給条件は案件ごとに確認します。"
+            ]
+        },
+        {
+            "h2": "グレードに合わせた選別とクリーニング",
+            "paras": [
+                "包装前に各ロットを選別し、不要な黄色い部分、ほこり、花粉、異物、選択したグレードに合わない断片を取り除きます。PushalとBunchはグレードの特徴である花柱部分を残します。赤い柱頭の折れた部分はNarmahとして別の商業グレードで扱います。"
+            ]
+        },
+        {
+            "h2": "正味250gの金属缶とバルク注文",
+            "bullets": [
+                "装飾金属缶入り、正味重量250g。",
+                "バルク輸出、特注包装、OEMは、ご希望の数量と仕様をお知らせください。対応条件を個別に確認します。",
+                "サンプルをご希望の場合は、グレード、検査項目、送付先をご連絡ください。提供条件と発送方法を確認します。"
+            ]
+        },
+        {
+            "h2": "包装・密封後のロット別COAと輸入確認",
+            "paras": [
+                "製品の包装と密封が完了した後にサンプルを採取して分析を依頼します。ロット別の分析証明書（COA）では、クロシン（色価）、ピクロクロシン（苦味）、サフラナール（香り）などを検査対象にできます。ISO 3632は試験の参考規格であり、企業の認証や一定の分析値を保証するものではありません。",
+                "日本への輸入に適用される食品衛生、残留農薬、表示などの要件は、輸入者様が検疫所や通関業者にご確認ください。必要書類、検査項目、輸送条件は注文ごとに合意します。日本の認証取得を主張するものではありません。"
+            ]
+        }
     ],
-    gradesTitle: "サフランのグレード",
-    grades: [
-      { name: "Super Negin", text: "最も長く太い全赤の柱頭で黄色い花柱なし。外観が最も均一。" },
-      { name: "Negin", text: "全赤の柱頭で、スーパーネギンよりやや短い。小分け・食品加工向け。" },
-      { name: "Sargol", text: "花柱を除いたカットされた赤い柱頭。最も一般的な輸出グレード。" },
-      { name: "Pushal", text: "黄色い花柱が少し付いた赤い柱頭。伝統的な外観。" },
+    "gradesTitle": "6種類の商業グレード",
+    "grades": [
+        {
+            "name": "Super Negin",
+            "text": "花柱を除いた長い赤色の柱頭。分離した糸を厳格に選別します。"
+        },
+        {
+            "name": "Negin",
+            "text": "花柱を除いた赤色の柱頭。Super Neginより選別条件がやや緩やかです。"
+        },
+        {
+            "name": "Sargol",
+            "text": "花柱を除いた赤色の柱頭の先端部分。糸は短めです。"
+        },
+        {
+            "name": "Pushal",
+            "text": "赤色の柱頭に少量の花柱が付いたグレード。"
+        },
+        {
+            "name": "Bunch (Dokhtar Pich)",
+            "text": "花柱を残した完全な柱頭を束にしたもの。"
+        },
+        {
+            "name": "Broken Threads (Narmah)",
+            "text": "赤色の柱頭の折れた部分を、独立した商業グレードとして扱います。"
+        }
     ],
-    quoteTitle: "お見積りの方法",
-    quoteIntro: "以下の情報をお送りいただければ、プロフォーマインボイスを作成します：",
-    quoteFields: ["グレード（Super Negin / Negin / Sargol / Pushal）", "数量（kg）", "包装またはOEMの有無", "仕向港・空港", "取引条件（例：CIF、DAP）", "必要な分析・書類"],
-    contactTitle: "輸出営業への連絡先",
-    contactNote: "英語で回答します。日本語でのご連絡も歓迎します。",
-    labels: { email: "メール", phone: "携帯 / WhatsApp", whatsapp: "WhatsApp", office: "テヘラン事務所" },
-    faqTitle: "卸売バイヤーからのよくある質問",
-    faqs: [
-      { q: "最低発注量は？", a: "1 kgからです。大口は他のイラン産品と混載できます。" },
-      { q: "OEM包装は可能ですか？", a: "はい、0.1 g～100 gの小売包装をお客様ブランドで対応します。" },
-      { q: "品質書類は？", a: "ご要望に応じたISO 3632分析、原産地証明書、植物検疫または衛生証明書、商業書類です。" },
+    "quoteTitle": "輸出見積もり・サンプルのご相談",
+    "quoteIntro": "具体的な調達相談のため、以下をお知らせください。",
+    "quoteFields": [
+        "会社名、国、用途（流通・小分け包装・食品製造）",
+        "グレードと数量（kg）",
+        "正味250g缶、バルク、OEMなどの包装仕様",
+        "仕向地と希望する引渡条件",
+        "COAの検査項目、必要書類、サンプルのご希望"
     ],
-    emailSubject: "Saffron wholesale inquiry (Japan) / サフラン卸売見積もり",
-    emailBody: "お世話になります。\n\nイラン産サフランの見積もりをお願いします。\nGrade: \nQuantity (kg): \nPacking: \nDestination: \nIncoterm: \nCompany: \n",
-    waText: "Hello Goodarzi Trading, saffron wholesale inquiry from Japan.\nGrade: \nQuantity (kg): \nPacking: \nDestination: ",
-  },
+    "contactTitle": "業務用バイヤーのお問い合わせ",
+    "contactNote": "英語で回答します。日本語でのお問い合わせも受け付けています。",
+    "labels": {
+        "email": "メール",
+        "phone": "携帯 / WhatsApp",
+        "whatsapp": "WhatsApp",
+        "office": "テヘラン事務所"
+    },
+    "faqTitle": "サフラン輸入・卸売のよくある質問",
+    "faqs": [
+        {
+            "q": "どのグレードを相談できますか？",
+            "a": "Super Negin、Negin、Sargol、Pushal、Bunch（Dokhtar Pich）、Broken Threads（Narmah）の6種類です。仕様はロットごとに確認します。"
+        },
+        {
+            "q": "どのように選別・清掃しますか？",
+            "a": "ほこり、花粉、異物、不要な黄色い部分、グレードに合わない断片を取り除きます。PushalとBunchは特徴となる花柱部分を残します。"
+        },
+        {
+            "q": "包装とOEMの選択肢は？",
+            "a": "正味250gの金属缶をご案内しています。バルク、特注包装、OEMは、ご希望に基づき個別に条件を確認します。"
+        },
+        {
+            "q": "COAの分析はいつ行いますか？",
+            "a": "包装・密封後に採取したサンプルで分析を依頼します。分析結果やISO 3632カテゴリーはロット別COAに基づき、固定値を保証しません。"
+        },
+        {
+            "q": "日本向けの見積もりやサンプルはどう依頼しますか？",
+            "a": "会社名、グレード、数量、包装、仕向地、検査要件をメール、既存の問い合わせフォーム、WhatsAppでお送りください。サンプルと供給の条件は返信時に確認します。"
+        }
+    ],
+    "emailSubject": "Iranian saffron inquiry / サフラン見積もり・サンプル相談",
+    "emailBody": "イラン産サフランの見積もりとサンプル条件をお願いします。\nCompany: \nGrade: \nQuantity (kg): \nPacking / OEM: \nDestination: \nCOA / documents: ",
+    "waText": "Hello Goodarzi Trading, saffron wholesale inquiry from Japan.\nCompany: \nGrade: \nQuantity: \nPacking: \nDestination: \nSamples / COA requirements: "
+},
 };
 
 export const SAFFRON_HREFLANG = (site: string) => [
