@@ -12,7 +12,7 @@ export const Route = createFileRoute("/services")({
     meta: [
       { title: "Services — Goodarzi Trading" },
       { name: "keywords", content: "trade services, sourcing, logistics, freight, quality inspection, بازرسی کالا, مشاوره خرید, contract management, import export Iran, goodarzi trading, واردات صادرات ایران, تجارت بین الملل, customs consulting Tehran" },
-      { name: "description", content: "Import, export, customs clearance, consulting, international logistics, sourcing, supplier verification, trade documentation and freight services." },
+      { name: "description", content: "Import and export services from Tehran for international buyers and established trading companies: Iranian product sourcing, supplier verification, customs clearance, trade documentation, logistics and freight." },
       { property: "og:title", content: "Services — Goodarzi Trading" },
       { property: "og:description", content: "Full-spectrum international trade services from Tehran to the world." },
       { property: "og:url", content: "https://www.goodarzitrading.ir/services" },

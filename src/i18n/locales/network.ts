@@ -5,7 +5,7 @@ export const network: Bundle = {
     heroEyebrow: "Global Partnership",
     heroTitle: "A worldwide network of importers, exporters and chambers",
     heroDesc:
-      "Goodarzi Trading is an active member of the Tehran Chamber of Commerce and works directly with traders, distributors and chamber members in more than 40 countries. We welcome new B2B partnerships across every continent.",
+      "Goodarzi Trading is an active member of the Tehran Chamber of Commerce and works directly with importers, distributors, established trading companies and chamber members in more than 40 countries. We welcome qualified B2B inquiries for defined sourcing, distribution or export requirements, including authorized representatives acting for identified buyers.",
 
     whoEyebrow: "Who we work with",
     whoTitle: "Built on chamber-verified relationships",
@@ -17,13 +17,13 @@ export const network: Bundle = {
     chambersTitle: "Chamber of Commerce Members",
     chambersDesc: "TCCIMA, joint chambers, and international chamber networks.",
     manufacturersTitle: "Manufacturers & Producers",
-    manufacturersDesc: "Iranian producers seeking outbound export representation.",
-    tradingHousesTitle: "Trading Houses & Agents",
-    tradingHousesDesc: "Overseas trading houses that need a Tehran-side partner.",
+    manufacturersDesc: "Iranian producers seeking qualified export representation for defined markets or identified buyer requirements.",
+    tradingHousesTitle: "Established Trading Companies & Authorized Representatives",
+    tradingHousesDesc: "Established overseas trading companies and authorized representatives acting for an identified buyer or defined sourcing requirement.",
 
     affiliationsEyebrow: "Chamber affiliations",
     affiliationsTitle: "Verified through official chambers",
-    becomePartner: "Become a Partner",
+    becomePartner: "Submit a Qualified Business Inquiry",
 
     chamber1: "Tehran Chamber of Commerce, Industries, Mines & Agriculture (TCCIMA)",
     chamber2: "Iran Chamber of Commerce (ICCIMA)",
@@ -49,11 +49,11 @@ export const network: Bundle = {
     regionAmericasName: "Americas",
     regionAmericasCountries: "Canada · Brazil · Argentina · Mexico · Chile",
 
-    joinEyebrow: "Join the network",
-    joinTitle: "Are you a trader, importer, or chamber member?",
+    joinEyebrow: "Qualified business inquiries",
+    joinTitle: "Are you an importer, established trading company, distributor, manufacturer, or chamber member?",
     joinDesc:
-      "Introduce your company and the markets you serve. We reply with a partnership proposal within one business day.",
-    joinSendInquiry: "Send Partnership Inquiry",
+      "Introduce your registered company, the markets you serve, and your specific sourcing, distribution, or export requirement. Authorized representatives should identify the buyer or organization they represent. We review qualified business inquiries and reply within one business day.",
+    joinSendInquiry: "Submit a Qualified Business Inquiry",
     joinContact: "Contact Us Directly",
   },
   fa: {
