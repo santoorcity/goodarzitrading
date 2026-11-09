@@ -21,7 +21,7 @@ export const Route = createFileRoute("/trade-network")({
       {
         name: "description",
         content:
-          "Join our global trade network. Connecting Iranian exporters with importers, distributors and chamber of commerce members across 40+ countries. B2B partnerships welcome.",
+          "Connect with Goodarzi Trading for qualified import, distribution and export requirements involving Iranian goods. We work with importers, established trading companies, chamber members and authorized representatives acting for identified buyers across 40+ countries.",
       },
       {
         name: "keywords",
@@ -32,7 +32,7 @@ export const Route = createFileRoute("/trade-network")({
       {
         property: "og:description",
         content:
-          "Partner with a Tehran-based trading house connected to importers, exporters and chambers of commerce worldwide.",
+          "Tehran-based trading house serving importers, established trading companies, chamber members and authorized representatives with defined buyer requirements worldwide.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.goodarzitrading.ir/trade-network" },

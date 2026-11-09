@@ -24,7 +24,7 @@ export const services: Bundle = {
     logisticsDesc:
       "Multi-modal freight management: sea, air, road and rail across continents.",
     sourcingTitle: "Product Sourcing",
-    sourcingDesc: "Find, vet and onboard qualified suppliers anywhere in the world.",
+    sourcingDesc: "Source and qualify suppliers for defined buyer requirements, including product specifications, volume, destination and delivery terms.",
     verificationTitle: "Supplier Verification",
     verificationDesc:
       "On-site audits, quality inspections and due diligence before commitment.",
@@ -32,7 +32,7 @@ export const services: Bundle = {
     documentationDesc:
       "Commercial invoices, B/L, certificates of origin, packing lists and L/C support.",
     freightTitle: "Freight Services",
-    freightDesc: "Optimised routing and cost-efficient forwarder partnerships.",
+    freightDesc: "Optimised routing coordinated with established, documented freight and logistics providers for each shipment requirement.",
     purchaseConsultingTitle: "Purchase Consulting",
     purchaseConsultingDesc:
       "Advisory on selecting and purchasing goods from domestic and international markets.",

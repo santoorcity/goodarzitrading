@@ -7,6 +7,15 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
+  vite: {
+    server: {
+      // Vite dev-server allowlist for this v0 preview host only; production builds do not use it.
+      allowedHosts:
+        process.env.NODE_ENV === "development"
+          ? ["sb-1u4sgakzl9pk.vercel.run"]
+          : undefined,
+    },
+  },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
