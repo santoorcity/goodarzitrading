@@ -1,6 +1,6 @@
 // Localized saffron buyer pages. ES/ZH/JA use approved batch-specific supply facts.
 // DE and the existing reciprocal language cluster are preserved.
-export type SaffronLocaleKey = "de" | "es" | "zh" | "ja";
+export type SaffronLocaleKey = "de" | "es" | "zh" | "ja" | "ko";
 
 export interface SaffronLocale {
   key: SaffronLocaleKey;
@@ -450,7 +450,86 @@ export const SAFFRON_LOCALES: Record<SaffronLocaleKey, SaffronLocale> = {
     "emailSubject": "Iranian saffron inquiry / サフラン見積もり・サンプル相談",
     "emailBody": "イラン産サフランの見積もりとサンプル条件をお願いします。\nCompany: \nGrade: \nQuantity (kg): \nPacking / OEM: \nDestination: \nCOA / documents: ",
     "waText": "Hello Goodarzi Trading, saffron wholesale inquiry from Japan.\nCompany: \nGrade: \nQuantity: \nPacking: \nDestination: \nSamples / COA requirements: "
-},
+  },
+  ko: {
+    key: "ko",
+    lang: "ko-KR",
+    path: "/ko/iranian-saffron-wholesale",
+    breadcrumb: "이란산 사프란 도매",
+    title: "이란산 사프란 도매·수입 상담 | Goodarzi Trading",
+    description:
+      "한국 수입업체, 도매상, 유통업체와 식품 제조사를 위한 이란산 사프란 공급 상담. 6개 상업 등급, 순중량 250g 금속 캔, 포장·밀봉 후 로트별 COA. 견적과 샘플을 문의하세요.",
+    keywords:
+      "이란산 사프란 도매, 사프란 수입, 사프란 도매 공급업체, 이란 사프란 수출, 사프란 벌크, 사프란 OEM, 사프란 수입업체",
+    eyebrow: "사프란 · HS 0910.20 · 이란 카이낫",
+    h1: "한국 기업을 위한 이란산 사프란 도매 공급",
+    intro:
+      "Goodarzi Trading은 테헤란에 기반을 둔 수출입 회사입니다. 이란 남호라산 카이낫(Qainat) 지역 농가에서 사프란을 조달하며, 사프란 수입업체·도매상·유통업체·식품 제조사·자체 브랜드 포장업체의 구매 상담을 받습니다.",
+    ctaQuote: "견적·샘플 문의",
+    ctaEmail: "이메일로 문의",
+    ctaWhatsapp: "WhatsApp",
+    sections: [
+      {
+        h2: "수입업체·도매상·식품 제조사를 위한 공급",
+        paras: [
+          "유통 및 식품 원료용 벌크 사프란을 상담할 수 있습니다. OEM과 자체 브랜드 포장은 구매자의 사양에 따라 검토하며, 수량·포장·공급 조건은 주문별로 확인합니다. 식품 제조사와 확인된 구매자를 대리하는 공식 담당자의 문의도 환영합니다.",
+        ],
+      },
+      {
+        h2: "등급별 선별과 세척",
+        paras: [
+          "포장 전에 각 로트를 선별하고 불필요한 노란 부분, 먼지, 꽃가루, 이물질 및 선택한 등급에 맞지 않는 조각을 제거합니다. Pushal과 Bunch는 등급의 특징인 화주 부분을 남기며, 붉은 암술머리의 부서진 부분은 Narmah라는 별도 상업 등급으로 취급합니다.",
+        ],
+      },
+      {
+        h2: "순중량 250g 금속 캔과 벌크 주문",
+        bullets: [
+          "장식용 금속 캔 포장, 캔당 순중량 250g.",
+          "벌크 수출, 맞춤 포장 및 OEM은 희망 수량과 포장 사양을 알려주시면 가능 여부와 조건을 확인합니다.",
+          "샘플을 원하시면 등급, 필요한 검사 항목 및 배송지를 알려주세요. 샘플 제공 조건과 발송 방법은 회신 시 확인합니다.",
+        ],
+      },
+      {
+        h2: "포장·밀봉 후 로트별 COA와 수입 준비",
+        paras: [
+          "제품을 포장하고 밀봉한 후 샘플을 채취하여 분석을 의뢰합니다. 로트별 분석증명서(COA)에는 크로신(색도), 피크로크로신(쓴맛), 사프라날(향) 등의 항목을 포함할 수 있습니다. ISO 3632는 시험 참고 규격이며, 회사 인증이나 고정된 분석 결과를 의미하지 않습니다.",
+          "한국 수입에 적용되는 식품 위생, 잔류농약, 표시 및 통관 요건은 수입자께서 관할 기관이나 통관 대행사에 확인해 주셔야 합니다. 필요한 서류, 검사 항목 및 운송 조건은 주문과 목적지에 따라 협의합니다.",
+        ],
+      },
+    ],
+    gradesTitle: "6가지 상업용 사프란 등급",
+    grades: [
+      { name: "Super Negin", text: "화주가 제거된 길고 붉은 암술머리로, 균일한 외관을 원하는 구매자를 위한 엄선 등급입니다." },
+      { name: "Negin", text: "화주가 제거된 붉은 암술머리로, Super Negin보다 선별 조건이 조금 완화된 등급입니다." },
+      { name: "Sargol", text: "화주가 제거된 붉은 암술머리 끝부분으로, 실이 비교적 짧습니다." },
+      { name: "Pushal", text: "붉은 암술머리에 짧은 화주 일부가 붙어 있는 등급입니다." },
+      { name: "Bunch (Dokhtar Pich)", text: "화주를 포함한 완전한 암술머리를 묶은 형태입니다." },
+      { name: "Broken Threads (Narmah)", text: "붉은 암술머리의 부서진 부분을 별도의 상업 등급으로 취급합니다." },
+    ],
+    quoteTitle: "수출 견적과 샘플 조건 문의",
+    quoteIntro: "구체적인 구매 상담을 위해 다음 정보를 보내주세요.",
+    quoteFields: [
+      "회사명, 국가 및 용도(유통·소분 포장·식품 제조)",
+      "등급과 수량(kg)",
+      "순중량 250g 캔, 벌크 또는 OEM 포장 사양",
+      "목적지와 희망 인도 조건",
+      "COA 검사 항목, 필요한 서류 및 샘플 요청",
+    ],
+    contactTitle: "전문 구매 상담 연락처",
+    contactNote: "영어로 답변드리며, 한국어 문의도 접수합니다.",
+    labels: { email: "이메일", phone: "휴대전화 / WhatsApp", whatsapp: "WhatsApp", office: "테헤란 사무소" },
+    faqTitle: "사프란 수입·도매 자주 묻는 질문",
+    faqs: [
+      { q: "어떤 이란산 사프란 등급을 상담할 수 있나요?", a: "Super Negin, Negin, Sargol, Pushal, Bunch(Dokhtar Pich), Broken Threads(Narmah)의 6가지입니다. 구체적인 사양은 로트별로 확인합니다." },
+      { q: "사프란은 어떻게 선별하고 세척하나요?", a: "먼지, 꽃가루, 이물질, 불필요한 노란 부분 및 선택한 등급에 맞지 않는 조각을 제거합니다. Pushal과 Bunch는 특징적인 화주 부분을 남깁니다." },
+      { q: "벌크 또는 OEM 포장을 상담할 수 있나요?", a: "가능합니다. 순중량 250g 금속 캔을 안내하며, 벌크·맞춤 포장·OEM 프로젝트는 구매자의 요구와 수량에 따라 조건을 확인합니다." },
+      { q: "COA 분석은 언제 진행되나요?", a: "제품을 포장하고 밀봉한 후 샘플을 채취하여 분석을 의뢰합니다. 결과와 ISO 3632 분류는 해당 로트의 COA에 따르며 고정 수치를 보장하지 않습니다." },
+      { q: "한국에서 견적이나 샘플을 어떻게 요청하나요?", a: "회사명, 등급, 수량, 포장, 목적지 및 검사 요건을 이메일, 기존 문의 양식 또는 WhatsApp으로 보내주세요. 샘플과 공급 조건은 회신 시 확인합니다." },
+    ],
+    emailSubject: "Iranian saffron inquiry / 이란산 사프란 견적·샘플 문의",
+    emailBody: "이란산 사프란 견적과 샘플 조건을 요청합니다.\n회사명 / 국가: \n등급: \n수량(kg): \n포장 / OEM: \n목적지: \nCOA / 서류: ",
+    waText: "Hello Goodarzi Trading, saffron wholesale inquiry from South Korea.\nCompany: \nGrade: \nQuantity: \nPacking: \nDestination: \nSamples / COA requirements: ",
+  },
 };
 
 export const SAFFRON_HREFLANG = (site: string) => [

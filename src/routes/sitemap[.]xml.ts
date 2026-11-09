@@ -5,7 +5,6 @@ import { EXPORT_PRODUCTS } from "@/data/export-products";
 import { BUYER_GUIDES } from "@/data/buyer-guides";
 import { TARGET_MARKETS } from "@/data/target-markets";
 
-
 const BASE_URL = "https://www.goodarzitrading.ir";
 
 interface SitemapEntry {
@@ -28,6 +27,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/es/azafran-irani-al-por-mayor", changefreq: "monthly", priority: "0.9" },
           { path: "/zh/iranian-saffron-supplier", changefreq: "monthly", priority: "0.9" },
           { path: "/ja/iranian-saffron-wholesale", changefreq: "monthly", priority: "0.9" },
+          { path: "/ko/iranian-saffron-wholesale", changefreq: "monthly", priority: "0.9" },
           { path: "/trade-network", changefreq: "monthly", priority: "0.85" },
           { path: "/inquiry", changefreq: "monthly", priority: "0.9" },
           { path: "/incoterms", changefreq: "yearly", priority: "0.7" },
@@ -43,11 +43,19 @@ export const Route = createFileRoute("/sitemap.xml")({
         ];
 
         for (const p of EXPORT_PRODUCTS) {
-          entries.push({ path: `/export-products/${p.slug}`, changefreq: "monthly", priority: "0.9" });
+          entries.push({
+            path: `/export-products/${p.slug}`,
+            changefreq: "monthly",
+            priority: "0.9",
+          });
         }
 
         for (const guide of BUYER_GUIDES) {
-          entries.push({ path: `/knowledge/buyer-guides/${guide.slug}`, changefreq: "monthly", priority: "0.8" });
+          entries.push({
+            path: `/knowledge/buyer-guides/${guide.slug}`,
+            changefreq: "monthly",
+            priority: "0.8",
+          });
         }
         for (const market of TARGET_MARKETS) {
           entries.push({ path: `/markets/${market.slug}`, changefreq: "monthly", priority: "0.8" });
@@ -57,10 +65,18 @@ export const Route = createFileRoute("/sitemap.xml")({
           entries.push({ path: `/knowledge/${cat.slug}`, changefreq: "monthly", priority: "0.6" });
         }
         for (const e of kc.registry.entries) {
-          entries.push({ path: `/knowledge/${e.category}/${e.id}`, changefreq: "yearly", priority: "0.55" });
+          entries.push({
+            path: `/knowledge/${e.category}/${e.id}`,
+            changefreq: "yearly",
+            priority: "0.55",
+          });
         }
         for (const r of kc.incoterms.rules) {
-          entries.push({ path: `/incoterms/${r.code.toLowerCase()}`, changefreq: "yearly", priority: "0.6" });
+          entries.push({
+            path: `/incoterms/${r.code.toLowerCase()}`,
+            changefreq: "yearly",
+            priority: "0.6",
+          });
         }
 
         const urls = entries.map((e) =>
@@ -70,7 +86,9 @@ export const Route = createFileRoute("/sitemap.xml")({
             e.changefreq ? `    <changefreq>${e.changefreq}</changefreq>` : null,
             e.priority ? `    <priority>${e.priority}</priority>` : null,
             `  </url>`,
-          ].filter(Boolean).join("\n"),
+          ]
+            .filter(Boolean)
+            .join("\n"),
         );
         const xml = [
           `<?xml version="1.0" encoding="UTF-8"?>`,

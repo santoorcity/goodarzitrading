@@ -34,6 +34,7 @@ import { Route as IncotermsCodeRouteImport } from './routes/incoterms.$code'
 import { Route as JaIranianSaffronWholesaleRouteImport } from './routes/ja.iranian-saffron-wholesale'
 import { Route as KnowledgeIndexRouteImport } from './routes/knowledge.index'
 import { Route as KnowledgeCategoryRouteImport } from './routes/knowledge.$category'
+import { Route as KoIranianSaffronWholesaleRouteImport } from './routes/ko.iranian-saffron-wholesale'
 import { Route as MarketsRegionRouteImport } from './routes/markets.$region'
 import { Route as ZhIranianSaffronSupplierRouteImport } from './routes/zh.iranian-saffron-supplier'
 import { Route as KnowledgeCategoryEntryRouteImport } from './routes/knowledge.$category.$entry'
@@ -166,6 +167,12 @@ const KnowledgeCategoryRoute = KnowledgeCategoryRouteImport.update({
   path: '/knowledge/$category',
   getParentRoute: () => rootRouteImport,
 } as any)
+const KoIranianSaffronWholesaleRoute =
+  KoIranianSaffronWholesaleRouteImport.update({
+    id: '/ko/iranian-saffron-wholesale',
+    path: '/ko/iranian-saffron-wholesale',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const MarketsRegionRoute = MarketsRegionRouteImport.update({
   id: '/markets/$region',
   path: '/markets/$region',
@@ -212,6 +219,7 @@ export interface FileRoutesByFullPath {
   '/incoterms/$code': typeof IncotermsCodeRoute
   '/ja/iranian-saffron-wholesale': typeof JaIranianSaffronWholesaleRoute
   '/knowledge/$category': typeof KnowledgeCategoryRouteWithChildren
+  '/ko/iranian-saffron-wholesale': typeof KoIranianSaffronWholesaleRoute
   '/markets/$region': typeof MarketsRegionRoute
   '/zh/iranian-saffron-supplier': typeof ZhIranianSaffronSupplierRoute
   '/export-products/': typeof ExportProductsIndexRoute
@@ -242,6 +250,7 @@ export interface FileRoutesByTo {
   '/incoterms/$code': typeof IncotermsCodeRoute
   '/ja/iranian-saffron-wholesale': typeof JaIranianSaffronWholesaleRoute
   '/knowledge/$category': typeof KnowledgeCategoryRouteWithChildren
+  '/ko/iranian-saffron-wholesale': typeof KoIranianSaffronWholesaleRoute
   '/markets/$region': typeof MarketsRegionRoute
   '/zh/iranian-saffron-supplier': typeof ZhIranianSaffronSupplierRoute
   '/export-products': typeof ExportProductsIndexRoute
@@ -274,6 +283,7 @@ export interface FileRoutesById {
   '/incoterms/$code': typeof IncotermsCodeRoute
   '/ja/iranian-saffron-wholesale': typeof JaIranianSaffronWholesaleRoute
   '/knowledge/$category': typeof KnowledgeCategoryRouteWithChildren
+  '/ko/iranian-saffron-wholesale': typeof KoIranianSaffronWholesaleRoute
   '/markets/$region': typeof MarketsRegionRoute
   '/zh/iranian-saffron-supplier': typeof ZhIranianSaffronSupplierRoute
   '/export-products/': typeof ExportProductsIndexRoute
@@ -307,6 +317,7 @@ export interface FileRouteTypes {
     | '/incoterms/$code'
     | '/ja/iranian-saffron-wholesale'
     | '/knowledge/$category'
+    | '/ko/iranian-saffron-wholesale'
     | '/markets/$region'
     | '/zh/iranian-saffron-supplier'
     | '/export-products/'
@@ -337,6 +348,7 @@ export interface FileRouteTypes {
     | '/incoterms/$code'
     | '/ja/iranian-saffron-wholesale'
     | '/knowledge/$category'
+    | '/ko/iranian-saffron-wholesale'
     | '/markets/$region'
     | '/zh/iranian-saffron-supplier'
     | '/export-products'
@@ -368,6 +380,7 @@ export interface FileRouteTypes {
     | '/incoterms/$code'
     | '/ja/iranian-saffron-wholesale'
     | '/knowledge/$category'
+    | '/ko/iranian-saffron-wholesale'
     | '/markets/$region'
     | '/zh/iranian-saffron-supplier'
     | '/export-products/'
@@ -399,6 +412,7 @@ export interface RootRouteChildren {
   IncotermsCodeRoute: typeof IncotermsCodeRoute
   JaIranianSaffronWholesaleRoute: typeof JaIranianSaffronWholesaleRoute
   KnowledgeCategoryRoute: typeof KnowledgeCategoryRouteWithChildren
+  KoIranianSaffronWholesaleRoute: typeof KoIranianSaffronWholesaleRoute
   MarketsRegionRoute: typeof MarketsRegionRoute
   ZhIranianSaffronSupplierRoute: typeof ZhIranianSaffronSupplierRoute
   IncotermsIndexRoute: typeof IncotermsIndexRoute
@@ -583,6 +597,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof KnowledgeCategoryRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ko/iranian-saffron-wholesale': {
+      id: '/ko/iranian-saffron-wholesale'
+      path: '/ko/iranian-saffron-wholesale'
+      fullPath: '/ko/iranian-saffron-wholesale'
+      preLoaderRoute: typeof KoIranianSaffronWholesaleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/markets/$region': {
       id: '/markets/$region'
       path: '/markets/$region'
@@ -661,6 +682,7 @@ const rootRouteChildren: RootRouteChildren = {
   IncotermsCodeRoute: IncotermsCodeRoute,
   JaIranianSaffronWholesaleRoute: JaIranianSaffronWholesaleRoute,
   KnowledgeCategoryRoute: KnowledgeCategoryRouteWithChildren,
+  KoIranianSaffronWholesaleRoute: KoIranianSaffronWholesaleRoute,
   MarketsRegionRoute: MarketsRegionRoute,
   ZhIranianSaffronSupplierRoute: ZhIranianSaffronSupplierRoute,
   IncotermsIndexRoute: IncotermsIndexRoute,

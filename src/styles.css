@@ -67,7 +67,11 @@
   --input: oklch(0.94 0.01 260);
   --ring: var(--gold);
 
-  --gradient-hero: linear-gradient(135deg, oklch(0.18 0.06 260 / 0.92), oklch(0.27 0.08 260 / 0.78));
+  --gradient-hero: linear-gradient(
+    135deg,
+    oklch(0.18 0.06 260 / 0.92),
+    oklch(0.27 0.08 260 / 0.78)
+  );
   --gradient-gold: linear-gradient(135deg, var(--gold), var(--gold-soft));
   --shadow-elegant: 0 20px 60px -20px oklch(0.18 0.06 260 / 0.35);
   --shadow-card: 0 4px 20px -8px oklch(0.18 0.06 260 / 0.15);
@@ -86,9 +90,21 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     font-family: var(--font-display);
     letter-spacing: -0.01em;
+  }
+  .ko-page,
+  .ko-page .font-display,
+  .ko-page h1,
+  .ko-page h2,
+  .ko-page h3,
+  .ko-page h4 {
+    font-family: "Noto Sans KR", system-ui, sans-serif;
+    letter-spacing: 0;
   }
 }
 
@@ -97,7 +113,12 @@
 }
 
 @utility eyebrow {
-  @apply inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-[color:var(--gold)];
+  @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--gold)];
+}
+
+.ko-page .font-display {
+  font-family: "Noto Sans KR", system-ui, sans-serif !important;
+  letter-spacing: 0;
 }
 
 @utility gold-divider {
