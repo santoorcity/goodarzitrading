@@ -1,6 +1,10 @@
 # SEO and international buyer work
 
-## Authorized November 2026 completion
+## Read-only audit only
+- [ ] Audit broker/agent invitation wording across content, metadata and all languages; provide exact sources and replacement text
+- [ ] Make no changes or publish; previous incomplete edits remain unvalidated and unpublished
+
+## Paused earlier work (requires fresh approval)
 - [ ] Finish five existing product detail pages: validate content, catalogue images, metadata, schema, layouts and existing language controls
 - [ ] Improve existing Spanish, Simplified Chinese and Japanese saffron buyer content and product links; preserve German page and hreflang cluster
 - [ ] Validate discovery files, automated build and security checks, then publish and check live pages
