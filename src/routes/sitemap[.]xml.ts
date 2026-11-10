@@ -28,6 +28,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/es/azafran-irani-al-por-mayor", changefreq: "monthly", priority: "0.9" },
           { path: "/zh/iranian-saffron-supplier", changefreq: "monthly", priority: "0.9" },
           { path: "/ja/iranian-saffron-wholesale", changefreq: "monthly", priority: "0.9" },
+          { path: "/ko/iranian-saffron-wholesale", changefreq: "monthly", priority: "0.9" },
           { path: "/trade-network", changefreq: "monthly", priority: "0.85" },
           { path: "/inquiry", changefreq: "monthly", priority: "0.9" },
           { path: "/incoterms", changefreq: "yearly", priority: "0.7" },

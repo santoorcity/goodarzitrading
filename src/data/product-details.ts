@@ -117,6 +117,7 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
         a: "Decorative metal tins with 250 g net weight. Bulk export and custom packaging can be discussed according to buyer requirements.",
       },
       { q: "What is the HS code for saffron?", a: "Saffron is classified under HS heading 0910.20. The importing country's tariff classification should be confirmed." },
+      { q: "Where can I find the Iranian saffron price list?", a: "The official Iranian Saffron Price List is available on this product page. It shows the current USD-per-kilogram references by grade; request a quotation for your required grade, quantity and destination." },
       QUOTE_FAQ("Iranian saffron"),
     ],
   },

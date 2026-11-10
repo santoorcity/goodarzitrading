@@ -1,10 +1,10 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { ArrowRight, CheckCircle2, FileText, MessageCircle, Package, Ship } from "lucide-react";
+import { ArrowRight, CheckCircle2, Download, ExternalLink, FileText, MessageCircle, Package, Ship } from "lucide-react";
 import { Breadcrumbs, breadcrumbSchema } from "@/components/site/Breadcrumbs";
 import { EXPORT_PRODUCTS, SITE_URL, getExportProduct } from "@/data/export-products";
 import { whatsappLink } from "@/lib/whatsapp";
 import { DETAIL_DOCS_NOTE, getProductDetail } from "@/data/product-details";
-import { SAFFRON_LOCALES } from "@/data/saffron-locales";
+import { SAFFRON_HREFLANG, SAFFRON_LOCALES } from "@/data/saffron-locales";
 
 function detailHs(slug: string, fallback: string) {
   const d = getProductDetail(slug);
@@ -29,8 +29,16 @@ export const Route = createFileRoute("/export-products/$slug")({
     }
     const d = getProductDetail(product.slug);
     const hs = detailHs(product.slug, product.hs);
-    const title = d?.seoTitle ?? `${product.name} Exporter & Supplier — HS ${product.hs} | Goodarzi Trading`;
-    const description = d?.seoDescription ?? product.summary;
+    const isSaffron = product.slug === "iranian-saffron";
+    const title = isSaffron
+      ? "Iranian Saffron Price List & Wholesale Price | Goodarzi Trading"
+      : d?.seoTitle ?? `${product.name} Exporter & Supplier — HS ${product.hs} | Goodarzi Trading`;
+    const description = isSaffron
+      ? "View the official Iranian Saffron Price List, wholesale saffron prices and the Goodarzi Trading catalogue. Compare Super Negin, Negin, Sargol and Pushal for bulk export inquiries."
+      : d?.seoDescription ?? product.summary;
+    const keywords = isSaffron
+      ? "Iranian saffron price, Iran saffron price, saffron price list, Iranian saffron price list, saffron wholesale price, Iranian saffron wholesale price, buy Iranian saffron, Iranian saffron supplier, bulk saffron price, saffron price per kg, Super Negin saffron price, Negin saffron price, Sargol saffron price"
+      : `${product.name} exporter, ${product.name} supplier, buy ${product.name} from Iran, ${hs ? `HS ${hs}, ` : ""}wholesale Iranian products, Goodarzi Trading`;
     const imgPath = d?.image ?? product.image;
     const image = imgPath.startsWith("http") ? imgPath : `${SITE_URL}${imgPath}`;
     const specs = d?.specifications ?? product.specifications;
@@ -39,7 +47,7 @@ export const Route = createFileRoute("/export-products/$slug")({
       meta: [
         { title },
         { name: "description", content: description },
-        { name: "keywords", content: `${product.name} exporter, ${product.name} supplier, buy ${product.name} from Iran, ${hs ? `HS ${hs}, ` : ""}wholesale Iranian products, Goodarzi Trading` },
+        { name: "keywords", content: keywords },
         { property: "og:title", content: title },
         { property: "og:description", content: description },
         { property: "og:type", content: "product" },
@@ -50,7 +58,7 @@ export const Route = createFileRoute("/export-products/$slug")({
         { name: "twitter:description", content: description },
         { name: "twitter:image", content: image },
       ],
-      links: [{ rel: "canonical", href: url }],
+      links: [{ rel: "canonical", href: url }, ...(isSaffron ? SAFFRON_HREFLANG(SITE_URL) : [])],
       scripts: [
         {
           type: "application/ld+json",
@@ -228,6 +236,58 @@ function ProductPage() {
                   </span>
                 ))}
               </p>
+            )}
+
+            {product.slug === "iranian-saffron" && (
+              <section aria-labelledby="saffron-documents" className="mt-12 rounded-sm border border-[color:var(--gold)]/40 bg-[color:var(--gold)]/5 p-5 md:p-7">
+                <span className="eyebrow">Official buyer documents</span>
+                <h2 id="saffron-documents" className="mt-3 font-display text-2xl font-semibold text-[color:var(--navy-deep)] md:text-3xl">
+                  Iranian Saffron Price List &amp; Catalogue
+                </h2>
+                <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+                  Review the official Iranian Saffron Price List for current price-per-kg references by grade, then use the catalogue for approved product, packaging and ordering information. Contact export sales for a quotation for your grade, quantity and destination.
+                </p>
+                <div className="mt-6 grid gap-5 md:grid-cols-2">
+                  <article className="overflow-hidden rounded-sm border border-border bg-card">
+                    <img
+                      src="/goodarzi-saffron-price-list.png"
+                      alt="Official Iranian Saffron Price List showing wholesale saffron prices by grade in USD per kilogram"
+                      width={1800}
+                      height={1400}
+                      loading="lazy"
+                      decoding="async"
+                      className="aspect-[4/3] w-full object-cover object-top"
+                    />
+                    <div className="p-5">
+                      <h3 className="font-display text-xl font-semibold text-[color:var(--navy-deep)]">Saffron Price List</h3>
+                      <p className="mt-2 text-sm text-muted-foreground">Official Iranian saffron price list with grade specifications and USD/kg references.</p>
+                      <div className="mt-4 flex flex-wrap gap-3">
+                        <a href="/goodarzi-saffron-price-list.png" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-sm bg-[color:var(--navy-deep)] px-4 py-2.5 text-sm font-semibold text-white">
+                          <ExternalLink className="h-4 w-4" /> View price list
+                        </a>
+                        <a href="/goodarzi-saffron-price-list.png" download className="inline-flex items-center gap-2 rounded-sm border border-[color:var(--navy)]/20 px-4 py-2.5 text-sm font-medium text-[color:var(--navy-deep)]">
+                          <Download className="h-4 w-4" /> Download
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+                  <article className="flex flex-col rounded-sm border border-border bg-card p-5 md:p-6">
+                    <div className="flex-1">
+                      <span className="inline-flex rounded-full bg-secondary px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-[color:var(--navy-deep)]">PDF catalogue</span>
+                      <h3 className="mt-4 font-display text-xl font-semibold text-[color:var(--navy-deep)]">Saffron Product Catalogue</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">Official catalogue covering saffron grades, specifications, packaging, ordering and export documentation.</p>
+                    </div>
+                    <div className="mt-6 flex flex-wrap gap-3">
+                      <a href="/goodarzi-saffron-catalogue.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-sm bg-[color:var(--navy-deep)] px-4 py-2.5 text-sm font-semibold text-white">
+                        <ExternalLink className="h-4 w-4" /> View catalogue
+                      </a>
+                      <a href="/goodarzi-saffron-catalogue.pdf" download className="inline-flex items-center gap-2 rounded-sm border border-[color:var(--navy)]/20 px-4 py-2.5 text-sm font-medium text-[color:var(--navy-deep)]">
+                        <Download className="h-4 w-4" /> Download PDF
+                      </a>
+                    </div>
+                  </article>
+                </div>
+              </section>
             )}
 
             {d?.sections.map((sec) => (
