@@ -4,7 +4,7 @@ import { Search, Filter, Database, ChevronDown, Briefcase, FileCheck, ExternalLi
 import { PageHero } from "@/components/site/PageHero";
 import { hsCodes, hsCategories, tariffBreakdown, CUSTOMS_DUTY_RATE, type HSCode } from "@/data/hs-codes";
 import { tradeServiceGroups, type TradeService } from "@/data/trade-services";
-import { useI18n } from "@/i18n/LanguageProvider";
+import { useI18n } from "@/i18n/useI18n";
 import { tr } from "@/data/tr";
 
 export const Route = createFileRoute("/hs-code")({

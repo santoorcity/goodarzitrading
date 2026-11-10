@@ -5,7 +5,7 @@ import {
 } from "lucide-react";
 import worldMap from "@/assets/world-map.jpg";
 import { HomeVideo } from "@/components/site/HomeVideo";
-import { useT } from "@/i18n/LanguageProvider";
+import { useT } from "@/i18n/useI18n";
 import { whatsappLink } from "@/lib/whatsapp";
 const heroPort = "/hero-port-containers.jpg";
 const membershipCert = { url: "/certificate-of-membership.jpg" };

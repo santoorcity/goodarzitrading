@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { Award, Globe2, Factory, Trophy } from "lucide-react";
-import { useT } from "@/i18n/LanguageProvider";
+import { useT } from "@/i18n/useI18n";
 
 export const Route = createFileRoute("/profile")({
   head: () => ({

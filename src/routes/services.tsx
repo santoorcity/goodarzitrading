@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
-import { useI18n } from "@/i18n/LanguageProvider";
+import { useI18n } from "@/i18n/useI18n";
 import {
   Ship, Plane, Truck, FileCheck, Search, Globe, ShieldCheck, Package, FileText,
   ShoppingCart, BadgeCheck, ScrollText,

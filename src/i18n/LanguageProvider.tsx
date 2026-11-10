@@ -1,23 +1,15 @@
-import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useMemo, useState, type ReactNode } from "react";
+import { LanguageContext } from "./language-context";
 import { isLang, LANG_DIR, LANGS, type Lang } from "./types";
 import { dictionary } from "./dictionary";
-
-type Ctx = {
-  lang: Lang;
-  dir: "ltr" | "rtl";
-  setLang: (l: Lang) => void;
-  t: (key: string, fallback?: string) => string;
-};
-
-const LanguageContext = createContext<Ctx | null>(null);
 
 const STORAGE_KEY = "gt-lang";
 
 function flatten(lang: Lang): Record<string, string> {
   const out: Record<string, string> = {};
-  for (const [ns, bundle] of Object.entries(dictionary)) {
-    for (const [k, v] of Object.entries(bundle[lang] ?? {})) {
-      out[`${ns}.${k}`] = v;
+  for (const [namespace, bundle] of Object.entries(dictionary)) {
+    for (const [key, value] of Object.entries(bundle[lang] ?? {})) {
+      out[`${namespace}.${key}`] = value;
     }
   }
   return out;
@@ -60,16 +52,4 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const value = useMemo<Ctx>(() => ({ lang, dir: LANG_DIR[lang], setLang, t }), [lang, setLang, t]);
 
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
-}
-
-export function useI18n(): Ctx {
-  const ctx = useContext(LanguageContext);
-  if (!ctx) {
-    return { lang: "en", dir: "ltr", setLang: () => {}, t: (k, f) => TABLES.en[k] ?? f ?? k };
-  }
-  return ctx;
-}
-
-export function useT() {
-  return useI18n().t;
 }

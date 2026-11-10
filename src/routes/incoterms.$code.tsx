@@ -3,7 +3,7 @@ import { PageHero } from "@/components/site/PageHero";
 import { LegalDisclaimer } from "@/components/knowledge/LegalDisclaimer";
 import { kc, incotermByCode } from "@/data/knowledge-center";
 import { incotermDetailByCode } from "@/data/incoterms-content";
-import { useI18n } from "@/i18n/LanguageProvider";
+import { useI18n } from "@/i18n/useI18n";
 import { ExternalLink } from "lucide-react";
 
 export const Route = createFileRoute("/incoterms/$code")({

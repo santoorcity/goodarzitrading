@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { Globe2, Handshake, Building2, Users, ArrowRight } from "lucide-react";
-import { useI18n } from "@/i18n/LanguageProvider";
+import { useI18n } from "@/i18n/useI18n";
 
 const REGION_KEYS = [
   { key: "regionGcc", flag: "🇦🇪" },

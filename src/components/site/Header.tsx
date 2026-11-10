@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
-import { useI18n } from "@/i18n/LanguageProvider";
+import { useI18n } from "@/i18n/useI18n";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 const logoAsset = { url: "/goodarzi-trading-logo.png" };
 

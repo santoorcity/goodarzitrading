@@ -8,7 +8,7 @@ import {
   TRANSLATION_UNAVAILABLE,
 } from "@/data/knowledge-center";
 import { contentForEntry } from "@/data/kc-content";
-import { useI18n } from "@/i18n/LanguageProvider";
+import { useI18n } from "@/i18n/useI18n";
 import { ExternalLink, Printer } from "lucide-react";
 
 export const Route = createFileRoute("/knowledge/$category/$entry")({

@@ -3,7 +3,7 @@ import { useMemo, useState } from "react";
 import { z } from "zod";
 import { PageHero } from "@/components/site/PageHero";
 import { MapPin, Phone, Mail, MessageCircle, Clock, CheckCircle2 } from "lucide-react";
-import { useT } from "@/i18n/LanguageProvider";
+import { useT } from "@/i18n/useI18n";
 import { composeMessage, sendToWhatsApp } from "@/lib/whatsapp";
 
 export const Route = createFileRoute("/contact")({

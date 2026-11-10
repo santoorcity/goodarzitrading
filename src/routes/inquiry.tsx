@@ -3,7 +3,7 @@ import { PageHero } from "@/components/site/PageHero";
 import { useMemo, useState } from "react";
 import { z } from "zod";
 import { CheckCircle2, Send } from "lucide-react";
-import { useT } from "@/i18n/LanguageProvider";
+import { useT } from "@/i18n/useI18n";
 import { sendToWhatsApp } from "@/lib/whatsapp";
 
 const WHATSAPP = "989191238554";

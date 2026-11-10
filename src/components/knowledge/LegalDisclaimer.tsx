@@ -1,5 +1,5 @@
 import { kc, localized } from "@/data/knowledge-center";
-import { useI18n } from "@/i18n/LanguageProvider";
+import { useI18n } from "@/i18n/useI18n";
 import { ShieldAlert } from "lucide-react";
 
 export function LegalDisclaimer() {

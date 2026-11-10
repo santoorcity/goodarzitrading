@@ -1,5 +1,5 @@
 import { Globe } from "lucide-react";
-import { useI18n } from "@/i18n/LanguageProvider";
+import { useI18n } from "@/i18n/useI18n";
 import { LANGS, LANG_LABELS } from "@/i18n/types";
 
 export function LanguageSwitcher({ compact = false }: { compact?: boolean }) {

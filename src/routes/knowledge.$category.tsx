@@ -8,7 +8,7 @@ import {
   localized,
   TRANSLATION_UNAVAILABLE,
 } from "@/data/knowledge-center";
-import { useI18n } from "@/i18n/LanguageProvider";
+import { useI18n } from "@/i18n/useI18n";
 import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 
 export const Route = createFileRoute("/knowledge/$category")({
