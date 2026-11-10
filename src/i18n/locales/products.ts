@@ -28,7 +28,7 @@ export const products: Bundle = {
     saffronName: "Iranian Saffron",
     saffronNameFa: "زعفران ایرانی",
     saffronMoq: "1 kg",
-    saffronPackaging: "0.1g – 1kg bulk / private label",
+    saffronPackaging: "250 g net metal tins only",
     saffronOrigin: "Khorasan, Iran",
     saffronGrades: "Sargol · Negin · Super Negin · Pushal",
     saffronDesc:
@@ -106,7 +106,7 @@ export const products: Bundle = {
     saffronName: "زعفران ایرانی",
     saffronNameFa: "زعفران ایرانی",
     saffronMoq: "۱ کیلوگرم",
-    saffronPackaging: "۰.۱ گرم تا ۱ کیلوگرم فله / برند اختصاصی",
+    saffronPackaging: "فقط قوطی فلزی با وزن خالص ۲۵۰ گرم",
     saffronOrigin: "خراسان، ایران",
     saffronGrades: "سرگل · نگین · سوپر نگین · پوشال",
     saffronDesc:
@@ -184,7 +184,7 @@ export const products: Bundle = {
     saffronName: "الزعفران الإيراني",
     saffronNameFa: "زعفران ایرانی",
     saffronMoq: "1 كجم",
-    saffronPackaging: "من 0.1 جرام إلى 1 كجم بالجملة / علامة خاصة",
+    saffronPackaging: "عبوات معدنية فقط بوزن صافٍ 250 غرامًا",
     saffronOrigin: "خراسان، إيران",
     saffronGrades: "سرگل · نگین · سوپر نگین · پوشال",
     saffronDesc:

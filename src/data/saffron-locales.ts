@@ -72,7 +72,7 @@ export const SAFFRON_LOCALES: Record<SaffronLocaleKey, SaffronLocale> = {
         h2: "Verpackung, Mindestmenge und Versand",
         bullets: [
           "Mindestbestellmenge: 1 kg",
-          "Lose Exportverpackung bis 1 kg je Einheit oder Einzelhandelspackungen von 0,1 g bis 100 g (Glas, Dose, Briefchen)",
+          "Aktuelle Exportverpackung: ausschließlich Metalldosen mit 250 g Nettogewicht.",
           "Private Label unter Ihrer Marke auf Anfrage",
           "Versand üblicherweise per Luftfracht ab Teheran (IKA); Lieferbedingungen EXW, FOB, CFR, CIF oder DAP nach Incoterms 2020",
           "Dokumente: Handelsrechnung, Packliste, Ursprungszeugnis der Handelskammer Teheran, Pflanzengesundheits- bzw. Gesundheitszeugnis, Transportdokument",
@@ -95,7 +95,7 @@ export const SAFFRON_LOCALES: Record<SaffronLocaleKey, SaffronLocale> = {
     faqTitle: "Häufige Fragen von Großhändlern",
     faqs: [
       { q: "Wie hoch ist die Mindestbestellmenge?", a: "Die Mindestbestellmenge beträgt 1 kg. Größere Mengen können mit anderen iranischen Produkten in einer Sendung kombiniert werden." },
-      { q: "Ist Private Label möglich?", a: "Ja. Safran kann in Einzelhandelspackungen von 0,1 g bis 100 g unter Ihrer eigenen Marke abgepackt werden." },
+      { q: "Ist Private Label möglich?", a: "Die aktuelle Exportverpackung besteht ausschließlich aus Metalldosen mit 250 g Nettogewicht. Etikettierungsanforderungen des Ziellandes werden je Auftrag geprüft." },
       { q: "Welche Qualitätsnachweise gibt es?", a: "Auf Anfrage eine Laboranalyse nach ISO 3632 sowie Ursprungszeugnis, Pflanzengesundheits- bzw. Gesundheitszeugnis und die üblichen Handelsdokumente." },
       { q: "Wie läuft die Bestellung ab?", a: "Sie senden Sorte, Menge, Verpackung und Zielort. Sie erhalten eine Proforma-Rechnung; anschließend organisieren wir Analyse, Exportabfertigung und Versand nach der vereinbarten Incoterms-Regel." },
     ],

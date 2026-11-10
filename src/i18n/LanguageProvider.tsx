@@ -1,5 +1,5 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
-import { LANG_DIR, LANGS, type Lang } from "./types";
+import { isLang, LANG_DIR, LANGS, type Lang } from "./types";
 import { dictionary } from "./dictionary";
 
 type Ctx = {
@@ -23,18 +23,16 @@ function flatten(lang: Lang): Record<string, string> {
   return out;
 }
 
-const TABLES: Record<Lang, Record<string, string>> = {
-  en: flatten("en"),
-  fa: flatten("fa"),
-  ar: flatten("ar"),
-};
+const TABLES = Object.fromEntries(
+  LANGS.map((language) => [language, flatten(language)]),
+) as Record<Lang, Record<string, string>>;
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>("en");
 
   useEffect(() => {
     const stored = typeof window !== "undefined" ? window.localStorage.getItem(STORAGE_KEY) : null;
-    if (stored && (LANGS as string[]).includes(stored)) setLangState(stored as Lang);
+    if (isLang(stored)) setLangState(stored);
   }, []);
 
   useEffect(() => {
@@ -44,6 +42,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   }, [lang]);
 
   const setLang = useCallback((l: Lang) => {
+    if (!LANGS.includes(l)) return;
     setLangState(l);
     try {
       window.localStorage.setItem(STORAGE_KEY, l);
