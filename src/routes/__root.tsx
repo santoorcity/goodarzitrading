@@ -89,6 +89,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Goodarzi Trading — Global Import & Export Solutions" },
       { name: "keywords", content: "import export Iran, buy from Iran, Iranian saffron exporter, Iran pistachio supplier, Iranian Mamra almonds, buy Iranian dates, Iran bitumen supplier, international trade Iran, freight forwarding, IRICA customs, Tehran Chamber of Commerce, world traders, chamber of commerce members, goodarzi trading, بازرگانی گودرزی, واردات صادرات ایران, تجارت بین الملل, صادرات زعفران, صادرات پسته, بازرگانان جهان" },
       { name: "description", content: "Iran-based import & export company. Buy Iranian saffron, pistachio, dates, barberry, dried fruits, nuts and Mamra almonds. Trade, customs and logistics support from Tehran." },
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
       { name: "author", content: "Goodarzi Trading" },
       { name: "google-site-verification", content: "DVsriVrhxiWjRyJJaweJ1-xQMP3hNRqyWHvqVLKAYkk" },
       { property: "og:site_name", content: "Goodarzi Trading" },

@@ -30,15 +30,22 @@ export const Route = createFileRoute("/export-products/$slug")({
     const d = getProductDetail(product.slug);
     const hs = detailHs(product.slug, product.hs);
     const isSaffron = product.slug === "iranian-saffron";
+    const isMamra = product.slug === "iranian-mamra-almonds";
     const title = isSaffron
       ? "Iranian Saffron Price List & Wholesale Price | Goodarzi Trading"
-      : d?.seoTitle ?? `${product.name} Exporter & Supplier — HS ${product.hs} | Goodarzi Trading`;
+      : isMamra
+        ? "Mamra Almond Kernels Wholesale Supplier & Exporter | Goodarzi Trading"
+        : d?.seoTitle ?? `${product.name} Wholesale Supplier & Exporter from Iran | Goodarzi Trading`;
     const description = isSaffron
       ? "View the official Iranian Saffron Price List, wholesale saffron prices and the Goodarzi Trading catalogue. Compare Super Negin, Negin, Sargol and Pushal for bulk export inquiries."
-      : d?.seoDescription ?? product.summary;
+      : isMamra
+        ? "Source Iranian Mamra almond kernels wholesale from Goodarzi Trading. Review 5A, 4A, 3A, 2A, A, ES, ESB and Mini grades, kernel counts, catalogue and export enquiry options."
+        : d?.seoDescription ?? `${product.summary} Request wholesale pricing, specifications and export documentation from Goodarzi Trading.`;
     const keywords = isSaffron
       ? "Iranian saffron price, Iran saffron price, saffron price list, Iranian saffron price list, saffron wholesale price, Iranian saffron wholesale price, buy Iranian saffron, Iranian saffron supplier, bulk saffron price, saffron price per kg, Super Negin saffron price, Negin saffron price, Sargol saffron price"
-      : `${product.name} exporter, ${product.name} supplier, buy ${product.name} from Iran, ${hs ? `HS ${hs}, ` : ""}wholesale Iranian products, Goodarzi Trading`;
+      : isMamra
+        ? "Mamra almond kernels, Mamra almonds wholesale, Mamra almond price, Iranian Mamra almond supplier, Mamra almond exporter, buy Mamra almonds, 5A Mamra almonds, 4A Mamra almonds, almond kernels wholesale, HS 0802.12"
+        : `${product.name} wholesale supplier, ${product.name} exporter from Iran, buy ${product.name}, ${product.grades.join(", ")}, ${hs ? `HS ${hs}, ` : ""}Iranian products export`;
     const imgPath = d?.image ?? product.image;
     const image = imgPath.startsWith("http") ? imgPath : `${SITE_URL}${imgPath}`;
     const specs = d?.specifications ?? product.specifications;
