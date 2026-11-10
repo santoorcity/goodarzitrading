@@ -276,6 +276,12 @@ function ProductPage() {
                       <span className="inline-flex rounded-full bg-secondary px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-[color:var(--navy-deep)]">PDF catalogue</span>
                       <h3 className="mt-4 font-display text-xl font-semibold text-[color:var(--navy-deep)]">Saffron Product Catalogue</h3>
                       <p className="mt-2 text-sm leading-relaxed text-muted-foreground">Official catalogue covering saffron grades, specifications, packaging, ordering and export documentation.</p>
+                      <iframe
+                        src="/goodarzi-saffron-catalogue.pdf#view=FitH"
+                        title="Goodarzi Trading Iranian Saffron Product Catalogue PDF"
+                        loading="lazy"
+                        className="mt-5 h-[360px] w-full rounded-sm border border-border bg-white md:h-[420px]"
+                      />
                     </div>
                     <div className="mt-6 flex flex-wrap gap-3">
                       <a href="/goodarzi-saffron-catalogue.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-sm bg-[color:var(--navy-deep)] px-4 py-2.5 text-sm font-semibold text-white">
