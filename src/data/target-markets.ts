@@ -25,7 +25,7 @@ export const TARGET_MARKETS: TargetMarket[] = [
     considerations: ["Air freight can suit high-value, low-volume consignments.", "Confirm Arabic/English label content and importer requirements before packing.", destinationNotice],
     faqs: [
       { q: "Which saffron grades are available for UAE buyers?", a: "Super Negin, Negin, Sargol and Pushal are listed, subject to lot availability and agreed specification." },
-      { q: "Can saffron be supplied in private-label packs?", a: "Yes. Private-label and buyer-branded packing is listed, with retail packs from 0.1 g to 100 g and bulk packs up to 1 kg per unit." },
+      { q: "Can saffron be supplied in private-label packs?", a: "Current export packaging is 250 g net metal tins only. Destination-market labelling requirements should be confirmed for each order." },
       { q: "Does this page imply UAE registration or local stock?", a: "No. It describes export supply from Iran. Importer registrations, product approvals and local requirements must be confirmed for the specific transaction." },
     ],
   },

@@ -52,15 +52,15 @@ export const EXPORT_PRODUCTS: ExportProduct[] = [
       "Premium Iranian saffron from Khorasan in Sargol, Negin, Super Negin and Pushal grades, with ISO 3632 laboratory analysis on request.",
     overview: [
       "Goodarzi Trading exports Iranian saffron directly from growers and processing units in Khorasan, the region that supplies the majority of the world's saffron.",
-      "Saffron is offered in bulk export packing as well as private-label retail packing from 0.1 g upwards, so importers, repackers and distributors can order the format their market requires.",
+      "Saffron is exported in 250 g net metal tins only. Importers and distributors should confirm their destination-market requirements before ordering.",
       "Every consignment is prepared for export with the documentation international buyers need for customs release, including ISO 3632 laboratory analysis on request.",
     ],
     origin: "Khorasan, Iran",
     grades: ["Sargol", "Negin", "Super Negin", "Pushal"],
     packaging: [
-      "Retail packs from 0.1 g to 100 g (glass, tin or sachet)",
-      "Bulk export packing up to 1 kg per unit",
-      "Private-label and buyer-branded packing available",
+      "250 g net metal tins only",
+      "Export packaging specification confirmed per order",
+      "Destination-market labelling requirements should be confirmed before ordering",
     ],
     moq: "1 kg",
     specifications: [
@@ -91,7 +91,7 @@ export const EXPORT_PRODUCTS: ExportProduct[] = [
       },
       {
         q: "Which packaging options are available?",
-        a: "Retail packs from 0.1 g to 100 g, bulk export packing up to 1 kg per unit, and private-label packing under the buyer's own brand.",
+        a: "Current export packaging is 250 g net metal tins only. Destination-market labelling requirements should be confirmed for each order.",
       },
     ],
   },

@@ -54,7 +54,7 @@ const FAQS = [
   },
   {
     q: "Which packaging options are available?",
-    a: "Retail packs from 0.1 g to 100 g in glass, tin or sachet, bulk export packing up to 1 kg per unit, and private-label packing under the buyer's own brand.",
+    a: "Current export packaging is 250 g net metal tins only. Destination-market labelling requirements should be confirmed for each order.",
   },
   {
     q: "What quality documentation is provided?",
