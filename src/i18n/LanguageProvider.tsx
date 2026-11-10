@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState, type ReactNode } from "react";
-import { LanguageContext } from "./language-context";
+import { LanguageContext, type LanguageContextValue } from "./language-context";
 import { isLang, LANG_DIR, LANGS, type Lang } from "./types";
 import { dictionary } from "./dictionary";
 
@@ -49,7 +49,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     [lang],
   );
 
-  const value = useMemo<Ctx>(() => ({ lang, dir: LANG_DIR[lang], setLang, t }), [lang, setLang, t]);
+  const value = useMemo<LanguageContextValue>(() => ({ lang, dir: LANG_DIR[lang], setLang, t }), [lang, setLang, t]);
 
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
 }
