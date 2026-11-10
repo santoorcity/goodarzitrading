@@ -24,7 +24,15 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const stored = typeof window !== "undefined" ? window.localStorage.getItem(STORAGE_KEY) : null;
-    if (isLang(stored)) setLangState(stored);
+    if (isLang(stored)) {
+      setLangState(stored);
+      return;
+    }
+    try {
+      window.localStorage.setItem(STORAGE_KEY, "en");
+    } catch {
+      /* ignore */
+    }
   }, []);
 
   useEffect(() => {
