@@ -296,6 +296,34 @@ function ProductPage() {
               </section>
             )}
 
+            {product.slug === "iranian-mamra-almonds" && (
+              <section aria-labelledby="mamra-almond-documents" className="mt-12 rounded-sm border border-[color:var(--gold)]/40 bg-[color:var(--gold)]/5 p-5 md:p-7">
+                <span className="eyebrow">Official buyer documents</span>
+                <h2 id="mamra-almond-documents" className="mt-3 font-display text-2xl font-semibold text-[color:var(--navy-deep)] md:text-3xl">
+                  Mamra Almond Kernels Catalogue
+                </h2>
+                <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+                  View the official Goodarzi Trading Mamra Almond Kernels catalogue for commercial grades, kernel size references, specifications, packing and ordering information.
+                </p>
+                <article className="mt-6 rounded-sm border border-border bg-card p-4 md:p-6">
+                  <iframe
+                    src="/goodarzi-mamra-almond-catalogue.pdf#view=FitH"
+                    title="Goodarzi Trading Mamra Almond Kernels Catalogue PDF"
+                    loading="lazy"
+                    className="h-[360px] w-full rounded-sm border border-border bg-white md:h-[520px]"
+                  />
+                  <div className="mt-5 flex flex-wrap gap-3">
+                    <a href="/goodarzi-mamra-almond-catalogue.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-sm bg-[color:var(--navy-deep)] px-4 py-2.5 text-sm font-semibold text-white">
+                      <ExternalLink className="h-4 w-4" /> View catalogue
+                    </a>
+                    <a href="/goodarzi-mamra-almond-catalogue.pdf" download className="inline-flex items-center gap-2 rounded-sm border border-[color:var(--navy)]/20 px-4 py-2.5 text-sm font-medium text-[color:var(--navy-deep)]">
+                      <Download className="h-4 w-4" /> Download PDF
+                    </a>
+                  </div>
+                </article>
+              </section>
+            )}
+
             {d?.sections.map((sec) => (
               <div key={sec.heading}>
                 <h2 className="mt-12 font-display text-xl font-semibold text-[color:var(--navy-deep)] md:text-2xl">
