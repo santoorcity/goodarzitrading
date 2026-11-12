@@ -2,11 +2,13 @@ import type { Bundle } from "../types";
 
 export const home: Bundle = {
   en: {
-    "hero.eyebrow": "Iran-based B2B trading company · Tehran",
-    "hero.title.line1": "Iranian Products for",
-    "hero.title.highlight": "International Buyers",
+    "hero.eyebrow": "GOODARZI TRADING",
+    "hero.title.line1": "From Iran to the",
+    "hero.title.highlight": "World.",
+    "hero.values": "Credibility. Commitment. Confidence. Follow-through.",
+    "hero.company": "Iranian Trading & Export Company",
     "hero.desc":
-      "Goodarzi Trading is an Iran-based import and export company and sourcing partner for overseas buyers. We supply Iranian products and coordinate trade documentation, customs, logistics and transit services.",
+      "Delivering direct international trade solutions through reliable business relationships, professional export operations, and a commitment to quality and long-term cooperation.",
     "hero.cta.quote": "Request a Quote",
     "hero.cta.services": "Explore Services",
     "hero.stat.countries.value": "6",
@@ -141,11 +143,13 @@ export const home: Bundle = {
     "cta.contact": "Contact Us",
   },
   fa: {
-    "hero.eyebrow": "تهران · خانه تجاری معتبر",
-    "hero.title.line1": "راهکارهای واردات و صادرات",
-    "hero.title.highlight": "جهانی",
+    "hero.eyebrow": "GOODARZI TRADING",
+    "hero.title.line1": "From Iran to the",
+    "hero.title.highlight": "World.",
+    "hero.values": "Credibility. Commitment. Confidence. Follow-through.",
+    "hero.company": "شرکت بازرگانی و صادراتی ایرانی",
     "hero.desc":
-      "بازرگانی گودرزی، تولیدکنندگان، تأمین‌کنندگان و خریداران را در سراسر قاره‌ها به هم متصل می‌کند — با تخصصی در گمرک، لجستیک و تأمین کالا که ریشه در دهه‌ها تجارت بین‌المللی دارد.",
+      "ارائه راهکارهای مستقیم تجارت بین‌المللی از طریق روابط تجاری قابل‌اعتماد، عملیات حرفه‌ای صادرات و تعهد به کیفیت و همکاری بلندمدت.",
     "hero.cta.quote": "درخواست استعلام قیمت",
     "hero.cta.services": "مشاهده خدمات",
     "hero.stat.countries.value": "+۴۰",
@@ -280,11 +284,13 @@ export const home: Bundle = {
     "cta.contact": "تماس با ما",
   },
   ar: {
-    "hero.eyebrow": "طهران · بيت تجاري عريق",
-    "hero.title.line1": "حلول الاستيراد والتصدير",
-    "hero.title.highlight": "العالمية",
+    "hero.eyebrow": "GOODARZI TRADING",
+    "hero.title.line1": "From Iran to the",
+    "hero.title.highlight": "World.",
+    "hero.values": "Credibility. Commitment. Confidence. Follow-through.",
+    "hero.company": "شركة إيرانية للتجارة والتصدير",
     "hero.desc":
-      "تربط شركة كودرزي التجارية المصنّعين والموردين والمشترين عبر القارات — بخبرة متكاملة في الجمارك واللوجستيات والتوريد متجذرة في عقود من التجارة الدولية.",
+      "نقدم حلولاً مباشرة للتجارة الدولية من خلال علاقات تجارية موثوقة، وعمليات تصدير احترافية، والتزام بالجودة والتعاون طويل الأمد.",
     "hero.cta.quote": "طلب عرض سعر",
     "hero.cta.services": "استكشاف الخدمات",
     "hero.stat.countries.value": "+40",

@@ -92,10 +92,14 @@ function Home() {
           <div className="max-w-3xl">
             <span className="eyebrow">{t("home.hero.eyebrow", "Tehran · Established Trading House")}</span>
             <h1 className="mt-5 font-display text-5xl font-semibold leading-[1.05] md:text-7xl">
-              {t("home.hero.title.line1", "Global Import & Export")} <span className="text-[color:var(--gold)]">{t("home.hero.title.highlight", "Solutions")}</span>
+              <bdi dir="ltr">{t("home.hero.title.line1", "From Iran to the")} <span className="text-[color:var(--gold)]">{t("home.hero.title.highlight", "World.")}</span></bdi>
             </h1>
             <p className="mt-6 max-w-xl text-lg text-white/80">
-              {t("home.hero.desc", "Goodarzi Trading connects manufacturers, suppliers and buyers across continents — with end-to-end customs, logistics and sourcing expertise rooted in decades of international trade.")}
+              <bdi dir="ltr">{t("home.hero.values", "Credibility. Commitment. Confidence. Follow-through.")}</bdi>
+              <br />
+              {t("home.hero.company", "Iranian Trading & Export Company")}
+              <br />
+              {t("home.hero.desc", "Delivering direct international trade solutions through reliable business relationships, professional export operations, and a commitment to quality and long-term cooperation.")}
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
               <Link
