@@ -123,7 +123,6 @@ function ProductPage() {
   const wa = whatsappLink(
     `Hello Goodarzi Trading, I would like a quotation for ${product.name}${hs ? ` (HS ${hs})` : ""}.\nQuantity: \nDestination port: \nPacking: `,
   );
-  const related = EXPORT_PRODUCTS.filter((p) => p.slug !== product.slug).slice(0, 3);
 
   return (
     <div lang="en" dir="ltr">
@@ -242,7 +241,7 @@ function ProductPage() {
                 <div className="mt-6 grid gap-5 md:grid-cols-2">
                   <article className="overflow-hidden rounded-sm border border-border bg-card">
                     <img
-                      src="/goodarzi-saffron-price-list.png"
+                      src="/goodarzi-saffron-price-list.jpg"
                       alt="Official Iranian Saffron Price List showing wholesale saffron prices by grade in USD per kilogram"
                       width={3072}
                       height={2568}
@@ -254,10 +253,10 @@ function ProductPage() {
                       <h3 className="font-display text-xl font-semibold text-[color:var(--navy-deep)]">Saffron Price List</h3>
                       <p className="mt-2 text-sm text-muted-foreground">Official Iranian saffron price list with grade specifications and USD/kg references.</p>
                       <div className="mt-4 flex flex-wrap gap-3">
-                        <a href="/goodarzi-saffron-price-list.png" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-sm bg-[color:var(--navy-deep)] px-4 py-2.5 text-sm font-semibold text-white">
+                        <a href="/goodarzi-saffron-price-list.jpg" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-sm bg-[color:var(--navy-deep)] px-4 py-2.5 text-sm font-semibold text-white">
                           <ExternalLink className="h-4 w-4" /> View price list
                         </a>
-                        <a href="/goodarzi-saffron-price-list.png" download className="inline-flex items-center gap-2 rounded-sm border border-[color:var(--navy)]/20 px-4 py-2.5 text-sm font-medium text-[color:var(--navy-deep)]">
+                        <a href="/goodarzi-saffron-price-list.jpg" download className="inline-flex items-center gap-2 rounded-sm border border-[color:var(--navy)]/20 px-4 py-2.5 text-sm font-medium text-[color:var(--navy-deep)]">
                           <Download className="h-4 w-4" /> Download
                         </a>
                       </div>
@@ -475,36 +474,6 @@ function ProductPage() {
         </div>
       </section>
 
-      <section className="py-16">
-        <div className="container-x">
-          <h2 className="font-display text-2xl font-semibold text-[color:var(--navy-deep)]">
-            Other Iranian export products
-          </h2>
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
-            {related.map((p) => (
-              <Link
-                key={p.slug}
-                to="/export-products/$slug"
-                params={{ slug: p.slug }}
-                className="group overflow-hidden rounded-sm border border-border bg-card shadow-[var(--shadow-card)] transition-shadow hover:shadow-[var(--shadow-elegant)]"
-              >
-                <img
-                  src={p.image}
-                  alt={p.name}
-                  width={600}
-                  height={450}
-                  loading="lazy"
-                  className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="p-5">
-                  <h3 className="font-display text-lg text-[color:var(--navy-deep)]">{p.name}</h3>
-                  <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-muted-foreground">{p.summary}</p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
