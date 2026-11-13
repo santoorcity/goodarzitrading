@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { ArrowRight, CheckCircle2, FileText, MessageCircle, Package, Ship } from "lucide-react";
+import { ArrowRight, CheckCircle2, Download, ExternalLink, FileText, MessageCircle, Package, Ship } from "lucide-react";
 import { Breadcrumbs, breadcrumbSchema } from "@/components/site/Breadcrumbs";
 import { EXPORT_PRODUCTS, SITE_URL, getExportProduct } from "@/data/export-products";
 import { whatsappLink } from "@/lib/whatsapp";
@@ -228,6 +228,92 @@ function ProductPage() {
                   </span>
                 ))}
               </p>
+            )}
+
+            {product.slug === "iranian-saffron" && (
+              <section aria-labelledby="saffron-documents" className="mt-12 rounded-sm border border-[color:var(--gold)]/40 bg-[color:var(--gold)]/5 p-5 md:p-7">
+                <span className="eyebrow">Official buyer documents</span>
+                <h2 id="saffron-documents" className="mt-3 font-display text-2xl font-semibold text-[color:var(--navy-deep)] md:text-3xl">
+                  Iranian Saffron Price List &amp; Catalogue
+                </h2>
+                <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+                  Review the official Iranian Saffron Price List for current price-per-kg references by grade, then use the catalogue for approved product, packaging and ordering information. Contact export sales for a quotation for your grade, quantity and destination.
+                </p>
+                <div className="mt-6 grid gap-5 md:grid-cols-2">
+                  <article className="overflow-hidden rounded-sm border border-border bg-card">
+                    <img
+                      src="/goodarzi-saffron-price-list.png"
+                      alt="Official Iranian Saffron Price List showing wholesale saffron prices by grade in USD per kilogram"
+                      width={3072}
+                      height={2568}
+                      loading="lazy"
+                      decoding="async"
+                      className="h-auto w-full object-contain"
+                    />
+                    <div className="p-5">
+                      <h3 className="font-display text-xl font-semibold text-[color:var(--navy-deep)]">Saffron Price List</h3>
+                      <p className="mt-2 text-sm text-muted-foreground">Official Iranian saffron price list with grade specifications and USD/kg references.</p>
+                      <div className="mt-4 flex flex-wrap gap-3">
+                        <a href="/goodarzi-saffron-price-list.png" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-sm bg-[color:var(--navy-deep)] px-4 py-2.5 text-sm font-semibold text-white">
+                          <ExternalLink className="h-4 w-4" /> View price list
+                        </a>
+                        <a href="/goodarzi-saffron-price-list.png" download className="inline-flex items-center gap-2 rounded-sm border border-[color:var(--navy)]/20 px-4 py-2.5 text-sm font-medium text-[color:var(--navy-deep)]">
+                          <Download className="h-4 w-4" /> Download
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+                  <article className="flex flex-col rounded-sm border border-border bg-card p-5 md:p-6">
+                    <div className="flex-1">
+                      <span className="inline-flex rounded-full bg-secondary px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-[color:var(--navy-deep)]">PDF catalogue</span>
+                      <h3 className="mt-4 font-display text-xl font-semibold text-[color:var(--navy-deep)]">Saffron Product Catalogue</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">Official catalogue covering saffron grades, specifications, packaging, ordering and export documentation.</p>
+                      <iframe
+                        src="/goodarzi-saffron-catalogue%20%281%29.pdf#view=FitH"
+                        title="Goodarzi Trading Iranian Saffron Product Catalogue PDF"
+                        loading="lazy"
+                        className="mt-5 h-[360px] w-full rounded-sm border border-border bg-white md:h-[420px]"
+                      />
+                    </div>
+                    <div className="mt-6 flex flex-wrap gap-3">
+                      <a href="/goodarzi-saffron-catalogue%20%281%29.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-sm bg-[color:var(--navy-deep)] px-4 py-2.5 text-sm font-semibold text-white">
+                        <ExternalLink className="h-4 w-4" /> View catalogue
+                      </a>
+                      <a href="/goodarzi-saffron-catalogue%20%281%29.pdf" download className="inline-flex items-center gap-2 rounded-sm border border-[color:var(--navy)]/20 px-4 py-2.5 text-sm font-medium text-[color:var(--navy-deep)]">
+                        <Download className="h-4 w-4" /> Download PDF
+                      </a>
+                    </div>
+                  </article>
+                </div>
+              </section>
+            )}
+
+            {product.slug === "iranian-mamra-almonds" && (
+              <section aria-labelledby="mamra-almond-documents" className="mt-12 rounded-sm border border-[color:var(--gold)]/40 bg-[color:var(--gold)]/5 p-5 md:p-7">
+                <span className="eyebrow">Official buyer documents</span>
+                <h2 id="mamra-almond-documents" className="mt-3 font-display text-2xl font-semibold text-[color:var(--navy-deep)] md:text-3xl">
+                  Mamra Almond Kernels Catalogue
+                </h2>
+                <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+                  View the official Goodarzi Trading Mamra Almond Kernels catalogue for commercial grades, kernel size references, specifications, packing and ordering information.
+                </p>
+                <article className="mt-6 rounded-sm border border-border bg-card p-4 md:p-6">
+                  <iframe
+                    src="/goodarzi-mamra-almond-catalogue.pdf#view=FitH"
+                    title="Goodarzi Trading Mamra Almond Kernels Catalogue PDF"
+                    loading="lazy"
+                    className="h-[360px] w-full rounded-sm border border-border bg-white md:h-[520px]"
+                  />
+                  <div className="mt-5 flex flex-wrap gap-3">
+                    <a href="/goodarzi-mamra-almond-catalogue.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-sm bg-[color:var(--navy-deep)] px-4 py-2.5 text-sm font-semibold text-white">
+                      <ExternalLink className="h-4 w-4" /> View catalogue
+                    </a>
+                    <a href="/goodarzi-mamra-almond-catalogue.pdf" download className="inline-flex items-center gap-2 rounded-sm border border-[color:var(--navy)]/20 px-4 py-2.5 text-sm font-medium text-[color:var(--navy-deep)]">
+                      <Download className="h-4 w-4" /> Download PDF
+                    </a>
+                  </div>
+                </article>
+              </section>
             )}
 
             {d?.sections.map((sec) => (
