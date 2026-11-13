@@ -1,10 +1,6 @@
 # SEO and international buyer work
 
-## Authorized homepage hero replacement
-- [ ] Replace only approved hero text in English, Persian and Arabic; preserve all controls and statistics
-- [ ] Verify all three previews and do not publish
-
-## Paused read-only audit (superseded by homepage authorization)
+## Read-only audit only
 - [ ] Audit broker/agent invitation wording across content, metadata and all languages; provide exact sources and replacement text
 - [ ] Make no changes or publish; previous incomplete edits remain unvalidated and unpublished
 
