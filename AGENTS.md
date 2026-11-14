@@ -11,3 +11,5 @@
 
 - Keep approved product-detail content separate from catalogue data so detail-page updates do not alter unrelated market pages.
 - Keep country-specific saffron copy in the existing shared locale registry; preserve its reciprocal hreflang cluster and link to the distinct main product URL rather than adding it as a duplicate language alternate.
+- Resolve floating email recipients in one browser-safe pathname helper so client navigation and direct product visits use identical routing.
+- Store newly supplied catalogue PDFs as immutable asset pointers and reference the same URL for preview, viewing and download to preserve original bytes.

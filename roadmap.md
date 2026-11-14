@@ -1,5 +1,10 @@
 # SEO and international buyer work
 
+## Current minimal contact and Dates catalogue update
+- [ ] Route one floating email icon by existing product path; leave WhatsApp unchanged
+- [ ] Add original supplied Dates PDF with embedded preview, View and Download on Dates only
+- [ ] Check routing and desktop/mobile preview; leave unpublished
+
 ## Authorized homepage hero replacement
 - [x] Replace only approved hero text in English, Persian and Arabic; preserve all controls and statistics
 - [x] Verify all three previews and do not publish

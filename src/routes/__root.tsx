@@ -15,6 +15,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Header } from "../components/site/Header";
 import { Footer } from "../components/site/Footer";
 import { WhatsAppFab } from "../components/site/WhatsAppFab";
+import { EmailFab } from "../components/site/EmailFab";
 import { LanguageProvider } from "../i18n/LanguageProvider";
 import { Analytics } from "@vercel/analytics/react";
 import { initGoogleAnalytics, trackPageView } from "../lib/analytics";
@@ -202,6 +203,7 @@ function RootComponent() {
         </main>
         <Footer />
         <WhatsAppFab />
+        <EmailFab />
         <Analytics />
       </LanguageProvider>
     </QueryClientProvider>

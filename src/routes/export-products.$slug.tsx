@@ -5,6 +5,8 @@ import { EXPORT_PRODUCTS, SITE_URL, getExportProduct } from "@/data/export-produ
 import { whatsappLink } from "@/lib/whatsapp";
 import { DETAIL_DOCS_NOTE, getProductDetail } from "@/data/product-details";
 import { SAFFRON_LOCALES } from "@/data/saffron-locales";
+import datesCatalogue from "@/assets/catalogues/GoodarziTrading_Mazafati_Dates_Catalogue_EN.pdf.asset.json";
+import { Button } from "@/components/ui/button";
 
 function detailHs(slug: string, fallback: string) {
   const d = getProductDetail(slug);
@@ -312,6 +314,38 @@ function ProductPage() {
                     </a>
                   </div>
                 </article>
+              </section>
+            )}
+
+            {product.slug === "iranian-dates" && (
+              <section aria-labelledby="dates-documents" className="mt-12">
+                <span className="eyebrow">Official buyer documents</span>
+                <h2 id="dates-documents" className="mt-3 font-display text-2xl font-semibold text-foreground md:text-3xl">
+                  Mazafati Dates Catalogue
+                </h2>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  View or download the original Goodarzi Trading Mazafati Dates catalogue.
+                </p>
+                <div className="mt-6">
+                  <iframe
+                    src={`${datesCatalogue.url}#view=FitH`}
+                    title="Goodarzi Trading Mazafati Dates Catalogue PDF"
+                    loading="lazy"
+                    className="h-[360px] w-full rounded-sm border border-border bg-background md:h-[520px]"
+                  />
+                  <div className="mt-5 flex flex-wrap gap-3">
+                    <Button asChild className="rounded-sm">
+                      <a href={datesCatalogue.url} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink /> View catalogue
+                      </a>
+                    </Button>
+                    <Button asChild variant="outline" className="rounded-sm">
+                      <a href={datesCatalogue.url} download={datesCatalogue.original_filename}>
+                        <Download /> Download PDF
+                      </a>
+                    </Button>
+                  </div>
+                </div>
               </section>
             )}
 
